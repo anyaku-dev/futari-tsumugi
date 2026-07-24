@@ -1,15 +1,60 @@
 """
 プレビュー用ローカルサーバー
 /recommend/futari-tsumugi/ へのリクエストをルートに書き換えて配信します。
+また ?note_feed=ranking|blog へのリクエストは note API をサーバー側で中継します
+（note API は CORS 非対応のため、ブラウザから直接取得できないための措置。
+ 本番 .asp でも同等のサーバー側中継が必要です）。
 """
 import os
-import sys
+import urllib.request
 from http.server import HTTPServer, SimpleHTTPRequestHandler
+from urllib.parse import urlparse, parse_qs
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 PORT = 8080
 
+# note フィード取得先（ホワイトリスト固定 = 任意URL指定は不可）
+NOTE_FEEDS = {
+    'ranking': 'https://note.com/api/v1/layout/magazine/m337eb74a473c/section?page=1',
+    'blog': 'https://note.com/api/v2/creators/futari_tsumugi/contents?kind=note&page=1',
+}
+
+
 class RewriteHandler(SimpleHTTPRequestHandler):
+    def do_GET(self):
+        feed = parse_qs(urlparse(self.path).query).get('note_feed', [None])[0]
+        if feed is not None:
+            self.handle_note_feed(feed)
+            return
+        super().do_GET()
+
+    def handle_note_feed(self, feed):
+        url = NOTE_FEEDS.get(feed)
+        if not url:
+            self.send_response(400)
+            self.send_header('Content-Type', 'application/json; charset=utf-8')
+            self.end_headers()
+            self.wfile.write(b'{"error":"bad note_feed"}')
+            return
+        try:
+            req = urllib.request.Request(url, headers={
+                'User-Agent': 'Mozilla/5.0 (compatible; FutariTsumugi/1.0)',
+                'Accept': 'application/json',
+            })
+            with urllib.request.urlopen(req, timeout=8) as resp:
+                data = resp.read()
+        except Exception:
+            self.send_response(502)
+            self.send_header('Content-Type', 'application/json; charset=utf-8')
+            self.end_headers()
+            self.wfile.write(b'{"error":"note fetch failed"}')
+            return
+        self.send_response(200)
+        self.send_header('Content-Type', 'application/json; charset=utf-8')
+        self.send_header('Cache-Control', 'public, max-age=300')
+        self.end_headers()
+        self.wfile.write(data)
+
     def translate_path(self, path):
         # /recommend/futari-tsumugi/ → /  に書き換え
         if path.startswith('/recommend/futari-tsumugi/'):

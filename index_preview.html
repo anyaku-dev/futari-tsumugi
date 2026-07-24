@@ -401,7 +401,7 @@
                         class="mx-auto mt-4 block h-0.5 w-[90px] bg-gradient-to-r from-brand-red to-[#f2b632]"
                         aria-hidden="true"></span>
                 </div>
-                <div class="mt-[58px] grid gap-x-6 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
+                <div class="mt-[58px] grid gap-x-6 gap-y-10 md:grid-cols-2 lg:grid-cols-3" data-note-grid="ranking">
                     <div class="relative pt-8 transition-opacity duration-700 ease-out motion-reduce:opacity-100 motion-reduce:transition-none opacity-0"
                         style="transition-delay:0ms"><span aria-label="1位"
                             class="absolute left-1/2 top-4 z-20 grid h-[58px] w-[58px] -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full border-[3px] border-white bg-gradient-to-br text-[28px] font-bold leading-none text-white md:h-[64px] md:w-[64px] md:text-[30px] from-[#ffd200] to-[#f6bd00] shadow-[0_4px_9px_rgba(210,153,0,0.35)]">1</span>
@@ -504,7 +504,7 @@
                         class="mx-auto mt-4 block h-0.5 w-[90px] bg-gradient-to-r from-brand-red to-[#f2b632]"
                         aria-hidden="true"></span>
                 </div>
-                <div class="mt-[58px] grid gap-x-6 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
+                <div class="mt-[58px] grid gap-x-6 gap-y-10 md:grid-cols-2 lg:grid-cols-3" data-note-grid="blog">
                     <div class="relative  transition-opacity duration-700 ease-out motion-reduce:opacity-100 motion-reduce:transition-none opacity-0"
                         style="transition-delay:0ms">
                         <article
@@ -587,24 +587,147 @@
             </div>
         </section>
         </div>
-        <!-- [NOTE-SECTIONS] フェードイン表示: 元サイトのIntersectionObserver挙動を再現。
-             opacity-0 で初期非表示のカードを、表示領域に入ったら不透明化します。 -->
+        <!-- [NOTE-SECTIONS] note連携: サーバー側プロキシ(?note_feed=)経由でnoteを取得しカードを描画。
+             ・ランキング = noteマガジン(m337eb74a473c) / ブログ = 最新記事
+             ・note APIはCORS非対応のため、必ずサーバー側(index.asp / preview server)で中継します。
+             ・取得できない環境では直下のベタ書きカードをそのままフォールバック表示します。
+             ・IntersectionObserverで元サイトのフェードイン挙動を再現します。 -->
         <script>
           (function () {
-            var targets = document.querySelectorAll('.note-embed .opacity-0');
-            if (!('IntersectionObserver' in window)) {
-              targets.forEach(function (el) { el.style.opacity = '1'; });
-              return;
+            var NOTE_USER = 'futari_tsumugi';
+            var RANK_BADGE = [
+              'from-[#ffd200] to-[#f6bd00] shadow-[0_4px_9px_rgba(210,153,0,0.35)]',
+              'from-[#d6d6d6] to-[#aeb0b4] shadow-[0_4px_9px_rgba(120,120,120,0.28)]',
+              'from-[#df9a45] to-[#c97c2f] shadow-[0_4px_9px_rgba(180,104,34,0.32)]'
+            ];
+
+            function el(tag, cls, text) {
+              var e = document.createElement(tag);
+              if (cls) e.className = cls;
+              if (text != null) e.textContent = text;
+              return e;
             }
-            var io = new IntersectionObserver(function (entries) {
-              entries.forEach(function (entry) {
-                if (entry.isIntersecting) {
-                  entry.target.style.opacity = '1';
-                  io.unobserve(entry.target);
-                }
+            // note CDN以外の画像URLは弾く(XSS/不正URL対策)。幅800に正規化。
+            function normImg(url) {
+              if (typeof url !== 'string' || url.indexOf('https://assets.st-note.com/') !== 0) return '';
+              var q = url.indexOf('?');
+              return (q === -1 ? url : url.slice(0, q)) + '?width=800';
+            }
+            function fmtDate(s) {
+              return (typeof s === 'string' && s.length >= 10) ? s.slice(0, 10).replace(/-/g, '.') : '';
+            }
+            function excerpt(s) {
+              if (typeof s !== 'string') return '';
+              var t = s.replace(/\s+/g, ' ').trim();
+              return t.length > 140 ? t.slice(0, 140) + '…' : t;
+            }
+            function noteUrl(item) {
+              if (typeof item.noteUrl === 'string' && /^https:\/\/note\.com\//.test(item.noteUrl)) return item.noteUrl;
+              if (typeof item.key === 'string' && /^n[0-9a-z]+$/i.test(item.key)) return 'https://note.com/' + NOTE_USER + '/n/' + item.key;
+              return 'https://note.com/' + NOTE_USER;
+            }
+
+            function buildCard(item, index, isRanking) {
+              var wrap = el('div', (isRanking ? 'relative pt-8 ' : 'relative  ') +
+                'transition-opacity duration-700 ease-out motion-reduce:opacity-100 motion-reduce:transition-none opacity-0');
+              wrap.style.transitionDelay = (index * 120) + 'ms';
+
+              if (isRanking) {
+                var badge = el('span',
+                  'absolute left-1/2 top-4 z-20 grid h-[58px] w-[58px] -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full border-[3px] border-white bg-gradient-to-br text-[28px] font-bold leading-none text-white md:h-[64px] md:w-[64px] md:text-[30px] ' +
+                  (RANK_BADGE[index] || RANK_BADGE[2]), String(index + 1));
+                badge.setAttribute('aria-label', (index + 1) + '位');
+                wrap.appendChild(badge);
+              }
+
+              var article = el('article', 'flex h-full min-h-[448px] flex-col overflow-hidden rounded-[12px] bg-white shadow-[0_6px_18px_rgba(0,0,0,0.18)]');
+
+              var imgWrap = el('div', 'relative aspect-[323/170] w-full overflow-hidden');
+              var img = el('img', 'h-full w-full object-cover');
+              var src = normImg(item.eyecatch);
+              if (src) img.src = src;
+              img.alt = '';
+              img.loading = 'lazy';
+              var overlay = el('span', 'pointer-events-none absolute inset-0 bg-gradient-to-b from-black/15 via-black/0 to-black/5');
+              overlay.setAttribute('aria-hidden', 'true');
+              imgWrap.appendChild(img);
+              imgWrap.appendChild(overlay);
+
+              var body = el('div', 'flex flex-1 flex-col px-5 pb-6 pt-5 md:px-[22px]');
+              body.appendChild(el('time', 'text-[13px] tracking-[0.03em] text-[#9a9a9a]', fmtDate(item.publish_at || item.publishAt)));
+              body.appendChild(el('h3', 'mt-4 line-clamp-2 min-h-[58px] text-[17px] font-bold leading-[1.7] text-brand-ink md:text-[18px]', item.name || ''));
+              body.appendChild(el('p', 'mb-6 mt-3 line-clamp-3 min-h-[78px] text-[14px] leading-[1.85] text-brand-ink md:text-[15px]', excerpt(item.body)));
+              var a = el('a', 'mt-auto inline-flex min-h-[41px] w-[136px] items-center justify-center rounded-full bg-brand-red text-[13px] font-bold text-white transition-[background-color,transform] duration-200 ease-out hover:scale-[1.04] hover:bg-[#ab892d] motion-reduce:transition-none motion-reduce:hover:scale-100', '記事ページへ');
+              a.href = noteUrl(item);
+              a.target = '_blank';
+              a.rel = 'noopener noreferrer';
+              body.appendChild(a);
+
+              article.appendChild(imgWrap);
+              article.appendChild(body);
+              wrap.appendChild(article);
+              return wrap;
+            }
+
+            function render(grid, items, isRanking) {
+              if (!grid || !items || !items.length) return false;
+              var frag = document.createDocumentFragment();
+              items.slice(0, 3).forEach(function (item, i) { frag.appendChild(buildCard(item, i, isRanking)); });
+              grid.innerHTML = '';
+              grid.appendChild(frag);
+              return true;
+            }
+
+            function fadeIn(scope) {
+              scope = scope || document.querySelector('.note-embed') || document;
+              var targets = scope.querySelectorAll('.opacity-0');
+              if (!('IntersectionObserver' in window)) {
+                Array.prototype.forEach.call(targets, function (n) { n.style.opacity = '1'; });
+                return;
+              }
+              var io = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                  if (entry.isIntersecting) { entry.target.style.opacity = '1'; io.unobserve(entry.target); }
+                });
+              }, { threshold: 0.1 });
+              Array.prototype.forEach.call(targets, function (n) { io.observe(n); });
+            }
+
+            function fetchFeed(type) {
+              var opts = { headers: { 'Accept': 'application/json' } };
+              var ctrl = ('AbortController' in window) ? new AbortController() : null;
+              if (ctrl) { opts.signal = ctrl.signal; setTimeout(function () { ctrl.abort(); }, 6000); }
+              return fetch('?note_feed=' + type, opts).then(function (r) {
+                var ct = r.headers.get('content-type') || '';
+                if (!r.ok || ct.indexOf('application/json') === -1) throw new Error('not json');
+                return r.json();
               });
-            }, { threshold: 0.1 });
-            targets.forEach(function (el) { io.observe(el); });
+            }
+
+            function pick(obj, path) {
+              try { return path.split('.').reduce(function (o, k) { return o[k]; }, obj); } catch (e) { return null; }
+            }
+
+            function hydrate(gridSel, type, isRanking, itemsPath) {
+              var grid = document.querySelector(gridSel);
+              var section = grid ? grid.parentNode.parentNode : null;
+              if (!('fetch' in window) || !('Promise' in window)) { fadeIn(section); return; }
+              fetchFeed(type)
+                .then(function (d) { if (!render(grid, pick(d, itemsPath), isRanking)) throw new Error('empty'); })
+                .catch(function () { /* 取得失敗時はベタ書きカードを維持 */ })
+                .then(function () { fadeIn(section); });
+            }
+
+            function init() {
+              hydrate('[data-note-grid="ranking"]', 'ranking', true, 'data.section.contents');
+              hydrate('[data-note-grid="blog"]', 'blog', false, 'data.contents');
+            }
+
+            if (document.readyState === 'loading') {
+              document.addEventListener('DOMContentLoaded', init);
+            } else {
+              init();
+            }
           })();
         </script>
         <!-- [NOTE-SECTIONS-END] -->
