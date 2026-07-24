@@ -1,0 +1,15 @@
+# Vercel デプロイに含めないファイル
+# ASP ソースは静的配信では実行できず、ルート / のインデックスとして
+# octet-stream 配信されてしまうため除外する（プレビューは index_preview.html）
+index.asp
+
+# ローカル専用の補助スクリプト・参照ファイル
+_preview_server.py
+_extract_note_css.py
+anyaku-production-inline.html
+
+# その他
+node_modules
+.playwright-mcp
+.DS_Store
+__pycache__
