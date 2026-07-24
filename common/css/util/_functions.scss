@@ -1,0 +1,46 @@
+@use "sass:math";
+/* 375pxデザイン時のpxからvwを計算 ------------*/
+/* calc内で使いたい場合: calc( 100% - #{vw(10)} ); */
+@function vw($size, $viewport: 375) {
+  @return math.div($size, $viewport) * 100 * 1vw;
+}
+
+@function rem($size, $fz: 10) {
+  // @return math.div($size, $fz) * 1rem;
+  @return calc($size/ $fz * 1rem);
+}
+
+/* 絶対位置計算関数 ----------------
+* 画面幅が変わっても要素位置を維持する
+* $distance   基準端からの距離
+* $wrapper    配置の基準となる幅（デフォルト：1300px）
+/* ------------------------------ */
+@function pos($distance, $wrapper: 1300) {
+  @return calc(((100% - #{rem($wrapper)}) / 2) + #{rem($distance)});
+}
+
+/* %の計算 -----------------------
+* $size       計算したい値
+* $viewport   基準となる値
+/* ------------------------------ */
+@function pct($size, $viewport: 1300) {
+  @return math.div($size, $viewport) * 100 * 1%;
+}
+
+/* 最小値(px)の計算 ----------------
+* $size       計算したい値
+* $viewport   基準となる値
+* $min        最小の画面幅
+/* ------------------------------ */
+@function minpx($size, $viewport: 1300, $min: 1024) {
+  @return math.div($size, $viewport) * $min * 1px;
+}
+
+/* 最大値(px)の計算 ----------------
+* $size       計算したい値
+* $viewport   基準となる値
+* $max        最大の画面幅
+/* ------------------------------ */
+@function maxpx($size, $viewport: 1300, $max: 1600) {
+  @return math.div($size, $viewport) * $max * 1px;
+}

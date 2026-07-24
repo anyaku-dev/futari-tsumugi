@@ -1,0 +1,357 @@
+@use "sass:math";
+@use "./functions" as *;
+
+@mixin fz($size, $static: true, $fz: 10) {
+  @if $static {
+    font-size: rem($size);
+    @include media_wide {
+      font-size: $size * 1px;
+    }
+  } @else {
+    font-size: rem($size);
+    font-size: max(rem($size), 10px);
+  }
+}
+/* sp-only ------------*/
+@mixin media_narrow {
+  @media screen and (max-width: 759px) {
+    @content;
+  }
+}
+/* pc-only ------------*/
+@mixin media_wide {
+  @media screen and (min-width: 760px) {
+    @content;
+  }
+}
+
+@mixin media_full {
+  @media screen and (min-width: 960px) {
+    @content;
+  }
+}
+/* hover-only ------------*/
+@mixin media_hover {
+  @media (any-hover: hover) {
+    @content;
+  }
+}
+/* flex ------------*/
+@mixin flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+/* grid ------------*/
+@mixin grid($columns: 1, $c_gap: 0, $r_gap: $c_gap) {
+  display: grid;
+  grid-template-columns: repeat($columns, 1fr);
+  grid-template-rows: auto;
+  grid-column-gap: #{$c_gap}px;
+  grid-row-gap: #{$r_gap}px;
+}
+/* Font Awesome 疑似要素 ------------*/
+@mixin fa5($weight: 900) {
+  font-family: "Font Awesome 5 Free";
+  font-weight: $weight;
+  font-style: normal;
+  font-variant: normal;
+  line-height: 1;
+  display: inline-block;
+  height: 1em;
+}
+/* Edge用 ------------*/
+@mixin edge_only {
+  @supports (-ms-ime-align: auto) {
+    /* Edge のみ適用される */
+    @content;
+  }
+}
+/* IE用 ------------*/
+@mixin ie_only {
+  @media (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    @content;
+  }
+}
+/* Safari用 ------------*/
+@mixin safari_only {
+  // 擬似要素には効きません
+  &_::-webkit-full-page-media,
+  _:future,
+  :root & {
+    @content;
+  }
+  @supports (paint-order: fill) and (-webkit-marquee-speed: 0) {
+    @content;
+  }
+}
+
+// ダミーの箇所を可視化
+@mixin dummy {
+  color: #f00 !important;
+  outline: 2px dashed #f00 !important;
+  background-color: #ff0 !important;
+}
+
+/* Font styles ------------*/
+@mixin font-family {
+  font-family:
+    "Noto Sans JP",
+    Hiragino Sans,
+    "ヒラギノ角ゴシック",
+    Hiragino Kaku Gothic ProN,
+    "ヒラギノ角ゴ ProN W3",
+    "メイリオ",
+    Meiryo,
+    sans-serif;
+}
+
+@mixin ff-worksans {
+  font-family: "Work Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+/* [mixin]Font Family ------------*/
+@mixin ff-notosansjp {
+  font-family:
+    "Noto Sans JP",
+    Hiragino Sans,
+    "ヒラギノ角ゴシック",
+    Hiragino Kaku Gothic ProN,
+    "ヒラギノ角ゴ ProN W3",
+    "メイリオ",
+    Meiryo,
+    sans-serif;
+}
+
+/* [mixin]Text Style ------------*/
+@mixin txt-large($static: false) {
+  font-weight: 400;
+  @include fz(16, $static);
+  letter-spacing: 0.03em;
+  line-height: 2;
+  @include media_wide {
+    @include fz(18, $static);
+    letter-spacing: 0.03em;
+    line-height: 2.2;
+  } /* PC only ------------ */
+}
+@mixin txt-basic($static: false) {
+  @include fz(13, $static);
+  letter-spacing: 0.03em;
+  font-weight: 400;
+  line-height: 1.9;
+  @include media_wide {
+    @include fz(16, $static);
+    letter-spacing: 0.03em;
+  } /* PC only ------------ */
+}
+@mixin txt-small($static: false) {
+  font-weight: 400;
+  @include fz(11, $static);
+  letter-spacing: 0.03em;
+  line-height: 1.6;
+  @include media_wide {
+    @include fz(12, $static);
+    letter-spacing: 0.03em;
+    line-height: 1.7;
+  } /* PC only ------------ */
+}
+@mixin title-01($static: false) {
+  font-weight: 400;
+  @include fz(24, $static);
+  letter-spacing: 0.1em;
+  line-height: 1.45;
+  @include media_wide {
+    @include fz(30, $static);
+    letter-spacing: 0.1em;
+    line-height: 1.7;
+  } /* PC only ------------ */
+}
+@mixin title-02($static: false) {
+  @include fz(20, $static);
+  letter-spacing: 0.08em;
+  line-height: 1.45;
+  font-weight: 400;
+  @include media_wide {
+    @include fz(26, $static);
+    letter-spacing: 0.08em;
+    line-height: 1.6;
+  } /* PC only ------------ */
+}
+@mixin title-03($static: false) {
+  @include fz(18, $static);
+  letter-spacing: 0.05em;
+  font-weight: 400;
+  line-height: 1.45;
+  @include media_wide {
+    @include fz(22, $static);
+    letter-spacing: 0.05em;
+  } /* PC only ------------ */
+}
+@mixin title-04($static: false) {
+  @include fz(16, $static);
+  letter-spacing: 0.03em;
+  line-height: 1.45;
+  font-weight: 400;
+  @include media_wide {
+    @include fz(18, $static);
+    letter-spacing: 0.03em;
+    line-height: 1.6;
+  } /* PC only ------------ */
+}
+
+/* Color styles ------------*/
+$c-black: #323743;
+$c-lightgray: #f0f0f0;
+$c-white: #ffffff;
+$c-red: #e60012;
+$c-beige: #fbf5e8;
+$c-gold: #b5941c;
+$c-darkgold: #9d7e10;
+
+/*------------------------------------------------
+other
+------------------------------------------------*/
+// [w1000]:PC_ONLY
+@mixin w1000 {
+  @include media_wide {
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+  } /* PC only ------------ */
+}
+
+// [inner]:SP_ONLY
+@mixin inner {
+  @include media_narrow {
+    width: vw(345);
+    margin-left: auto;
+    margin-right: auto;
+  } /* SP only ------------ */
+}
+
+// ・
+// リストなどで使用します。
+// 自動でインデントが付きます。
+// インデントを外す場合は第1引数にtrueを指定してください。
+// 第2引数にインデントサイズを指定できます。
+@mixin dot($isIndent: false, $indentSize: 1) {
+  @if $isIndent != true {
+    @include indent($indentSize);
+  }
+  &::before {
+    content: "\30FB";
+  } /* before ------------*/
+}
+
+// ●
+// リストなどで使用します。
+// 自動でインデントが付きます。
+// インデントを外す場合は第1引数にtrueを指定してください。
+// 第2引数にインデントサイズを指定できます。
+@mixin maru($isIndent: false, $indentSize: 1) {
+  @if $isIndent != true {
+    @include indent($indentSize);
+  }
+  &::before {
+    content: "\25CF";
+  } /* before ------------*/
+}
+
+// ※
+// リストなどで使用します。
+// 自動でインデントが付きます。
+// インデントを外す場合は第1引数にtrueを指定してください。
+// 第2引数にインデントサイズを指定できます。
+@mixin kome($isIndent: false, $indentSize: 1) {
+  @if $isIndent != true {
+    @include indent($indentSize);
+  }
+  &::before {
+    content: "\203B";
+  } /* before ------------*/
+}
+
+@mixin indent($indentSize: 1) {
+  padding-left: #{$indentSize}em;
+  text-indent: -#{$indentSize}em;
+}
+
+@mixin of-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+// テキストオーバーフロー
+// 引数に行数を指定してください。
+@mixin txt-clamp($row: 1) {
+  // 引数が数値以外だったらエラーを返す
+  @if type-of($row) != "number" {
+    @error 'txt-clampの引数は必ず数値で指定してください';
+  }
+
+  @if $row == 1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  } @else {
+    display: -webkit-box;
+    min-height: 0;
+    -webkit-line-clamp: $row;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+// 文字の縦書き
+// writing-mode は、縦書き、横書きの方向を指定するCSSプロパティです。
+@mixin txt-vertical {
+  // writing-mode: horizontal-tb; // 通常のテキスト。横書き、行は上から下
+  // writing-mode: vertical-rl; // 縦書き、列は右から左
+  writing-mode: vertical-lr; // 縦書き、列は左から右
+}
+
+// text-orientationは、縦書きの中の文字を回転させます。
+// 縦書き文章中のアルファベットは横向きのまま表示されますが、
+// text-orientationを使用することで、アルファベットも縦書きにすることができます。
+@mixin txt-orientation {
+  text-orientation: upright;
+}
+
+// text-combine を利用すると、１文字分のスペースに複数の文字を表示できるようになります。
+// これを利用すると、縦書きの中に横書きの文字を入れ、縦中横（たてちゅうよこ）と呼ばれるレイアウトを作成することができます。
+@mixin txt-combine {
+  text-combine-upright: all; // Firefox
+  text-combine: horizontal; // Chrome, Safari
+}
+
+//タイトルの両サイドに囲み斜線
+@mixin paya($width: 1, $height: 1, $color: #000000, $weight: 1, $gap: 0) {
+  position: relative;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  padding-inline: #{$gap}px;
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: -100%;
+    bottom: -100%;
+    width: #{$weight}px;
+    height: #{hypot($width, $height)}px;
+    margin: auto;
+    background-color: $color;
+  } /* before after ------------*/
+  &::before {
+    transform: rotate(90 + atan($height / $width));
+    left: calc(-1 * #{$width}px / 2);
+  } /* before ------------*/
+  &::after {
+    transform: rotate(90 - atan($height / $width));
+    right: calc(-1 * #{$width}px / 2);
+  } /* after ------------*/
+}

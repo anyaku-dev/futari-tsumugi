@@ -1,0 +1,22 @@
+@import url(icon.css);
+body { background-color: #fff; }
+#page_header { margin-bottom: 0; }
+.jtb-nav-breadcrumb { margin: 8px auto 25px; min-width: 1120px; width: 100%; }
+.l-page { -webkit-font-feature-settings: "palt" 1; font-feature-settings: "palt" 1; font-size: 15px; line-height: 1.6; min-width: 1120px; width: 100%; }
+.l-container { margin: 0 auto; text-align: left; width: 1120px; }
+.l-page * { box-sizing: border-box; }
+.l-page a:hover { text-decoration: underline; }
+.l-page h1 { background:url(/common/images/title_h1.gif) no-repeat left bottom; font-size: 18px; font-weight: bold; line-height: 1; margin: 0 auto 25px; padding: 15px 0 20px 25px; width: 1120px; }
+.l-page h2 { border-bottom: 1px solid #cc0033; font-size: 16px; margin-bottom: 1.5em; }
+.l-page h2 span { border-left: 4px solid #cc0033; font-weight: bold; padding:  2px 0 2px .5em; }
+.l-page ul { padding: 0 1em 1.5em; }
+.l-page ul > li { display: list-item; list-style: disc; list-style-position: outside; margin-left: 1em; }
+.l-page ul > li + li, .l-page ul > li p + p { padding-top: .8em; }
+.l-page ul > li > ul { padding: .6em 0 0; }
+.l-page ul > li > ul > li { display: flex; list-style: none; margin: 0; }
+.l-page ul > li > ul > li + li { padding-top: .6em; }
+.l-page ul > li > ul > li::before { content: '\f105'; display: inline-block; font-family: 'icon'; padding-right: .5em; }
+.js-btn-page-top { bottom: 50px; cursor: pointer; display: none; position: fixed; right: 50px; z-index: 100; }
+.js-btn-page-top a { display: block; height: 17px; position: relative; width: 35px; }
+.js-btn-page-top a::before { color: #000; content: '\e802'; display: inline-block; font-family: 'icon'; font-size: 17px; height: 17px; width: 35px; }
+.js-btn-page-top a:hover { opacity: .8; }

@@ -1,0 +1,1769 @@
+  <%@LANGUAGE=VBScript%>
+  <!-- #Include virtual="/smartphone/common/smartchk.inc" -->
+  <%
+	Dim isSmartPhone
+	isSmartPhone = IsSmartPhoneUA()
+%>
+<!doctype html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>JTBの結婚相談所 ふたり紬 | JTB</title>
+  <meta name="keywords" content="" />
+  <meta name="description" content="じっくり納得して婚活を進めたい方へ。 JTBの結婚相談所ふたり紬は、場所や移動時間に縛られず、オンラインで気軽に相談できます。ご成婚特典でJTBトラベルギフト5万円分プレゼント！まずはLINE無料相談からお待ちしております。" />
+  <!-- OGP -->
+
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:title" content="JTBの結婚相談所 ふたり紬 | JTB" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.jtb.co.jp/recommend/futari-tsumugi/" />
+  <meta property="og:image" content="https://www.jtb.co.jp/recommend/futari-tsumugi/common/images/ogp.png" />
+  <meta property="og:site_name" content="JTB" />
+  <meta property="og:description" content="じっくり納得して婚活を進めたい方へ。 JTBの結婚相談所ふたり紬は、場所や移動時間に縛られず、オンラインで気軽に相談できます。ご成婚特典でJTBトラベルギフト5万円分プレゼント！まずはLINE無料相談からお待ちしております。" />
+
+      <% If Not isSmartPhone Then %>
+    <link rel="stylesheet" href="/_common/css/headfooter.css">
+    <link rel="stylesheet" href="/_common/css/common.css">
+    <% Else %>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="/smartphone/_common/css/headfooter.css">
+    <link rel="stylesheet" href="/smartphone/_common/css/common.css">
+    <link rel="apple-touch-icon" href="/smartphone/images/icon57.jpg" sizes="57x57">
+    <link rel="apple-touch-icon" href="/smartphone/images/icon72.jpg" sizes="72x72">
+    <link rel="apple-touch-icon" href="/smartphone/images/icon114.jpg" sizes="114x114">
+    <link rel="apple-touch-icon" href="/smartphone/images/icon57.jpg">
+    <% End If %>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=1250" /><link rel="shortcut icon" href="/recommend/futari-tsumugi/common/images/favicon.png" />
+<link rel="stylesheet" href="/recommend/futari-tsumugi/common/css/main.css" />
+
+<!-- web font -->
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Work+Sans:wght@400&display=swap" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Work+Sans:wght@400&display=swap" media="print" onload="this.media='all'" />
+<noscript>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Work+Sans:wght@400&display=swap" />
+</noscript>
+
+      <% If Not isSmartPhone Then %>
+    <!-- #include virtual="/_common/head/head.html" -->
+    <% Else %>
+    <!-- #include virtual="/smartphone/_common/head/head.html" -->
+    <% End If %>
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+
+<body>
+      <% If Not isSmartPhone Then %>
+    <!-- #Include virtual="/_common/header/header.html" -->
+    <!-- breadcrumbs -->
+    <ul itemscope itemtype="http://schema.org/BreadcrumbList" class="jtb-nav-breadcrumb">
+      <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+        <a itemprop="item" href="http://www.jtb.co.jp/"><span itemprop="name">JTBホーム</span></a>
+        <meta itemprop="position" content="1">
+      </li>
+      <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+        <span itemprop="name">ふたり紬</span>
+        <meta itemprop="position" content="2">
+      </li>
+    </ul>
+    <!-- /breadcrumbs -->
+    <% Else %>
+    <!-- header -->
+    <!-- #Include virtual="/smartphone/_common/header/header.html" -->
+    <!-- /header -->
+    <% End If %>
+  
+  <div kamiru="inspect">
+        <div id="wrapper">
+      <header id="header">
+  <div class="header__in">
+    <h1 class="header-logo">
+      <a class="header-logo__link effect-fade-hover" href="#wrapper"><img src="/recommend/futari-tsumugi/common/images/svg/logo.svg" alt="JTBの結婚相談所 ふたり紬"></a>
+    </h1><!-- .header__logo -->
+
+    <ul class="header__list">
+      <li>
+        <a href="https://www.instagram.com/jtb_futaritsumugi/" target="_blank" class="header__link header__link--insta">
+          <figure class="header__sns"><img src="/recommend/futari-tsumugi/common/images/icon/ic_insta.png" alt="Instagram" width="80" height="80"></figure>
+        </a>
+      </li>
+      <li>
+        <a href="https://lin.ee/zy6qOdz" target="_blank" class="header__link header__link--line" aria-label="無料カウンセリング予約">
+          <figure class="header__sns"><img src="/recommend/futari-tsumugi/common/images/svg/ic_line.svg" alt="Instagram" width="80" height="80"></figure>
+          <span class="header__linktxt">無料カウンセリング予約</span>
+        </a>
+      </li>
+    </ul>
+
+    <button class="menu" aria-label="メニューを開く" type="button">
+      <span class="menu__btn">
+        <span class="menu__line"></span>
+        <span class="menu__line"></span>
+        <span class="menu__line"></span>
+        <span class="menu__line"></span>
+      </span>
+    </button><!-- .menu -->
+
+    <nav class="nav">
+      <div class="nav__in">
+        <ul class="nav-list">
+          <li class="nav-list__item">
+            <a href="#wrapper" class="nav-list__link">TOP</a>
+          </li>
+          <li class="nav-list__item">
+            <a href="#about" class="nav-list__link">ふたり紬について</a>
+          </li>
+          <li class="nav-list__item">
+            <a href="#service" class="nav-list__link">料金&サービス</a>
+          </li>
+          <li class="nav-list__item">
+            <a href="#flow" class="nav-list__link">成婚までの流れ</a>
+          </li>
+          <li class="nav-list__item">
+            <a href="#staff" class="nav-list__link">スタッフ紹介</a>
+          </li>
+          <li class="nav-list__item">
+            <a href="#comparison" class="nav-list__link">比較</a>
+          </li>
+          <li class="nav-list__item">
+            <a href="#information" class="nav-list__link">運営会社</a>
+          </li>
+          <li class="nav-list__item">
+            <a href="#faq" class="nav-list__link">よくあるご質問</a>
+          </li>
+          <li class="nav-list__item">
+            <a href="#contact" class="nav-list__link">無料相談・お問い合わせ</a>
+          </li>
+        </ul>
+        <ul class="nav-bnr">
+          <li class="nav-bnr__item">
+            <a href="https://www.instagram.com/jtb_futaritsumugi/" target="_blank" class="nav-bnr__link">
+              <img src="/recommend/futari-tsumugi/common/images/bnr/bnr_01.png" alt="最新情報やイベントの様子などはこちらをチェック！" width="640" height="196">
+            </a>
+          </li>
+          <li class="nav-bnr__item nav-bnr__item--line">
+            <a href="https://lin.ee/zy6qOdz" target="_blank" class="nav-bnr__link">
+              <img src="/recommend/futari-tsumugi/common/images/bnr/bnr_02.png" alt="LINEで無料相談" width="640" height="220">
+            </a>
+          </li>
+          <li class="nav-bnr__item">
+            <a href="https://www.jtbbwt.com/government/service/solution/area-marketing/promotion/futari-tsumugi/" target="_blank" class="nav-bnr__link">
+              <img src="/recommend/futari-tsumugi/common/images/bnr/bnr_03.png" alt="自治体・行政機関向けはこちら" width="640" height="196">
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav><!-- .nav -->
+
+  </div><!-- .header__in -->
+</header><!-- #header -->
+
+      <div class="lcl-fixbnr">
+        <a href="https://lin.ee/zy6qOdz"  class="lcl-fixbnr__link effect-fade-hover">
+          <img src="/recommend/futari-tsumugi/common/images/bnr/bnr_02.png" alt="LINEで無料相談" width="640" height="220">
+        </a>
+        <button type="button" class="lcl-fixbnr__close effect-fade-hover" aria-label="バナーを非表示"><svg class="ico_svg ic_cancel" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle class="svg-elm svg-circle svg-circle01" cx="12" cy="12" r="11" fill="white"/>
+<circle class="svg-elm svg-circle svg-circle02" cx="12" cy="12" r="7" fill="white"/>
+<path class="svg-elm svg-path svg-path01" d="M12 2C6.47 2 2 6.47 2 12C2 17.53 6.47 22 12 22C17.53 22 22 17.53 22 12C22 6.47 17.53 2 12 2ZM17 15.59L15.59 17L12 13.41L8.41 17L7 15.59L10.59 12L7 8.41L8.41 7L12 10.59L15.59 7L17 8.41L13.41 12L17 15.59Z" fill="#1F1F1F"/>
+</svg>
+</button>
+      </div>
+
+      <main id="main">
+        <div class="lcl-hero js-load">
+          <div class="lcl-hero__sep">
+            <div class="lcl-hero__cnt">
+              <p class="lcl-hero__lead">じっくり、納得して<br>選びたい方のために。</p>
+              <figure class="lcl-hero__ttl"><img src="/recommend/futari-tsumugi/images/hero/ttl.png" alt="JTB&#215;結婚相談所" width="840" height="514"></figure>
+              <div class="lcl-hero__award">
+                <figure class="lcl-hero__select"><img src="/recommend/futari-tsumugi/common/images/selected.png" alt="2025年 下期 IBJ AWARDに当社が選ばれました" width="162" height="162"></figure>
+                <ul class="lcl-hero__list">
+                  <li>
+                    <figure class="lcl-hero__label"><img src="/recommend/futari-tsumugi/images/hero/img_01.png" alt="業界No.1の会員数 約10万人" width="260" height="162"></figure>
+                  </li>
+                  <li>
+                    <figure class="lcl-hero__label"><img src="/recommend/futari-tsumugi/images/hero/img_02.png" alt="成婚数 No.1" width="260" height="162"></figure>
+                  </li>
+                  <li>
+                    <figure class="lcl-hero__label"><img src="/recommend/futari-tsumugi/images/hero/img_03.png" alt="お見合い数 No.1" width="260" height="162"></figure>
+                  </li>
+                </ul>
+              </div>
+              <p class="txt-small mt5">※当社はIBJの加盟相談所です。※No.1：日本マーケティングリサーチ機構調べ（会員数：2024年12月末時点、2025年2月期 指定領域における市場調査）</p>
+            </div><!-- .lcl-hero__cnt -->
+            <div class="lcl-hero__figarea">
+              <figure class="lcl-hero__person lcl-hero__person--01"><img src="/recommend/futari-tsumugi/images/hero/person_01.jpg" alt="スタッフ画像1" width="364" height="910"></figure>
+              <figure class="lcl-hero__person lcl-hero__person--02"><img src="/recommend/futari-tsumugi/images/hero/person_02.jpg" alt="スタッフ画像2" width="364" height="910"></figure>
+              <figure class="lcl-hero__person lcl-hero__person--03"><img src="/recommend/futari-tsumugi/images/hero/person_03.jpg" alt="スタッフ画像3" width="364" height="910"></figure>
+            </div><!-- .lcl-hero__figarea -->
+          </div><!-- .lcl-hero__sep -->
+        </div><!-- .lcl-hero -->
+
+        <div class="lcl-lead">
+          <div class="lcl-lead__sep">
+            <a href="#gift" class="lcl-lead__box">
+              <p class="lcl-lead__label">ご成婚特典</p>
+              <div class="lcl-lead__cnt lcl-lead-cnt01">
+                <p class="txt-large tac">JTBトラベルギフト</p>
+                <p class="lcl-lead-cnt__txt"><span class="lcl-lead-cnt01__price lcl-lead__underline fwb">50,000<span class="lcl-lead-cnt01__unit c-red">円</span></span><span class="lcl-lead-cnt01__unit">プレゼント！</span></p>
+                <div class="lcl-lead-cnt01__usable">
+                  <ul class="lcl-lead-cnt01__list">
+                    <li class="lcl-lead-cnt01__item">ハネムーン</li>
+                    <li class="lcl-lead-cnt01__item">リゾートウェディング</li>
+                  </ul>
+                  などで使える！
+                </div><!-- .lcl-lead-cnt01__usable -->
+                <span class="lcl-lead__link">詳しくはこちら<svg class="ico_svg ic_down" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path class="svg-elm svg-path svg-path01" d="M20 12L18.59 10.59L13 16.17V4H11V16.17L5.42 10.58L4 12L12 20L20 12Z" fill="#1F1F1F"/>
+</svg>
+</span>
+              </div><!-- .lcl-lead__cnt -->
+            </a><!-- .lcl-lead__box -->
+            <a href="/recommend/futari-tsumugi/common/pdf/campaign.pdf"  rel="noopener noreferrer nofollow" class="lcl-lead__box">
+              <p class="lcl-lead__label">ご紹介キャンペーン</p>
+              <div class="lcl-lead__cnt lcl-lead-cnt02">
+                <p class="txt-large tac">ご紹介した方が入会したら</p>
+                <p class="lcl-lead-cnt__txt"><span class="lcl-lead-cnt02__txt lcl-lead__underline">JTBカタログギフト</span></p>
+                <p class="lcl-lead-cnt02__note">「たびもの撰華 梓（あずさ）」</p>
+                <p class="txt-large tac fw700 mt5-n">プレゼント！</p>
+                <span class="lcl-lead__link">詳しくはこちら<svg class="ico_svg ic_pdf" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path class="svg-elm svg-path svg-path01" d="M20 2H8C6.9 2 6 2.9 6 4V16C6 17.1 6.9 18 8 18H20C21.1 18 22 17.1 22 16V4C22 2.9 21.1 2 20 2ZM11.5 9.5C11.5 10.33 10.83 11 10 11H9V13H7.5V7H10C10.83 7 11.5 7.67 11.5 8.5V9.5ZM16.5 11.5C16.5 12.33 15.83 13 15 13H12.5V7H15C15.83 7 16.5 7.67 16.5 8.5V11.5ZM20.5 8.5H19V9.5H20.5V11H19V13H17.5V7H20.5V8.5ZM9 9.5H10V8.5H9V9.5ZM4 6H2V20C2 21.1 2.9 22 4 22H18V20H4V6ZM14 11.5H15V8.5H14V11.5Z" fill="#1F1F1F"/>
+</svg>
+</span>
+              </div><!-- .lcl-lead__cnt -->
+            </a><!-- .lcl-lead__box -->
+          </div><!-- .lcl-lead__sep -->
+        </div><!-- .lcl-lead -->
+
+        <div class="lcl-recommend">
+          <div class="lcl-recommend__box">
+            <p class="lcl-recommend__lead">JTBの結婚相談所「ふたり紬」は<span>こんな方にオススメ</span></p>
+            <div class="lcl-recommend__cnt">
+              <div class="lcl-recommend__sep">
+                <div class="lcl-recommend__item">
+                  <p class="lcl-recommend__bubble"><span><span class="lcl-recommend__em">条件</span>で比べ続けることに、<br>少し疲れている。</span></p>
+                  <figure class="lcl-recommend__fig"><img src="/recommend/futari-tsumugi/images/recommend/person_01.png" alt="悩んでいる人1"></figure>
+                </div><!-- .lcl-recommend__item -->
+                <div class="lcl-recommend__item">
+                  <p class="lcl-recommend__bubble"><span>急かされる決断ではなく、<br><span class="lcl-recommend__em">納得</span>して選びたい。</span></p>
+                  <figure class="lcl-recommend__fig"><img src="/recommend/futari-tsumugi/images/recommend/person_02.png" alt="悩んでいる人2"></figure>
+                </div><!-- .lcl-recommend__item -->
+                <div class="lcl-recommend__item">
+                  <p class="lcl-recommend__bubble"><span><span class="lcl-recommend__em">失敗したくない</span><br>気持ちが、<br>以前より強くなっている。</span></p>
+                  <figure class="lcl-recommend__fig"><img src="/recommend/futari-tsumugi/images/recommend/person_03.png" alt="悩んでいる人3"></figure>
+                </div><!-- .lcl-recommend__item -->
+              </div><!-- .lcl-recommend__sep -->
+            </div><!-- .lcl-recommend__cnt -->
+          </div><!-- lcl-recommend__box -->
+        </div><!-- lcl-recommend -->
+
+        <div class="lcl-message">
+          <svg class="ico_svg bg_logo" width="565" height="572" viewBox="0 0 565 572" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path class="svg-elm svg-path svg-path01" d="M209.324 316.921C210.514 312.158 211.492 307.315 212.02 302.337C212.443 298.457 212.708 294.523 212.708 290.509V215.34H252.045V194.6C252.045 190.613 252.257 186.679 252.627 182.772H212.708V107.656C212.708 66.2316 245.991 32.5404 286.915 32.5404C315.863 32.5404 340.951 49.4529 353.165 74.0188C355.385 78.461 357.157 83.1708 358.478 88.0679C360.144 94.3298 361.122 100.886 361.122 107.683C361.122 112.152 360.673 116.487 359.932 120.742C358.954 126.308 357.447 131.687 355.332 136.772C347.798 154.835 333.496 169.312 315.651 176.939C313.959 182.532 313.034 188.472 313.034 194.627V211.914C349.913 202.441 379.099 173.487 389.303 136.504C390.572 131.848 391.55 127.084 392.211 122.214C392.846 117.451 393.295 112.634 393.295 107.683C393.295 101.207 392.634 94.9185 391.55 88.7637C390.625 83.4919 389.33 78.354 387.664 73.3498C373.389 30.7743 333.655 0 286.888 0C228.252 0 180.535 48.3022 180.535 107.656V182.826H106.327C47.6914 182.879 0 231.155 0 290.509C0 337.848 30.4019 378.069 72.4359 392.439C71.8279 387.515 71.4842 382.538 71.4842 377.453C71.4842 370.683 72.0658 364.046 73.0968 357.57C48.8546 345.207 32.1203 319.838 32.1203 290.509C32.1203 249.084 65.4038 215.393 106.327 215.393H180.535V255.801V290.509C180.535 294.978 180.085 299.313 179.345 303.568C178.367 309.134 176.86 314.513 174.745 319.597C167.211 337.661 152.908 352.165 135.064 359.765C133.372 365.357 132.447 371.298 132.447 377.453C132.447 383.233 133.293 388.826 134.8 394.125C171.361 383.822 199.965 354.252 209.297 316.921H209.324Z" fill="#F7F7F7"/>
+<path class="svg-elm svg-path svg-path02" d="M492.589 179.615C493.197 184.539 493.541 189.516 493.541 194.601C493.541 201.371 492.959 208.008 491.928 214.484C516.171 226.847 532.905 252.215 532.905 281.545C532.905 322.97 499.621 356.661 458.698 356.661H384.491V316.253V281.545C384.491 277.076 384.94 272.741 385.68 268.486C386.658 262.92 388.165 257.541 390.28 252.456C397.815 234.393 412.117 219.916 429.961 212.289C431.653 206.696 432.578 200.756 432.578 194.574C432.578 188.794 431.733 183.201 430.226 177.902C393.664 188.205 365.06 217.775 355.728 255.106C354.538 259.869 353.56 264.713 353.031 269.69C352.608 273.57 352.344 277.504 352.344 281.518V356.687H313.006V377.427C313.006 381.414 312.795 385.348 312.425 389.255H352.344V464.371C352.344 505.795 319.06 539.487 278.137 539.487C249.189 539.487 224.101 522.574 211.887 498.008C209.666 493.566 207.895 488.856 206.573 483.959C204.908 477.697 203.93 471.141 203.93 464.344C203.93 459.875 204.379 455.54 205.119 451.285C206.097 445.719 207.604 440.34 209.719 435.255C217.253 417.192 231.556 402.688 249.4 395.088C251.092 389.495 252.017 383.555 252.017 377.4V360.113C215.139 369.586 185.953 398.54 175.748 435.523C174.479 440.179 173.501 444.943 172.84 449.813C172.206 454.576 171.756 459.393 171.756 464.344C171.756 470.82 172.417 477.108 173.501 483.263C174.426 488.535 175.722 493.673 177.387 498.677C191.584 541.226 231.318 572 278.084 572C336.72 572 384.438 523.698 384.438 464.344V389.174H458.645C517.281 389.148 564.999 340.845 564.999 281.491C564.999 234.152 534.623 193.932 492.563 179.561L492.589 179.615Z" fill="#F7F7F7"/>
+<path class="svg-elm svg-path svg-path03" d="M89.8835 348.633C88.6146 353.289 87.6364 358.052 86.9755 362.923C86.341 367.686 85.8916 372.503 85.8916 377.454C85.8916 383.93 86.5525 390.218 87.6364 396.373C88.5617 401.645 89.8571 406.783 91.5226 411.787C102.124 443.551 126.947 468.652 158.301 479.383C157.693 474.459 157.349 469.482 157.349 464.398C157.349 457.627 157.931 450.991 158.962 444.515C144.713 437.263 133.107 425.515 125.943 411.091C123.722 406.649 121.951 401.939 120.629 397.042C118.964 390.78 117.985 384.224 117.985 377.454C117.985 372.985 118.435 368.649 119.175 364.395C120.153 358.828 121.66 353.45 123.775 348.365C131.309 330.302 145.612 315.798 163.456 308.198C165.148 302.605 166.073 296.664 166.073 290.51V273.222C129.195 282.696 100.009 311.65 89.8042 348.633H89.8835Z" fill="#F7F7F7"/>
+<path class="svg-elm svg-path svg-path04" d="M269.81 168.188C268.621 172.952 267.642 177.795 267.114 182.773C266.691 186.653 266.426 190.587 266.426 194.601V269.77H227.089V290.509C227.089 294.497 226.877 298.43 226.507 302.337H266.426V342.772V377.48C266.426 381.949 265.977 386.284 265.237 390.539C264.259 396.105 262.752 401.484 260.637 406.569C253.102 424.632 238.8 439.136 220.956 446.736C219.264 452.329 218.338 458.269 218.338 464.424C218.338 470.204 219.184 475.797 220.691 481.096C257.253 470.793 285.831 441.223 295.189 403.893C296.379 399.129 297.357 394.286 297.886 389.308C298.309 385.428 298.573 381.494 298.573 377.48V302.311H337.91V281.572C337.91 277.584 338.122 273.65 338.492 269.743H298.573V229.309V194.601C298.573 190.132 299.022 185.797 299.763 181.542C300.741 175.976 302.248 170.597 304.363 165.512C311.897 147.449 326.199 132.972 344.044 125.345C345.736 119.752 346.661 113.812 346.661 107.657C346.661 101.877 345.815 96.2836 344.308 90.9851C307.747 101.288 279.169 130.858 269.81 168.188Z" fill="#F7F7F7"/>
+<path class="svg-elm svg-path svg-path05" d="M477.388 175.681C476.462 170.41 475.167 165.272 473.501 160.267C462.9 128.503 438.077 103.402 406.723 92.6711C407.331 97.595 407.675 102.572 407.675 107.657C407.675 114.427 407.093 121.064 406.062 127.54C420.311 134.792 431.917 146.539 439.081 160.963C441.302 165.405 443.073 170.115 444.395 175.012C446.06 181.274 447.039 187.831 447.039 194.601C447.039 199.07 446.589 203.405 445.849 207.66C444.871 213.226 443.364 218.605 441.249 223.689C433.715 241.752 419.412 256.23 401.568 263.856C399.876 269.449 398.951 275.39 398.951 281.545V298.832C435.83 289.359 465.042 260.404 475.22 223.422C476.489 218.765 477.467 214.002 478.128 209.132C478.762 204.368 479.212 199.552 479.212 194.601C479.212 188.125 478.551 181.836 477.467 175.681H477.388Z" fill="#F7F7F7"/>
+</svg>
+          <div class="lcl-message__in">
+            <p class="title-01 c-red">結婚相談所を、<br>「じっくり、納得して」<br>選びたい方へ。</p>
+            <div class="mt50-w mt20-n">
+              <p>結婚相談所は、実績や会員数、料金の違いは見えても、<br>それだけで自分に合うかどうかを判断することはできません。<br>条件で比べるほど迷いが増え、立ち止まってしまい、踏み出せない方もいます。</p>
+              <p class="txt-large c-red mt20-w mt15-n">ふたり紬は、そうした悩みを抱えたまま相談できる結婚相談所です。</p>
+              <p class="mt5-n">JTBは110年以上にわたり、人生の節目に関わる<br class="dn-n">「簡単には決められない旅行など」を数多くお預かりしてきました。</p>
+              <p class="mt20-w mt15-n">だからこそ結婚においても、結論を急がせることなく、<br>納得して選ぶプロセスを大切にしています。</p>
+              <p class="txt-large c-red mt5-n">ふたり紬では、入会を決める前から、今の気持ちや迷いを、丁寧にお聞きしています。</p>
+              <p class="mt20-w mt15-n">結婚相談所を選ぶ前の一歩として、<br class="dn-n">まずは、今の気持ちをお聞かせください。</p>
+            </div>
+
+            <div class="lcl-message-btm">
+              <div class="lcl-message-btm__sep">
+                <div class="lcl-message-btm__cnt">
+                  <div class="lcl-message-btm__info">
+                    <figure class="lcl-message-btm__icon"><img src="/recommend/futari-tsumugi/images/message/phone.png" alt="スマートフォンのアイコン" width="124" height="124"></figure>
+                    <p class="lcl-message-btm__txt">スマホひとつで、全国約10万人<sup>※</sup>の<br class="dn-n">会員様の中から理想のお相手探し。</p>
+                  </div>
+                  <p class="mt20-w mt15-n">日本最大級の結婚相談所ネットワークを活用し、豊富な会員データの中からあなたにぴったりのパートナー探しをサポートいたします。場所を選ばず、いつでもどこでも本格的な婚活が可能です。</p>
+                  <p class="txt-small mt10">※当社はIBJの加盟相談所です。</p>
+                </div>
+                <div class="lcl-message-btm__figarea">
+                  <figure class="lcl-message-btm__fig"><img src="/recommend/futari-tsumugi/images/message/img_01.jpg" alt="スマホでお相手を探している画像" width="650" height="600"></figure>
+                  <p class="lcl-message-btm__bubble"><img src="/recommend/futari-tsumugi/images/message/txt.png" alt="いつでもどこでもお相手が探せる♪"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <ul class="lcl-nav">
+          <li class="lcl-nav__item">
+            <a href="#about" class="lcl-nav__link">
+              ふたり紬について
+              <svg class="ico_svg ic_down" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path class="svg-elm svg-path svg-path01" d="M20 12L18.59 10.59L13 16.17V4H11V16.17L5.42 10.58L4 12L12 20L20 12Z" fill="#1F1F1F"/>
+</svg>
+            </a>
+          </li>
+          <li class="lcl-nav__item">
+            <a href="#service" class="lcl-nav__link">
+              料金&サービス
+              <svg class="ico_svg ic_down" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path class="svg-elm svg-path svg-path01" d="M20 12L18.59 10.59L13 16.17V4H11V16.17L5.42 10.58L4 12L12 20L20 12Z" fill="#1F1F1F"/>
+</svg>
+            </a>
+          </li>
+          <li class="lcl-nav__item">
+            <a href="#flow" class="lcl-nav__link">
+              成婚までの流れ
+              <svg class="ico_svg ic_down" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path class="svg-elm svg-path svg-path01" d="M20 12L18.59 10.59L13 16.17V4H11V16.17L5.42 10.58L4 12L12 20L20 12Z" fill="#1F1F1F"/>
+</svg>
+            </a>
+          </li>
+          <li class="lcl-nav__item">
+            <a href="#staff" class="lcl-nav__link">
+              スタッフ紹介
+              <svg class="ico_svg ic_down" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path class="svg-elm svg-path svg-path01" d="M20 12L18.59 10.59L13 16.17V4H11V16.17L5.42 10.58L4 12L12 20L20 12Z" fill="#1F1F1F"/>
+</svg>
+            </a>
+          </li>
+          <li class="lcl-nav__item">
+            <a href="#comparison" class="lcl-nav__link">
+              比較
+              <svg class="ico_svg ic_down" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path class="svg-elm svg-path svg-path01" d="M20 12L18.59 10.59L13 16.17V4H11V16.17L5.42 10.58L4 12L12 20L20 12Z" fill="#1F1F1F"/>
+</svg>
+            </a>
+          </li>
+          <li class="lcl-nav__item">
+            <a href="#information" class="lcl-nav__link">
+              運営会社
+              <svg class="ico_svg ic_down" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path class="svg-elm svg-path svg-path01" d="M20 12L18.59 10.59L13 16.17V4H11V16.17L5.42 10.58L4 12L12 20L20 12Z" fill="#1F1F1F"/>
+</svg>
+            </a>
+          </li>
+          <li class="lcl-nav__item">
+            <a href="#faq" class="lcl-nav__link">
+              よくある<br class="dn-w">ご質問
+              <svg class="ico_svg ic_down" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path class="svg-elm svg-path svg-path01" d="M20 12L18.59 10.59L13 16.17V4H11V16.17L5.42 10.58L4 12L12 20L20 12Z" fill="#1F1F1F"/>
+</svg>
+            </a>
+          </li>
+          <li class="lcl-nav__item">
+            <a href="#contact" class="lcl-nav__link">
+              無料相談・<br class="dn-w">お問い合わせ
+              <svg class="ico_svg ic_down" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path class="svg-elm svg-path svg-path01" d="M20 12L18.59 10.59L13 16.17V4H11V16.17L5.42 10.58L4 12L12 20L20 12Z" fill="#1F1F1F"/>
+</svg>
+            </a>
+          </li>
+        </ul>
+
+        <section class="lcl-about" id="about">
+          <svg class="ico_svg bg_logo" width="565" height="572" viewBox="0 0 565 572" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path class="svg-elm svg-path svg-path01" d="M209.324 316.921C210.514 312.158 211.492 307.315 212.02 302.337C212.443 298.457 212.708 294.523 212.708 290.509V215.34H252.045V194.6C252.045 190.613 252.257 186.679 252.627 182.772H212.708V107.656C212.708 66.2316 245.991 32.5404 286.915 32.5404C315.863 32.5404 340.951 49.4529 353.165 74.0188C355.385 78.461 357.157 83.1708 358.478 88.0679C360.144 94.3298 361.122 100.886 361.122 107.683C361.122 112.152 360.673 116.487 359.932 120.742C358.954 126.308 357.447 131.687 355.332 136.772C347.798 154.835 333.496 169.312 315.651 176.939C313.959 182.532 313.034 188.472 313.034 194.627V211.914C349.913 202.441 379.099 173.487 389.303 136.504C390.572 131.848 391.55 127.084 392.211 122.214C392.846 117.451 393.295 112.634 393.295 107.683C393.295 101.207 392.634 94.9185 391.55 88.7637C390.625 83.4919 389.33 78.354 387.664 73.3498C373.389 30.7743 333.655 0 286.888 0C228.252 0 180.535 48.3022 180.535 107.656V182.826H106.327C47.6914 182.879 0 231.155 0 290.509C0 337.848 30.4019 378.069 72.4359 392.439C71.8279 387.515 71.4842 382.538 71.4842 377.453C71.4842 370.683 72.0658 364.046 73.0968 357.57C48.8546 345.207 32.1203 319.838 32.1203 290.509C32.1203 249.084 65.4038 215.393 106.327 215.393H180.535V255.801V290.509C180.535 294.978 180.085 299.313 179.345 303.568C178.367 309.134 176.86 314.513 174.745 319.597C167.211 337.661 152.908 352.165 135.064 359.765C133.372 365.357 132.447 371.298 132.447 377.453C132.447 383.233 133.293 388.826 134.8 394.125C171.361 383.822 199.965 354.252 209.297 316.921H209.324Z" fill="#F7F7F7"/>
+<path class="svg-elm svg-path svg-path02" d="M492.589 179.615C493.197 184.539 493.541 189.516 493.541 194.601C493.541 201.371 492.959 208.008 491.928 214.484C516.171 226.847 532.905 252.215 532.905 281.545C532.905 322.97 499.621 356.661 458.698 356.661H384.491V316.253V281.545C384.491 277.076 384.94 272.741 385.68 268.486C386.658 262.92 388.165 257.541 390.28 252.456C397.815 234.393 412.117 219.916 429.961 212.289C431.653 206.696 432.578 200.756 432.578 194.574C432.578 188.794 431.733 183.201 430.226 177.902C393.664 188.205 365.06 217.775 355.728 255.106C354.538 259.869 353.56 264.713 353.031 269.69C352.608 273.57 352.344 277.504 352.344 281.518V356.687H313.006V377.427C313.006 381.414 312.795 385.348 312.425 389.255H352.344V464.371C352.344 505.795 319.06 539.487 278.137 539.487C249.189 539.487 224.101 522.574 211.887 498.008C209.666 493.566 207.895 488.856 206.573 483.959C204.908 477.697 203.93 471.141 203.93 464.344C203.93 459.875 204.379 455.54 205.119 451.285C206.097 445.719 207.604 440.34 209.719 435.255C217.253 417.192 231.556 402.688 249.4 395.088C251.092 389.495 252.017 383.555 252.017 377.4V360.113C215.139 369.586 185.953 398.54 175.748 435.523C174.479 440.179 173.501 444.943 172.84 449.813C172.206 454.576 171.756 459.393 171.756 464.344C171.756 470.82 172.417 477.108 173.501 483.263C174.426 488.535 175.722 493.673 177.387 498.677C191.584 541.226 231.318 572 278.084 572C336.72 572 384.438 523.698 384.438 464.344V389.174H458.645C517.281 389.148 564.999 340.845 564.999 281.491C564.999 234.152 534.623 193.932 492.563 179.561L492.589 179.615Z" fill="#F7F7F7"/>
+<path class="svg-elm svg-path svg-path03" d="M89.8835 348.633C88.6146 353.289 87.6364 358.052 86.9755 362.923C86.341 367.686 85.8916 372.503 85.8916 377.454C85.8916 383.93 86.5525 390.218 87.6364 396.373C88.5617 401.645 89.8571 406.783 91.5226 411.787C102.124 443.551 126.947 468.652 158.301 479.383C157.693 474.459 157.349 469.482 157.349 464.398C157.349 457.627 157.931 450.991 158.962 444.515C144.713 437.263 133.107 425.515 125.943 411.091C123.722 406.649 121.951 401.939 120.629 397.042C118.964 390.78 117.985 384.224 117.985 377.454C117.985 372.985 118.435 368.649 119.175 364.395C120.153 358.828 121.66 353.45 123.775 348.365C131.309 330.302 145.612 315.798 163.456 308.198C165.148 302.605 166.073 296.664 166.073 290.51V273.222C129.195 282.696 100.009 311.65 89.8042 348.633H89.8835Z" fill="#F7F7F7"/>
+<path class="svg-elm svg-path svg-path04" d="M269.81 168.188C268.621 172.952 267.642 177.795 267.114 182.773C266.691 186.653 266.426 190.587 266.426 194.601V269.77H227.089V290.509C227.089 294.497 226.877 298.43 226.507 302.337H266.426V342.772V377.48C266.426 381.949 265.977 386.284 265.237 390.539C264.259 396.105 262.752 401.484 260.637 406.569C253.102 424.632 238.8 439.136 220.956 446.736C219.264 452.329 218.338 458.269 218.338 464.424C218.338 470.204 219.184 475.797 220.691 481.096C257.253 470.793 285.831 441.223 295.189 403.893C296.379 399.129 297.357 394.286 297.886 389.308C298.309 385.428 298.573 381.494 298.573 377.48V302.311H337.91V281.572C337.91 277.584 338.122 273.65 338.492 269.743H298.573V229.309V194.601C298.573 190.132 299.022 185.797 299.763 181.542C300.741 175.976 302.248 170.597 304.363 165.512C311.897 147.449 326.199 132.972 344.044 125.345C345.736 119.752 346.661 113.812 346.661 107.657C346.661 101.877 345.815 96.2836 344.308 90.9851C307.747 101.288 279.169 130.858 269.81 168.188Z" fill="#F7F7F7"/>
+<path class="svg-elm svg-path svg-path05" d="M477.388 175.681C476.462 170.41 475.167 165.272 473.501 160.267C462.9 128.503 438.077 103.402 406.723 92.6711C407.331 97.595 407.675 102.572 407.675 107.657C407.675 114.427 407.093 121.064 406.062 127.54C420.311 134.792 431.917 146.539 439.081 160.963C441.302 165.405 443.073 170.115 444.395 175.012C446.06 181.274 447.039 187.831 447.039 194.601C447.039 199.07 446.589 203.405 445.849 207.66C444.871 213.226 443.364 218.605 441.249 223.689C433.715 241.752 419.412 256.23 401.568 263.856C399.876 269.449 398.951 275.39 398.951 281.545V298.832C435.83 289.359 465.042 260.404 475.22 223.422C476.489 218.765 477.467 214.002 478.128 209.132C478.762 204.368 479.212 199.552 479.212 194.601C479.212 188.125 478.551 181.836 477.467 175.681H477.388Z" fill="#F7F7F7"/>
+</svg>
+          <div class="lcl-about__in">
+            <div class="lcl-cmn-ttl">
+              <svg class="ico_svg logo-mark" width="29" height="30" viewBox="0 0 29 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path class="svg-elm svg-path svg-path01" d="M10.7441 16.6218C10.8051 16.3719 10.8553 16.1179 10.8825 15.8568C10.9042 15.6533 10.9177 15.447 10.9177 15.2365V11.294H12.9368V10.2063C12.9368 9.99719 12.9477 9.79088 12.9667 9.58596H10.9177V5.64632C10.9177 3.47368 12.6261 1.70667 14.7266 1.70667C16.2124 1.70667 17.5001 2.59368 18.127 3.8821C18.241 4.11509 18.3319 4.3621 18.3998 4.61895C18.4853 4.94737 18.5355 5.29123 18.5355 5.64772C18.5355 5.8821 18.5124 6.10947 18.4744 6.33263C18.4242 6.62456 18.3469 6.90667 18.2383 7.17333C17.8516 8.1207 17.1175 8.88 16.2016 9.28C16.1147 9.57333 16.0672 9.88491 16.0672 10.2077V11.1144C17.9601 10.6175 19.4582 9.09895 19.9819 7.1593C20.0471 6.91509 20.0973 6.66526 20.1312 6.40982C20.1638 6.16 20.1868 5.90737 20.1868 5.64772C20.1868 5.30807 20.1529 4.97824 20.0973 4.65544C20.0498 4.37895 19.9833 4.10947 19.8978 3.84702C19.1651 1.61403 17.1256 0 14.7252 0C11.7156 0 9.26638 2.53333 9.26638 5.64632V9.58877H5.45752C2.44788 9.59158 0 12.1235 0 15.2365C0 17.7193 1.56045 19.8288 3.71795 20.5825C3.68674 20.3242 3.6691 20.0632 3.6691 19.7965C3.6691 19.4414 3.69895 19.0933 3.75187 18.7537C2.50758 18.1053 1.64865 16.7747 1.64865 15.2365C1.64865 13.0639 3.35701 11.2968 5.45752 11.2968H9.26638V13.4161V15.2365C9.26638 15.4709 9.24331 15.6982 9.20532 15.9214C9.15511 16.2133 9.07777 16.4954 8.96921 16.7621C8.58249 17.7095 7.8484 18.4702 6.93248 18.8688C6.84564 19.1621 6.79815 19.4737 6.79815 19.7965C6.79815 20.0996 6.84157 20.393 6.91891 20.6709C8.79553 20.1305 10.2637 18.5796 10.7427 16.6218H10.7441Z" fill="#E60012"/>
+<path class="svg-elm svg-path svg-path02" d="M25.2834 9.42039C25.3147 9.67864 25.3323 9.93969 25.3323 10.2064C25.3323 10.5614 25.3024 10.9095 25.2495 11.2492C26.4938 11.8976 27.3527 13.2281 27.3527 14.7664C27.3527 16.939 25.6444 18.706 23.5439 18.706H19.735V16.5867V14.7664C19.735 14.532 19.7581 14.3046 19.7961 14.0814C19.8463 13.7895 19.9236 13.5074 20.0322 13.2407C20.4189 12.2934 21.153 11.5341 22.0689 11.1341C22.1558 10.8407 22.2032 10.5292 22.2032 10.205C22.2032 9.90179 22.1598 9.60846 22.0825 9.33057C20.2059 9.87092 18.7377 11.4218 18.2587 13.3797C18.1976 13.6295 18.1474 13.8835 18.1203 14.1446C18.0986 14.3481 18.085 14.5544 18.085 14.765V18.7074H16.0659V19.7951C16.0659 20.0042 16.0551 20.2106 16.0361 20.4155H18.085V24.3551C18.085 26.5278 16.3767 28.2948 14.2761 28.2948C12.7903 28.2948 11.5026 27.4078 10.8757 26.1193C10.7617 25.8864 10.6708 25.6393 10.603 25.3825C10.5175 25.0541 10.4673 24.7102 10.4673 24.3537C10.4673 24.1193 10.4904 23.892 10.5283 23.6688C10.5786 23.3769 10.6559 23.0948 10.7644 22.8281C11.1512 21.8807 11.8853 21.12 12.8012 20.7214C12.888 20.4281 12.9355 20.1165 12.9355 19.7937V18.8871C11.0426 19.3839 9.54458 20.9025 9.02081 22.8421C8.95568 23.0864 8.90547 23.3362 8.87155 23.5916C8.83898 23.8414 8.81592 24.0941 8.81592 24.3537C8.81592 24.6934 8.84984 25.0232 8.90547 25.346C8.95297 25.6225 9.01945 25.892 9.10494 26.1544C9.8336 28.386 11.873 30 14.2734 30C17.2831 30 19.7323 27.4667 19.7323 24.3537V20.4113H23.5412C26.5508 20.4099 29 17.8765 29 14.7635C29 12.2807 27.4409 10.1713 25.2821 9.41758L25.2834 9.42039Z" fill="#E60012"/>
+<path class="svg-elm svg-path svg-path03" d="M4.61359 18.2849C4.54845 18.5291 4.49825 18.779 4.46432 19.0344C4.43176 19.2842 4.40869 19.5369 4.40869 19.7965C4.40869 20.1362 4.44261 20.466 4.49825 20.7888C4.54574 21.0653 4.61223 21.3347 4.69771 21.5972C5.24184 23.2632 6.51598 24.5797 8.12528 25.1425C8.09407 24.8842 8.07643 24.6232 8.07643 24.3565C8.07643 24.0014 8.10629 23.6533 8.15921 23.3137C7.42783 22.9333 6.83214 22.3172 6.46442 21.5607C6.35044 21.3277 6.25952 21.0807 6.19168 20.8239C6.10619 20.4954 6.05599 20.1516 6.05599 19.7965C6.05599 19.5621 6.07905 19.3347 6.11705 19.1116C6.16725 18.8197 6.2446 18.5376 6.35315 18.2709C6.73987 17.3235 7.47396 16.5628 8.38988 16.1642C8.47672 15.8709 8.52422 15.5593 8.52422 15.2365V14.3298C6.63132 14.8267 5.13328 16.3453 4.60951 18.2849H4.61359Z" fill="#666666"/>
+<path class="svg-elm svg-path svg-path04" d="M13.8485 8.8211C13.7874 9.07092 13.7372 9.32496 13.7101 9.58601C13.6883 9.78952 13.6748 9.99583 13.6748 10.2064V14.1488H11.6557V15.2365C11.6557 15.4457 11.6448 15.652 11.6258 15.8569H13.6748V17.9776V19.7979C13.6748 20.0323 13.6517 20.2597 13.6137 20.4829C13.5635 20.7748 13.4862 21.0569 13.3776 21.3236C12.9909 22.2709 12.2568 23.0316 11.3409 23.4302C11.254 23.7236 11.2065 24.0351 11.2065 24.3579C11.2065 24.6611 11.25 24.9544 11.3273 25.2323C13.2039 24.692 14.6707 23.1411 15.1511 21.1832C15.2122 20.9334 15.2624 20.6793 15.2895 20.4183C15.3112 20.2148 15.3248 20.0085 15.3248 19.7979V15.8555H17.3439V14.7678C17.3439 14.5586 17.3547 14.3523 17.3737 14.1474H15.3248V12.0267V10.2064C15.3248 9.97197 15.3478 9.7446 15.3858 9.52145C15.436 9.22952 15.5134 8.94741 15.6219 8.68074C16.0087 7.73338 16.7428 6.97408 17.6587 6.57408C17.7455 6.28074 17.793 5.96917 17.793 5.64636C17.793 5.3432 17.7496 5.04987 17.6722 4.77197C15.7956 5.31232 14.3288 6.8632 13.8485 8.8211Z" fill="#666666"/>
+<path class="svg-elm svg-path svg-path05" d="M24.503 9.21404C24.4555 8.93754 24.389 8.66807 24.3036 8.40561C23.7594 6.73965 22.4853 5.42316 20.876 4.86035C20.9072 5.1186 20.9248 5.37965 20.9248 5.64632C20.9248 6.0014 20.895 6.34947 20.8421 6.68912C21.5734 7.06947 22.1691 7.68561 22.5368 8.44211C22.6508 8.67509 22.7417 8.92211 22.8096 9.17895C22.8951 9.50737 22.9453 9.85123 22.9453 10.2063C22.9453 10.4407 22.9222 10.6681 22.8842 10.8912C22.834 11.1832 22.7567 11.4653 22.6481 11.7319C22.2614 12.6793 21.5273 13.4386 20.6114 13.8386C20.5245 14.1319 20.4771 14.4435 20.4771 14.7663V15.673C22.3699 15.1761 23.8693 13.6575 24.3918 11.7179C24.4569 11.4737 24.5071 11.2239 24.541 10.9684C24.5736 10.7186 24.5966 10.466 24.5966 10.2063C24.5966 9.86667 24.5627 9.53684 24.5071 9.21404H24.503Z" fill="#666666"/>
+</svg>
+              <p class="lcl-cmn-ttl__en">ABOUT</p>
+              <h2>ふたり紬について</h2>
+            </div><!-- .lcl-cmn-ttl -->
+            <div class="lcl-about__wrap">
+              <div class="lcl-about__block">
+                <figure class="lcl-about__fig lcl-about__fig--01"></figure>
+                <div class="lcl-about__cnt">
+                  <div class="lcl-about__head">
+                    <p class="lcl-about__num">01</p>
+                    <h3 class="lcl-about__lead">JTBのトップコンサルタントが<br>あなたの成婚をしっかり<br class="dn-w">サポート</h3>
+                  </div>
+                  <p class="mt15">JTBロイヤルスタッフをはじめ、社内で育成・選抜されたカウンセラーが婚活のサポートを行っています。JTBが長年大切にしてきたのは、人の意思決定に向き合うための対話力と姿勢です。<br>人生の選択に関わる仕事を担うため、対話や判断支援を重視した育成を継続して行ってきました。結婚相談所の運営においても、その考え方は変わりません。</p>
+                  <ul class="txt-small mt20-w mt10-n">
+                    <li>※一部のカウンセラーは、JLCA「結婚カウンセラー資格」等の認定を取得しています。</li>
+                    <li>※JTB社員の育成について<a href="https://www.jtbcorp.jp/jp/job_offer/recruit/careerculture/career/" target="_blank" class="tdu"><span class="c-black">詳しくはこちら</span></a></li>
+                    <li>※JTBロイヤルスタッフについて<a href="https://www.jtb.co.jp/stores/royalstaff/" target="_blank" class="tdu"><span class="c-black">詳しくはこちら</span></a></li>
+                  </ul>
+                  <a href="#staff" class="btn01 mt20">
+                    <span class="btn01__txt">スタッフ紹介</span>
+                    <svg class="ico_svg ic_down" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path class="svg-elm svg-path svg-path01" d="M20 12L18.59 10.59L13 16.17V4H11V16.17L5.42 10.58L4 12L12 20L20 12Z" fill="#1F1F1F"/>
+</svg>
+                  </a>
+                </div>
+              </div><!-- .lcl-about__block -->
+              <div class="lcl-about__block">
+                <figure class="lcl-about__fig lcl-about__fig--02"></figure>
+                <div class="lcl-about__cnt">
+                  <div class="lcl-about__head">
+                    <p class="lcl-about__num">02</p>
+                    <h3 class="lcl-about__lead">業界最大手<sup>※</sup>のIBJの<br class="dn-w">正規加盟店だから圧倒的な<br class="dn-w">会員数と出会いのチャンスがある</h3>
+                  </div>
+                  <p class="mt15">JTBの結婚相談所 ふたり紬は、業界最大手IBJの正規加盟店です。<span class="dib">充実したサポート体制のもと、</span>安心して婚活を進めることができます。<br>約10万人の会員が在籍するIBJのネットワークを活用し、あなたの理想のお相手との出会いをサポートします。さらにJTBが運営しているため、独自のホスピタリティを活かし、人を介した信頼性のあるマッチングを提供します。<br>旅行相談のように、お気軽にご来店ください。</p>
+                  <ul class="txt-small mt20-w mt10-n">
+                    <li>※日本マーケティングリサーチ機構調べ（会員数：2024年12月末時点、2025年2月期 指定領域における市場調査）</li>
+                  </ul>
+                  <ul class="lcl-about-info">
+                    <li class="lcl-about-info__item">
+                      <p class="lcl-about-info__label">会員数</p>
+                      <div class="lcl-about-info__cnt">
+                        <p class="lcl-about-info__value">
+                          <span class="lcl-about-info__num">104,859</span>名
+                        </p>
+                        <p class="txt-small">（2025年12月末時点／<br class="dn-n">IBJ会員データ）</p>
+                      </div>
+                    </li>
+                    <li class="lcl-about-info__item">
+                      <p class="lcl-about-info__label">年間お見合い<br class="dn-w">成立数</p>
+                      <div class="lcl-about-info__cnt">
+                        <p class="lcl-about-info__value">
+                          <span class="lcl-about-info__num">969,782</span>件
+                        </p>
+                        <p class="txt-small">（2025年12月末時点／<br class="dn-n">IBJ会員データ）</p>
+                      </div>
+                    </li>
+                    <li class="lcl-about-info__item">
+                      <p class="lcl-about-info__label">年間成婚数</p>
+                      <div class="lcl-about-info__cnt">
+                        <p class="lcl-about-info__value">
+                          <span class="lcl-about-info__num">19,112</span>名
+                        </p>
+                        <p class="txt-small">（2025年時点／<br class="dn-n">IBJ会員データ）</p>
+                      </div>
+                    </li>
+                  </ul>
+                  <div class="lcl-about-box lcl-about-box01 mt20">
+                    <figure class="lcl-about-box01__fig"><img src="/recommend/futari-tsumugi/common/images/selected.png" alt="IBJ AWARD®に当社が選ばれました" width="240" height="240"></figure>
+                    <div class="lcl-about-box01__cnt">
+                      <p class="c-red txt-large">IBJ AWARD®に当社が選ばれました！</p>
+                      <p class="mt5">IBJ AWARD®とは、全国4,777社の結婚相談所の中から実績と信頼性の両面で、全相談所のうちわずか10～15％程度しか受賞できない非常に名誉ある賞です。</p>
+                      <p class="mt5 txt-small">※「IBJ AWARD®」は株式会社IBJの商標登録です。</p>
+                    </div>
+                  </div>
+                </div>
+              </div><!-- .lcl-about__block -->
+              <div class="lcl-about__block">
+                <figure class="lcl-about__fig lcl-about__fig--03"></figure>
+                <div class="lcl-about__cnt">
+                  <div class="lcl-about__head">
+                    <p class="lcl-about__num">03</p>
+                    <h3 class="lcl-about__lead">全国対応×オンライン<br>スマホで気軽に婚活</h3>
+                  </div>
+                  <p class="mt15">ふたり紬は、全国どこからでも、オンラインで気軽に相談できる結婚相談所です。スマートフォンやパソコンがあれば、場所や移動時間に縛られることなく全国から理想のお相手探しができます。<br>JTBはこれまで、オンラインでの相談・手配・コンシェルジュ対応を数多く行ってきました。画面越しでも相手の意向を丁寧にくみ取り、安心して話せる関係をつくることを大切にしています。<br>距離を理由に、妥協しない。全国どこにいても、同じ質で寄り添える。それが、JTBのオンライン婚活です。</p>
+                  <ul class="txt-small mt20-w mt10-n">
+                    <li>※JTBリモート相談について<a href="https://consultants.jtb.co.jp/top" target="_blank" class="tdu"><span class="c-black">詳しくはこちら</span></a></li>
+                  </ul>
+                  <div class="lcl-about-box lcl-about-box02 mt20">
+                    <p class="c-red title-04">オンライン婚活は<br class="dn-w">こんな方に向いています</p>
+                    <ul class="mt15-w mt10-n">
+                      <li class="lcl-about-box02__item">忙しい日々でも、時間を有効活用して効率的に婚活を進めたい方</li>
+                      <li class="lcl-about-box02__item">出会いの機会が限られる地域にお住まいの方で、<br>居住地域に限定されず、全国規模で理想のお相手と出会いたい方</li>
+                    </ul>
+                  </div>
+                </div>
+              </div><!-- .lcl-about__block -->
+              <div class="lcl-about__block" id="gift">
+                <figure class="lcl-about__fig lcl-about__fig--04"></figure>
+                <div class="lcl-about__cnt">
+                  <div class="lcl-about__head">
+                    <p class="lcl-about__num">04</p>
+                    <h3 class="lcl-about__lead">JTBならではの<br class="dn-w">ネットワークで、<br class="dn-n">成婚後の<br class="dn-w">生活もトータルサポート</h3>
+                  </div>
+                  <p class="mt15">ふたり紬では、成婚をひとつの節目と考えています。結婚はゴールではなく、その先の生活が続いていくものだからです。JTBはこれまで、人生の節目に寄り添う仕事を重ねてきました。ハネムーンやウェディング、贈り物の手配なども、必要なときに、無理なく相談いただけます。<br>「次はどうするか」を、急いで決める必要はありません。人生の流れの中で、自然につながっていく。それも、JTBらしいかたちだと考えています。</p>
+                  <ul class="txt-small mt20-w mt10-n">
+                    <li>※JTBのサービスについて<a href="https://www.jtb.co.jp/" target="_blank" class="tdu"><span class="c-black">詳しくはこちら</span></a></li>
+                    <li>※JTB海外ウェディング・結婚式について<a href="https://www.jtb.co.jp/wed/" target="_blank" class="tdu"><span class="c-black">詳しくはこちら</span></a></li>
+                  </ul>
+                  <div class="lcl-about-box lcl-about-box03 mt20">
+                    <p class="lcl-about-box03__label">ご成婚特典</p>
+                    <p class="lcl-about-box03__sub">JTBトラベルギフト</p>
+                    <p class="lcl-about-box03__ttl">50,000<span class="lcl-about-box03__unit">円分プレゼント！</span></p>
+                    <p class="mt15">当相談所でご成婚されたお二人に、ハネムーン・リゾートウェディングなどで使える「JTBトラベルギフト5万円分」をプレゼントいたします（ご成婚カップル1組につき1つ）。</p>
+                    <div class="lcl-about-box03__box">
+                      <p class="lcl-about-box03__lead">ご利用方法</p>
+                      <p class="lcl-about-box03__detail">JTBトラベルギフトカードとしてお渡しします。全国のJTBグループ店舗やJTBホームページでご利用いただけます。</p>
+                    </div>
+                    <ul class="txt-small mt15">
+                      <li>※ご利用には、「JTBトラベルメンバー」へのご登録（無料）が必要です。</li>
+                    </ul>
+                  </div>
+                  <a href="https://www.jtb.co.jp/wed/?utm_source=futaritsumugi&utm_medium=banner&utm_campaign=kochi_branch" target="_blank" class="lcl-about__bnr effect-fade-hover"><img src="/recommend/futari-tsumugi/images/about/bnr.png" alt="リゾートウェディング・海外挙式のご相談なら、JTB WEDDING" width="1160" height="360"></a>
+                </div>
+              </div><!-- .lcl-about__block -->
+            </div><!-- .lcl-about__wrap -->
+          </div><!-- .lcl-about__in -->
+        </section><!-- .lcl-about -->
+
+        <div class="fs-ctaarea">
+  <div class="fs-ctaarea__bg"></div>
+  <div class="fs-ctaarea__in">
+    <figure class="fs-ctaarea__fig fs-ctaarea__fig--01"><img src="/recommend/futari-tsumugi/common/images/ctaarea/people_01.png" alt="スタッフ画像1" width="680" height="834"></figure>
+    <figure class="fs-ctaarea__fig fs-ctaarea__fig--02"><img src="/recommend/futari-tsumugi/common/images/ctaarea/people_02.png" alt="スタッフ画像2" width="680" height="834"></figure>
+    <p class="fs-ctaarea__ttl">結婚相談所を<span>比較中</span>の方へ</p>
+    <a href="https://lin.ee/zy6qOdz"  awicon="nothing" class="fs-ctaarea__link">
+      <span class="fs-ctaarea__label">
+        <svg class="ico_svg ic_line" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path class="svg-elm svg-path svg-path01" d="M30.0671 1.66666H9.93255C5.36734 1.66666 1.6665 5.3675 1.6665 9.93271V30.0673C1.6665 34.6325 5.36734 38.3333 9.93255 38.3333H30.0671C34.6323 38.3333 38.3332 34.6325 38.3332 30.0673V9.93271C38.3332 5.3675 34.6323 1.66666 30.0671 1.66666Z" fill="#06C755"/>
+<path class="svg-elm svg-path svg-path02" d="M32.2213 18.2721C32.2213 12.8019 26.7373 8.35146 19.9964 8.35146C13.2554 8.35146 7.77148 12.8019 7.77148 18.2721C7.77148 23.1762 12.1211 27.2829 17.9958 28.0598C18.3934 28.1457 18.9353 28.3222 19.0728 28.6625C19.1966 28.9719 19.153 29.4554 19.1129 29.7682C19.1129 29.7682 18.9697 30.631 18.9388 30.8144C18.8849 31.1237 18.6936 32.0232 19.9975 31.4732C21.3026 30.9232 27.0375 27.3276 29.6019 24.3759C31.3734 22.4326 32.2224 20.4618 32.2224 18.2721H32.2213Z" fill="white"/>
+<path class="svg-elm svg-path svg-path03" d="M28.1532 21.4311H24.7191C24.5896 21.4311 24.4854 21.3268 24.4854 21.1974V21.1939V15.8681V15.8624C24.4854 15.7329 24.5896 15.6286 24.7191 15.6286H28.1532C28.2815 15.6286 28.3869 15.734 28.3869 15.8624V16.7297C28.3869 16.8592 28.2826 16.9635 28.1532 16.9635H25.8191V17.8641H28.1532C28.2815 17.8641 28.3869 17.9695 28.3869 18.0979V18.9653C28.3869 19.0947 28.2826 19.199 28.1532 19.199H25.8191V20.0996H28.1532C28.2815 20.0996 28.3869 20.2051 28.3869 20.3334V21.2008C28.3869 21.3303 28.2826 21.4345 28.1532 21.4345V21.4311Z" fill="#06C755"/>
+<path class="svg-elm svg-path svg-path04" d="M15.4492 21.4311C15.5776 21.4311 15.683 21.3268 15.683 21.1974V20.33C15.683 20.2016 15.5776 20.0962 15.4492 20.0962H13.1152V15.8612C13.1152 15.7329 13.0098 15.6275 12.8814 15.6275H12.014C11.8845 15.6275 11.7803 15.7317 11.7803 15.8612V21.1928V21.1974C11.7803 21.3268 11.8845 21.4311 12.014 21.4311H15.4481H15.4492Z" fill="#06C755"/>
+<path class="svg-elm svg-path svg-path05" d="M17.5155 15.6286H16.6493C16.5202 15.6286 16.4155 15.7332 16.4155 15.8623V21.1973C16.4155 21.3264 16.5202 21.4311 16.6493 21.4311H17.5155C17.6446 21.4311 17.7493 21.3264 17.7493 21.1973V15.8623C17.7493 15.7332 17.6446 15.6286 17.5155 15.6286Z" fill="#06C755"/>
+<path class="svg-elm svg-path svg-path06" d="M23.4178 15.6286H22.5504C22.4209 15.6286 22.3166 15.7328 22.3166 15.8623V19.0306L19.876 15.734C19.8703 15.726 19.8634 15.718 19.8577 15.7099C19.8577 15.7099 19.8577 15.7099 19.8565 15.7088C19.8519 15.7042 19.8474 15.6985 19.8428 15.6939C19.8416 15.6927 19.8393 15.6916 19.8382 15.6905C19.8336 15.687 19.8302 15.6836 19.8256 15.6801C19.8233 15.679 19.821 15.6767 19.8187 15.6756C19.8153 15.6721 19.8107 15.6698 19.8061 15.6675C19.8038 15.6664 19.8015 15.6641 19.7992 15.663C19.7946 15.6607 19.7912 15.6584 19.7866 15.6561C19.7843 15.6549 19.782 15.6538 19.7797 15.6526C19.7752 15.6503 19.7706 15.6481 19.766 15.6469C19.7637 15.6469 19.7614 15.6446 19.758 15.6446C19.7534 15.6435 19.7488 15.6412 19.7442 15.64C19.7419 15.64 19.7385 15.6389 19.7362 15.6377C19.7316 15.6377 19.727 15.6355 19.7225 15.6343C19.719 15.6343 19.7156 15.6343 19.7121 15.6332C19.7076 15.6332 19.7041 15.632 19.6995 15.632C19.695 15.632 19.6915 15.632 19.6869 15.632C19.6846 15.632 19.6812 15.632 19.6789 15.632H18.8172C18.6889 15.632 18.5835 15.7363 18.5835 15.8658V21.2008C18.5835 21.3291 18.6878 21.4345 18.8172 21.4345H19.6846C19.8141 21.4345 19.9184 21.3302 19.9184 21.2008V18.0325L22.3625 21.3337C22.3796 21.3577 22.4003 21.3772 22.4232 21.3921C22.4232 21.3921 22.4255 21.3933 22.4255 21.3944C22.4301 21.3978 22.4346 21.4001 22.4404 21.4036C22.4427 21.4047 22.445 21.4059 22.4472 21.407C22.4507 21.4093 22.4553 21.4105 22.4587 21.4127C22.4621 21.415 22.4667 21.4162 22.4702 21.4173C22.4725 21.4173 22.4747 21.4196 22.477 21.4196C22.4828 21.4219 22.4874 21.4231 22.4931 21.4242C22.4931 21.4242 22.4954 21.4242 22.4965 21.4242C22.516 21.4288 22.5366 21.4322 22.5572 21.4322H23.4189C23.5472 21.4322 23.6527 21.328 23.6527 21.1985V15.8635C23.6527 15.7351 23.5484 15.6297 23.4189 15.6297L23.4178 15.6286Z" fill="#06C755"/>
+</svg>
+        LINEでラクラク！</span>
+      <span class="fs-ctaarea__txt">無料相談<span class="fs-ctaarea__small">はこちら</span></span>
+      <span class="fs-ctaarea__ico"><svg class="ico_svg ic_tab" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path class="svg-elm svg-path svg-path01" d="M19 19H5V5H12V3H5C3.89 3 3 3.9 3 5V19C3 20.1 3.89 21 5 21H19C20.1 21 21 20.1 21 19V12H19V19ZM14 3V5H17.59L7.76 14.83L9.17 16.24L19 6.41V10H21V3H14Z" fill="#1F1F1F"/>
+</svg>
+</span>
+    </a>
+  </div>
+</div>
+
+        <section class="lcl-service" id="service">
+          <svg class="ico_svg bg_logo" width="565" height="572" viewBox="0 0 565 572" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path class="svg-elm svg-path svg-path01" d="M209.324 316.921C210.514 312.158 211.492 307.315 212.02 302.337C212.443 298.457 212.708 294.523 212.708 290.509V215.34H252.045V194.6C252.045 190.613 252.257 186.679 252.627 182.772H212.708V107.656C212.708 66.2316 245.991 32.5404 286.915 32.5404C315.863 32.5404 340.951 49.4529 353.165 74.0188C355.385 78.461 357.157 83.1708 358.478 88.0679C360.144 94.3298 361.122 100.886 361.122 107.683C361.122 112.152 360.673 116.487 359.932 120.742C358.954 126.308 357.447 131.687 355.332 136.772C347.798 154.835 333.496 169.312 315.651 176.939C313.959 182.532 313.034 188.472 313.034 194.627V211.914C349.913 202.441 379.099 173.487 389.303 136.504C390.572 131.848 391.55 127.084 392.211 122.214C392.846 117.451 393.295 112.634 393.295 107.683C393.295 101.207 392.634 94.9185 391.55 88.7637C390.625 83.4919 389.33 78.354 387.664 73.3498C373.389 30.7743 333.655 0 286.888 0C228.252 0 180.535 48.3022 180.535 107.656V182.826H106.327C47.6914 182.879 0 231.155 0 290.509C0 337.848 30.4019 378.069 72.4359 392.439C71.8279 387.515 71.4842 382.538 71.4842 377.453C71.4842 370.683 72.0658 364.046 73.0968 357.57C48.8546 345.207 32.1203 319.838 32.1203 290.509C32.1203 249.084 65.4038 215.393 106.327 215.393H180.535V255.801V290.509C180.535 294.978 180.085 299.313 179.345 303.568C178.367 309.134 176.86 314.513 174.745 319.597C167.211 337.661 152.908 352.165 135.064 359.765C133.372 365.357 132.447 371.298 132.447 377.453C132.447 383.233 133.293 388.826 134.8 394.125C171.361 383.822 199.965 354.252 209.297 316.921H209.324Z" fill="#F7F7F7"/>
+<path class="svg-elm svg-path svg-path02" d="M492.589 179.615C493.197 184.539 493.541 189.516 493.541 194.601C493.541 201.371 492.959 208.008 491.928 214.484C516.171 226.847 532.905 252.215 532.905 281.545C532.905 322.97 499.621 356.661 458.698 356.661H384.491V316.253V281.545C384.491 277.076 384.94 272.741 385.68 268.486C386.658 262.92 388.165 257.541 390.28 252.456C397.815 234.393 412.117 219.916 429.961 212.289C431.653 206.696 432.578 200.756 432.578 194.574C432.578 188.794 431.733 183.201 430.226 177.902C393.664 188.205 365.06 217.775 355.728 255.106C354.538 259.869 353.56 264.713 353.031 269.69C352.608 273.57 352.344 277.504 352.344 281.518V356.687H313.006V377.427C313.006 381.414 312.795 385.348 312.425 389.255H352.344V464.371C352.344 505.795 319.06 539.487 278.137 539.487C249.189 539.487 224.101 522.574 211.887 498.008C209.666 493.566 207.895 488.856 206.573 483.959C204.908 477.697 203.93 471.141 203.93 464.344C203.93 459.875 204.379 455.54 205.119 451.285C206.097 445.719 207.604 440.34 209.719 435.255C217.253 417.192 231.556 402.688 249.4 395.088C251.092 389.495 252.017 383.555 252.017 377.4V360.113C215.139 369.586 185.953 398.54 175.748 435.523C174.479 440.179 173.501 444.943 172.84 449.813C172.206 454.576 171.756 459.393 171.756 464.344C171.756 470.82 172.417 477.108 173.501 483.263C174.426 488.535 175.722 493.673 177.387 498.677C191.584 541.226 231.318 572 278.084 572C336.72 572 384.438 523.698 384.438 464.344V389.174H458.645C517.281 389.148 564.999 340.845 564.999 281.491C564.999 234.152 534.623 193.932 492.563 179.561L492.589 179.615Z" fill="#F7F7F7"/>
+<path class="svg-elm svg-path svg-path03" d="M89.8835 348.633C88.6146 353.289 87.6364 358.052 86.9755 362.923C86.341 367.686 85.8916 372.503 85.8916 377.454C85.8916 383.93 86.5525 390.218 87.6364 396.373C88.5617 401.645 89.8571 406.783 91.5226 411.787C102.124 443.551 126.947 468.652 158.301 479.383C157.693 474.459 157.349 469.482 157.349 464.398C157.349 457.627 157.931 450.991 158.962 444.515C144.713 437.263 133.107 425.515 125.943 411.091C123.722 406.649 121.951 401.939 120.629 397.042C118.964 390.78 117.985 384.224 117.985 377.454C117.985 372.985 118.435 368.649 119.175 364.395C120.153 358.828 121.66 353.45 123.775 348.365C131.309 330.302 145.612 315.798 163.456 308.198C165.148 302.605 166.073 296.664 166.073 290.51V273.222C129.195 282.696 100.009 311.65 89.8042 348.633H89.8835Z" fill="#F7F7F7"/>
+<path class="svg-elm svg-path svg-path04" d="M269.81 168.188C268.621 172.952 267.642 177.795 267.114 182.773C266.691 186.653 266.426 190.587 266.426 194.601V269.77H227.089V290.509C227.089 294.497 226.877 298.43 226.507 302.337H266.426V342.772V377.48C266.426 381.949 265.977 386.284 265.237 390.539C264.259 396.105 262.752 401.484 260.637 406.569C253.102 424.632 238.8 439.136 220.956 446.736C219.264 452.329 218.338 458.269 218.338 464.424C218.338 470.204 219.184 475.797 220.691 481.096C257.253 470.793 285.831 441.223 295.189 403.893C296.379 399.129 297.357 394.286 297.886 389.308C298.309 385.428 298.573 381.494 298.573 377.48V302.311H337.91V281.572C337.91 277.584 338.122 273.65 338.492 269.743H298.573V229.309V194.601C298.573 190.132 299.022 185.797 299.763 181.542C300.741 175.976 302.248 170.597 304.363 165.512C311.897 147.449 326.199 132.972 344.044 125.345C345.736 119.752 346.661 113.812 346.661 107.657C346.661 101.877 345.815 96.2836 344.308 90.9851C307.747 101.288 279.169 130.858 269.81 168.188Z" fill="#F7F7F7"/>
+<path class="svg-elm svg-path svg-path05" d="M477.388 175.681C476.462 170.41 475.167 165.272 473.501 160.267C462.9 128.503 438.077 103.402 406.723 92.6711C407.331 97.595 407.675 102.572 407.675 107.657C407.675 114.427 407.093 121.064 406.062 127.54C420.311 134.792 431.917 146.539 439.081 160.963C441.302 165.405 443.073 170.115 444.395 175.012C446.06 181.274 447.039 187.831 447.039 194.601C447.039 199.07 446.589 203.405 445.849 207.66C444.871 213.226 443.364 218.605 441.249 223.689C433.715 241.752 419.412 256.23 401.568 263.856C399.876 269.449 398.951 275.39 398.951 281.545V298.832C435.83 289.359 465.042 260.404 475.22 223.422C476.489 218.765 477.467 214.002 478.128 209.132C478.762 204.368 479.212 199.552 479.212 194.601C479.212 188.125 478.551 181.836 477.467 175.681H477.388Z" fill="#F7F7F7"/>
+</svg>
+          <div class="lcl-service__in">
+            <div class="lcl-cmn-ttl">
+              <svg class="ico_svg logo-mark" width="29" height="30" viewBox="0 0 29 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path class="svg-elm svg-path svg-path01" d="M10.7441 16.6218C10.8051 16.3719 10.8553 16.1179 10.8825 15.8568C10.9042 15.6533 10.9177 15.447 10.9177 15.2365V11.294H12.9368V10.2063C12.9368 9.99719 12.9477 9.79088 12.9667 9.58596H10.9177V5.64632C10.9177 3.47368 12.6261 1.70667 14.7266 1.70667C16.2124 1.70667 17.5001 2.59368 18.127 3.8821C18.241 4.11509 18.3319 4.3621 18.3998 4.61895C18.4853 4.94737 18.5355 5.29123 18.5355 5.64772C18.5355 5.8821 18.5124 6.10947 18.4744 6.33263C18.4242 6.62456 18.3469 6.90667 18.2383 7.17333C17.8516 8.1207 17.1175 8.88 16.2016 9.28C16.1147 9.57333 16.0672 9.88491 16.0672 10.2077V11.1144C17.9601 10.6175 19.4582 9.09895 19.9819 7.1593C20.0471 6.91509 20.0973 6.66526 20.1312 6.40982C20.1638 6.16 20.1868 5.90737 20.1868 5.64772C20.1868 5.30807 20.1529 4.97824 20.0973 4.65544C20.0498 4.37895 19.9833 4.10947 19.8978 3.84702C19.1651 1.61403 17.1256 0 14.7252 0C11.7156 0 9.26638 2.53333 9.26638 5.64632V9.58877H5.45752C2.44788 9.59158 0 12.1235 0 15.2365C0 17.7193 1.56045 19.8288 3.71795 20.5825C3.68674 20.3242 3.6691 20.0632 3.6691 19.7965C3.6691 19.4414 3.69895 19.0933 3.75187 18.7537C2.50758 18.1053 1.64865 16.7747 1.64865 15.2365C1.64865 13.0639 3.35701 11.2968 5.45752 11.2968H9.26638V13.4161V15.2365C9.26638 15.4709 9.24331 15.6982 9.20532 15.9214C9.15511 16.2133 9.07777 16.4954 8.96921 16.7621C8.58249 17.7095 7.8484 18.4702 6.93248 18.8688C6.84564 19.1621 6.79815 19.4737 6.79815 19.7965C6.79815 20.0996 6.84157 20.393 6.91891 20.6709C8.79553 20.1305 10.2637 18.5796 10.7427 16.6218H10.7441Z" fill="#E60012"/>
+<path class="svg-elm svg-path svg-path02" d="M25.2834 9.42039C25.3147 9.67864 25.3323 9.93969 25.3323 10.2064C25.3323 10.5614 25.3024 10.9095 25.2495 11.2492C26.4938 11.8976 27.3527 13.2281 27.3527 14.7664C27.3527 16.939 25.6444 18.706 23.5439 18.706H19.735V16.5867V14.7664C19.735 14.532 19.7581 14.3046 19.7961 14.0814C19.8463 13.7895 19.9236 13.5074 20.0322 13.2407C20.4189 12.2934 21.153 11.5341 22.0689 11.1341C22.1558 10.8407 22.2032 10.5292 22.2032 10.205C22.2032 9.90179 22.1598 9.60846 22.0825 9.33057C20.2059 9.87092 18.7377 11.4218 18.2587 13.3797C18.1976 13.6295 18.1474 13.8835 18.1203 14.1446C18.0986 14.3481 18.085 14.5544 18.085 14.765V18.7074H16.0659V19.7951C16.0659 20.0042 16.0551 20.2106 16.0361 20.4155H18.085V24.3551C18.085 26.5278 16.3767 28.2948 14.2761 28.2948C12.7903 28.2948 11.5026 27.4078 10.8757 26.1193C10.7617 25.8864 10.6708 25.6393 10.603 25.3825C10.5175 25.0541 10.4673 24.7102 10.4673 24.3537C10.4673 24.1193 10.4904 23.892 10.5283 23.6688C10.5786 23.3769 10.6559 23.0948 10.7644 22.8281C11.1512 21.8807 11.8853 21.12 12.8012 20.7214C12.888 20.4281 12.9355 20.1165 12.9355 19.7937V18.8871C11.0426 19.3839 9.54458 20.9025 9.02081 22.8421C8.95568 23.0864 8.90547 23.3362 8.87155 23.5916C8.83898 23.8414 8.81592 24.0941 8.81592 24.3537C8.81592 24.6934 8.84984 25.0232 8.90547 25.346C8.95297 25.6225 9.01945 25.892 9.10494 26.1544C9.8336 28.386 11.873 30 14.2734 30C17.2831 30 19.7323 27.4667 19.7323 24.3537V20.4113H23.5412C26.5508 20.4099 29 17.8765 29 14.7635C29 12.2807 27.4409 10.1713 25.2821 9.41758L25.2834 9.42039Z" fill="#E60012"/>
+<path class="svg-elm svg-path svg-path03" d="M4.61359 18.2849C4.54845 18.5291 4.49825 18.779 4.46432 19.0344C4.43176 19.2842 4.40869 19.5369 4.40869 19.7965C4.40869 20.1362 4.44261 20.466 4.49825 20.7888C4.54574 21.0653 4.61223 21.3347 4.69771 21.5972C5.24184 23.2632 6.51598 24.5797 8.12528 25.1425C8.09407 24.8842 8.07643 24.6232 8.07643 24.3565C8.07643 24.0014 8.10629 23.6533 8.15921 23.3137C7.42783 22.9333 6.83214 22.3172 6.46442 21.5607C6.35044 21.3277 6.25952 21.0807 6.19168 20.8239C6.10619 20.4954 6.05599 20.1516 6.05599 19.7965C6.05599 19.5621 6.07905 19.3347 6.11705 19.1116C6.16725 18.8197 6.2446 18.5376 6.35315 18.2709C6.73987 17.3235 7.47396 16.5628 8.38988 16.1642C8.47672 15.8709 8.52422 15.5593 8.52422 15.2365V14.3298C6.63132 14.8267 5.13328 16.3453 4.60951 18.2849H4.61359Z" fill="#666666"/>
+<path class="svg-elm svg-path svg-path04" d="M13.8485 8.8211C13.7874 9.07092 13.7372 9.32496 13.7101 9.58601C13.6883 9.78952 13.6748 9.99583 13.6748 10.2064V14.1488H11.6557V15.2365C11.6557 15.4457 11.6448 15.652 11.6258 15.8569H13.6748V17.9776V19.7979C13.6748 20.0323 13.6517 20.2597 13.6137 20.4829C13.5635 20.7748 13.4862 21.0569 13.3776 21.3236C12.9909 22.2709 12.2568 23.0316 11.3409 23.4302C11.254 23.7236 11.2065 24.0351 11.2065 24.3579C11.2065 24.6611 11.25 24.9544 11.3273 25.2323C13.2039 24.692 14.6707 23.1411 15.1511 21.1832C15.2122 20.9334 15.2624 20.6793 15.2895 20.4183C15.3112 20.2148 15.3248 20.0085 15.3248 19.7979V15.8555H17.3439V14.7678C17.3439 14.5586 17.3547 14.3523 17.3737 14.1474H15.3248V12.0267V10.2064C15.3248 9.97197 15.3478 9.7446 15.3858 9.52145C15.436 9.22952 15.5134 8.94741 15.6219 8.68074C16.0087 7.73338 16.7428 6.97408 17.6587 6.57408C17.7455 6.28074 17.793 5.96917 17.793 5.64636C17.793 5.3432 17.7496 5.04987 17.6722 4.77197C15.7956 5.31232 14.3288 6.8632 13.8485 8.8211Z" fill="#666666"/>
+<path class="svg-elm svg-path svg-path05" d="M24.503 9.21404C24.4555 8.93754 24.389 8.66807 24.3036 8.40561C23.7594 6.73965 22.4853 5.42316 20.876 4.86035C20.9072 5.1186 20.9248 5.37965 20.9248 5.64632C20.9248 6.0014 20.895 6.34947 20.8421 6.68912C21.5734 7.06947 22.1691 7.68561 22.5368 8.44211C22.6508 8.67509 22.7417 8.92211 22.8096 9.17895C22.8951 9.50737 22.9453 9.85123 22.9453 10.2063C22.9453 10.4407 22.9222 10.6681 22.8842 10.8912C22.834 11.1832 22.7567 11.4653 22.6481 11.7319C22.2614 12.6793 21.5273 13.4386 20.6114 13.8386C20.5245 14.1319 20.4771 14.4435 20.4771 14.7663V15.673C22.3699 15.1761 23.8693 13.6575 24.3918 11.7179C24.4569 11.4737 24.5071 11.2239 24.541 10.9684C24.5736 10.7186 24.5966 10.466 24.5966 10.2063C24.5966 9.86667 24.5627 9.53684 24.5071 9.21404H24.503Z" fill="#666666"/>
+</svg>
+              <p class="lcl-cmn-ttl__en">PRICE&SERVICE</p>
+              <h2>料金&サービス</h2>
+            </div><!-- .lcl-cmn-ttl -->
+            <div class="lcl-service__cnt">
+              <p class="tac-w mt40 inner">ご自身に合うプランが分からなくても大丈夫。スタッフが寄り添い、あなたにぴったりのプランをご提案します。</p>
+              <div class="lcl-service__plan">
+                <p class="lcl-cmn-sub">料金プラン</p>
+                <div class="lcl-service__tablearea swipe-n">
+                  <div class="lcl-service__table">
+                    <picture class="lcl-service__pic">
+                      <source srcset="/recommend/futari-tsumugi/images/sp/service/table.png" media="(max-width: 759px)" width="1131" height="1677">
+                      <img loading="lazy" src="/recommend/futari-tsumugi/images/service/table.png" alt="料金プラン比較表" width="2221" height="1940">
+                    </picture>
+                  </div>
+                </div>
+                <p class="tar-w inner txt-small mt10">※料金は全て税込表示です。</p>
+              </div><!-- .lcl-service__plan -->
+              <div class="lcl-service-benefits">
+                <p class="lcl-service-benefits__ttl">未来設計婚活プラン限定特典<br><span class="txt-basic">アールイズ・ウエディング株式会社 協賛</span></p>
+                <div class="lcl-service-benefits__box">
+                  <div class="lcl-service-benefits__sep">
+                    <p class="lcl-service-benefits__label">入会から成婚まで</p>
+                    <ul class="lcl-service-benefits__list">
+                      <li class="lcl-service-benefits__item">
+                        <p class="title-04 c-red">専門カウンセラーによる専属サポート</p>
+                        <p>入会時から成婚後まで一貫して、婚活・旅行・リゾートウェディングの幅広い専門知識を持つカウンセラーがサポート。</p>
+                      </li>
+                      <li class="lcl-service-benefits__item">
+                        <p class="title-04 c-red">未来設計セミナー（オンライン）</p>
+                        <p>真剣交際以降のカップル向け。リゾートウェディングのプロが、結婚式のお話を通じて成婚後のウェディングを具体化し、その先の新生活への期待感を高めるお手伝いをします。</p>
+                        <p class="txt-small mt5">お二人で結婚式や新生活の具体的なイメージを持つことで、婚活のモチベーションが向上。<br>成婚後の漠然とした不安を解消し、幸せな未来を「見える化」するセミナーです。</p>
+                      </li>
+                      <li class="lcl-service-benefits__item">
+                        <p class="title-04 c-red">特別イベント・セミナーご招待（オンライン）</p>
+                        <p>婚活をさらに楽しく、成婚後のイメージを具体化するイベントにご招待します。</p>
+                        <p class="txt-small mt5">メイクアップ講座や写真映えレッスンなど、プロによる魅力的な企画を定期的にご用意します。</p>
+                      </li>
+                    </ul>
+                  </div><!-- .lcl-service-benefits__sep -->
+                  <div class="lcl-service-benefits__sep">
+                    <p class="lcl-service-benefits__label">成婚後</p>
+                    <ul class="lcl-service-benefits__list">
+                      <li class="lcl-service-benefits__item">
+                        <p class="title-04 c-red">プレ・リゾートウェディング体験旅行in沖縄（別途料金）</p>
+                        <p>成婚後初めての旅行として、沖縄旅行をプロデュースします。ご旅行中に、ふたり紬オリジナルの沖縄リゾートウェディング挙式会場見学会を特別にご用意します。</p>
+                      </li>
+                      <li class="lcl-service-benefits__item">
+                        <p class="title-04 c-red">リゾートウェディング成約特典</p>
+                        <p>JTBの結婚相談所を通じてリゾートウェディングをお申し込みいただいたカップル様には、特別な特典（衣裳グレードアップ差額から50,000円OFF）をご用意しております。</p>
+                        <p class="txt-small mt5">基本プランに含まれるドレス・タキシードから、お好みの衣裳へ変更する際の追加料金が50,000円お得になります。</p>
+                      </li>
+                    </ul>
+                  </div><!-- .lcl-service-benefits__sep -->
+                </div><!-- .lcl-service-benefits__box -->
+              </div><!-- .lcl-service-benefits -->
+              <div class="lcl-service-box">
+                <p class="lcl-cmn-sub">プロポーズプロデュースの<br class="dn-w">ご提案も可能です</p>
+                <div class="lcl-service-box__sep">
+                  <figure class="lcl-service-box__fig"></figure>
+                  <div class="lcl-service-box__cnt">
+                    <p>当相談所では、プロポーズを最高の思い出にするためのサポートも充実！<br>活動中のプロポーズには、<a href="https://www.patisserie-flower.jp/"  class="tdu"><span class="c-black">Patisserie + Flower</span></a>と提携し、お相手が喜ぶ感動フラワーギフトをご紹介いたします。花にオリジナルメッセージを添え、想いを華やかに伝えましょう。<br>さらに、ご成婚退会後のプロポーズは、<a href="https://how-to-propose.com/"  class="tdu"><span class="c-black">How toプロポーズ</span></a>が理想のシチュエーションをプロデュース。一生に一度の感動的な瞬間を、プロのサポートで実現できます。<br>あなたの婚活を、プロポーズまでトータルで応援します。</p>
+                    <p class="txt-small mt15">※ご紹介する各サービスの利用には、別途費用が発生いたします。</p>
+                  </div>
+                </div>
+              </div>
+              <div class="lcl-service-detail">
+                <div class="lcl-service-detail__in">
+                  <p class="lcl-cmn-sub lcl-cmn-sub--gold">料金の詳細</p>
+                  <dl class="cmn-dlist mt30-w mt10-n">
+                    <div class="cmn-dlist__sep">
+                      <dt class="cmn-dlist__term">入会金</dt>
+                      <dd class="cmn-dlist__desc">会員としての登録、その他、入会時に必要となる事務手続きに要する料金</dd>
+                    </div>
+                    <div class="cmn-dlist__sep">
+                      <dt class="cmn-dlist__term">登録費</dt>
+                      <dd class="cmn-dlist__desc">IBJ会員登録に要する会員諸情報登録料</dd>
+                    </div>
+                    <div class="cmn-dlist__sep">
+                      <dt class="cmn-dlist__term">活動サポート費</dt>
+                      <dd class="cmn-dlist__desc">カウンセリング料、ご交際・ご成婚に向けた活動のサポートに要する料金</dd>
+                    </div>
+                    <div class="cmn-dlist__sep">
+                      <dt class="cmn-dlist__term">月会費</dt>
+                      <dd class="cmn-dlist__desc">会員として活動するために月々要する料金</dd>
+                    </div>
+                    <div class="cmn-dlist__sep">
+                      <dt class="cmn-dlist__term">成婚料</dt>
+                      <dd class="cmn-dlist__desc">ご成婚に至った際にお支払いいただく料金</dd>
+                    </div>
+                  </dl>
+                </div>
+              </div>
+            </div><!-- .lcl-service__cnt -->
+          </div><!-- .lcl-service__in -->
+        </section><!-- .lcl-service -->
+
+        <div class="fs-ctaarea">
+  <div class="fs-ctaarea__bg"></div>
+  <div class="fs-ctaarea__in">
+    <figure class="fs-ctaarea__fig fs-ctaarea__fig--01"><img src="/recommend/futari-tsumugi/common/images/ctaarea/people_01.png" alt="スタッフ画像1" width="680" height="834"></figure>
+    <figure class="fs-ctaarea__fig fs-ctaarea__fig--02"><img src="/recommend/futari-tsumugi/common/images/ctaarea/people_02.png" alt="スタッフ画像2" width="680" height="834"></figure>
+    <p class="fs-ctaarea__ttl">どんな<span>お相手</span>がいるか見てみる</p>
+    <a href="https://lin.ee/zy6qOdz"  awicon="nothing" class="fs-ctaarea__link">
+      <span class="fs-ctaarea__label">
+        <svg class="ico_svg ic_line" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path class="svg-elm svg-path svg-path01" d="M30.0671 1.66666H9.93255C5.36734 1.66666 1.6665 5.3675 1.6665 9.93271V30.0673C1.6665 34.6325 5.36734 38.3333 9.93255 38.3333H30.0671C34.6323 38.3333 38.3332 34.6325 38.3332 30.0673V9.93271C38.3332 5.3675 34.6323 1.66666 30.0671 1.66666Z" fill="#06C755"/>
+<path class="svg-elm svg-path svg-path02" d="M32.2213 18.2721C32.2213 12.8019 26.7373 8.35146 19.9964 8.35146C13.2554 8.35146 7.77148 12.8019 7.77148 18.2721C7.77148 23.1762 12.1211 27.2829 17.9958 28.0598C18.3934 28.1457 18.9353 28.3222 19.0728 28.6625C19.1966 28.9719 19.153 29.4554 19.1129 29.7682C19.1129 29.7682 18.9697 30.631 18.9388 30.8144C18.8849 31.1237 18.6936 32.0232 19.9975 31.4732C21.3026 30.9232 27.0375 27.3276 29.6019 24.3759C31.3734 22.4326 32.2224 20.4618 32.2224 18.2721H32.2213Z" fill="white"/>
+<path class="svg-elm svg-path svg-path03" d="M28.1532 21.4311H24.7191C24.5896 21.4311 24.4854 21.3268 24.4854 21.1974V21.1939V15.8681V15.8624C24.4854 15.7329 24.5896 15.6286 24.7191 15.6286H28.1532C28.2815 15.6286 28.3869 15.734 28.3869 15.8624V16.7297C28.3869 16.8592 28.2826 16.9635 28.1532 16.9635H25.8191V17.8641H28.1532C28.2815 17.8641 28.3869 17.9695 28.3869 18.0979V18.9653C28.3869 19.0947 28.2826 19.199 28.1532 19.199H25.8191V20.0996H28.1532C28.2815 20.0996 28.3869 20.2051 28.3869 20.3334V21.2008C28.3869 21.3303 28.2826 21.4345 28.1532 21.4345V21.4311Z" fill="#06C755"/>
+<path class="svg-elm svg-path svg-path04" d="M15.4492 21.4311C15.5776 21.4311 15.683 21.3268 15.683 21.1974V20.33C15.683 20.2016 15.5776 20.0962 15.4492 20.0962H13.1152V15.8612C13.1152 15.7329 13.0098 15.6275 12.8814 15.6275H12.014C11.8845 15.6275 11.7803 15.7317 11.7803 15.8612V21.1928V21.1974C11.7803 21.3268 11.8845 21.4311 12.014 21.4311H15.4481H15.4492Z" fill="#06C755"/>
+<path class="svg-elm svg-path svg-path05" d="M17.5155 15.6286H16.6493C16.5202 15.6286 16.4155 15.7332 16.4155 15.8623V21.1973C16.4155 21.3264 16.5202 21.4311 16.6493 21.4311H17.5155C17.6446 21.4311 17.7493 21.3264 17.7493 21.1973V15.8623C17.7493 15.7332 17.6446 15.6286 17.5155 15.6286Z" fill="#06C755"/>
+<path class="svg-elm svg-path svg-path06" d="M23.4178 15.6286H22.5504C22.4209 15.6286 22.3166 15.7328 22.3166 15.8623V19.0306L19.876 15.734C19.8703 15.726 19.8634 15.718 19.8577 15.7099C19.8577 15.7099 19.8577 15.7099 19.8565 15.7088C19.8519 15.7042 19.8474 15.6985 19.8428 15.6939C19.8416 15.6927 19.8393 15.6916 19.8382 15.6905C19.8336 15.687 19.8302 15.6836 19.8256 15.6801C19.8233 15.679 19.821 15.6767 19.8187 15.6756C19.8153 15.6721 19.8107 15.6698 19.8061 15.6675C19.8038 15.6664 19.8015 15.6641 19.7992 15.663C19.7946 15.6607 19.7912 15.6584 19.7866 15.6561C19.7843 15.6549 19.782 15.6538 19.7797 15.6526C19.7752 15.6503 19.7706 15.6481 19.766 15.6469C19.7637 15.6469 19.7614 15.6446 19.758 15.6446C19.7534 15.6435 19.7488 15.6412 19.7442 15.64C19.7419 15.64 19.7385 15.6389 19.7362 15.6377C19.7316 15.6377 19.727 15.6355 19.7225 15.6343C19.719 15.6343 19.7156 15.6343 19.7121 15.6332C19.7076 15.6332 19.7041 15.632 19.6995 15.632C19.695 15.632 19.6915 15.632 19.6869 15.632C19.6846 15.632 19.6812 15.632 19.6789 15.632H18.8172C18.6889 15.632 18.5835 15.7363 18.5835 15.8658V21.2008C18.5835 21.3291 18.6878 21.4345 18.8172 21.4345H19.6846C19.8141 21.4345 19.9184 21.3302 19.9184 21.2008V18.0325L22.3625 21.3337C22.3796 21.3577 22.4003 21.3772 22.4232 21.3921C22.4232 21.3921 22.4255 21.3933 22.4255 21.3944C22.4301 21.3978 22.4346 21.4001 22.4404 21.4036C22.4427 21.4047 22.445 21.4059 22.4472 21.407C22.4507 21.4093 22.4553 21.4105 22.4587 21.4127C22.4621 21.415 22.4667 21.4162 22.4702 21.4173C22.4725 21.4173 22.4747 21.4196 22.477 21.4196C22.4828 21.4219 22.4874 21.4231 22.4931 21.4242C22.4931 21.4242 22.4954 21.4242 22.4965 21.4242C22.516 21.4288 22.5366 21.4322 22.5572 21.4322H23.4189C23.5472 21.4322 23.6527 21.328 23.6527 21.1985V15.8635C23.6527 15.7351 23.5484 15.6297 23.4189 15.6297L23.4178 15.6286Z" fill="#06C755"/>
+</svg>
+        LINEでラクラク！</span>
+      <span class="fs-ctaarea__txt">お試し検索会<span class="fs-ctaarea__small">ご予約</span></span>
+      <span class="fs-ctaarea__ico"><svg class="ico_svg ic_tab" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path class="svg-elm svg-path svg-path01" d="M19 19H5V5H12V3H5C3.89 3 3 3.9 3 5V19C3 20.1 3.89 21 5 21H19C20.1 21 21 20.1 21 19V12H19V19ZM14 3V5H17.59L7.76 14.83L9.17 16.24L19 6.41V10H21V3H14Z" fill="#1F1F1F"/>
+</svg>
+</span>
+    </a>
+  </div>
+</div>
+
+        <section class="lcl-flow" id="flow">
+          <svg class="ico_svg bg_logo" width="565" height="572" viewBox="0 0 565 572" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path class="svg-elm svg-path svg-path01" d="M209.324 316.921C210.514 312.158 211.492 307.315 212.02 302.337C212.443 298.457 212.708 294.523 212.708 290.509V215.34H252.045V194.6C252.045 190.613 252.257 186.679 252.627 182.772H212.708V107.656C212.708 66.2316 245.991 32.5404 286.915 32.5404C315.863 32.5404 340.951 49.4529 353.165 74.0188C355.385 78.461 357.157 83.1708 358.478 88.0679C360.144 94.3298 361.122 100.886 361.122 107.683C361.122 112.152 360.673 116.487 359.932 120.742C358.954 126.308 357.447 131.687 355.332 136.772C347.798 154.835 333.496 169.312 315.651 176.939C313.959 182.532 313.034 188.472 313.034 194.627V211.914C349.913 202.441 379.099 173.487 389.303 136.504C390.572 131.848 391.55 127.084 392.211 122.214C392.846 117.451 393.295 112.634 393.295 107.683C393.295 101.207 392.634 94.9185 391.55 88.7637C390.625 83.4919 389.33 78.354 387.664 73.3498C373.389 30.7743 333.655 0 286.888 0C228.252 0 180.535 48.3022 180.535 107.656V182.826H106.327C47.6914 182.879 0 231.155 0 290.509C0 337.848 30.4019 378.069 72.4359 392.439C71.8279 387.515 71.4842 382.538 71.4842 377.453C71.4842 370.683 72.0658 364.046 73.0968 357.57C48.8546 345.207 32.1203 319.838 32.1203 290.509C32.1203 249.084 65.4038 215.393 106.327 215.393H180.535V255.801V290.509C180.535 294.978 180.085 299.313 179.345 303.568C178.367 309.134 176.86 314.513 174.745 319.597C167.211 337.661 152.908 352.165 135.064 359.765C133.372 365.357 132.447 371.298 132.447 377.453C132.447 383.233 133.293 388.826 134.8 394.125C171.361 383.822 199.965 354.252 209.297 316.921H209.324Z" fill="#F7F7F7"/>
+<path class="svg-elm svg-path svg-path02" d="M492.589 179.615C493.197 184.539 493.541 189.516 493.541 194.601C493.541 201.371 492.959 208.008 491.928 214.484C516.171 226.847 532.905 252.215 532.905 281.545C532.905 322.97 499.621 356.661 458.698 356.661H384.491V316.253V281.545C384.491 277.076 384.94 272.741 385.68 268.486C386.658 262.92 388.165 257.541 390.28 252.456C397.815 234.393 412.117 219.916 429.961 212.289C431.653 206.696 432.578 200.756 432.578 194.574C432.578 188.794 431.733 183.201 430.226 177.902C393.664 188.205 365.06 217.775 355.728 255.106C354.538 259.869 353.56 264.713 353.031 269.69C352.608 273.57 352.344 277.504 352.344 281.518V356.687H313.006V377.427C313.006 381.414 312.795 385.348 312.425 389.255H352.344V464.371C352.344 505.795 319.06 539.487 278.137 539.487C249.189 539.487 224.101 522.574 211.887 498.008C209.666 493.566 207.895 488.856 206.573 483.959C204.908 477.697 203.93 471.141 203.93 464.344C203.93 459.875 204.379 455.54 205.119 451.285C206.097 445.719 207.604 440.34 209.719 435.255C217.253 417.192 231.556 402.688 249.4 395.088C251.092 389.495 252.017 383.555 252.017 377.4V360.113C215.139 369.586 185.953 398.54 175.748 435.523C174.479 440.179 173.501 444.943 172.84 449.813C172.206 454.576 171.756 459.393 171.756 464.344C171.756 470.82 172.417 477.108 173.501 483.263C174.426 488.535 175.722 493.673 177.387 498.677C191.584 541.226 231.318 572 278.084 572C336.72 572 384.438 523.698 384.438 464.344V389.174H458.645C517.281 389.148 564.999 340.845 564.999 281.491C564.999 234.152 534.623 193.932 492.563 179.561L492.589 179.615Z" fill="#F7F7F7"/>
+<path class="svg-elm svg-path svg-path03" d="M89.8835 348.633C88.6146 353.289 87.6364 358.052 86.9755 362.923C86.341 367.686 85.8916 372.503 85.8916 377.454C85.8916 383.93 86.5525 390.218 87.6364 396.373C88.5617 401.645 89.8571 406.783 91.5226 411.787C102.124 443.551 126.947 468.652 158.301 479.383C157.693 474.459 157.349 469.482 157.349 464.398C157.349 457.627 157.931 450.991 158.962 444.515C144.713 437.263 133.107 425.515 125.943 411.091C123.722 406.649 121.951 401.939 120.629 397.042C118.964 390.78 117.985 384.224 117.985 377.454C117.985 372.985 118.435 368.649 119.175 364.395C120.153 358.828 121.66 353.45 123.775 348.365C131.309 330.302 145.612 315.798 163.456 308.198C165.148 302.605 166.073 296.664 166.073 290.51V273.222C129.195 282.696 100.009 311.65 89.8042 348.633H89.8835Z" fill="#F7F7F7"/>
+<path class="svg-elm svg-path svg-path04" d="M269.81 168.188C268.621 172.952 267.642 177.795 267.114 182.773C266.691 186.653 266.426 190.587 266.426 194.601V269.77H227.089V290.509C227.089 294.497 226.877 298.43 226.507 302.337H266.426V342.772V377.48C266.426 381.949 265.977 386.284 265.237 390.539C264.259 396.105 262.752 401.484 260.637 406.569C253.102 424.632 238.8 439.136 220.956 446.736C219.264 452.329 218.338 458.269 218.338 464.424C218.338 470.204 219.184 475.797 220.691 481.096C257.253 470.793 285.831 441.223 295.189 403.893C296.379 399.129 297.357 394.286 297.886 389.308C298.309 385.428 298.573 381.494 298.573 377.48V302.311H337.91V281.572C337.91 277.584 338.122 273.65 338.492 269.743H298.573V229.309V194.601C298.573 190.132 299.022 185.797 299.763 181.542C300.741 175.976 302.248 170.597 304.363 165.512C311.897 147.449 326.199 132.972 344.044 125.345C345.736 119.752 346.661 113.812 346.661 107.657C346.661 101.877 345.815 96.2836 344.308 90.9851C307.747 101.288 279.169 130.858 269.81 168.188Z" fill="#F7F7F7"/>
+<path class="svg-elm svg-path svg-path05" d="M477.388 175.681C476.462 170.41 475.167 165.272 473.501 160.267C462.9 128.503 438.077 103.402 406.723 92.6711C407.331 97.595 407.675 102.572 407.675 107.657C407.675 114.427 407.093 121.064 406.062 127.54C420.311 134.792 431.917 146.539 439.081 160.963C441.302 165.405 443.073 170.115 444.395 175.012C446.06 181.274 447.039 187.831 447.039 194.601C447.039 199.07 446.589 203.405 445.849 207.66C444.871 213.226 443.364 218.605 441.249 223.689C433.715 241.752 419.412 256.23 401.568 263.856C399.876 269.449 398.951 275.39 398.951 281.545V298.832C435.83 289.359 465.042 260.404 475.22 223.422C476.489 218.765 477.467 214.002 478.128 209.132C478.762 204.368 479.212 199.552 479.212 194.601C479.212 188.125 478.551 181.836 477.467 175.681H477.388Z" fill="#F7F7F7"/>
+</svg>
+          <div class="lcl-flow__in">
+            <div class="lcl-cmn-ttl">
+              <svg class="ico_svg logo-mark" width="29" height="30" viewBox="0 0 29 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path class="svg-elm svg-path svg-path01" d="M10.7441 16.6218C10.8051 16.3719 10.8553 16.1179 10.8825 15.8568C10.9042 15.6533 10.9177 15.447 10.9177 15.2365V11.294H12.9368V10.2063C12.9368 9.99719 12.9477 9.79088 12.9667 9.58596H10.9177V5.64632C10.9177 3.47368 12.6261 1.70667 14.7266 1.70667C16.2124 1.70667 17.5001 2.59368 18.127 3.8821C18.241 4.11509 18.3319 4.3621 18.3998 4.61895C18.4853 4.94737 18.5355 5.29123 18.5355 5.64772C18.5355 5.8821 18.5124 6.10947 18.4744 6.33263C18.4242 6.62456 18.3469 6.90667 18.2383 7.17333C17.8516 8.1207 17.1175 8.88 16.2016 9.28C16.1147 9.57333 16.0672 9.88491 16.0672 10.2077V11.1144C17.9601 10.6175 19.4582 9.09895 19.9819 7.1593C20.0471 6.91509 20.0973 6.66526 20.1312 6.40982C20.1638 6.16 20.1868 5.90737 20.1868 5.64772C20.1868 5.30807 20.1529 4.97824 20.0973 4.65544C20.0498 4.37895 19.9833 4.10947 19.8978 3.84702C19.1651 1.61403 17.1256 0 14.7252 0C11.7156 0 9.26638 2.53333 9.26638 5.64632V9.58877H5.45752C2.44788 9.59158 0 12.1235 0 15.2365C0 17.7193 1.56045 19.8288 3.71795 20.5825C3.68674 20.3242 3.6691 20.0632 3.6691 19.7965C3.6691 19.4414 3.69895 19.0933 3.75187 18.7537C2.50758 18.1053 1.64865 16.7747 1.64865 15.2365C1.64865 13.0639 3.35701 11.2968 5.45752 11.2968H9.26638V13.4161V15.2365C9.26638 15.4709 9.24331 15.6982 9.20532 15.9214C9.15511 16.2133 9.07777 16.4954 8.96921 16.7621C8.58249 17.7095 7.8484 18.4702 6.93248 18.8688C6.84564 19.1621 6.79815 19.4737 6.79815 19.7965C6.79815 20.0996 6.84157 20.393 6.91891 20.6709C8.79553 20.1305 10.2637 18.5796 10.7427 16.6218H10.7441Z" fill="#E60012"/>
+<path class="svg-elm svg-path svg-path02" d="M25.2834 9.42039C25.3147 9.67864 25.3323 9.93969 25.3323 10.2064C25.3323 10.5614 25.3024 10.9095 25.2495 11.2492C26.4938 11.8976 27.3527 13.2281 27.3527 14.7664C27.3527 16.939 25.6444 18.706 23.5439 18.706H19.735V16.5867V14.7664C19.735 14.532 19.7581 14.3046 19.7961 14.0814C19.8463 13.7895 19.9236 13.5074 20.0322 13.2407C20.4189 12.2934 21.153 11.5341 22.0689 11.1341C22.1558 10.8407 22.2032 10.5292 22.2032 10.205C22.2032 9.90179 22.1598 9.60846 22.0825 9.33057C20.2059 9.87092 18.7377 11.4218 18.2587 13.3797C18.1976 13.6295 18.1474 13.8835 18.1203 14.1446C18.0986 14.3481 18.085 14.5544 18.085 14.765V18.7074H16.0659V19.7951C16.0659 20.0042 16.0551 20.2106 16.0361 20.4155H18.085V24.3551C18.085 26.5278 16.3767 28.2948 14.2761 28.2948C12.7903 28.2948 11.5026 27.4078 10.8757 26.1193C10.7617 25.8864 10.6708 25.6393 10.603 25.3825C10.5175 25.0541 10.4673 24.7102 10.4673 24.3537C10.4673 24.1193 10.4904 23.892 10.5283 23.6688C10.5786 23.3769 10.6559 23.0948 10.7644 22.8281C11.1512 21.8807 11.8853 21.12 12.8012 20.7214C12.888 20.4281 12.9355 20.1165 12.9355 19.7937V18.8871C11.0426 19.3839 9.54458 20.9025 9.02081 22.8421C8.95568 23.0864 8.90547 23.3362 8.87155 23.5916C8.83898 23.8414 8.81592 24.0941 8.81592 24.3537C8.81592 24.6934 8.84984 25.0232 8.90547 25.346C8.95297 25.6225 9.01945 25.892 9.10494 26.1544C9.8336 28.386 11.873 30 14.2734 30C17.2831 30 19.7323 27.4667 19.7323 24.3537V20.4113H23.5412C26.5508 20.4099 29 17.8765 29 14.7635C29 12.2807 27.4409 10.1713 25.2821 9.41758L25.2834 9.42039Z" fill="#E60012"/>
+<path class="svg-elm svg-path svg-path03" d="M4.61359 18.2849C4.54845 18.5291 4.49825 18.779 4.46432 19.0344C4.43176 19.2842 4.40869 19.5369 4.40869 19.7965C4.40869 20.1362 4.44261 20.466 4.49825 20.7888C4.54574 21.0653 4.61223 21.3347 4.69771 21.5972C5.24184 23.2632 6.51598 24.5797 8.12528 25.1425C8.09407 24.8842 8.07643 24.6232 8.07643 24.3565C8.07643 24.0014 8.10629 23.6533 8.15921 23.3137C7.42783 22.9333 6.83214 22.3172 6.46442 21.5607C6.35044 21.3277 6.25952 21.0807 6.19168 20.8239C6.10619 20.4954 6.05599 20.1516 6.05599 19.7965C6.05599 19.5621 6.07905 19.3347 6.11705 19.1116C6.16725 18.8197 6.2446 18.5376 6.35315 18.2709C6.73987 17.3235 7.47396 16.5628 8.38988 16.1642C8.47672 15.8709 8.52422 15.5593 8.52422 15.2365V14.3298C6.63132 14.8267 5.13328 16.3453 4.60951 18.2849H4.61359Z" fill="#666666"/>
+<path class="svg-elm svg-path svg-path04" d="M13.8485 8.8211C13.7874 9.07092 13.7372 9.32496 13.7101 9.58601C13.6883 9.78952 13.6748 9.99583 13.6748 10.2064V14.1488H11.6557V15.2365C11.6557 15.4457 11.6448 15.652 11.6258 15.8569H13.6748V17.9776V19.7979C13.6748 20.0323 13.6517 20.2597 13.6137 20.4829C13.5635 20.7748 13.4862 21.0569 13.3776 21.3236C12.9909 22.2709 12.2568 23.0316 11.3409 23.4302C11.254 23.7236 11.2065 24.0351 11.2065 24.3579C11.2065 24.6611 11.25 24.9544 11.3273 25.2323C13.2039 24.692 14.6707 23.1411 15.1511 21.1832C15.2122 20.9334 15.2624 20.6793 15.2895 20.4183C15.3112 20.2148 15.3248 20.0085 15.3248 19.7979V15.8555H17.3439V14.7678C17.3439 14.5586 17.3547 14.3523 17.3737 14.1474H15.3248V12.0267V10.2064C15.3248 9.97197 15.3478 9.7446 15.3858 9.52145C15.436 9.22952 15.5134 8.94741 15.6219 8.68074C16.0087 7.73338 16.7428 6.97408 17.6587 6.57408C17.7455 6.28074 17.793 5.96917 17.793 5.64636C17.793 5.3432 17.7496 5.04987 17.6722 4.77197C15.7956 5.31232 14.3288 6.8632 13.8485 8.8211Z" fill="#666666"/>
+<path class="svg-elm svg-path svg-path05" d="M24.503 9.21404C24.4555 8.93754 24.389 8.66807 24.3036 8.40561C23.7594 6.73965 22.4853 5.42316 20.876 4.86035C20.9072 5.1186 20.9248 5.37965 20.9248 5.64632C20.9248 6.0014 20.895 6.34947 20.8421 6.68912C21.5734 7.06947 22.1691 7.68561 22.5368 8.44211C22.6508 8.67509 22.7417 8.92211 22.8096 9.17895C22.8951 9.50737 22.9453 9.85123 22.9453 10.2063C22.9453 10.4407 22.9222 10.6681 22.8842 10.8912C22.834 11.1832 22.7567 11.4653 22.6481 11.7319C22.2614 12.6793 21.5273 13.4386 20.6114 13.8386C20.5245 14.1319 20.4771 14.4435 20.4771 14.7663V15.673C22.3699 15.1761 23.8693 13.6575 24.3918 11.7179C24.4569 11.4737 24.5071 11.2239 24.541 10.9684C24.5736 10.7186 24.5966 10.466 24.5966 10.2063C24.5966 9.86667 24.5627 9.53684 24.5071 9.21404H24.503Z" fill="#666666"/>
+</svg>
+              <p class="lcl-cmn-ttl__en">FLOW</p>
+              <h2>成婚までの流れ</h2>
+            </div><!-- .lcl-cmn-ttl -->
+            <div class="lcl-flow__cnt">
+              <ul class="lcl-flow__list">
+                                  <li class="lcl-flow__item">
+                    <div class="lcl-flow__wrap">
+                      <p class="lcl-flow__label">FLOW<span class="lcl-flow__num">01</span></p>
+                      <div class="lcl-flow__area">
+                        <p class="lcl-flow__ttl">無料相談&<span class="dib">カウンセリング</span></p>
+                        <p class="mt10-w mt5-n">カウンセリングはオンラインでも可能です。悩みや希望条件をヒアリングし、サービス内容や方針を丁寧に説明します。無理な勧誘はありません。</p>
+                        <div class="lcl-flow__box">
+                          <p class="lcl-flow__en">POINT</p>
+                          <p class="lcl-flow__detail">無料相談のご予約は、<a href="https://lin.ee/zy6qOdz" target="_blank" class="tdu"><span class="c-black">LINE</span></a>からもお気軽に承っております。</p>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                                  <li class="lcl-flow__item">
+                    <div class="lcl-flow__wrap">
+                      <p class="lcl-flow__label">FLOW<span class="lcl-flow__num">02</span></p>
+                      <div class="lcl-flow__area">
+                        <p class="lcl-flow__ttl">入会手続き</p>
+                        <p class="mt10-w mt5-n">サービス内容や規約に納得いただいた上で、婚活のルールや個人情報保護について確認し、書面で契約します。</p>
+                        <div class="lcl-flow__box">
+                          <p class="lcl-flow__en">POINT</p>
+                          <p class="lcl-flow__detail">郵送でのお手続きにも対応しております。</p>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                                  <li class="lcl-flow__item">
+                    <div class="lcl-flow__wrap">
+                      <p class="lcl-flow__label">FLOW<span class="lcl-flow__num">03</span></p>
+                      <div class="lcl-flow__area">
+                        <p class="lcl-flow__ttl">必要書類のご準備</p>
+                        <p class="mt10-w mt5-n">住民票や独身証明書、写真付き身分証明書、収入証明書、学歴証明書など、正しく安全に活動を始めるための公的書類を揃えていただきます。</p>
+                        <div class="lcl-flow__box">
+                          <p class="lcl-flow__en">POINT</p>
+                          <p class="lcl-flow__detail">書類の提出は必須のため、真剣に結婚したい独身の方同士がお互い安心して活動できます。</p>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                                  <li class="lcl-flow__item">
+                    <div class="lcl-flow__wrap">
+                      <p class="lcl-flow__label">FLOW<span class="lcl-flow__num">04</span></p>
+                      <div class="lcl-flow__area">
+                        <p class="lcl-flow__ttl">プロフィール作成</p>
+                        <p class="mt10-w mt5-n">あなたの魅力が伝わるよう、カウンセラーと相談しながら作成します。<br>プロフィールにはお写真が1枚以上必要なため、6ヶ月以内に撮影したものをご準備いただくようお願いします。</p>
+                        <div class="lcl-flow__box">
+                          <p class="lcl-flow__en">POINT</p>
+                          <p class="lcl-flow__detail">写真撮影やデータ準備に関するサポートは、料金プランに応じてカウンセラーが丁寧にご案内いたします。</p>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                                  <li class="lcl-flow__item">
+                    <div class="lcl-flow__wrap">
+                      <p class="lcl-flow__label">FLOW<span class="lcl-flow__num">05</span></p>
+                      <div class="lcl-flow__area">
+                        <p class="lcl-flow__ttl">お相手探し</p>
+                        <p class="mt10-w mt5-n">IBJのデータベースから、会ってみたいと思うお相手を見つけて、お見合いを申し込みましょう。ご自身でお探しするだけでなく、弊社からの紹介ももちろん可能です。さまざまな角度から、運命のお相手を一緒にお探しいたします。</p>
+                        <div class="lcl-flow__box">
+                          <p class="lcl-flow__en">POINT</p>
+                          <p class="lcl-flow__detail">ご入会から1ヶ月以内に、最大10名の方をご紹介いたします。</p>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                                  <li class="lcl-flow__item">
+                    <div class="lcl-flow__wrap">
+                      <p class="lcl-flow__label">FLOW<span class="lcl-flow__num">06</span></p>
+                      <div class="lcl-flow__area">
+                        <p class="lcl-flow__ttl">お見合い</p>
+                        <p class="mt10-w mt5-n">お互いの合意後、カウンセラーが日程や場所を調整。<br>場所決めのポイントやお見合いのコツ、心得など、会員様が安心してお見合いに臨めるよう、丁寧にバックアップします。</p>
+                        <div class="lcl-flow__box">
+                          <p class="lcl-flow__en">POINT</p>
+                          <p class="lcl-flow__detail">お見合いの調整はカウンセラーにお任せでOK！</p>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                                  <li class="lcl-flow__item">
+                    <div class="lcl-flow__wrap">
+                      <p class="lcl-flow__label">FLOW<span class="lcl-flow__num">07</span></p>
+                      <div class="lcl-flow__area">
+                        <p class="lcl-flow__ttl">プレ交際</p>
+                        <p class="mt10-w mt5-n">複数人と「お友達」としてデートを重ね、相性を確かめる期間です。服装やプランの相談も随時受け付けます。<br>また、「合わない」と感じれば、いつでも相談所を通して交際終了させることが可能です。</p>
+                        <div class="lcl-flow__box">
+                          <p class="lcl-flow__en">POINT</p>
+                          <p class="lcl-flow__detail">交際中のお悩みも、カウンセラーに随時ご相談できます。</p>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                                  <li class="lcl-flow__item">
+                    <div class="lcl-flow__wrap">
+                      <p class="lcl-flow__label">FLOW<span class="lcl-flow__num">08</span></p>
+                      <div class="lcl-flow__area">
+                        <p class="lcl-flow__ttl">真剣交際</p>
+                        <p class="mt10-w mt5-n">結婚を前提に一人の方と向き合う期間です。<br>気持ちの確認やプロポーズのタイミングを、親身にサポートします。</p>
+                        <div class="lcl-flow__box">
+                          <p class="lcl-flow__en">POINT</p>
+                          <p class="lcl-flow__detail">プロポーズ準備に関しても、必要に応じてカウンセラーがサポートします。</p>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                                  <li class="lcl-flow__item">
+                    <div class="lcl-flow__wrap">
+                      <p class="lcl-flow__label">FLOW<span class="lcl-flow__num">09</span></p>
+                      <div class="lcl-flow__area">
+                        <p class="lcl-flow__ttl">プロポーズ・ご成婚</p>
+                        <p class="mt10-w mt5-n">二人の結婚の意思が固まれば成婚退会です。<br>ご成婚は婚活におけるゴールとなりますが、結婚後も不安なことなどございましたら、挙式や新生活の相談などお支えいたします。</p>
+                        <div class="lcl-flow__box">
+                          <p class="lcl-flow__en">POINT</p>
+                          <p class="lcl-flow__detail">ハネムーンやリゾートウェディングについても、ご相談ください。</p>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="lcl-staff" id="staff">
+          <svg class="ico_svg bg_logo" width="565" height="572" viewBox="0 0 565 572" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path class="svg-elm svg-path svg-path01" d="M209.324 316.921C210.514 312.158 211.492 307.315 212.02 302.337C212.443 298.457 212.708 294.523 212.708 290.509V215.34H252.045V194.6C252.045 190.613 252.257 186.679 252.627 182.772H212.708V107.656C212.708 66.2316 245.991 32.5404 286.915 32.5404C315.863 32.5404 340.951 49.4529 353.165 74.0188C355.385 78.461 357.157 83.1708 358.478 88.0679C360.144 94.3298 361.122 100.886 361.122 107.683C361.122 112.152 360.673 116.487 359.932 120.742C358.954 126.308 357.447 131.687 355.332 136.772C347.798 154.835 333.496 169.312 315.651 176.939C313.959 182.532 313.034 188.472 313.034 194.627V211.914C349.913 202.441 379.099 173.487 389.303 136.504C390.572 131.848 391.55 127.084 392.211 122.214C392.846 117.451 393.295 112.634 393.295 107.683C393.295 101.207 392.634 94.9185 391.55 88.7637C390.625 83.4919 389.33 78.354 387.664 73.3498C373.389 30.7743 333.655 0 286.888 0C228.252 0 180.535 48.3022 180.535 107.656V182.826H106.327C47.6914 182.879 0 231.155 0 290.509C0 337.848 30.4019 378.069 72.4359 392.439C71.8279 387.515 71.4842 382.538 71.4842 377.453C71.4842 370.683 72.0658 364.046 73.0968 357.57C48.8546 345.207 32.1203 319.838 32.1203 290.509C32.1203 249.084 65.4038 215.393 106.327 215.393H180.535V255.801V290.509C180.535 294.978 180.085 299.313 179.345 303.568C178.367 309.134 176.86 314.513 174.745 319.597C167.211 337.661 152.908 352.165 135.064 359.765C133.372 365.357 132.447 371.298 132.447 377.453C132.447 383.233 133.293 388.826 134.8 394.125C171.361 383.822 199.965 354.252 209.297 316.921H209.324Z" fill="#F7F7F7"/>
+<path class="svg-elm svg-path svg-path02" d="M492.589 179.615C493.197 184.539 493.541 189.516 493.541 194.601C493.541 201.371 492.959 208.008 491.928 214.484C516.171 226.847 532.905 252.215 532.905 281.545C532.905 322.97 499.621 356.661 458.698 356.661H384.491V316.253V281.545C384.491 277.076 384.94 272.741 385.68 268.486C386.658 262.92 388.165 257.541 390.28 252.456C397.815 234.393 412.117 219.916 429.961 212.289C431.653 206.696 432.578 200.756 432.578 194.574C432.578 188.794 431.733 183.201 430.226 177.902C393.664 188.205 365.06 217.775 355.728 255.106C354.538 259.869 353.56 264.713 353.031 269.69C352.608 273.57 352.344 277.504 352.344 281.518V356.687H313.006V377.427C313.006 381.414 312.795 385.348 312.425 389.255H352.344V464.371C352.344 505.795 319.06 539.487 278.137 539.487C249.189 539.487 224.101 522.574 211.887 498.008C209.666 493.566 207.895 488.856 206.573 483.959C204.908 477.697 203.93 471.141 203.93 464.344C203.93 459.875 204.379 455.54 205.119 451.285C206.097 445.719 207.604 440.34 209.719 435.255C217.253 417.192 231.556 402.688 249.4 395.088C251.092 389.495 252.017 383.555 252.017 377.4V360.113C215.139 369.586 185.953 398.54 175.748 435.523C174.479 440.179 173.501 444.943 172.84 449.813C172.206 454.576 171.756 459.393 171.756 464.344C171.756 470.82 172.417 477.108 173.501 483.263C174.426 488.535 175.722 493.673 177.387 498.677C191.584 541.226 231.318 572 278.084 572C336.72 572 384.438 523.698 384.438 464.344V389.174H458.645C517.281 389.148 564.999 340.845 564.999 281.491C564.999 234.152 534.623 193.932 492.563 179.561L492.589 179.615Z" fill="#F7F7F7"/>
+<path class="svg-elm svg-path svg-path03" d="M89.8835 348.633C88.6146 353.289 87.6364 358.052 86.9755 362.923C86.341 367.686 85.8916 372.503 85.8916 377.454C85.8916 383.93 86.5525 390.218 87.6364 396.373C88.5617 401.645 89.8571 406.783 91.5226 411.787C102.124 443.551 126.947 468.652 158.301 479.383C157.693 474.459 157.349 469.482 157.349 464.398C157.349 457.627 157.931 450.991 158.962 444.515C144.713 437.263 133.107 425.515 125.943 411.091C123.722 406.649 121.951 401.939 120.629 397.042C118.964 390.78 117.985 384.224 117.985 377.454C117.985 372.985 118.435 368.649 119.175 364.395C120.153 358.828 121.66 353.45 123.775 348.365C131.309 330.302 145.612 315.798 163.456 308.198C165.148 302.605 166.073 296.664 166.073 290.51V273.222C129.195 282.696 100.009 311.65 89.8042 348.633H89.8835Z" fill="#F7F7F7"/>
+<path class="svg-elm svg-path svg-path04" d="M269.81 168.188C268.621 172.952 267.642 177.795 267.114 182.773C266.691 186.653 266.426 190.587 266.426 194.601V269.77H227.089V290.509C227.089 294.497 226.877 298.43 226.507 302.337H266.426V342.772V377.48C266.426 381.949 265.977 386.284 265.237 390.539C264.259 396.105 262.752 401.484 260.637 406.569C253.102 424.632 238.8 439.136 220.956 446.736C219.264 452.329 218.338 458.269 218.338 464.424C218.338 470.204 219.184 475.797 220.691 481.096C257.253 470.793 285.831 441.223 295.189 403.893C296.379 399.129 297.357 394.286 297.886 389.308C298.309 385.428 298.573 381.494 298.573 377.48V302.311H337.91V281.572C337.91 277.584 338.122 273.65 338.492 269.743H298.573V229.309V194.601C298.573 190.132 299.022 185.797 299.763 181.542C300.741 175.976 302.248 170.597 304.363 165.512C311.897 147.449 326.199 132.972 344.044 125.345C345.736 119.752 346.661 113.812 346.661 107.657C346.661 101.877 345.815 96.2836 344.308 90.9851C307.747 101.288 279.169 130.858 269.81 168.188Z" fill="#F7F7F7"/>
+<path class="svg-elm svg-path svg-path05" d="M477.388 175.681C476.462 170.41 475.167 165.272 473.501 160.267C462.9 128.503 438.077 103.402 406.723 92.6711C407.331 97.595 407.675 102.572 407.675 107.657C407.675 114.427 407.093 121.064 406.062 127.54C420.311 134.792 431.917 146.539 439.081 160.963C441.302 165.405 443.073 170.115 444.395 175.012C446.06 181.274 447.039 187.831 447.039 194.601C447.039 199.07 446.589 203.405 445.849 207.66C444.871 213.226 443.364 218.605 441.249 223.689C433.715 241.752 419.412 256.23 401.568 263.856C399.876 269.449 398.951 275.39 398.951 281.545V298.832C435.83 289.359 465.042 260.404 475.22 223.422C476.489 218.765 477.467 214.002 478.128 209.132C478.762 204.368 479.212 199.552 479.212 194.601C479.212 188.125 478.551 181.836 477.467 175.681H477.388Z" fill="#F7F7F7"/>
+</svg>
+          <div class="lcl-staff__in">
+            <div class="lcl-cmn-ttl">
+              <svg class="ico_svg logo-mark" width="29" height="30" viewBox="0 0 29 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path class="svg-elm svg-path svg-path01" d="M10.7441 16.6218C10.8051 16.3719 10.8553 16.1179 10.8825 15.8568C10.9042 15.6533 10.9177 15.447 10.9177 15.2365V11.294H12.9368V10.2063C12.9368 9.99719 12.9477 9.79088 12.9667 9.58596H10.9177V5.64632C10.9177 3.47368 12.6261 1.70667 14.7266 1.70667C16.2124 1.70667 17.5001 2.59368 18.127 3.8821C18.241 4.11509 18.3319 4.3621 18.3998 4.61895C18.4853 4.94737 18.5355 5.29123 18.5355 5.64772C18.5355 5.8821 18.5124 6.10947 18.4744 6.33263C18.4242 6.62456 18.3469 6.90667 18.2383 7.17333C17.8516 8.1207 17.1175 8.88 16.2016 9.28C16.1147 9.57333 16.0672 9.88491 16.0672 10.2077V11.1144C17.9601 10.6175 19.4582 9.09895 19.9819 7.1593C20.0471 6.91509 20.0973 6.66526 20.1312 6.40982C20.1638 6.16 20.1868 5.90737 20.1868 5.64772C20.1868 5.30807 20.1529 4.97824 20.0973 4.65544C20.0498 4.37895 19.9833 4.10947 19.8978 3.84702C19.1651 1.61403 17.1256 0 14.7252 0C11.7156 0 9.26638 2.53333 9.26638 5.64632V9.58877H5.45752C2.44788 9.59158 0 12.1235 0 15.2365C0 17.7193 1.56045 19.8288 3.71795 20.5825C3.68674 20.3242 3.6691 20.0632 3.6691 19.7965C3.6691 19.4414 3.69895 19.0933 3.75187 18.7537C2.50758 18.1053 1.64865 16.7747 1.64865 15.2365C1.64865 13.0639 3.35701 11.2968 5.45752 11.2968H9.26638V13.4161V15.2365C9.26638 15.4709 9.24331 15.6982 9.20532 15.9214C9.15511 16.2133 9.07777 16.4954 8.96921 16.7621C8.58249 17.7095 7.8484 18.4702 6.93248 18.8688C6.84564 19.1621 6.79815 19.4737 6.79815 19.7965C6.79815 20.0996 6.84157 20.393 6.91891 20.6709C8.79553 20.1305 10.2637 18.5796 10.7427 16.6218H10.7441Z" fill="#E60012"/>
+<path class="svg-elm svg-path svg-path02" d="M25.2834 9.42039C25.3147 9.67864 25.3323 9.93969 25.3323 10.2064C25.3323 10.5614 25.3024 10.9095 25.2495 11.2492C26.4938 11.8976 27.3527 13.2281 27.3527 14.7664C27.3527 16.939 25.6444 18.706 23.5439 18.706H19.735V16.5867V14.7664C19.735 14.532 19.7581 14.3046 19.7961 14.0814C19.8463 13.7895 19.9236 13.5074 20.0322 13.2407C20.4189 12.2934 21.153 11.5341 22.0689 11.1341C22.1558 10.8407 22.2032 10.5292 22.2032 10.205C22.2032 9.90179 22.1598 9.60846 22.0825 9.33057C20.2059 9.87092 18.7377 11.4218 18.2587 13.3797C18.1976 13.6295 18.1474 13.8835 18.1203 14.1446C18.0986 14.3481 18.085 14.5544 18.085 14.765V18.7074H16.0659V19.7951C16.0659 20.0042 16.0551 20.2106 16.0361 20.4155H18.085V24.3551C18.085 26.5278 16.3767 28.2948 14.2761 28.2948C12.7903 28.2948 11.5026 27.4078 10.8757 26.1193C10.7617 25.8864 10.6708 25.6393 10.603 25.3825C10.5175 25.0541 10.4673 24.7102 10.4673 24.3537C10.4673 24.1193 10.4904 23.892 10.5283 23.6688C10.5786 23.3769 10.6559 23.0948 10.7644 22.8281C11.1512 21.8807 11.8853 21.12 12.8012 20.7214C12.888 20.4281 12.9355 20.1165 12.9355 19.7937V18.8871C11.0426 19.3839 9.54458 20.9025 9.02081 22.8421C8.95568 23.0864 8.90547 23.3362 8.87155 23.5916C8.83898 23.8414 8.81592 24.0941 8.81592 24.3537C8.81592 24.6934 8.84984 25.0232 8.90547 25.346C8.95297 25.6225 9.01945 25.892 9.10494 26.1544C9.8336 28.386 11.873 30 14.2734 30C17.2831 30 19.7323 27.4667 19.7323 24.3537V20.4113H23.5412C26.5508 20.4099 29 17.8765 29 14.7635C29 12.2807 27.4409 10.1713 25.2821 9.41758L25.2834 9.42039Z" fill="#E60012"/>
+<path class="svg-elm svg-path svg-path03" d="M4.61359 18.2849C4.54845 18.5291 4.49825 18.779 4.46432 19.0344C4.43176 19.2842 4.40869 19.5369 4.40869 19.7965C4.40869 20.1362 4.44261 20.466 4.49825 20.7888C4.54574 21.0653 4.61223 21.3347 4.69771 21.5972C5.24184 23.2632 6.51598 24.5797 8.12528 25.1425C8.09407 24.8842 8.07643 24.6232 8.07643 24.3565C8.07643 24.0014 8.10629 23.6533 8.15921 23.3137C7.42783 22.9333 6.83214 22.3172 6.46442 21.5607C6.35044 21.3277 6.25952 21.0807 6.19168 20.8239C6.10619 20.4954 6.05599 20.1516 6.05599 19.7965C6.05599 19.5621 6.07905 19.3347 6.11705 19.1116C6.16725 18.8197 6.2446 18.5376 6.35315 18.2709C6.73987 17.3235 7.47396 16.5628 8.38988 16.1642C8.47672 15.8709 8.52422 15.5593 8.52422 15.2365V14.3298C6.63132 14.8267 5.13328 16.3453 4.60951 18.2849H4.61359Z" fill="#666666"/>
+<path class="svg-elm svg-path svg-path04" d="M13.8485 8.8211C13.7874 9.07092 13.7372 9.32496 13.7101 9.58601C13.6883 9.78952 13.6748 9.99583 13.6748 10.2064V14.1488H11.6557V15.2365C11.6557 15.4457 11.6448 15.652 11.6258 15.8569H13.6748V17.9776V19.7979C13.6748 20.0323 13.6517 20.2597 13.6137 20.4829C13.5635 20.7748 13.4862 21.0569 13.3776 21.3236C12.9909 22.2709 12.2568 23.0316 11.3409 23.4302C11.254 23.7236 11.2065 24.0351 11.2065 24.3579C11.2065 24.6611 11.25 24.9544 11.3273 25.2323C13.2039 24.692 14.6707 23.1411 15.1511 21.1832C15.2122 20.9334 15.2624 20.6793 15.2895 20.4183C15.3112 20.2148 15.3248 20.0085 15.3248 19.7979V15.8555H17.3439V14.7678C17.3439 14.5586 17.3547 14.3523 17.3737 14.1474H15.3248V12.0267V10.2064C15.3248 9.97197 15.3478 9.7446 15.3858 9.52145C15.436 9.22952 15.5134 8.94741 15.6219 8.68074C16.0087 7.73338 16.7428 6.97408 17.6587 6.57408C17.7455 6.28074 17.793 5.96917 17.793 5.64636C17.793 5.3432 17.7496 5.04987 17.6722 4.77197C15.7956 5.31232 14.3288 6.8632 13.8485 8.8211Z" fill="#666666"/>
+<path class="svg-elm svg-path svg-path05" d="M24.503 9.21404C24.4555 8.93754 24.389 8.66807 24.3036 8.40561C23.7594 6.73965 22.4853 5.42316 20.876 4.86035C20.9072 5.1186 20.9248 5.37965 20.9248 5.64632C20.9248 6.0014 20.895 6.34947 20.8421 6.68912C21.5734 7.06947 22.1691 7.68561 22.5368 8.44211C22.6508 8.67509 22.7417 8.92211 22.8096 9.17895C22.8951 9.50737 22.9453 9.85123 22.9453 10.2063C22.9453 10.4407 22.9222 10.6681 22.8842 10.8912C22.834 11.1832 22.7567 11.4653 22.6481 11.7319C22.2614 12.6793 21.5273 13.4386 20.6114 13.8386C20.5245 14.1319 20.4771 14.4435 20.4771 14.7663V15.673C22.3699 15.1761 23.8693 13.6575 24.3918 11.7179C24.4569 11.4737 24.5071 11.2239 24.541 10.9684C24.5736 10.7186 24.5966 10.466 24.5966 10.2063C24.5966 9.86667 24.5627 9.53684 24.5071 9.21404H24.503Z" fill="#666666"/>
+</svg>
+              <p class="lcl-cmn-ttl__en">STAFF</p>
+              <h2>スタッフ紹介</h2>
+            </div><!-- .lcl-cmn-ttl -->
+            <div class="lcl-staff__cnt">
+              <p class="tac-w">スタッフがどんな時でもあなたの一番の理解者でいるからこそ、<br class="dn-n">一人ひとりにピッタリのお相手を紹介することができ、精度の高いお見合いを実現しています。</p>
+              <div class="lcl-staff__box">
+                <p class="lcl-cmn-sub">代表挨拶</p>
+                <div class="lcl-staff__sep">
+                  <figure class="lcl-staff__fig"><img src="/recommend/futari-tsumugi/images/staff/img_01.jpg" alt="新開 祐二" width="940" height="900"></figure>
+                  <div class="lcl-staff__area">
+                    <p class="tac-n c-red title-02">新開 祐二</p>
+                    <p class="mt30-w mt15-n">～ふたりの物語を紬ぐ、人生という旅へ～<br>JTBの結婚相談所 ふたり紬は、出会いから始まるお二人の人生という旅を、JTBが長年培ってきたホスピタリティと揺るぎない信頼を基盤に、<br>心ときめく自然な出会いを通してサポートします。<br>私たちは「結婚」だけでなく、その先に広がる「ふたりらしい日々」をともに描くお手伝いをしたいと考えています。特別な記念日も、何気ない日も、すべてがふたりにとっての「いい日」になりますように。<br>お客さまの「これから」を彩る素敵な出会いを、心を込めてコーディネートさせていただきます。</p>
+                  </div>
+                </div><!-- .lcl-staff__sep -->
+              </div><!-- .lcl-staff__box -->
+
+                                <ul class="lcl-staff-list lcl-staff-list--large">
+                                    <li class="lcl-staff-list__item">
+                    <button type="button" class="modal-open lcl-staff-list__open" data-target="modal-01">
+                      <span class="lcl-staff-list__figarea">
+                        <img src="/recommend/futari-tsumugi/images/staff/img_02.jpg" alt="岩崎 まち" width="704" height="900">
+                        <span class="lcl-staff-list__icon"></span>
+                      </span>
+                      <span class="lcl-staff-list__txt">カウンセラー／JTBロイヤルスタッフ</span>
+                      <span class="lcl-staff-list__name">岩崎 まち</span>
+                    </button>
+                  </li>
+                                  <li class="lcl-staff-list__item">
+                    <button type="button" class="modal-open lcl-staff-list__open" data-target="modal-02">
+                      <span class="lcl-staff-list__figarea">
+                        <img src="/recommend/futari-tsumugi/images/staff/img_03.jpg" alt="吉村 まなみ" width="704" height="900">
+                        <span class="lcl-staff-list__icon"></span>
+                      </span>
+                      <span class="lcl-staff-list__txt">カウンセラー</span>
+                      <span class="lcl-staff-list__name">吉村 まなみ</span>
+                    </button>
+                  </li>
+                                    </ul>
+                                    <ul class="lcl-staff-list">
+                                    <li class="lcl-staff-list__item">
+                    <button type="button" class="modal-open lcl-staff-list__open" data-target="modal-03">
+                      <span class="lcl-staff-list__figarea">
+                        <img src="/recommend/futari-tsumugi/images/staff/img_04.jpg" alt="井沖" width="704" height="900">
+                        <span class="lcl-staff-list__icon"></span>
+                      </span>
+                      <span class="lcl-staff-list__txt">カウンセラー</span>
+                      <span class="lcl-staff-list__name">井沖</span>
+                    </button>
+                  </li>
+                                  <li class="lcl-staff-list__item">
+                    <button type="button" class="modal-open lcl-staff-list__open" data-target="modal-04">
+                      <span class="lcl-staff-list__figarea">
+                        <img src="/recommend/futari-tsumugi/images/staff/img_05.jpg" alt="藤田" width="704" height="900">
+                        <span class="lcl-staff-list__icon"></span>
+                      </span>
+                      <span class="lcl-staff-list__txt">カウンセラー</span>
+                      <span class="lcl-staff-list__name">藤田</span>
+                    </button>
+                  </li>
+                                  <li class="lcl-staff-list__item">
+                    <button type="button" class="modal-open lcl-staff-list__open" data-target="modal-05">
+                      <span class="lcl-staff-list__figarea">
+                        <img src="/recommend/futari-tsumugi/images/staff/img_06.jpg" alt="竹内" width="704" height="900">
+                        <span class="lcl-staff-list__icon"></span>
+                      </span>
+                      <span class="lcl-staff-list__txt">カウンセラー</span>
+                      <span class="lcl-staff-list__name">竹内</span>
+                    </button>
+                  </li>
+                                  <li class="lcl-staff-list__item">
+                    <button type="button" class="modal-open lcl-staff-list__open" data-target="modal-06">
+                      <span class="lcl-staff-list__figarea">
+                        <img src="/recommend/futari-tsumugi/images/staff/img_07.jpg" alt="恒石" width="704" height="900">
+                        <span class="lcl-staff-list__icon"></span>
+                      </span>
+                      <span class="lcl-staff-list__txt">カウンセラー</span>
+                      <span class="lcl-staff-list__name">恒石</span>
+                    </button>
+                  </li>
+                                  <li class="lcl-staff-list__item">
+                    <button type="button" class="modal-open lcl-staff-list__open" data-target="modal-07">
+                      <span class="lcl-staff-list__figarea">
+                        <img src="/recommend/futari-tsumugi/images/staff/img_ready.jpg" alt="田内" width="704" height="900">
+                        <span class="lcl-staff-list__icon"></span>
+                      </span>
+                      <span class="lcl-staff-list__txt">カウンセラー</span>
+                      <span class="lcl-staff-list__name">田内</span>
+                    </button>
+                  </li>
+                                  <li class="lcl-staff-list__item">
+                    <button type="button" class="modal-open lcl-staff-list__open" data-target="modal-08">
+                      <span class="lcl-staff-list__figarea">
+                        <img src="/recommend/futari-tsumugi/images/staff/img_ready.jpg" alt="生田" width="704" height="900">
+                        <span class="lcl-staff-list__icon"></span>
+                      </span>
+                      <span class="lcl-staff-list__txt">カウンセラー</span>
+                      <span class="lcl-staff-list__name">生田</span>
+                    </button>
+                  </li>
+                                  <li class="lcl-staff-list__item">
+                    <button type="button" class="modal-open lcl-staff-list__open" data-target="modal-09">
+                      <span class="lcl-staff-list__figarea">
+                        <img src="/recommend/futari-tsumugi/images/staff/img_ready.jpg" alt="山本" width="704" height="900">
+                        <span class="lcl-staff-list__icon"></span>
+                      </span>
+                      <span class="lcl-staff-list__txt">カウンセラー</span>
+                      <span class="lcl-staff-list__name">山本</span>
+                    </button>
+                  </li>
+                                  <li class="lcl-staff-list__item">
+                    <button type="button" class="modal-open lcl-staff-list__open" data-target="modal-10">
+                      <span class="lcl-staff-list__figarea">
+                        <img src="/recommend/futari-tsumugi/images/staff/img_ready.jpg" alt="中島" width="704" height="900">
+                        <span class="lcl-staff-list__icon"></span>
+                      </span>
+                      <span class="lcl-staff-list__txt">カウンセラー</span>
+                      <span class="lcl-staff-list__name">中島</span>
+                    </button>
+                  </li>
+                                  </ul>
+                  
+                    <dialog class="modal lcl-staff-modal" id="modal-01" aria-hidden="true">
+                      <div class="modal__inner">
+                        <div class="modal__main lcl-staff-modal__main">
+                          <div class="lcl-staff-modal__in">
+                            <div class="lcl-staff-modal__sep lcl-staff-modal__sep--fs">
+                              <figure class="lcl-staff-modal__fig"><img src="/recommend/futari-tsumugi/images/staff/img_02.jpg" alt="岩崎 まち" width="704" height="900"></figure>
+                              <div class="lcl-staff-modal__cnt">
+                                <p>カウンセラー／JTBロイヤルスタッフ</p>
+                                <p class="c-red title-02">岩崎 まち</p>
+                                <p class="mt15">初めまして。JTBの結婚相談所 ふたり紬の岩崎と申します。<br>これまで旅行事業において、100組以上のハネムーンやリゾートウェディングをお手伝いしてまいりました。おふたりの幸せな門出に寄り添う中で、「その出会いの瞬間から支えたい」と強く思うようになり、婚活カウンセラーとしての道を志しました。<br>これまで培った傾聴力と寄り添う姿勢を大切にしながら、お一人おひとりのペースに合わせたご縁づくりをお手伝いしております。<br>「旅」のように、新しい発見と感動に満ちた未来を、私たちと共につむぎましょう。お目にかかれる日を心より楽しみにしております。</p>
+                                                                  <div class="lcl-staff-modal__box">
+                                    <p class="title04 c-red">保有資格</p>
+                                    <div class="lcl-staff-modal__area">
+                                      <ul class="lcl-staff-modal__list">
+                                                                                  <li class="lcl-staff-modal__item">婚活カウンセラー初級</li>
+                                                                                  <li class="lcl-staff-modal__item">総合旅行業務取扱管理者</li>
+                                                                                  <li class="lcl-staff-modal__item">クルーズコンサルタント</li>
+                                                                              </ul>
+                                      <div class="lcl-staff-modal__figlist">
+                                        <figure class="lcl-staff-modal__bnr"><img src="/recommend/futari-tsumugi/images/staff/bnr_01.jpg" alt="JLCA認定婚活カウンセラー" width="600" height="188"></figure>
+                                      </div>
+                                    </div>
+                                  </div>
+                                                                <p class="lcl-staff-modal__hobby"><span class="c-red title-04">趣味</span>
+                                  <span class="lcl-staff-modal__hobbytxt">旅行／話題のカフェ・レストラン巡り／人と話したりおしゃべりしたりすること</span>
+                                </p>
+                              </div>
+                            </div>
+                            <button type="button" class="lcl-staff-modal__btn">閉じる<svg class="ico_svg ic_cancel" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle class="svg-elm svg-circle svg-circle01" cx="12" cy="12" r="11" fill="white"/>
+<circle class="svg-elm svg-circle svg-circle02" cx="12" cy="12" r="7" fill="white"/>
+<path class="svg-elm svg-path svg-path01" d="M12 2C6.47 2 2 6.47 2 12C2 17.53 6.47 22 12 22C17.53 22 22 17.53 22 12C22 6.47 17.53 2 12 2ZM17 15.59L15.59 17L12 13.41L8.41 17L7 15.59L10.59 12L7 8.41L8.41 7L12 10.59L15.59 7L17 8.41L13.41 12L17 15.59Z" fill="#1F1F1F"/>
+</svg>
+</button>
+                          </div>
+                        </div><!-- /.modal__main -->
+                        <button class="btn modal__close modal-close" type="button" aria-label="モーダルを閉じる"><svg class="ico_svg ic_cancel" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle class="svg-elm svg-circle svg-circle01" cx="12" cy="12" r="11" fill="white"/>
+<circle class="svg-elm svg-circle svg-circle02" cx="12" cy="12" r="7" fill="white"/>
+<path class="svg-elm svg-path svg-path01" d="M12 2C6.47 2 2 6.47 2 12C2 17.53 6.47 22 12 22C17.53 22 22 17.53 22 12C22 6.47 17.53 2 12 2ZM17 15.59L15.59 17L12 13.41L8.41 17L7 15.59L10.59 12L7 8.41L8.41 7L12 10.59L15.59 7L17 8.41L13.41 12L17 15.59Z" fill="#1F1F1F"/>
+</svg>
+</button>
+                      </div><!-- /.modal__inner -->
+                    </dialog>
+                  
+                    <dialog class="modal lcl-staff-modal" id="modal-02" aria-hidden="true">
+                      <div class="modal__inner">
+                        <div class="modal__main lcl-staff-modal__main">
+                          <div class="lcl-staff-modal__in">
+                            <div class="lcl-staff-modal__sep">
+                              <figure class="lcl-staff-modal__fig"><img src="/recommend/futari-tsumugi/images/staff/img_03.jpg" alt="吉村 まなみ" width="704" height="900"></figure>
+                              <div class="lcl-staff-modal__cnt">
+                                <p>カウンセラー</p>
+                                <p class="c-red title-02">吉村 まなみ</p>
+                                <p class="mt15">初めまして。JTBの結婚相談所「ふたり紬」カウンセラーの吉村と申します。<br>長年、旅に関わる仕事を通じて、多くの人々が新たな場所や文化と出会い、心を通わせる瞬間に立ち会ってまいりました。その中で培った経験とホスピタリティを活かし、「ふたり紬」では、皆様の大切なご縁が深く結ばれていくよう、心を込めてお手伝いいたします。新たな人生の旅立ちを、ぜひ私と一緒に始めましょう。</p>
+                                                                <p class="lcl-staff-modal__hobby"><span class="c-red title-04">趣味</span>
+                                  <span class="lcl-staff-modal__hobbytxt">読書／散歩</span>
+                                </p>
+                              </div>
+                            </div>
+                            <button type="button" class="lcl-staff-modal__btn">閉じる<svg class="ico_svg ic_cancel" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle class="svg-elm svg-circle svg-circle01" cx="12" cy="12" r="11" fill="white"/>
+<circle class="svg-elm svg-circle svg-circle02" cx="12" cy="12" r="7" fill="white"/>
+<path class="svg-elm svg-path svg-path01" d="M12 2C6.47 2 2 6.47 2 12C2 17.53 6.47 22 12 22C17.53 22 22 17.53 22 12C22 6.47 17.53 2 12 2ZM17 15.59L15.59 17L12 13.41L8.41 17L7 15.59L10.59 12L7 8.41L8.41 7L12 10.59L15.59 7L17 8.41L13.41 12L17 15.59Z" fill="#1F1F1F"/>
+</svg>
+</button>
+                          </div>
+                        </div><!-- /.modal__main -->
+                        <button class="btn modal__close modal-close" type="button" aria-label="モーダルを閉じる"><svg class="ico_svg ic_cancel" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle class="svg-elm svg-circle svg-circle01" cx="12" cy="12" r="11" fill="white"/>
+<circle class="svg-elm svg-circle svg-circle02" cx="12" cy="12" r="7" fill="white"/>
+<path class="svg-elm svg-path svg-path01" d="M12 2C6.47 2 2 6.47 2 12C2 17.53 6.47 22 12 22C17.53 22 22 17.53 22 12C22 6.47 17.53 2 12 2ZM17 15.59L15.59 17L12 13.41L8.41 17L7 15.59L10.59 12L7 8.41L8.41 7L12 10.59L15.59 7L17 8.41L13.41 12L17 15.59Z" fill="#1F1F1F"/>
+</svg>
+</button>
+                      </div><!-- /.modal__inner -->
+                    </dialog>
+                  
+                    <dialog class="modal lcl-staff-modal" id="modal-03" aria-hidden="true">
+                      <div class="modal__inner">
+                        <div class="modal__main lcl-staff-modal__main">
+                          <div class="lcl-staff-modal__in">
+                            <div class="lcl-staff-modal__sep">
+                              <figure class="lcl-staff-modal__fig"><img src="/recommend/futari-tsumugi/images/staff/img_04.jpg" alt="井沖" width="704" height="900"></figure>
+                              <div class="lcl-staff-modal__cnt">
+                                <p>カウンセラー</p>
+                                <p class="c-red title-02">井沖</p>
+                                <p class="mt15">長年、旅行会社で多くのお客様の大切な思い出作りをサポートしてまいりました。その中で培った経験とホスピタリティを活かし、今度は皆様の「人生という長い旅」の最良のパートナー探しを、心を込めてお手伝いしたいと願っております。新たな旅立ちを、ぜひ私と一緒に始めましょう。</p>
+                                                                <p class="lcl-staff-modal__hobby"><span class="c-red title-04">趣味</span>
+                                  <span class="lcl-staff-modal__hobbytxt">美味しいお店の食べ歩き／カフェ巡り／映画鑑賞</span>
+                                </p>
+                              </div>
+                            </div>
+                            <button type="button" class="lcl-staff-modal__btn">閉じる<svg class="ico_svg ic_cancel" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle class="svg-elm svg-circle svg-circle01" cx="12" cy="12" r="11" fill="white"/>
+<circle class="svg-elm svg-circle svg-circle02" cx="12" cy="12" r="7" fill="white"/>
+<path class="svg-elm svg-path svg-path01" d="M12 2C6.47 2 2 6.47 2 12C2 17.53 6.47 22 12 22C17.53 22 22 17.53 22 12C22 6.47 17.53 2 12 2ZM17 15.59L15.59 17L12 13.41L8.41 17L7 15.59L10.59 12L7 8.41L8.41 7L12 10.59L15.59 7L17 8.41L13.41 12L17 15.59Z" fill="#1F1F1F"/>
+</svg>
+</button>
+                          </div>
+                        </div><!-- /.modal__main -->
+                        <button class="btn modal__close modal-close" type="button" aria-label="モーダルを閉じる"><svg class="ico_svg ic_cancel" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle class="svg-elm svg-circle svg-circle01" cx="12" cy="12" r="11" fill="white"/>
+<circle class="svg-elm svg-circle svg-circle02" cx="12" cy="12" r="7" fill="white"/>
+<path class="svg-elm svg-path svg-path01" d="M12 2C6.47 2 2 6.47 2 12C2 17.53 6.47 22 12 22C17.53 22 22 17.53 22 12C22 6.47 17.53 2 12 2ZM17 15.59L15.59 17L12 13.41L8.41 17L7 15.59L10.59 12L7 8.41L8.41 7L12 10.59L15.59 7L17 8.41L13.41 12L17 15.59Z" fill="#1F1F1F"/>
+</svg>
+</button>
+                      </div><!-- /.modal__inner -->
+                    </dialog>
+                  
+                    <dialog class="modal lcl-staff-modal" id="modal-04" aria-hidden="true">
+                      <div class="modal__inner">
+                        <div class="modal__main lcl-staff-modal__main">
+                          <div class="lcl-staff-modal__in">
+                            <div class="lcl-staff-modal__sep">
+                              <figure class="lcl-staff-modal__fig"><img src="/recommend/futari-tsumugi/images/staff/img_05.jpg" alt="藤田" width="704" height="900"></figure>
+                              <div class="lcl-staff-modal__cnt">
+                                <p>カウンセラー</p>
+                                <p class="c-red title-02">藤田</p>
+                                <p class="mt15">これまで、数多くのハネムーンやリゾートウェディングをお手伝いしてまいりました。人生の節目に立ち会う中で、「人と人が出会い、家族となる尊い瞬間」を幾度となく見守ってきました。<br>ご成婚は新たな人生のスタートライン。その先に続く幸せな日々こそが本番です。お一人おひとりの想いや価値観を大切にしながら、心温まるご縁を丁寧に紡いでいきたいと願っています。</p>
+                                                                <p class="lcl-staff-modal__hobby"><span class="c-red title-04">趣味</span>
+                                  <span class="lcl-staff-modal__hobbytxt">主人と愛犬とのキャンプ／自然の中で過ごす時間／地域の美味しいもの探し</span>
+                                </p>
+                              </div>
+                            </div>
+                            <button type="button" class="lcl-staff-modal__btn">閉じる<svg class="ico_svg ic_cancel" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle class="svg-elm svg-circle svg-circle01" cx="12" cy="12" r="11" fill="white"/>
+<circle class="svg-elm svg-circle svg-circle02" cx="12" cy="12" r="7" fill="white"/>
+<path class="svg-elm svg-path svg-path01" d="M12 2C6.47 2 2 6.47 2 12C2 17.53 6.47 22 12 22C17.53 22 22 17.53 22 12C22 6.47 17.53 2 12 2ZM17 15.59L15.59 17L12 13.41L8.41 17L7 15.59L10.59 12L7 8.41L8.41 7L12 10.59L15.59 7L17 8.41L13.41 12L17 15.59Z" fill="#1F1F1F"/>
+</svg>
+</button>
+                          </div>
+                        </div><!-- /.modal__main -->
+                        <button class="btn modal__close modal-close" type="button" aria-label="モーダルを閉じる"><svg class="ico_svg ic_cancel" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle class="svg-elm svg-circle svg-circle01" cx="12" cy="12" r="11" fill="white"/>
+<circle class="svg-elm svg-circle svg-circle02" cx="12" cy="12" r="7" fill="white"/>
+<path class="svg-elm svg-path svg-path01" d="M12 2C6.47 2 2 6.47 2 12C2 17.53 6.47 22 12 22C17.53 22 22 17.53 22 12C22 6.47 17.53 2 12 2ZM17 15.59L15.59 17L12 13.41L8.41 17L7 15.59L10.59 12L7 8.41L8.41 7L12 10.59L15.59 7L17 8.41L13.41 12L17 15.59Z" fill="#1F1F1F"/>
+</svg>
+</button>
+                      </div><!-- /.modal__inner -->
+                    </dialog>
+                  
+                    <dialog class="modal lcl-staff-modal" id="modal-05" aria-hidden="true">
+                      <div class="modal__inner">
+                        <div class="modal__main lcl-staff-modal__main">
+                          <div class="lcl-staff-modal__in">
+                            <div class="lcl-staff-modal__sep">
+                              <figure class="lcl-staff-modal__fig"><img src="/recommend/futari-tsumugi/images/staff/img_06.jpg" alt="竹内" width="704" height="900"></figure>
+                              <div class="lcl-staff-modal__cnt">
+                                <p>カウンセラー</p>
+                                <p class="c-red title-02">竹内</p>
+                                <p class="mt15">これまでの「旅」を通じた経験は、私たちにとってかけがえのない財産です。お客様が最高の思い出を紡ぐお手伝いをする中で、人生という壮大な旅路においても、その経験が活かせると確信しました。<br>「ふたり紬」は、お客様一人ひとりの人生の旅に寄り添い、最良のパートナーとの「ご縁」という名の目的地へと導くために誕生した結婚相談所です。私は、あなたの専属カウンセラーとして、成婚というゴールまで、力強く、そして情熱的にサポートすることをお約束いたします。</p>
+                                                                <p class="lcl-staff-modal__hobby"><span class="c-red title-04">趣味</span>
+                                  <span class="lcl-staff-modal__hobbytxt">スポーツ観戦／音楽鑑賞／旅行</span>
+                                </p>
+                              </div>
+                            </div>
+                            <button type="button" class="lcl-staff-modal__btn">閉じる<svg class="ico_svg ic_cancel" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle class="svg-elm svg-circle svg-circle01" cx="12" cy="12" r="11" fill="white"/>
+<circle class="svg-elm svg-circle svg-circle02" cx="12" cy="12" r="7" fill="white"/>
+<path class="svg-elm svg-path svg-path01" d="M12 2C6.47 2 2 6.47 2 12C2 17.53 6.47 22 12 22C17.53 22 22 17.53 22 12C22 6.47 17.53 2 12 2ZM17 15.59L15.59 17L12 13.41L8.41 17L7 15.59L10.59 12L7 8.41L8.41 7L12 10.59L15.59 7L17 8.41L13.41 12L17 15.59Z" fill="#1F1F1F"/>
+</svg>
+</button>
+                          </div>
+                        </div><!-- /.modal__main -->
+                        <button class="btn modal__close modal-close" type="button" aria-label="モーダルを閉じる"><svg class="ico_svg ic_cancel" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle class="svg-elm svg-circle svg-circle01" cx="12" cy="12" r="11" fill="white"/>
+<circle class="svg-elm svg-circle svg-circle02" cx="12" cy="12" r="7" fill="white"/>
+<path class="svg-elm svg-path svg-path01" d="M12 2C6.47 2 2 6.47 2 12C2 17.53 6.47 22 12 22C17.53 22 22 17.53 22 12C22 6.47 17.53 2 12 2ZM17 15.59L15.59 17L12 13.41L8.41 17L7 15.59L10.59 12L7 8.41L8.41 7L12 10.59L15.59 7L17 8.41L13.41 12L17 15.59Z" fill="#1F1F1F"/>
+</svg>
+</button>
+                      </div><!-- /.modal__inner -->
+                    </dialog>
+                  
+                    <dialog class="modal lcl-staff-modal" id="modal-06" aria-hidden="true">
+                      <div class="modal__inner">
+                        <div class="modal__main lcl-staff-modal__main">
+                          <div class="lcl-staff-modal__in">
+                            <div class="lcl-staff-modal__sep">
+                              <figure class="lcl-staff-modal__fig"><img src="/recommend/futari-tsumugi/images/staff/img_07.jpg" alt="恒石" width="704" height="900"></figure>
+                              <div class="lcl-staff-modal__cnt">
+                                <p>カウンセラー</p>
+                                <p class="c-red title-02">恒石</p>
+                                <p class="mt15">はじめまして。カウンセラーの恒石と申します。<br>安心して何でも話せる関係づくりを一番大切にしております。これまで多くの方々の人生の転機に寄り添い、その大切な瞬間を共に歩んでまいりました。あなたの心に深く寄り添い、一つひとつの気持ちを丁寧に受け止めながら、幸せなご縁へとつながるよう、心を込めてサポートいたします。どんな小さなことでも、どうぞお気軽にご相談ください。</p>
+                                                                <p class="lcl-staff-modal__hobby"><span class="c-red title-04">趣味</span>
+                                  <span class="lcl-staff-modal__hobbytxt">写真を撮ること</span>
+                                </p>
+                              </div>
+                            </div>
+                            <button type="button" class="lcl-staff-modal__btn">閉じる<svg class="ico_svg ic_cancel" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle class="svg-elm svg-circle svg-circle01" cx="12" cy="12" r="11" fill="white"/>
+<circle class="svg-elm svg-circle svg-circle02" cx="12" cy="12" r="7" fill="white"/>
+<path class="svg-elm svg-path svg-path01" d="M12 2C6.47 2 2 6.47 2 12C2 17.53 6.47 22 12 22C17.53 22 22 17.53 22 12C22 6.47 17.53 2 12 2ZM17 15.59L15.59 17L12 13.41L8.41 17L7 15.59L10.59 12L7 8.41L8.41 7L12 10.59L15.59 7L17 8.41L13.41 12L17 15.59Z" fill="#1F1F1F"/>
+</svg>
+</button>
+                          </div>
+                        </div><!-- /.modal__main -->
+                        <button class="btn modal__close modal-close" type="button" aria-label="モーダルを閉じる"><svg class="ico_svg ic_cancel" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle class="svg-elm svg-circle svg-circle01" cx="12" cy="12" r="11" fill="white"/>
+<circle class="svg-elm svg-circle svg-circle02" cx="12" cy="12" r="7" fill="white"/>
+<path class="svg-elm svg-path svg-path01" d="M12 2C6.47 2 2 6.47 2 12C2 17.53 6.47 22 12 22C17.53 22 22 17.53 22 12C22 6.47 17.53 2 12 2ZM17 15.59L15.59 17L12 13.41L8.41 17L7 15.59L10.59 12L7 8.41L8.41 7L12 10.59L15.59 7L17 8.41L13.41 12L17 15.59Z" fill="#1F1F1F"/>
+</svg>
+</button>
+                      </div><!-- /.modal__inner -->
+                    </dialog>
+                  
+                    <dialog class="modal lcl-staff-modal" id="modal-07" aria-hidden="true">
+                      <div class="modal__inner">
+                        <div class="modal__main lcl-staff-modal__main">
+                          <div class="lcl-staff-modal__in">
+                            <div class="lcl-staff-modal__sep">
+                              <figure class="lcl-staff-modal__fig"><img src="/recommend/futari-tsumugi/images/staff/img_ready.jpg" alt="田内" width="704" height="900"></figure>
+                              <div class="lcl-staff-modal__cnt">
+                                <p>カウンセラー</p>
+                                <p class="c-red title-02">田内</p>
+                                <p class="mt15">お一人お一人の想いに真摯に耳を傾け、丁寧な対応を心掛けてまいります。<br>人生の大切な節目に関わらせていただくことを胸に、誠実に、そして全力で、あなたの幸せな未来へと伴走することをお約束いたします。</p>
+                                                                <p class="lcl-staff-modal__hobby"><span class="c-red title-04">趣味</span>
+                                  <span class="lcl-staff-modal__hobbytxt">旅行／美術鑑賞</span>
+                                </p>
+                              </div>
+                            </div>
+                            <button type="button" class="lcl-staff-modal__btn">閉じる<svg class="ico_svg ic_cancel" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle class="svg-elm svg-circle svg-circle01" cx="12" cy="12" r="11" fill="white"/>
+<circle class="svg-elm svg-circle svg-circle02" cx="12" cy="12" r="7" fill="white"/>
+<path class="svg-elm svg-path svg-path01" d="M12 2C6.47 2 2 6.47 2 12C2 17.53 6.47 22 12 22C17.53 22 22 17.53 22 12C22 6.47 17.53 2 12 2ZM17 15.59L15.59 17L12 13.41L8.41 17L7 15.59L10.59 12L7 8.41L8.41 7L12 10.59L15.59 7L17 8.41L13.41 12L17 15.59Z" fill="#1F1F1F"/>
+</svg>
+</button>
+                          </div>
+                        </div><!-- /.modal__main -->
+                        <button class="btn modal__close modal-close" type="button" aria-label="モーダルを閉じる"><svg class="ico_svg ic_cancel" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle class="svg-elm svg-circle svg-circle01" cx="12" cy="12" r="11" fill="white"/>
+<circle class="svg-elm svg-circle svg-circle02" cx="12" cy="12" r="7" fill="white"/>
+<path class="svg-elm svg-path svg-path01" d="M12 2C6.47 2 2 6.47 2 12C2 17.53 6.47 22 12 22C17.53 22 22 17.53 22 12C22 6.47 17.53 2 12 2ZM17 15.59L15.59 17L12 13.41L8.41 17L7 15.59L10.59 12L7 8.41L8.41 7L12 10.59L15.59 7L17 8.41L13.41 12L17 15.59Z" fill="#1F1F1F"/>
+</svg>
+</button>
+                      </div><!-- /.modal__inner -->
+                    </dialog>
+                  
+                    <dialog class="modal lcl-staff-modal" id="modal-08" aria-hidden="true">
+                      <div class="modal__inner">
+                        <div class="modal__main lcl-staff-modal__main">
+                          <div class="lcl-staff-modal__in">
+                            <div class="lcl-staff-modal__sep">
+                              <figure class="lcl-staff-modal__fig"><img src="/recommend/futari-tsumugi/images/staff/img_ready.jpg" alt="生田" width="704" height="900"></figure>
+                              <div class="lcl-staff-modal__cnt">
+                                <p>カウンセラー</p>
+                                <p class="c-red title-02">生田</p>
+                                <p class="mt15">「なりたい自分」を共に描き、婚活の不安や疑問に寄り添います。<br>じっくりお話を伺い、一緒に解決策を探しながら、あなたの魅力を最大限に引き出し、納得できるパートナーとの出会いを二人三脚で実現します。</p>
+                                                                <p class="lcl-staff-modal__hobby"><span class="c-red title-04">趣味</span>
+                                  <span class="lcl-staff-modal__hobbytxt">読書（心理学、自己啓発）／美術館巡り／新しい街の散策</span>
+                                </p>
+                              </div>
+                            </div>
+                            <button type="button" class="lcl-staff-modal__btn">閉じる<svg class="ico_svg ic_cancel" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle class="svg-elm svg-circle svg-circle01" cx="12" cy="12" r="11" fill="white"/>
+<circle class="svg-elm svg-circle svg-circle02" cx="12" cy="12" r="7" fill="white"/>
+<path class="svg-elm svg-path svg-path01" d="M12 2C6.47 2 2 6.47 2 12C2 17.53 6.47 22 12 22C17.53 22 22 17.53 22 12C22 6.47 17.53 2 12 2ZM17 15.59L15.59 17L12 13.41L8.41 17L7 15.59L10.59 12L7 8.41L8.41 7L12 10.59L15.59 7L17 8.41L13.41 12L17 15.59Z" fill="#1F1F1F"/>
+</svg>
+</button>
+                          </div>
+                        </div><!-- /.modal__main -->
+                        <button class="btn modal__close modal-close" type="button" aria-label="モーダルを閉じる"><svg class="ico_svg ic_cancel" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle class="svg-elm svg-circle svg-circle01" cx="12" cy="12" r="11" fill="white"/>
+<circle class="svg-elm svg-circle svg-circle02" cx="12" cy="12" r="7" fill="white"/>
+<path class="svg-elm svg-path svg-path01" d="M12 2C6.47 2 2 6.47 2 12C2 17.53 6.47 22 12 22C17.53 22 22 17.53 22 12C22 6.47 17.53 2 12 2ZM17 15.59L15.59 17L12 13.41L8.41 17L7 15.59L10.59 12L7 8.41L8.41 7L12 10.59L15.59 7L17 8.41L13.41 12L17 15.59Z" fill="#1F1F1F"/>
+</svg>
+</button>
+                      </div><!-- /.modal__inner -->
+                    </dialog>
+                  
+                    <dialog class="modal lcl-staff-modal" id="modal-09" aria-hidden="true">
+                      <div class="modal__inner">
+                        <div class="modal__main lcl-staff-modal__main">
+                          <div class="lcl-staff-modal__in">
+                            <div class="lcl-staff-modal__sep">
+                              <figure class="lcl-staff-modal__fig"><img src="/recommend/futari-tsumugi/images/staff/img_ready.jpg" alt="山本" width="704" height="900"></figure>
+                              <div class="lcl-staff-modal__cnt">
+                                <p>カウンセラー</p>
+                                <p class="c-red title-02">山本</p>
+                                <p class="mt15">目標に向かってコツコツ努力することが私の強みです。会員様の理想の未来へ、着実に一歩ずつ伴走するサポートを心がけます。<br>どんな小さな悩みも共有し、一緒に素敵な出会いを見つけ、幸せな未来を築いていきましょう。</p>
+                                                                <p class="lcl-staff-modal__hobby"><span class="c-red title-04">趣味</span>
+                                  <span class="lcl-staff-modal__hobbytxt">心と身体を整える時間を大切にしています。<br>温泉、サウナでのリフレッシュ／ランニング／ピラティス</span>
+                                </p>
+                              </div>
+                            </div>
+                            <button type="button" class="lcl-staff-modal__btn">閉じる<svg class="ico_svg ic_cancel" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle class="svg-elm svg-circle svg-circle01" cx="12" cy="12" r="11" fill="white"/>
+<circle class="svg-elm svg-circle svg-circle02" cx="12" cy="12" r="7" fill="white"/>
+<path class="svg-elm svg-path svg-path01" d="M12 2C6.47 2 2 6.47 2 12C2 17.53 6.47 22 12 22C17.53 22 22 17.53 22 12C22 6.47 17.53 2 12 2ZM17 15.59L15.59 17L12 13.41L8.41 17L7 15.59L10.59 12L7 8.41L8.41 7L12 10.59L15.59 7L17 8.41L13.41 12L17 15.59Z" fill="#1F1F1F"/>
+</svg>
+</button>
+                          </div>
+                        </div><!-- /.modal__main -->
+                        <button class="btn modal__close modal-close" type="button" aria-label="モーダルを閉じる"><svg class="ico_svg ic_cancel" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle class="svg-elm svg-circle svg-circle01" cx="12" cy="12" r="11" fill="white"/>
+<circle class="svg-elm svg-circle svg-circle02" cx="12" cy="12" r="7" fill="white"/>
+<path class="svg-elm svg-path svg-path01" d="M12 2C6.47 2 2 6.47 2 12C2 17.53 6.47 22 12 22C17.53 22 22 17.53 22 12C22 6.47 17.53 2 12 2ZM17 15.59L15.59 17L12 13.41L8.41 17L7 15.59L10.59 12L7 8.41L8.41 7L12 10.59L15.59 7L17 8.41L13.41 12L17 15.59Z" fill="#1F1F1F"/>
+</svg>
+</button>
+                      </div><!-- /.modal__inner -->
+                    </dialog>
+                  
+                    <dialog class="modal lcl-staff-modal" id="modal-10" aria-hidden="true">
+                      <div class="modal__inner">
+                        <div class="modal__main lcl-staff-modal__main">
+                          <div class="lcl-staff-modal__in">
+                            <div class="lcl-staff-modal__sep">
+                              <figure class="lcl-staff-modal__fig"><img src="/recommend/futari-tsumugi/images/staff/img_ready.jpg" alt="中島" width="704" height="900"></figure>
+                              <div class="lcl-staff-modal__cnt">
+                                <p>カウンセラー</p>
+                                <p class="c-red title-02">中島</p>
+                                <p class="mt15">旅行事業で培ったヒアリング力と提案力を活かし、結婚への想いを何でも安心してご相談いただける存在でありたいと願っています。お客様の不安も喜びも期待も共有し、成婚まで全力で伴走してまいります。</p>
+                                                                <p class="lcl-staff-modal__hobby"><span class="c-red title-04">趣味</span>
+                                  <span class="lcl-staff-modal__hobbytxt">美味しいご飯屋さん巡り／音楽鑑賞</span>
+                                </p>
+                              </div>
+                            </div>
+                            <button type="button" class="lcl-staff-modal__btn">閉じる<svg class="ico_svg ic_cancel" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle class="svg-elm svg-circle svg-circle01" cx="12" cy="12" r="11" fill="white"/>
+<circle class="svg-elm svg-circle svg-circle02" cx="12" cy="12" r="7" fill="white"/>
+<path class="svg-elm svg-path svg-path01" d="M12 2C6.47 2 2 6.47 2 12C2 17.53 6.47 22 12 22C17.53 22 22 17.53 22 12C22 6.47 17.53 2 12 2ZM17 15.59L15.59 17L12 13.41L8.41 17L7 15.59L10.59 12L7 8.41L8.41 7L12 10.59L15.59 7L17 8.41L13.41 12L17 15.59Z" fill="#1F1F1F"/>
+</svg>
+</button>
+                          </div>
+                        </div><!-- /.modal__main -->
+                        <button class="btn modal__close modal-close" type="button" aria-label="モーダルを閉じる"><svg class="ico_svg ic_cancel" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle class="svg-elm svg-circle svg-circle01" cx="12" cy="12" r="11" fill="white"/>
+<circle class="svg-elm svg-circle svg-circle02" cx="12" cy="12" r="7" fill="white"/>
+<path class="svg-elm svg-path svg-path01" d="M12 2C6.47 2 2 6.47 2 12C2 17.53 6.47 22 12 22C17.53 22 22 17.53 22 12C22 6.47 17.53 2 12 2ZM17 15.59L15.59 17L12 13.41L8.41 17L7 15.59L10.59 12L7 8.41L8.41 7L12 10.59L15.59 7L17 8.41L13.41 12L17 15.59Z" fill="#1F1F1F"/>
+</svg>
+</button>
+                      </div><!-- /.modal__inner -->
+                    </dialog>
+                              </div><!-- .lcl-staff__cnt -->
+          </div><!-- .lcl-staff__in -->
+        </section><!-- .lcl-staff -->
+
+        <div class="fs-ctaarea">
+  <div class="fs-ctaarea__bg"></div>
+  <div class="fs-ctaarea__in">
+    <figure class="fs-ctaarea__fig fs-ctaarea__fig--01"><img src="/recommend/futari-tsumugi/common/images/ctaarea/people_01.png" alt="スタッフ画像1" width="680" height="834"></figure>
+    <figure class="fs-ctaarea__fig fs-ctaarea__fig--02"><img src="/recommend/futari-tsumugi/common/images/ctaarea/people_02.png" alt="スタッフ画像2" width="680" height="834"></figure>
+    <p class="fs-ctaarea__ttl">まずは<span>話</span>を聞いてみる</p>
+    <a href="https://lin.ee/zy6qOdz"  awicon="nothing" class="fs-ctaarea__link">
+      <span class="fs-ctaarea__label">
+        <svg class="ico_svg ic_line" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path class="svg-elm svg-path svg-path01" d="M30.0671 1.66666H9.93255C5.36734 1.66666 1.6665 5.3675 1.6665 9.93271V30.0673C1.6665 34.6325 5.36734 38.3333 9.93255 38.3333H30.0671C34.6323 38.3333 38.3332 34.6325 38.3332 30.0673V9.93271C38.3332 5.3675 34.6323 1.66666 30.0671 1.66666Z" fill="#06C755"/>
+<path class="svg-elm svg-path svg-path02" d="M32.2213 18.2721C32.2213 12.8019 26.7373 8.35146 19.9964 8.35146C13.2554 8.35146 7.77148 12.8019 7.77148 18.2721C7.77148 23.1762 12.1211 27.2829 17.9958 28.0598C18.3934 28.1457 18.9353 28.3222 19.0728 28.6625C19.1966 28.9719 19.153 29.4554 19.1129 29.7682C19.1129 29.7682 18.9697 30.631 18.9388 30.8144C18.8849 31.1237 18.6936 32.0232 19.9975 31.4732C21.3026 30.9232 27.0375 27.3276 29.6019 24.3759C31.3734 22.4326 32.2224 20.4618 32.2224 18.2721H32.2213Z" fill="white"/>
+<path class="svg-elm svg-path svg-path03" d="M28.1532 21.4311H24.7191C24.5896 21.4311 24.4854 21.3268 24.4854 21.1974V21.1939V15.8681V15.8624C24.4854 15.7329 24.5896 15.6286 24.7191 15.6286H28.1532C28.2815 15.6286 28.3869 15.734 28.3869 15.8624V16.7297C28.3869 16.8592 28.2826 16.9635 28.1532 16.9635H25.8191V17.8641H28.1532C28.2815 17.8641 28.3869 17.9695 28.3869 18.0979V18.9653C28.3869 19.0947 28.2826 19.199 28.1532 19.199H25.8191V20.0996H28.1532C28.2815 20.0996 28.3869 20.2051 28.3869 20.3334V21.2008C28.3869 21.3303 28.2826 21.4345 28.1532 21.4345V21.4311Z" fill="#06C755"/>
+<path class="svg-elm svg-path svg-path04" d="M15.4492 21.4311C15.5776 21.4311 15.683 21.3268 15.683 21.1974V20.33C15.683 20.2016 15.5776 20.0962 15.4492 20.0962H13.1152V15.8612C13.1152 15.7329 13.0098 15.6275 12.8814 15.6275H12.014C11.8845 15.6275 11.7803 15.7317 11.7803 15.8612V21.1928V21.1974C11.7803 21.3268 11.8845 21.4311 12.014 21.4311H15.4481H15.4492Z" fill="#06C755"/>
+<path class="svg-elm svg-path svg-path05" d="M17.5155 15.6286H16.6493C16.5202 15.6286 16.4155 15.7332 16.4155 15.8623V21.1973C16.4155 21.3264 16.5202 21.4311 16.6493 21.4311H17.5155C17.6446 21.4311 17.7493 21.3264 17.7493 21.1973V15.8623C17.7493 15.7332 17.6446 15.6286 17.5155 15.6286Z" fill="#06C755"/>
+<path class="svg-elm svg-path svg-path06" d="M23.4178 15.6286H22.5504C22.4209 15.6286 22.3166 15.7328 22.3166 15.8623V19.0306L19.876 15.734C19.8703 15.726 19.8634 15.718 19.8577 15.7099C19.8577 15.7099 19.8577 15.7099 19.8565 15.7088C19.8519 15.7042 19.8474 15.6985 19.8428 15.6939C19.8416 15.6927 19.8393 15.6916 19.8382 15.6905C19.8336 15.687 19.8302 15.6836 19.8256 15.6801C19.8233 15.679 19.821 15.6767 19.8187 15.6756C19.8153 15.6721 19.8107 15.6698 19.8061 15.6675C19.8038 15.6664 19.8015 15.6641 19.7992 15.663C19.7946 15.6607 19.7912 15.6584 19.7866 15.6561C19.7843 15.6549 19.782 15.6538 19.7797 15.6526C19.7752 15.6503 19.7706 15.6481 19.766 15.6469C19.7637 15.6469 19.7614 15.6446 19.758 15.6446C19.7534 15.6435 19.7488 15.6412 19.7442 15.64C19.7419 15.64 19.7385 15.6389 19.7362 15.6377C19.7316 15.6377 19.727 15.6355 19.7225 15.6343C19.719 15.6343 19.7156 15.6343 19.7121 15.6332C19.7076 15.6332 19.7041 15.632 19.6995 15.632C19.695 15.632 19.6915 15.632 19.6869 15.632C19.6846 15.632 19.6812 15.632 19.6789 15.632H18.8172C18.6889 15.632 18.5835 15.7363 18.5835 15.8658V21.2008C18.5835 21.3291 18.6878 21.4345 18.8172 21.4345H19.6846C19.8141 21.4345 19.9184 21.3302 19.9184 21.2008V18.0325L22.3625 21.3337C22.3796 21.3577 22.4003 21.3772 22.4232 21.3921C22.4232 21.3921 22.4255 21.3933 22.4255 21.3944C22.4301 21.3978 22.4346 21.4001 22.4404 21.4036C22.4427 21.4047 22.445 21.4059 22.4472 21.407C22.4507 21.4093 22.4553 21.4105 22.4587 21.4127C22.4621 21.415 22.4667 21.4162 22.4702 21.4173C22.4725 21.4173 22.4747 21.4196 22.477 21.4196C22.4828 21.4219 22.4874 21.4231 22.4931 21.4242C22.4931 21.4242 22.4954 21.4242 22.4965 21.4242C22.516 21.4288 22.5366 21.4322 22.5572 21.4322H23.4189C23.5472 21.4322 23.6527 21.328 23.6527 21.1985V15.8635C23.6527 15.7351 23.5484 15.6297 23.4189 15.6297L23.4178 15.6286Z" fill="#06C755"/>
+</svg>
+        LINEでラクラク！</span>
+      <span class="fs-ctaarea__txt">無料相談<span class="fs-ctaarea__small">はこちら</span></span>
+      <span class="fs-ctaarea__ico"><svg class="ico_svg ic_tab" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path class="svg-elm svg-path svg-path01" d="M19 19H5V5H12V3H5C3.89 3 3 3.9 3 5V19C3 20.1 3.89 21 5 21H19C20.1 21 21 20.1 21 19V12H19V19ZM14 3V5H17.59L7.76 14.83L9.17 16.24L19 6.41V10H21V3H14Z" fill="#1F1F1F"/>
+</svg>
+</span>
+    </a>
+  </div>
+</div>
+
+        <section class="lcl-comparison" id="comparison">
+          <svg class="ico_svg bg_logo" width="565" height="572" viewBox="0 0 565 572" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path class="svg-elm svg-path svg-path01" d="M209.324 316.921C210.514 312.158 211.492 307.315 212.02 302.337C212.443 298.457 212.708 294.523 212.708 290.509V215.34H252.045V194.6C252.045 190.613 252.257 186.679 252.627 182.772H212.708V107.656C212.708 66.2316 245.991 32.5404 286.915 32.5404C315.863 32.5404 340.951 49.4529 353.165 74.0188C355.385 78.461 357.157 83.1708 358.478 88.0679C360.144 94.3298 361.122 100.886 361.122 107.683C361.122 112.152 360.673 116.487 359.932 120.742C358.954 126.308 357.447 131.687 355.332 136.772C347.798 154.835 333.496 169.312 315.651 176.939C313.959 182.532 313.034 188.472 313.034 194.627V211.914C349.913 202.441 379.099 173.487 389.303 136.504C390.572 131.848 391.55 127.084 392.211 122.214C392.846 117.451 393.295 112.634 393.295 107.683C393.295 101.207 392.634 94.9185 391.55 88.7637C390.625 83.4919 389.33 78.354 387.664 73.3498C373.389 30.7743 333.655 0 286.888 0C228.252 0 180.535 48.3022 180.535 107.656V182.826H106.327C47.6914 182.879 0 231.155 0 290.509C0 337.848 30.4019 378.069 72.4359 392.439C71.8279 387.515 71.4842 382.538 71.4842 377.453C71.4842 370.683 72.0658 364.046 73.0968 357.57C48.8546 345.207 32.1203 319.838 32.1203 290.509C32.1203 249.084 65.4038 215.393 106.327 215.393H180.535V255.801V290.509C180.535 294.978 180.085 299.313 179.345 303.568C178.367 309.134 176.86 314.513 174.745 319.597C167.211 337.661 152.908 352.165 135.064 359.765C133.372 365.357 132.447 371.298 132.447 377.453C132.447 383.233 133.293 388.826 134.8 394.125C171.361 383.822 199.965 354.252 209.297 316.921H209.324Z" fill="#F7F7F7"/>
+<path class="svg-elm svg-path svg-path02" d="M492.589 179.615C493.197 184.539 493.541 189.516 493.541 194.601C493.541 201.371 492.959 208.008 491.928 214.484C516.171 226.847 532.905 252.215 532.905 281.545C532.905 322.97 499.621 356.661 458.698 356.661H384.491V316.253V281.545C384.491 277.076 384.94 272.741 385.68 268.486C386.658 262.92 388.165 257.541 390.28 252.456C397.815 234.393 412.117 219.916 429.961 212.289C431.653 206.696 432.578 200.756 432.578 194.574C432.578 188.794 431.733 183.201 430.226 177.902C393.664 188.205 365.06 217.775 355.728 255.106C354.538 259.869 353.56 264.713 353.031 269.69C352.608 273.57 352.344 277.504 352.344 281.518V356.687H313.006V377.427C313.006 381.414 312.795 385.348 312.425 389.255H352.344V464.371C352.344 505.795 319.06 539.487 278.137 539.487C249.189 539.487 224.101 522.574 211.887 498.008C209.666 493.566 207.895 488.856 206.573 483.959C204.908 477.697 203.93 471.141 203.93 464.344C203.93 459.875 204.379 455.54 205.119 451.285C206.097 445.719 207.604 440.34 209.719 435.255C217.253 417.192 231.556 402.688 249.4 395.088C251.092 389.495 252.017 383.555 252.017 377.4V360.113C215.139 369.586 185.953 398.54 175.748 435.523C174.479 440.179 173.501 444.943 172.84 449.813C172.206 454.576 171.756 459.393 171.756 464.344C171.756 470.82 172.417 477.108 173.501 483.263C174.426 488.535 175.722 493.673 177.387 498.677C191.584 541.226 231.318 572 278.084 572C336.72 572 384.438 523.698 384.438 464.344V389.174H458.645C517.281 389.148 564.999 340.845 564.999 281.491C564.999 234.152 534.623 193.932 492.563 179.561L492.589 179.615Z" fill="#F7F7F7"/>
+<path class="svg-elm svg-path svg-path03" d="M89.8835 348.633C88.6146 353.289 87.6364 358.052 86.9755 362.923C86.341 367.686 85.8916 372.503 85.8916 377.454C85.8916 383.93 86.5525 390.218 87.6364 396.373C88.5617 401.645 89.8571 406.783 91.5226 411.787C102.124 443.551 126.947 468.652 158.301 479.383C157.693 474.459 157.349 469.482 157.349 464.398C157.349 457.627 157.931 450.991 158.962 444.515C144.713 437.263 133.107 425.515 125.943 411.091C123.722 406.649 121.951 401.939 120.629 397.042C118.964 390.78 117.985 384.224 117.985 377.454C117.985 372.985 118.435 368.649 119.175 364.395C120.153 358.828 121.66 353.45 123.775 348.365C131.309 330.302 145.612 315.798 163.456 308.198C165.148 302.605 166.073 296.664 166.073 290.51V273.222C129.195 282.696 100.009 311.65 89.8042 348.633H89.8835Z" fill="#F7F7F7"/>
+<path class="svg-elm svg-path svg-path04" d="M269.81 168.188C268.621 172.952 267.642 177.795 267.114 182.773C266.691 186.653 266.426 190.587 266.426 194.601V269.77H227.089V290.509C227.089 294.497 226.877 298.43 226.507 302.337H266.426V342.772V377.48C266.426 381.949 265.977 386.284 265.237 390.539C264.259 396.105 262.752 401.484 260.637 406.569C253.102 424.632 238.8 439.136 220.956 446.736C219.264 452.329 218.338 458.269 218.338 464.424C218.338 470.204 219.184 475.797 220.691 481.096C257.253 470.793 285.831 441.223 295.189 403.893C296.379 399.129 297.357 394.286 297.886 389.308C298.309 385.428 298.573 381.494 298.573 377.48V302.311H337.91V281.572C337.91 277.584 338.122 273.65 338.492 269.743H298.573V229.309V194.601C298.573 190.132 299.022 185.797 299.763 181.542C300.741 175.976 302.248 170.597 304.363 165.512C311.897 147.449 326.199 132.972 344.044 125.345C345.736 119.752 346.661 113.812 346.661 107.657C346.661 101.877 345.815 96.2836 344.308 90.9851C307.747 101.288 279.169 130.858 269.81 168.188Z" fill="#F7F7F7"/>
+<path class="svg-elm svg-path svg-path05" d="M477.388 175.681C476.462 170.41 475.167 165.272 473.501 160.267C462.9 128.503 438.077 103.402 406.723 92.6711C407.331 97.595 407.675 102.572 407.675 107.657C407.675 114.427 407.093 121.064 406.062 127.54C420.311 134.792 431.917 146.539 439.081 160.963C441.302 165.405 443.073 170.115 444.395 175.012C446.06 181.274 447.039 187.831 447.039 194.601C447.039 199.07 446.589 203.405 445.849 207.66C444.871 213.226 443.364 218.605 441.249 223.689C433.715 241.752 419.412 256.23 401.568 263.856C399.876 269.449 398.951 275.39 398.951 281.545V298.832C435.83 289.359 465.042 260.404 475.22 223.422C476.489 218.765 477.467 214.002 478.128 209.132C478.762 204.368 479.212 199.552 479.212 194.601C479.212 188.125 478.551 181.836 477.467 175.681H477.388Z" fill="#F7F7F7"/>
+</svg>
+          <div class="lcl-comparison__in">
+            <div class="lcl-cmn-ttl">
+              <svg class="ico_svg logo-mark" width="29" height="30" viewBox="0 0 29 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path class="svg-elm svg-path svg-path01" d="M10.7441 16.6218C10.8051 16.3719 10.8553 16.1179 10.8825 15.8568C10.9042 15.6533 10.9177 15.447 10.9177 15.2365V11.294H12.9368V10.2063C12.9368 9.99719 12.9477 9.79088 12.9667 9.58596H10.9177V5.64632C10.9177 3.47368 12.6261 1.70667 14.7266 1.70667C16.2124 1.70667 17.5001 2.59368 18.127 3.8821C18.241 4.11509 18.3319 4.3621 18.3998 4.61895C18.4853 4.94737 18.5355 5.29123 18.5355 5.64772C18.5355 5.8821 18.5124 6.10947 18.4744 6.33263C18.4242 6.62456 18.3469 6.90667 18.2383 7.17333C17.8516 8.1207 17.1175 8.88 16.2016 9.28C16.1147 9.57333 16.0672 9.88491 16.0672 10.2077V11.1144C17.9601 10.6175 19.4582 9.09895 19.9819 7.1593C20.0471 6.91509 20.0973 6.66526 20.1312 6.40982C20.1638 6.16 20.1868 5.90737 20.1868 5.64772C20.1868 5.30807 20.1529 4.97824 20.0973 4.65544C20.0498 4.37895 19.9833 4.10947 19.8978 3.84702C19.1651 1.61403 17.1256 0 14.7252 0C11.7156 0 9.26638 2.53333 9.26638 5.64632V9.58877H5.45752C2.44788 9.59158 0 12.1235 0 15.2365C0 17.7193 1.56045 19.8288 3.71795 20.5825C3.68674 20.3242 3.6691 20.0632 3.6691 19.7965C3.6691 19.4414 3.69895 19.0933 3.75187 18.7537C2.50758 18.1053 1.64865 16.7747 1.64865 15.2365C1.64865 13.0639 3.35701 11.2968 5.45752 11.2968H9.26638V13.4161V15.2365C9.26638 15.4709 9.24331 15.6982 9.20532 15.9214C9.15511 16.2133 9.07777 16.4954 8.96921 16.7621C8.58249 17.7095 7.8484 18.4702 6.93248 18.8688C6.84564 19.1621 6.79815 19.4737 6.79815 19.7965C6.79815 20.0996 6.84157 20.393 6.91891 20.6709C8.79553 20.1305 10.2637 18.5796 10.7427 16.6218H10.7441Z" fill="#E60012"/>
+<path class="svg-elm svg-path svg-path02" d="M25.2834 9.42039C25.3147 9.67864 25.3323 9.93969 25.3323 10.2064C25.3323 10.5614 25.3024 10.9095 25.2495 11.2492C26.4938 11.8976 27.3527 13.2281 27.3527 14.7664C27.3527 16.939 25.6444 18.706 23.5439 18.706H19.735V16.5867V14.7664C19.735 14.532 19.7581 14.3046 19.7961 14.0814C19.8463 13.7895 19.9236 13.5074 20.0322 13.2407C20.4189 12.2934 21.153 11.5341 22.0689 11.1341C22.1558 10.8407 22.2032 10.5292 22.2032 10.205C22.2032 9.90179 22.1598 9.60846 22.0825 9.33057C20.2059 9.87092 18.7377 11.4218 18.2587 13.3797C18.1976 13.6295 18.1474 13.8835 18.1203 14.1446C18.0986 14.3481 18.085 14.5544 18.085 14.765V18.7074H16.0659V19.7951C16.0659 20.0042 16.0551 20.2106 16.0361 20.4155H18.085V24.3551C18.085 26.5278 16.3767 28.2948 14.2761 28.2948C12.7903 28.2948 11.5026 27.4078 10.8757 26.1193C10.7617 25.8864 10.6708 25.6393 10.603 25.3825C10.5175 25.0541 10.4673 24.7102 10.4673 24.3537C10.4673 24.1193 10.4904 23.892 10.5283 23.6688C10.5786 23.3769 10.6559 23.0948 10.7644 22.8281C11.1512 21.8807 11.8853 21.12 12.8012 20.7214C12.888 20.4281 12.9355 20.1165 12.9355 19.7937V18.8871C11.0426 19.3839 9.54458 20.9025 9.02081 22.8421C8.95568 23.0864 8.90547 23.3362 8.87155 23.5916C8.83898 23.8414 8.81592 24.0941 8.81592 24.3537C8.81592 24.6934 8.84984 25.0232 8.90547 25.346C8.95297 25.6225 9.01945 25.892 9.10494 26.1544C9.8336 28.386 11.873 30 14.2734 30C17.2831 30 19.7323 27.4667 19.7323 24.3537V20.4113H23.5412C26.5508 20.4099 29 17.8765 29 14.7635C29 12.2807 27.4409 10.1713 25.2821 9.41758L25.2834 9.42039Z" fill="#E60012"/>
+<path class="svg-elm svg-path svg-path03" d="M4.61359 18.2849C4.54845 18.5291 4.49825 18.779 4.46432 19.0344C4.43176 19.2842 4.40869 19.5369 4.40869 19.7965C4.40869 20.1362 4.44261 20.466 4.49825 20.7888C4.54574 21.0653 4.61223 21.3347 4.69771 21.5972C5.24184 23.2632 6.51598 24.5797 8.12528 25.1425C8.09407 24.8842 8.07643 24.6232 8.07643 24.3565C8.07643 24.0014 8.10629 23.6533 8.15921 23.3137C7.42783 22.9333 6.83214 22.3172 6.46442 21.5607C6.35044 21.3277 6.25952 21.0807 6.19168 20.8239C6.10619 20.4954 6.05599 20.1516 6.05599 19.7965C6.05599 19.5621 6.07905 19.3347 6.11705 19.1116C6.16725 18.8197 6.2446 18.5376 6.35315 18.2709C6.73987 17.3235 7.47396 16.5628 8.38988 16.1642C8.47672 15.8709 8.52422 15.5593 8.52422 15.2365V14.3298C6.63132 14.8267 5.13328 16.3453 4.60951 18.2849H4.61359Z" fill="#666666"/>
+<path class="svg-elm svg-path svg-path04" d="M13.8485 8.8211C13.7874 9.07092 13.7372 9.32496 13.7101 9.58601C13.6883 9.78952 13.6748 9.99583 13.6748 10.2064V14.1488H11.6557V15.2365C11.6557 15.4457 11.6448 15.652 11.6258 15.8569H13.6748V17.9776V19.7979C13.6748 20.0323 13.6517 20.2597 13.6137 20.4829C13.5635 20.7748 13.4862 21.0569 13.3776 21.3236C12.9909 22.2709 12.2568 23.0316 11.3409 23.4302C11.254 23.7236 11.2065 24.0351 11.2065 24.3579C11.2065 24.6611 11.25 24.9544 11.3273 25.2323C13.2039 24.692 14.6707 23.1411 15.1511 21.1832C15.2122 20.9334 15.2624 20.6793 15.2895 20.4183C15.3112 20.2148 15.3248 20.0085 15.3248 19.7979V15.8555H17.3439V14.7678C17.3439 14.5586 17.3547 14.3523 17.3737 14.1474H15.3248V12.0267V10.2064C15.3248 9.97197 15.3478 9.7446 15.3858 9.52145C15.436 9.22952 15.5134 8.94741 15.6219 8.68074C16.0087 7.73338 16.7428 6.97408 17.6587 6.57408C17.7455 6.28074 17.793 5.96917 17.793 5.64636C17.793 5.3432 17.7496 5.04987 17.6722 4.77197C15.7956 5.31232 14.3288 6.8632 13.8485 8.8211Z" fill="#666666"/>
+<path class="svg-elm svg-path svg-path05" d="M24.503 9.21404C24.4555 8.93754 24.389 8.66807 24.3036 8.40561C23.7594 6.73965 22.4853 5.42316 20.876 4.86035C20.9072 5.1186 20.9248 5.37965 20.9248 5.64632C20.9248 6.0014 20.895 6.34947 20.8421 6.68912C21.5734 7.06947 22.1691 7.68561 22.5368 8.44211C22.6508 8.67509 22.7417 8.92211 22.8096 9.17895C22.8951 9.50737 22.9453 9.85123 22.9453 10.2063C22.9453 10.4407 22.9222 10.6681 22.8842 10.8912C22.834 11.1832 22.7567 11.4653 22.6481 11.7319C22.2614 12.6793 21.5273 13.4386 20.6114 13.8386C20.5245 14.1319 20.4771 14.4435 20.4771 14.7663V15.673C22.3699 15.1761 23.8693 13.6575 24.3918 11.7179C24.4569 11.4737 24.5071 11.2239 24.541 10.9684C24.5736 10.7186 24.5966 10.466 24.5966 10.2063C24.5966 9.86667 24.5627 9.53684 24.5071 9.21404H24.503Z" fill="#666666"/>
+</svg>
+              <p class="lcl-cmn-ttl__en">COMPARISON</p>
+              <h2>マッチングアプリのサポートとの比較</h2>
+            </div><!-- .lcl-cmn-ttl -->
+            <div class="lcl-comparison__cnt">
+              <div class="lcl-comparison__head">
+                <p>婚活にはさまざまな方法がありますが、サービスによって「サポートの範囲」は大きく異なります。<br class="dn-n">ここでは、結婚相談所とマッチングアプリの違いを、活動の進め方や判断のサポートという視点から比較しました。<br class="dn-n">ご自身に合った婚活スタイルを見つける参考にしてください。</p>
+                <p class="txt-small mt15-w mt10-n">※結婚相談所に関する内容は、当社が提供しているサービス内容に基づき整理しております。<br>※マッチングアプリに関する内容は、各社公式サイト等の公開情報を参考に当社にて整理したものです。<br>サービス内容は変更となる場合がありますので、最新の情報は各社公式サイトにてご確認ください。</p>
+              </div>
+              <div class="lcl-comparison__tablearea">
+                <picture class="lcl-comparison__table">
+                  <source srcset="/recommend/futari-tsumugi/images/sp/comparison/table.png" media="(max-width: 759px)" width="700" height="1115">
+                  <img loading="lazy" src="/recommend/futari-tsumugi/images/comparison/table.png" alt="結婚相談所（ふたり紬）とマッチングアプリの比較" width="1900" height="1750">
+                </picture>
+              </div><!-- .lcl-comparison__tablearea -->
+              <div class="lcl-comparison__note">
+                <ul class="lcl-comparison__list">
+                  <li class="lcl-comparison__item">
+                    <svg class="ico_svg ic_circle" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle class="svg-elm svg-circle svg-circle01" cx="12.4998" cy="12.4993" r="10.4583" stroke="#E60012" stroke-width="2"/>
+</svg>
+                    サービスとして提供されています。
+                  </li>
+                  <li class="lcl-comparison__item">
+                    <svg class="ico_svg ic_triangle" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path class="svg-elm svg-path svg-path01" d="M22.1753 20.875H2.82471L12.4995 5.04199L22.1753 20.875Z" stroke="#7D7D7D" stroke-width="2"/>
+</svg>
+                    機能や情報はありますが、基本的にご自身で<br class="dn-w">進めます。
+                  </li>
+                  <li class="lcl-comparison__item">
+                    <svg class="ico_svg ic_minus" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path class="svg-elm svg-path svg-path01" d="M4.1665 12.5H20.8332" stroke="#7D7D7D" stroke-width="2"/>
+</svg>
+                    仕組みとしては用意されていません。
+                  </li>
+                  <li class="lcl-comparison__item">
+                    <svg class="ico_svg ic_kome" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_11567_21064)">
+<path class="svg-elm svg-path svg-path01" d="M12.5 9.56C12.1693 9.56 11.8867 9.44267 11.652 9.208C11.4173 8.97333 11.3 8.69067 11.3 8.36C11.3 8.02933 11.4173 7.74667 11.652 7.512C11.8867 7.27733 12.1693 7.16 12.5 7.16C12.8307 7.16 13.1133 7.27733 13.348 7.512C13.5827 7.74667 13.7 8.02933 13.7 8.36C13.7 8.69067 13.5827 8.97333 13.348 9.208C13.1133 9.44267 12.8307 9.56 12.5 9.56ZM12.5 12.456L17.78 7.176L18.244 7.64L12.964 12.92L18.244 18.2L17.78 18.664L12.5 13.384L7.204 18.68L6.74 18.216L12.036 12.92L6.756 7.64L7.22 7.176L12.5 12.456ZM9.14 12.92C9.14 13.2507 9.02267 13.5333 8.788 13.768C8.55333 14.0027 8.27067 14.12 7.94 14.12C7.60933 14.12 7.32667 14.0027 7.092 13.768C6.85733 13.5333 6.74 13.2507 6.74 12.92C6.74 12.5893 6.85733 12.3067 7.092 12.072C7.32667 11.8373 7.60933 11.72 7.94 11.72C8.27067 11.72 8.55333 11.8373 8.788 12.072C9.02267 12.3067 9.14 12.5893 9.14 12.92ZM15.86 12.92C15.86 12.5893 15.9773 12.3067 16.212 12.072C16.4467 11.8373 16.7293 11.72 17.06 11.72C17.3907 11.72 17.6733 11.8373 17.908 12.072C18.1427 12.3067 18.26 12.5893 18.26 12.92C18.26 13.2507 18.1427 13.5333 17.908 13.768C17.6733 14.0027 17.3907 14.12 17.06 14.12C16.7293 14.12 16.4467 14.0027 16.212 13.768C15.9773 13.5333 15.86 13.2507 15.86 12.92ZM12.5 16.28C12.8307 16.28 13.1133 16.3973 13.348 16.632C13.5827 16.8667 13.7 17.1493 13.7 17.48C13.7 17.8107 13.5827 18.0933 13.348 18.328C13.1133 18.5627 12.8307 18.68 12.5 18.68C12.1693 18.68 11.8867 18.5627 11.652 18.328C11.4173 18.0933 11.3 17.8107 11.3 17.48C11.3 17.1493 11.4173 16.8667 11.652 16.632C11.8867 16.3973 12.1693 16.28 12.5 16.28Z" fill="#323743"/>
+</g>
+<defs>
+<clipPath id="clip0_11567_21064">
+<rect class="svg-elm svg-rect svg-rect01" width="25" height="25" fill="white"/>
+</clipPath>
+</defs>
+</svg>
+                    サポート内容はプランにより異なります。
+                  </li>
+                </ul>
+              </div>
+              <div class="lcl-comparison-case">
+                <div class="lcl-comparison-case__in">
+                  <p class="lcl-cmn-sub">結婚相談所は<br class="dn-w">このような方が<br class="dn-w">利用されています</p>
+                  <div class="lcl-comparison-case__cnt">
+                    <div class="lcl-comparison-case__sep">
+                      <figure class="lcl-comparison-case__fig"><img src="/recommend/futari-tsumugi/images/comparison/img_01.png" alt="最終学歴構成" width="920" height="592"></figure>
+                      <figure class="lcl-comparison-case__fig"><img src="/recommend/futari-tsumugi/images/comparison/img_02.png" alt="年収構成" width="920" height="592"></figure>
+                      <figure class="lcl-comparison-case__fig"><img src="/recommend/futari-tsumugi/images/comparison/img_03.png" alt="婚活カウンセラーのサポートは必要だったか" width="920" height="592"></figure>
+                      <figure class="lcl-comparison-case__fig"><img src="/recommend/futari-tsumugi/images/comparison/img_04.png" alt="結婚後に感じた結婚相談所利用におけるメリット" width="920" height="592"></figure>
+                    </div>
+                    <p class="txt-small mt30-w mt10-n">※結婚相談所に関する数値は、株式会社IBJが公表している「<a href="https://www.ibjapan.com/ibj/data/" target="_blank" class="tdu"><span class="c-black">数字でIBJチェック！</span></a>」（2026年1月時点）を参照しています。</p>
+                  </div>
+                </div>
+                <p class="mt50 tac-w txt-large">マッチングアプリは「出会うきっかけ」を提供するサービス。<br class="dn-n">結婚相談所は「選び、決めるまで」を一緒に考えるサービスです。<br>結婚相談所は、出会いを増やすだけでなく、<span class="c-red">迷ったとき・悩んだときに相談できる存在</span>です。<br>一人では決めきれない選択も、プロと一緒なら前に進める。<br>そんな婚活を始めてみませんか。</p>
+              </div>
+            </div><!-- .lcl-comparison__cnt -->
+          </div><!-- .lcl-comparison__in -->
+        </section><!-- .lcl-comparison -->
+
+        <div class="lcl-insta">
+          <a href="https://www.instagram.com/jtb_futaritsumugi/" target="_blank" class="lcl-insta__link">
+            <div class="lcl-insta__area">
+              <svg class="ico_svg ic_insta" width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path class="svg-elm svg-path svg-path01" d="M17.536 9.22917C12.9526 9.22917 9.30029 12.9531 9.30029 17.4648C9.30029 22.0482 12.9526 25.7005 17.536 25.7005C22.0477 25.7005 25.7716 22.0482 25.7716 17.4648C25.7716 12.9531 22.0477 9.22917 17.536 9.22917ZM17.536 22.8359C14.5998 22.8359 12.1649 20.4727 12.1649 17.4648C12.1649 14.5286 14.5282 12.1654 17.536 12.1654C20.4722 12.1654 22.8354 14.5286 22.8354 17.4648C22.8354 20.4727 20.4722 22.8359 17.536 22.8359ZM27.9917 8.94271C27.9917 7.86849 27.1323 7.00911 26.0581 7.00911C24.9839 7.00911 24.1245 7.86849 24.1245 8.94271C24.1245 10.0169 24.9839 10.8763 26.0581 10.8763C27.1323 10.8763 27.9917 10.0169 27.9917 8.94271ZM33.4344 10.8763C33.2912 8.29818 32.7183 6.00651 30.8563 4.14453C28.9943 2.28255 26.7026 1.70964 24.1245 1.56641C21.4748 1.42318 13.5256 1.42318 10.8758 1.56641C8.29769 1.70964 6.07764 2.28255 4.14404 4.14453C2.28206 6.00651 1.70915 8.29818 1.56592 10.8763C1.42269 13.526 1.42269 21.4753 1.56592 24.125C1.70915 26.7031 2.28206 28.9232 4.14404 30.8568C6.07764 32.7187 8.29769 33.2917 10.8758 33.4349C13.5256 33.5781 21.4748 33.5781 24.1245 33.4349C26.7026 33.2917 28.9943 32.7187 30.8563 30.8568C32.7183 28.9232 33.2912 26.7031 33.4344 24.125C33.5776 21.4753 33.5776 13.526 33.4344 10.8763ZM29.9969 26.918C29.4956 28.3503 28.3498 29.4245 26.9891 29.9974C24.8407 30.8568 19.8276 30.6419 17.536 30.6419C15.1727 30.6419 10.1597 30.8568 8.08284 29.9974C6.65055 29.4245 5.57633 28.3503 5.00342 26.918C4.14404 24.8411 4.35889 19.8281 4.35889 17.4648C4.35889 15.1732 4.14404 10.1602 5.00342 8.01172C5.57633 6.65104 6.65055 5.57682 8.08284 5.00391C10.1597 4.14453 15.1727 4.35937 17.536 4.35937C19.8276 4.35937 24.8407 4.14453 26.9891 5.00391C28.3498 5.50521 29.424 6.65104 29.9969 8.01172C30.8563 10.1602 30.6414 15.1732 30.6414 17.4648C30.6414 19.8281 30.8563 24.8411 29.9969 26.918Z" fill="white"/>
+</svg>
+              <p class="lcl-insta__linktxt"><span>最新情報</span>や<span>イベントの様子</span><br class="dn-w">などはこちらをチェック！</p>
+            </div>
+            <span class="lcl-insta__btn">Instagram<svg class="ico_svg ic_tab" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path class="svg-elm svg-path svg-path01" d="M19 19H5V5H12V3H5C3.89 3 3 3.9 3 5V19C3 20.1 3.89 21 5 21H19C20.1 21 21 20.1 21 19V12H19V19ZM14 3V5H17.59L7.76 14.83L9.17 16.24L19 6.41V10H21V3H14Z" fill="#1F1F1F"/>
+</svg>
+</span>
+          </a>
+        </div>
+
+        <section class="lcl-faq" id="faq">
+          <svg class="ico_svg bg_logo" width="565" height="572" viewBox="0 0 565 572" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path class="svg-elm svg-path svg-path01" d="M209.324 316.921C210.514 312.158 211.492 307.315 212.02 302.337C212.443 298.457 212.708 294.523 212.708 290.509V215.34H252.045V194.6C252.045 190.613 252.257 186.679 252.627 182.772H212.708V107.656C212.708 66.2316 245.991 32.5404 286.915 32.5404C315.863 32.5404 340.951 49.4529 353.165 74.0188C355.385 78.461 357.157 83.1708 358.478 88.0679C360.144 94.3298 361.122 100.886 361.122 107.683C361.122 112.152 360.673 116.487 359.932 120.742C358.954 126.308 357.447 131.687 355.332 136.772C347.798 154.835 333.496 169.312 315.651 176.939C313.959 182.532 313.034 188.472 313.034 194.627V211.914C349.913 202.441 379.099 173.487 389.303 136.504C390.572 131.848 391.55 127.084 392.211 122.214C392.846 117.451 393.295 112.634 393.295 107.683C393.295 101.207 392.634 94.9185 391.55 88.7637C390.625 83.4919 389.33 78.354 387.664 73.3498C373.389 30.7743 333.655 0 286.888 0C228.252 0 180.535 48.3022 180.535 107.656V182.826H106.327C47.6914 182.879 0 231.155 0 290.509C0 337.848 30.4019 378.069 72.4359 392.439C71.8279 387.515 71.4842 382.538 71.4842 377.453C71.4842 370.683 72.0658 364.046 73.0968 357.57C48.8546 345.207 32.1203 319.838 32.1203 290.509C32.1203 249.084 65.4038 215.393 106.327 215.393H180.535V255.801V290.509C180.535 294.978 180.085 299.313 179.345 303.568C178.367 309.134 176.86 314.513 174.745 319.597C167.211 337.661 152.908 352.165 135.064 359.765C133.372 365.357 132.447 371.298 132.447 377.453C132.447 383.233 133.293 388.826 134.8 394.125C171.361 383.822 199.965 354.252 209.297 316.921H209.324Z" fill="#F7F7F7"/>
+<path class="svg-elm svg-path svg-path02" d="M492.589 179.615C493.197 184.539 493.541 189.516 493.541 194.601C493.541 201.371 492.959 208.008 491.928 214.484C516.171 226.847 532.905 252.215 532.905 281.545C532.905 322.97 499.621 356.661 458.698 356.661H384.491V316.253V281.545C384.491 277.076 384.94 272.741 385.68 268.486C386.658 262.92 388.165 257.541 390.28 252.456C397.815 234.393 412.117 219.916 429.961 212.289C431.653 206.696 432.578 200.756 432.578 194.574C432.578 188.794 431.733 183.201 430.226 177.902C393.664 188.205 365.06 217.775 355.728 255.106C354.538 259.869 353.56 264.713 353.031 269.69C352.608 273.57 352.344 277.504 352.344 281.518V356.687H313.006V377.427C313.006 381.414 312.795 385.348 312.425 389.255H352.344V464.371C352.344 505.795 319.06 539.487 278.137 539.487C249.189 539.487 224.101 522.574 211.887 498.008C209.666 493.566 207.895 488.856 206.573 483.959C204.908 477.697 203.93 471.141 203.93 464.344C203.93 459.875 204.379 455.54 205.119 451.285C206.097 445.719 207.604 440.34 209.719 435.255C217.253 417.192 231.556 402.688 249.4 395.088C251.092 389.495 252.017 383.555 252.017 377.4V360.113C215.139 369.586 185.953 398.54 175.748 435.523C174.479 440.179 173.501 444.943 172.84 449.813C172.206 454.576 171.756 459.393 171.756 464.344C171.756 470.82 172.417 477.108 173.501 483.263C174.426 488.535 175.722 493.673 177.387 498.677C191.584 541.226 231.318 572 278.084 572C336.72 572 384.438 523.698 384.438 464.344V389.174H458.645C517.281 389.148 564.999 340.845 564.999 281.491C564.999 234.152 534.623 193.932 492.563 179.561L492.589 179.615Z" fill="#F7F7F7"/>
+<path class="svg-elm svg-path svg-path03" d="M89.8835 348.633C88.6146 353.289 87.6364 358.052 86.9755 362.923C86.341 367.686 85.8916 372.503 85.8916 377.454C85.8916 383.93 86.5525 390.218 87.6364 396.373C88.5617 401.645 89.8571 406.783 91.5226 411.787C102.124 443.551 126.947 468.652 158.301 479.383C157.693 474.459 157.349 469.482 157.349 464.398C157.349 457.627 157.931 450.991 158.962 444.515C144.713 437.263 133.107 425.515 125.943 411.091C123.722 406.649 121.951 401.939 120.629 397.042C118.964 390.78 117.985 384.224 117.985 377.454C117.985 372.985 118.435 368.649 119.175 364.395C120.153 358.828 121.66 353.45 123.775 348.365C131.309 330.302 145.612 315.798 163.456 308.198C165.148 302.605 166.073 296.664 166.073 290.51V273.222C129.195 282.696 100.009 311.65 89.8042 348.633H89.8835Z" fill="#F7F7F7"/>
+<path class="svg-elm svg-path svg-path04" d="M269.81 168.188C268.621 172.952 267.642 177.795 267.114 182.773C266.691 186.653 266.426 190.587 266.426 194.601V269.77H227.089V290.509C227.089 294.497 226.877 298.43 226.507 302.337H266.426V342.772V377.48C266.426 381.949 265.977 386.284 265.237 390.539C264.259 396.105 262.752 401.484 260.637 406.569C253.102 424.632 238.8 439.136 220.956 446.736C219.264 452.329 218.338 458.269 218.338 464.424C218.338 470.204 219.184 475.797 220.691 481.096C257.253 470.793 285.831 441.223 295.189 403.893C296.379 399.129 297.357 394.286 297.886 389.308C298.309 385.428 298.573 381.494 298.573 377.48V302.311H337.91V281.572C337.91 277.584 338.122 273.65 338.492 269.743H298.573V229.309V194.601C298.573 190.132 299.022 185.797 299.763 181.542C300.741 175.976 302.248 170.597 304.363 165.512C311.897 147.449 326.199 132.972 344.044 125.345C345.736 119.752 346.661 113.812 346.661 107.657C346.661 101.877 345.815 96.2836 344.308 90.9851C307.747 101.288 279.169 130.858 269.81 168.188Z" fill="#F7F7F7"/>
+<path class="svg-elm svg-path svg-path05" d="M477.388 175.681C476.462 170.41 475.167 165.272 473.501 160.267C462.9 128.503 438.077 103.402 406.723 92.6711C407.331 97.595 407.675 102.572 407.675 107.657C407.675 114.427 407.093 121.064 406.062 127.54C420.311 134.792 431.917 146.539 439.081 160.963C441.302 165.405 443.073 170.115 444.395 175.012C446.06 181.274 447.039 187.831 447.039 194.601C447.039 199.07 446.589 203.405 445.849 207.66C444.871 213.226 443.364 218.605 441.249 223.689C433.715 241.752 419.412 256.23 401.568 263.856C399.876 269.449 398.951 275.39 398.951 281.545V298.832C435.83 289.359 465.042 260.404 475.22 223.422C476.489 218.765 477.467 214.002 478.128 209.132C478.762 204.368 479.212 199.552 479.212 194.601C479.212 188.125 478.551 181.836 477.467 175.681H477.388Z" fill="#F7F7F7"/>
+</svg>
+          <div class="lcl-faq__in">
+            <div class="lcl-cmn-ttl">
+              <svg class="ico_svg logo-mark" width="29" height="30" viewBox="0 0 29 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path class="svg-elm svg-path svg-path01" d="M10.7441 16.6218C10.8051 16.3719 10.8553 16.1179 10.8825 15.8568C10.9042 15.6533 10.9177 15.447 10.9177 15.2365V11.294H12.9368V10.2063C12.9368 9.99719 12.9477 9.79088 12.9667 9.58596H10.9177V5.64632C10.9177 3.47368 12.6261 1.70667 14.7266 1.70667C16.2124 1.70667 17.5001 2.59368 18.127 3.8821C18.241 4.11509 18.3319 4.3621 18.3998 4.61895C18.4853 4.94737 18.5355 5.29123 18.5355 5.64772C18.5355 5.8821 18.5124 6.10947 18.4744 6.33263C18.4242 6.62456 18.3469 6.90667 18.2383 7.17333C17.8516 8.1207 17.1175 8.88 16.2016 9.28C16.1147 9.57333 16.0672 9.88491 16.0672 10.2077V11.1144C17.9601 10.6175 19.4582 9.09895 19.9819 7.1593C20.0471 6.91509 20.0973 6.66526 20.1312 6.40982C20.1638 6.16 20.1868 5.90737 20.1868 5.64772C20.1868 5.30807 20.1529 4.97824 20.0973 4.65544C20.0498 4.37895 19.9833 4.10947 19.8978 3.84702C19.1651 1.61403 17.1256 0 14.7252 0C11.7156 0 9.26638 2.53333 9.26638 5.64632V9.58877H5.45752C2.44788 9.59158 0 12.1235 0 15.2365C0 17.7193 1.56045 19.8288 3.71795 20.5825C3.68674 20.3242 3.6691 20.0632 3.6691 19.7965C3.6691 19.4414 3.69895 19.0933 3.75187 18.7537C2.50758 18.1053 1.64865 16.7747 1.64865 15.2365C1.64865 13.0639 3.35701 11.2968 5.45752 11.2968H9.26638V13.4161V15.2365C9.26638 15.4709 9.24331 15.6982 9.20532 15.9214C9.15511 16.2133 9.07777 16.4954 8.96921 16.7621C8.58249 17.7095 7.8484 18.4702 6.93248 18.8688C6.84564 19.1621 6.79815 19.4737 6.79815 19.7965C6.79815 20.0996 6.84157 20.393 6.91891 20.6709C8.79553 20.1305 10.2637 18.5796 10.7427 16.6218H10.7441Z" fill="#E60012"/>
+<path class="svg-elm svg-path svg-path02" d="M25.2834 9.42039C25.3147 9.67864 25.3323 9.93969 25.3323 10.2064C25.3323 10.5614 25.3024 10.9095 25.2495 11.2492C26.4938 11.8976 27.3527 13.2281 27.3527 14.7664C27.3527 16.939 25.6444 18.706 23.5439 18.706H19.735V16.5867V14.7664C19.735 14.532 19.7581 14.3046 19.7961 14.0814C19.8463 13.7895 19.9236 13.5074 20.0322 13.2407C20.4189 12.2934 21.153 11.5341 22.0689 11.1341C22.1558 10.8407 22.2032 10.5292 22.2032 10.205C22.2032 9.90179 22.1598 9.60846 22.0825 9.33057C20.2059 9.87092 18.7377 11.4218 18.2587 13.3797C18.1976 13.6295 18.1474 13.8835 18.1203 14.1446C18.0986 14.3481 18.085 14.5544 18.085 14.765V18.7074H16.0659V19.7951C16.0659 20.0042 16.0551 20.2106 16.0361 20.4155H18.085V24.3551C18.085 26.5278 16.3767 28.2948 14.2761 28.2948C12.7903 28.2948 11.5026 27.4078 10.8757 26.1193C10.7617 25.8864 10.6708 25.6393 10.603 25.3825C10.5175 25.0541 10.4673 24.7102 10.4673 24.3537C10.4673 24.1193 10.4904 23.892 10.5283 23.6688C10.5786 23.3769 10.6559 23.0948 10.7644 22.8281C11.1512 21.8807 11.8853 21.12 12.8012 20.7214C12.888 20.4281 12.9355 20.1165 12.9355 19.7937V18.8871C11.0426 19.3839 9.54458 20.9025 9.02081 22.8421C8.95568 23.0864 8.90547 23.3362 8.87155 23.5916C8.83898 23.8414 8.81592 24.0941 8.81592 24.3537C8.81592 24.6934 8.84984 25.0232 8.90547 25.346C8.95297 25.6225 9.01945 25.892 9.10494 26.1544C9.8336 28.386 11.873 30 14.2734 30C17.2831 30 19.7323 27.4667 19.7323 24.3537V20.4113H23.5412C26.5508 20.4099 29 17.8765 29 14.7635C29 12.2807 27.4409 10.1713 25.2821 9.41758L25.2834 9.42039Z" fill="#E60012"/>
+<path class="svg-elm svg-path svg-path03" d="M4.61359 18.2849C4.54845 18.5291 4.49825 18.779 4.46432 19.0344C4.43176 19.2842 4.40869 19.5369 4.40869 19.7965C4.40869 20.1362 4.44261 20.466 4.49825 20.7888C4.54574 21.0653 4.61223 21.3347 4.69771 21.5972C5.24184 23.2632 6.51598 24.5797 8.12528 25.1425C8.09407 24.8842 8.07643 24.6232 8.07643 24.3565C8.07643 24.0014 8.10629 23.6533 8.15921 23.3137C7.42783 22.9333 6.83214 22.3172 6.46442 21.5607C6.35044 21.3277 6.25952 21.0807 6.19168 20.8239C6.10619 20.4954 6.05599 20.1516 6.05599 19.7965C6.05599 19.5621 6.07905 19.3347 6.11705 19.1116C6.16725 18.8197 6.2446 18.5376 6.35315 18.2709C6.73987 17.3235 7.47396 16.5628 8.38988 16.1642C8.47672 15.8709 8.52422 15.5593 8.52422 15.2365V14.3298C6.63132 14.8267 5.13328 16.3453 4.60951 18.2849H4.61359Z" fill="#666666"/>
+<path class="svg-elm svg-path svg-path04" d="M13.8485 8.8211C13.7874 9.07092 13.7372 9.32496 13.7101 9.58601C13.6883 9.78952 13.6748 9.99583 13.6748 10.2064V14.1488H11.6557V15.2365C11.6557 15.4457 11.6448 15.652 11.6258 15.8569H13.6748V17.9776V19.7979C13.6748 20.0323 13.6517 20.2597 13.6137 20.4829C13.5635 20.7748 13.4862 21.0569 13.3776 21.3236C12.9909 22.2709 12.2568 23.0316 11.3409 23.4302C11.254 23.7236 11.2065 24.0351 11.2065 24.3579C11.2065 24.6611 11.25 24.9544 11.3273 25.2323C13.2039 24.692 14.6707 23.1411 15.1511 21.1832C15.2122 20.9334 15.2624 20.6793 15.2895 20.4183C15.3112 20.2148 15.3248 20.0085 15.3248 19.7979V15.8555H17.3439V14.7678C17.3439 14.5586 17.3547 14.3523 17.3737 14.1474H15.3248V12.0267V10.2064C15.3248 9.97197 15.3478 9.7446 15.3858 9.52145C15.436 9.22952 15.5134 8.94741 15.6219 8.68074C16.0087 7.73338 16.7428 6.97408 17.6587 6.57408C17.7455 6.28074 17.793 5.96917 17.793 5.64636C17.793 5.3432 17.7496 5.04987 17.6722 4.77197C15.7956 5.31232 14.3288 6.8632 13.8485 8.8211Z" fill="#666666"/>
+<path class="svg-elm svg-path svg-path05" d="M24.503 9.21404C24.4555 8.93754 24.389 8.66807 24.3036 8.40561C23.7594 6.73965 22.4853 5.42316 20.876 4.86035C20.9072 5.1186 20.9248 5.37965 20.9248 5.64632C20.9248 6.0014 20.895 6.34947 20.8421 6.68912C21.5734 7.06947 22.1691 7.68561 22.5368 8.44211C22.6508 8.67509 22.7417 8.92211 22.8096 9.17895C22.8951 9.50737 22.9453 9.85123 22.9453 10.2063C22.9453 10.4407 22.9222 10.6681 22.8842 10.8912C22.834 11.1832 22.7567 11.4653 22.6481 11.7319C22.2614 12.6793 21.5273 13.4386 20.6114 13.8386C20.5245 14.1319 20.4771 14.4435 20.4771 14.7663V15.673C22.3699 15.1761 23.8693 13.6575 24.3918 11.7179C24.4569 11.4737 24.5071 11.2239 24.541 10.9684C24.5736 10.7186 24.5966 10.466 24.5966 10.2063C24.5966 9.86667 24.5627 9.53684 24.5071 9.21404H24.503Z" fill="#666666"/>
+</svg>
+              <p class="lcl-cmn-ttl__en">FAQ</p>
+              <h2>よくあるご質問</h2>
+            </div><!-- .lcl-cmn-ttl -->
+            <div class="lcl-faq__cnt">
+              <p class="tac-w">スタッフがどんな時でもあなたの一番の理解者でいるからこそ、<br class="dn-n">一人ひとりにピッタリのお相手を紹介することができ、精度の高いお見合いを実現しています。</p>
+              <div class="lcl-faq__wrap">
+                <details class="details lcl-faq__details">
+                  <summary class="details__summary lcl-faq__summary"><span class="lcl-faq__icon">Q.</span><span class="flex1-n flex1-w">詳しくお話を聞きたいのですが、カウンセリングで無理やり入会させられませんか？</span></summary>
+                  <div class="details__in">
+                    <!-- アコーディオン ここから -->
+                    <div class="lcl-faq__main">
+                      <span class="lcl-faq__icon">A.</span>
+                      <p class="flex1-w flex1-n">カウンセリングで強引な勧誘などは一切行いませんので、安心してご相談くださいませ。<br>じっくりご検討いただいた上で、ご入会について判断いただければと思います。</p>
+                    </div>
+                    <!-- アコーディオン ここまで -->
+                  </div><!-- /.details__in -->
+                </details><!-- /.details -->
+                <details class="details lcl-faq__details">
+                  <summary class="details__summary lcl-faq__summary"><span class="lcl-faq__icon">Q.</span><span class="flex1-n flex1-w">カウンセリングでは、どんなことを聞かれるのでしょうか？</span></summary>
+                  <div class="details__in">
+                    <!-- アコーディオン ここから -->
+                    <div class="lcl-faq__main">
+                      <span class="lcl-faq__icon">A.</span>
+                      <p class="flex1-w flex1-n">現在のご状況や結婚への思い、相手に望まれること等をお伺いいたします。<br>一方で、結婚相談所に対する質問やご不明点があれば、どんなことでもお気軽にご質問ください。</p>
+                    </div>
+                    <!-- アコーディオン ここまで -->
+                  </div><!-- /.details__in -->
+                </details><!-- /.details -->
+                <details class="details lcl-faq__details">
+                  <summary class="details__summary lcl-faq__summary"><span class="lcl-faq__icon">Q.</span><span class="flex1-n flex1-w">プライバシーはきちんと守られるのでしょうか？</span></summary>
+                  <div class="details__in">
+                    <!-- アコーディオン ここから -->
+                    <div class="lcl-faq__main">
+                      <span class="lcl-faq__icon">A.</span>
+                      <p class="flex1-w flex1-n">お預かりした個人情報は、厳重に管理されており、外部に漏れるようなことは一切ございません。<br>「秘密厳守」が会員様との信頼関係の第一歩だと考えております。</p>
+                    </div>
+                    <!-- アコーディオン ここまで -->
+                  </div><!-- /.details__in -->
+                </details><!-- /.details -->
+                <details class="details lcl-faq__details">
+                  <summary class="details__summary lcl-faq__summary"><span class="lcl-faq__icon">Q.</span><span class="flex1-n flex1-w">家族に結婚相談所への入会を知られたくないです。</span></summary>
+                  <div class="details__in">
+                    <!-- アコーディオン ここから -->
+                    <div class="lcl-faq__main">
+                      <span class="lcl-faq__icon">A.</span>
+                      <p class="flex1-w flex1-n">ご本人以外へのご連絡やコンタクトは一切ありませんので、ご安心くださいませ。連絡方法などは会員様のご希望を尊重いたします。</p>
+                    </div>
+                    <!-- アコーディオン ここまで -->
+                  </div><!-- /.details__in -->
+                </details><!-- /.details -->
+                <details class="details lcl-faq__details">
+                  <summary class="details__summary lcl-faq__summary"><span class="lcl-faq__icon">Q.</span><span class="flex1-n flex1-w">再婚の場合でも入会できますか？</span></summary>
+                  <div class="details__in">
+                    <!-- アコーディオン ここから -->
+                    <div class="lcl-faq__main">
+                      <span class="lcl-faq__icon">A.</span>
+                      <p class="flex1-w flex1-n">会員様には再婚の方も多数いらっしゃいます。どうぞご安心くださいませ。</p>
+                    </div>
+                    <!-- アコーディオン ここまで -->
+                  </div><!-- /.details__in -->
+                </details><!-- /.details -->
+                <details class="details lcl-faq__details">
+                  <summary class="details__summary lcl-faq__summary"><span class="lcl-faq__icon">Q.</span><span class="flex1-n flex1-w">婚活は、どのくらいの期間を要するのでしょうか？</span></summary>
+                  <div class="details__in">
+                    <!-- アコーディオン ここから -->
+                    <div class="lcl-faq__main">
+                      <span class="lcl-faq__icon">A.</span>
+                      <p class="flex1-w flex1-n">多くの結婚相談所が「1年」を婚活期間として想定しています。<br>結婚はご縁であるものの、長く続けるとモチベーションも下がってしまいます。婚活ではスピードと密度が大切です。</p>
+                    </div>
+                    <!-- アコーディオン ここまで -->
+                  </div><!-- /.details__in -->
+                </details><!-- /.details -->
+                <details class="details lcl-faq__details">
+                  <summary class="details__summary lcl-faq__summary"><span class="lcl-faq__icon">Q.</span><span class="flex1-n flex1-w">どこの都道府県からでも入会は可能でしょうか？</span></summary>
+                  <div class="details__in">
+                    <!-- アコーディオン ここから -->
+                    <div class="lcl-faq__main">
+                      <span class="lcl-faq__icon">A.</span>
+                      <p class="flex1-w flex1-n">もちろん可能です。オンラインでのカウンセリングにも対応しているので、全国どこからでも入会可能です。</p>
+                    </div>
+                    <!-- アコーディオン ここまで -->
+                  </div><!-- /.details__in -->
+                </details><!-- /.details -->
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="fs-ctaarea">
+  <div class="fs-ctaarea__bg"></div>
+  <div class="fs-ctaarea__in">
+    <figure class="fs-ctaarea__fig fs-ctaarea__fig--01"><img src="/recommend/futari-tsumugi/common/images/ctaarea/people_01.png" alt="スタッフ画像1" width="680" height="834"></figure>
+    <figure class="fs-ctaarea__fig fs-ctaarea__fig--02"><img src="/recommend/futari-tsumugi/common/images/ctaarea/people_02.png" alt="スタッフ画像2" width="680" height="834"></figure>
+    <p class="fs-ctaarea__ttl">結婚相談所を<span>選ぶ前</span>に</p>
+    <a href="https://lin.ee/zy6qOdz"  awicon="nothing" class="fs-ctaarea__link">
+      <span class="fs-ctaarea__label">
+        <svg class="ico_svg ic_line" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path class="svg-elm svg-path svg-path01" d="M30.0671 1.66666H9.93255C5.36734 1.66666 1.6665 5.3675 1.6665 9.93271V30.0673C1.6665 34.6325 5.36734 38.3333 9.93255 38.3333H30.0671C34.6323 38.3333 38.3332 34.6325 38.3332 30.0673V9.93271C38.3332 5.3675 34.6323 1.66666 30.0671 1.66666Z" fill="#06C755"/>
+<path class="svg-elm svg-path svg-path02" d="M32.2213 18.2721C32.2213 12.8019 26.7373 8.35146 19.9964 8.35146C13.2554 8.35146 7.77148 12.8019 7.77148 18.2721C7.77148 23.1762 12.1211 27.2829 17.9958 28.0598C18.3934 28.1457 18.9353 28.3222 19.0728 28.6625C19.1966 28.9719 19.153 29.4554 19.1129 29.7682C19.1129 29.7682 18.9697 30.631 18.9388 30.8144C18.8849 31.1237 18.6936 32.0232 19.9975 31.4732C21.3026 30.9232 27.0375 27.3276 29.6019 24.3759C31.3734 22.4326 32.2224 20.4618 32.2224 18.2721H32.2213Z" fill="white"/>
+<path class="svg-elm svg-path svg-path03" d="M28.1532 21.4311H24.7191C24.5896 21.4311 24.4854 21.3268 24.4854 21.1974V21.1939V15.8681V15.8624C24.4854 15.7329 24.5896 15.6286 24.7191 15.6286H28.1532C28.2815 15.6286 28.3869 15.734 28.3869 15.8624V16.7297C28.3869 16.8592 28.2826 16.9635 28.1532 16.9635H25.8191V17.8641H28.1532C28.2815 17.8641 28.3869 17.9695 28.3869 18.0979V18.9653C28.3869 19.0947 28.2826 19.199 28.1532 19.199H25.8191V20.0996H28.1532C28.2815 20.0996 28.3869 20.2051 28.3869 20.3334V21.2008C28.3869 21.3303 28.2826 21.4345 28.1532 21.4345V21.4311Z" fill="#06C755"/>
+<path class="svg-elm svg-path svg-path04" d="M15.4492 21.4311C15.5776 21.4311 15.683 21.3268 15.683 21.1974V20.33C15.683 20.2016 15.5776 20.0962 15.4492 20.0962H13.1152V15.8612C13.1152 15.7329 13.0098 15.6275 12.8814 15.6275H12.014C11.8845 15.6275 11.7803 15.7317 11.7803 15.8612V21.1928V21.1974C11.7803 21.3268 11.8845 21.4311 12.014 21.4311H15.4481H15.4492Z" fill="#06C755"/>
+<path class="svg-elm svg-path svg-path05" d="M17.5155 15.6286H16.6493C16.5202 15.6286 16.4155 15.7332 16.4155 15.8623V21.1973C16.4155 21.3264 16.5202 21.4311 16.6493 21.4311H17.5155C17.6446 21.4311 17.7493 21.3264 17.7493 21.1973V15.8623C17.7493 15.7332 17.6446 15.6286 17.5155 15.6286Z" fill="#06C755"/>
+<path class="svg-elm svg-path svg-path06" d="M23.4178 15.6286H22.5504C22.4209 15.6286 22.3166 15.7328 22.3166 15.8623V19.0306L19.876 15.734C19.8703 15.726 19.8634 15.718 19.8577 15.7099C19.8577 15.7099 19.8577 15.7099 19.8565 15.7088C19.8519 15.7042 19.8474 15.6985 19.8428 15.6939C19.8416 15.6927 19.8393 15.6916 19.8382 15.6905C19.8336 15.687 19.8302 15.6836 19.8256 15.6801C19.8233 15.679 19.821 15.6767 19.8187 15.6756C19.8153 15.6721 19.8107 15.6698 19.8061 15.6675C19.8038 15.6664 19.8015 15.6641 19.7992 15.663C19.7946 15.6607 19.7912 15.6584 19.7866 15.6561C19.7843 15.6549 19.782 15.6538 19.7797 15.6526C19.7752 15.6503 19.7706 15.6481 19.766 15.6469C19.7637 15.6469 19.7614 15.6446 19.758 15.6446C19.7534 15.6435 19.7488 15.6412 19.7442 15.64C19.7419 15.64 19.7385 15.6389 19.7362 15.6377C19.7316 15.6377 19.727 15.6355 19.7225 15.6343C19.719 15.6343 19.7156 15.6343 19.7121 15.6332C19.7076 15.6332 19.7041 15.632 19.6995 15.632C19.695 15.632 19.6915 15.632 19.6869 15.632C19.6846 15.632 19.6812 15.632 19.6789 15.632H18.8172C18.6889 15.632 18.5835 15.7363 18.5835 15.8658V21.2008C18.5835 21.3291 18.6878 21.4345 18.8172 21.4345H19.6846C19.8141 21.4345 19.9184 21.3302 19.9184 21.2008V18.0325L22.3625 21.3337C22.3796 21.3577 22.4003 21.3772 22.4232 21.3921C22.4232 21.3921 22.4255 21.3933 22.4255 21.3944C22.4301 21.3978 22.4346 21.4001 22.4404 21.4036C22.4427 21.4047 22.445 21.4059 22.4472 21.407C22.4507 21.4093 22.4553 21.4105 22.4587 21.4127C22.4621 21.415 22.4667 21.4162 22.4702 21.4173C22.4725 21.4173 22.4747 21.4196 22.477 21.4196C22.4828 21.4219 22.4874 21.4231 22.4931 21.4242C22.4931 21.4242 22.4954 21.4242 22.4965 21.4242C22.516 21.4288 22.5366 21.4322 22.5572 21.4322H23.4189C23.5472 21.4322 23.6527 21.328 23.6527 21.1985V15.8635C23.6527 15.7351 23.5484 15.6297 23.4189 15.6297L23.4178 15.6286Z" fill="#06C755"/>
+</svg>
+        LINEでラクラク！</span>
+      <span class="fs-ctaarea__txt"><span class="fs-ctaarea__small">一度、</span>相談<span class="fs-ctaarea__small">してみる</span></span>
+      <span class="fs-ctaarea__ico"><svg class="ico_svg ic_tab" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path class="svg-elm svg-path svg-path01" d="M19 19H5V5H12V3H5C3.89 3 3 3.9 3 5V19C3 20.1 3.89 21 5 21H19C20.1 21 21 20.1 21 19V12H19V19ZM14 3V5H17.59L7.76 14.83L9.17 16.24L19 6.41V10H21V3H14Z" fill="#1F1F1F"/>
+</svg>
+</span>
+    </a>
+  </div>
+</div>
+
+        <section class="lcl-reason">
+          <svg class="ico_svg bg_logo" width="565" height="572" viewBox="0 0 565 572" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path class="svg-elm svg-path svg-path01" d="M209.324 316.921C210.514 312.158 211.492 307.315 212.02 302.337C212.443 298.457 212.708 294.523 212.708 290.509V215.34H252.045V194.6C252.045 190.613 252.257 186.679 252.627 182.772H212.708V107.656C212.708 66.2316 245.991 32.5404 286.915 32.5404C315.863 32.5404 340.951 49.4529 353.165 74.0188C355.385 78.461 357.157 83.1708 358.478 88.0679C360.144 94.3298 361.122 100.886 361.122 107.683C361.122 112.152 360.673 116.487 359.932 120.742C358.954 126.308 357.447 131.687 355.332 136.772C347.798 154.835 333.496 169.312 315.651 176.939C313.959 182.532 313.034 188.472 313.034 194.627V211.914C349.913 202.441 379.099 173.487 389.303 136.504C390.572 131.848 391.55 127.084 392.211 122.214C392.846 117.451 393.295 112.634 393.295 107.683C393.295 101.207 392.634 94.9185 391.55 88.7637C390.625 83.4919 389.33 78.354 387.664 73.3498C373.389 30.7743 333.655 0 286.888 0C228.252 0 180.535 48.3022 180.535 107.656V182.826H106.327C47.6914 182.879 0 231.155 0 290.509C0 337.848 30.4019 378.069 72.4359 392.439C71.8279 387.515 71.4842 382.538 71.4842 377.453C71.4842 370.683 72.0658 364.046 73.0968 357.57C48.8546 345.207 32.1203 319.838 32.1203 290.509C32.1203 249.084 65.4038 215.393 106.327 215.393H180.535V255.801V290.509C180.535 294.978 180.085 299.313 179.345 303.568C178.367 309.134 176.86 314.513 174.745 319.597C167.211 337.661 152.908 352.165 135.064 359.765C133.372 365.357 132.447 371.298 132.447 377.453C132.447 383.233 133.293 388.826 134.8 394.125C171.361 383.822 199.965 354.252 209.297 316.921H209.324Z" fill="#F7F7F7"/>
+<path class="svg-elm svg-path svg-path02" d="M492.589 179.615C493.197 184.539 493.541 189.516 493.541 194.601C493.541 201.371 492.959 208.008 491.928 214.484C516.171 226.847 532.905 252.215 532.905 281.545C532.905 322.97 499.621 356.661 458.698 356.661H384.491V316.253V281.545C384.491 277.076 384.94 272.741 385.68 268.486C386.658 262.92 388.165 257.541 390.28 252.456C397.815 234.393 412.117 219.916 429.961 212.289C431.653 206.696 432.578 200.756 432.578 194.574C432.578 188.794 431.733 183.201 430.226 177.902C393.664 188.205 365.06 217.775 355.728 255.106C354.538 259.869 353.56 264.713 353.031 269.69C352.608 273.57 352.344 277.504 352.344 281.518V356.687H313.006V377.427C313.006 381.414 312.795 385.348 312.425 389.255H352.344V464.371C352.344 505.795 319.06 539.487 278.137 539.487C249.189 539.487 224.101 522.574 211.887 498.008C209.666 493.566 207.895 488.856 206.573 483.959C204.908 477.697 203.93 471.141 203.93 464.344C203.93 459.875 204.379 455.54 205.119 451.285C206.097 445.719 207.604 440.34 209.719 435.255C217.253 417.192 231.556 402.688 249.4 395.088C251.092 389.495 252.017 383.555 252.017 377.4V360.113C215.139 369.586 185.953 398.54 175.748 435.523C174.479 440.179 173.501 444.943 172.84 449.813C172.206 454.576 171.756 459.393 171.756 464.344C171.756 470.82 172.417 477.108 173.501 483.263C174.426 488.535 175.722 493.673 177.387 498.677C191.584 541.226 231.318 572 278.084 572C336.72 572 384.438 523.698 384.438 464.344V389.174H458.645C517.281 389.148 564.999 340.845 564.999 281.491C564.999 234.152 534.623 193.932 492.563 179.561L492.589 179.615Z" fill="#F7F7F7"/>
+<path class="svg-elm svg-path svg-path03" d="M89.8835 348.633C88.6146 353.289 87.6364 358.052 86.9755 362.923C86.341 367.686 85.8916 372.503 85.8916 377.454C85.8916 383.93 86.5525 390.218 87.6364 396.373C88.5617 401.645 89.8571 406.783 91.5226 411.787C102.124 443.551 126.947 468.652 158.301 479.383C157.693 474.459 157.349 469.482 157.349 464.398C157.349 457.627 157.931 450.991 158.962 444.515C144.713 437.263 133.107 425.515 125.943 411.091C123.722 406.649 121.951 401.939 120.629 397.042C118.964 390.78 117.985 384.224 117.985 377.454C117.985 372.985 118.435 368.649 119.175 364.395C120.153 358.828 121.66 353.45 123.775 348.365C131.309 330.302 145.612 315.798 163.456 308.198C165.148 302.605 166.073 296.664 166.073 290.51V273.222C129.195 282.696 100.009 311.65 89.8042 348.633H89.8835Z" fill="#F7F7F7"/>
+<path class="svg-elm svg-path svg-path04" d="M269.81 168.188C268.621 172.952 267.642 177.795 267.114 182.773C266.691 186.653 266.426 190.587 266.426 194.601V269.77H227.089V290.509C227.089 294.497 226.877 298.43 226.507 302.337H266.426V342.772V377.48C266.426 381.949 265.977 386.284 265.237 390.539C264.259 396.105 262.752 401.484 260.637 406.569C253.102 424.632 238.8 439.136 220.956 446.736C219.264 452.329 218.338 458.269 218.338 464.424C218.338 470.204 219.184 475.797 220.691 481.096C257.253 470.793 285.831 441.223 295.189 403.893C296.379 399.129 297.357 394.286 297.886 389.308C298.309 385.428 298.573 381.494 298.573 377.48V302.311H337.91V281.572C337.91 277.584 338.122 273.65 338.492 269.743H298.573V229.309V194.601C298.573 190.132 299.022 185.797 299.763 181.542C300.741 175.976 302.248 170.597 304.363 165.512C311.897 147.449 326.199 132.972 344.044 125.345C345.736 119.752 346.661 113.812 346.661 107.657C346.661 101.877 345.815 96.2836 344.308 90.9851C307.747 101.288 279.169 130.858 269.81 168.188Z" fill="#F7F7F7"/>
+<path class="svg-elm svg-path svg-path05" d="M477.388 175.681C476.462 170.41 475.167 165.272 473.501 160.267C462.9 128.503 438.077 103.402 406.723 92.6711C407.331 97.595 407.675 102.572 407.675 107.657C407.675 114.427 407.093 121.064 406.062 127.54C420.311 134.792 431.917 146.539 439.081 160.963C441.302 165.405 443.073 170.115 444.395 175.012C446.06 181.274 447.039 187.831 447.039 194.601C447.039 199.07 446.589 203.405 445.849 207.66C444.871 213.226 443.364 218.605 441.249 223.689C433.715 241.752 419.412 256.23 401.568 263.856C399.876 269.449 398.951 275.39 398.951 281.545V298.832C435.83 289.359 465.042 260.404 475.22 223.422C476.489 218.765 477.467 214.002 478.128 209.132C478.762 204.368 479.212 199.552 479.212 194.601C479.212 188.125 478.551 181.836 477.467 175.681H477.388Z" fill="#F7F7F7"/>
+</svg>
+          <div class="lcl-reason__in">
+            <p class="lcl-reason__sub">JTBが結婚相談所を運営する理由</p>
+            <figure class="lcl-reason__logo"><img src="/recommend/futari-tsumugi/images/reason/jtb_logo.png" alt="JTB 感動のそばに、いつも。" width="300" height="188"></figure>
+            <div class="tac-w mt30">
+              <p class="c-red title-02 tac">「旅行会社の結婚相談所」</p>
+              <p class="mt30-w mt15-n">WEBで簡単に予約や比較ができる時代でも、旅行会社が選ばれるのは、<br class="dn-n">情報ではなく「判断」を任せられる存在があるからです。<br> 条件やデータだけでは見えない想いに寄り添い、<br class="dn-n">1人では決めきれない選択をプロが共に導く——。</p>
+              <p class="mt25">その安心感は婚活でも変わりません。<br>そんな想いから「JTBの結婚相談所　ふたり紬」は生まれました。<br>110年以上にわたり人の出会いと選択に向き合い、<br class="dn-n">約2,000万人の個人のお客様、<br class="dn-n">法人・官公庁など約36,000の組織、<br class="dn-n">9万社を超える事業パートナーとの信頼を築いてきました。</p>
+              <p class="mt25 txt-large tac-n c-red">オンラインの手軽さの中に、<br class="dn-w">確かな人の温もりを。<br> 信頼できる「相談」から、<br class="dn-w">新しい一歩を始めてみませんか。</p>
+              <a href="https://www.jtbcorp.jp/jp/" target="_blank" class="btn01 mt40-w mt30-n mla mra">
+                <span class="btn01__txt">JTBを知る</span>
+                <svg class="ico_svg ic_tab" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path class="svg-elm svg-path svg-path01" d="M19 19H5V5H12V3H5C3.89 3 3 3.9 3 5V19C3 20.1 3.89 21 5 21H19C20.1 21 21 20.1 21 19V12H19V19ZM14 3V5H17.59L7.76 14.83L9.17 16.24L19 6.41V10H21V3H14Z" fill="#1F1F1F"/>
+</svg>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section class="lcl-info" id="information">
+          <div class="lcl-info__in">
+            <div class="lcl-cmn-ttl">
+              <svg class="ico_svg logo-mark" width="29" height="30" viewBox="0 0 29 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path class="svg-elm svg-path svg-path01" d="M10.7441 16.6218C10.8051 16.3719 10.8553 16.1179 10.8825 15.8568C10.9042 15.6533 10.9177 15.447 10.9177 15.2365V11.294H12.9368V10.2063C12.9368 9.99719 12.9477 9.79088 12.9667 9.58596H10.9177V5.64632C10.9177 3.47368 12.6261 1.70667 14.7266 1.70667C16.2124 1.70667 17.5001 2.59368 18.127 3.8821C18.241 4.11509 18.3319 4.3621 18.3998 4.61895C18.4853 4.94737 18.5355 5.29123 18.5355 5.64772C18.5355 5.8821 18.5124 6.10947 18.4744 6.33263C18.4242 6.62456 18.3469 6.90667 18.2383 7.17333C17.8516 8.1207 17.1175 8.88 16.2016 9.28C16.1147 9.57333 16.0672 9.88491 16.0672 10.2077V11.1144C17.9601 10.6175 19.4582 9.09895 19.9819 7.1593C20.0471 6.91509 20.0973 6.66526 20.1312 6.40982C20.1638 6.16 20.1868 5.90737 20.1868 5.64772C20.1868 5.30807 20.1529 4.97824 20.0973 4.65544C20.0498 4.37895 19.9833 4.10947 19.8978 3.84702C19.1651 1.61403 17.1256 0 14.7252 0C11.7156 0 9.26638 2.53333 9.26638 5.64632V9.58877H5.45752C2.44788 9.59158 0 12.1235 0 15.2365C0 17.7193 1.56045 19.8288 3.71795 20.5825C3.68674 20.3242 3.6691 20.0632 3.6691 19.7965C3.6691 19.4414 3.69895 19.0933 3.75187 18.7537C2.50758 18.1053 1.64865 16.7747 1.64865 15.2365C1.64865 13.0639 3.35701 11.2968 5.45752 11.2968H9.26638V13.4161V15.2365C9.26638 15.4709 9.24331 15.6982 9.20532 15.9214C9.15511 16.2133 9.07777 16.4954 8.96921 16.7621C8.58249 17.7095 7.8484 18.4702 6.93248 18.8688C6.84564 19.1621 6.79815 19.4737 6.79815 19.7965C6.79815 20.0996 6.84157 20.393 6.91891 20.6709C8.79553 20.1305 10.2637 18.5796 10.7427 16.6218H10.7441Z" fill="#E60012"/>
+<path class="svg-elm svg-path svg-path02" d="M25.2834 9.42039C25.3147 9.67864 25.3323 9.93969 25.3323 10.2064C25.3323 10.5614 25.3024 10.9095 25.2495 11.2492C26.4938 11.8976 27.3527 13.2281 27.3527 14.7664C27.3527 16.939 25.6444 18.706 23.5439 18.706H19.735V16.5867V14.7664C19.735 14.532 19.7581 14.3046 19.7961 14.0814C19.8463 13.7895 19.9236 13.5074 20.0322 13.2407C20.4189 12.2934 21.153 11.5341 22.0689 11.1341C22.1558 10.8407 22.2032 10.5292 22.2032 10.205C22.2032 9.90179 22.1598 9.60846 22.0825 9.33057C20.2059 9.87092 18.7377 11.4218 18.2587 13.3797C18.1976 13.6295 18.1474 13.8835 18.1203 14.1446C18.0986 14.3481 18.085 14.5544 18.085 14.765V18.7074H16.0659V19.7951C16.0659 20.0042 16.0551 20.2106 16.0361 20.4155H18.085V24.3551C18.085 26.5278 16.3767 28.2948 14.2761 28.2948C12.7903 28.2948 11.5026 27.4078 10.8757 26.1193C10.7617 25.8864 10.6708 25.6393 10.603 25.3825C10.5175 25.0541 10.4673 24.7102 10.4673 24.3537C10.4673 24.1193 10.4904 23.892 10.5283 23.6688C10.5786 23.3769 10.6559 23.0948 10.7644 22.8281C11.1512 21.8807 11.8853 21.12 12.8012 20.7214C12.888 20.4281 12.9355 20.1165 12.9355 19.7937V18.8871C11.0426 19.3839 9.54458 20.9025 9.02081 22.8421C8.95568 23.0864 8.90547 23.3362 8.87155 23.5916C8.83898 23.8414 8.81592 24.0941 8.81592 24.3537C8.81592 24.6934 8.84984 25.0232 8.90547 25.346C8.95297 25.6225 9.01945 25.892 9.10494 26.1544C9.8336 28.386 11.873 30 14.2734 30C17.2831 30 19.7323 27.4667 19.7323 24.3537V20.4113H23.5412C26.5508 20.4099 29 17.8765 29 14.7635C29 12.2807 27.4409 10.1713 25.2821 9.41758L25.2834 9.42039Z" fill="#E60012"/>
+<path class="svg-elm svg-path svg-path03" d="M4.61359 18.2849C4.54845 18.5291 4.49825 18.779 4.46432 19.0344C4.43176 19.2842 4.40869 19.5369 4.40869 19.7965C4.40869 20.1362 4.44261 20.466 4.49825 20.7888C4.54574 21.0653 4.61223 21.3347 4.69771 21.5972C5.24184 23.2632 6.51598 24.5797 8.12528 25.1425C8.09407 24.8842 8.07643 24.6232 8.07643 24.3565C8.07643 24.0014 8.10629 23.6533 8.15921 23.3137C7.42783 22.9333 6.83214 22.3172 6.46442 21.5607C6.35044 21.3277 6.25952 21.0807 6.19168 20.8239C6.10619 20.4954 6.05599 20.1516 6.05599 19.7965C6.05599 19.5621 6.07905 19.3347 6.11705 19.1116C6.16725 18.8197 6.2446 18.5376 6.35315 18.2709C6.73987 17.3235 7.47396 16.5628 8.38988 16.1642C8.47672 15.8709 8.52422 15.5593 8.52422 15.2365V14.3298C6.63132 14.8267 5.13328 16.3453 4.60951 18.2849H4.61359Z" fill="#666666"/>
+<path class="svg-elm svg-path svg-path04" d="M13.8485 8.8211C13.7874 9.07092 13.7372 9.32496 13.7101 9.58601C13.6883 9.78952 13.6748 9.99583 13.6748 10.2064V14.1488H11.6557V15.2365C11.6557 15.4457 11.6448 15.652 11.6258 15.8569H13.6748V17.9776V19.7979C13.6748 20.0323 13.6517 20.2597 13.6137 20.4829C13.5635 20.7748 13.4862 21.0569 13.3776 21.3236C12.9909 22.2709 12.2568 23.0316 11.3409 23.4302C11.254 23.7236 11.2065 24.0351 11.2065 24.3579C11.2065 24.6611 11.25 24.9544 11.3273 25.2323C13.2039 24.692 14.6707 23.1411 15.1511 21.1832C15.2122 20.9334 15.2624 20.6793 15.2895 20.4183C15.3112 20.2148 15.3248 20.0085 15.3248 19.7979V15.8555H17.3439V14.7678C17.3439 14.5586 17.3547 14.3523 17.3737 14.1474H15.3248V12.0267V10.2064C15.3248 9.97197 15.3478 9.7446 15.3858 9.52145C15.436 9.22952 15.5134 8.94741 15.6219 8.68074C16.0087 7.73338 16.7428 6.97408 17.6587 6.57408C17.7455 6.28074 17.793 5.96917 17.793 5.64636C17.793 5.3432 17.7496 5.04987 17.6722 4.77197C15.7956 5.31232 14.3288 6.8632 13.8485 8.8211Z" fill="#666666"/>
+<path class="svg-elm svg-path svg-path05" d="M24.503 9.21404C24.4555 8.93754 24.389 8.66807 24.3036 8.40561C23.7594 6.73965 22.4853 5.42316 20.876 4.86035C20.9072 5.1186 20.9248 5.37965 20.9248 5.64632C20.9248 6.0014 20.895 6.34947 20.8421 6.68912C21.5734 7.06947 22.1691 7.68561 22.5368 8.44211C22.6508 8.67509 22.7417 8.92211 22.8096 9.17895C22.8951 9.50737 22.9453 9.85123 22.9453 10.2063C22.9453 10.4407 22.9222 10.6681 22.8842 10.8912C22.834 11.1832 22.7567 11.4653 22.6481 11.7319C22.2614 12.6793 21.5273 13.4386 20.6114 13.8386C20.5245 14.1319 20.4771 14.4435 20.4771 14.7663V15.673C22.3699 15.1761 23.8693 13.6575 24.3918 11.7179C24.4569 11.4737 24.5071 11.2239 24.541 10.9684C24.5736 10.7186 24.5966 10.466 24.5966 10.2063C24.5966 9.86667 24.5627 9.53684 24.5071 9.21404H24.503Z" fill="#666666"/>
+</svg>
+              <p class="lcl-cmn-ttl__en">INFORMATION</p>
+              <h2>運営会社</h2>
+            </div><!-- .lcl-cmn-ttl -->
+            <div class="lcl-info__cnt">
+              <dl class="cmn-dlist cmn-dlist--red">
+                <div class="cmn-dlist__sep">
+                  <dt class="cmn-dlist__term">社名</dt>
+                  <dd class="cmn-dlist__desc">株式会社JTB</dd>
+                </div>
+                <div class="cmn-dlist__sep">
+                  <dt class="cmn-dlist__term">営業時間</dt>
+                  <dd class="cmn-dlist__desc">10:00〜18:00</dd>
+                </div>
+                <div class="cmn-dlist__sep">
+                  <dt class="cmn-dlist__term">定休日</dt>
+                  <dd class="cmn-dlist__desc">完全予約制ですので、平日・休日問わずご都合に合わせてご予約いただけます。
+                    <span class="db txt-small">※<a href="https://forms.office.com/r/rbUvBcrHNx" target="_blank" class="tdu"><span class="c-black">お問い合わせフォーム</span></a>や<a href="https://lin.ee/zy6qOdz" target="_blank" class="tdu"><span class="c-black">公式LINE</span></a>でのお問い合わせは24時間受け付けております。</span>
+                  </dd>
+                </div>
+                <div class="cmn-dlist__sep">
+                  <dt class="cmn-dlist__term">JTB公式サイト</dt>
+                  <dd class="cmn-dlist__desc"><a href="https://www.jtbcorp.jp/jp/" target="_blank" rel="noopener noreferrer nofollow" class="tdu"><span class="c-black">https://www.jtbcorp.jp/jp/</span></a></dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </section>
+
+        <section class="lcl-contact" id="contact">
+          <div class="lcl-contact__in">
+            <div class="lcl-cmn-ttl lcl-cmn-ttl--white">
+              <svg class="ico_svg logo-mark" width="29" height="30" viewBox="0 0 29 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path class="svg-elm svg-path svg-path01" d="M10.7441 16.6218C10.8051 16.3719 10.8553 16.1179 10.8825 15.8568C10.9042 15.6533 10.9177 15.447 10.9177 15.2365V11.294H12.9368V10.2063C12.9368 9.99719 12.9477 9.79088 12.9667 9.58596H10.9177V5.64632C10.9177 3.47368 12.6261 1.70667 14.7266 1.70667C16.2124 1.70667 17.5001 2.59368 18.127 3.8821C18.241 4.11509 18.3319 4.3621 18.3998 4.61895C18.4853 4.94737 18.5355 5.29123 18.5355 5.64772C18.5355 5.8821 18.5124 6.10947 18.4744 6.33263C18.4242 6.62456 18.3469 6.90667 18.2383 7.17333C17.8516 8.1207 17.1175 8.88 16.2016 9.28C16.1147 9.57333 16.0672 9.88491 16.0672 10.2077V11.1144C17.9601 10.6175 19.4582 9.09895 19.9819 7.1593C20.0471 6.91509 20.0973 6.66526 20.1312 6.40982C20.1638 6.16 20.1868 5.90737 20.1868 5.64772C20.1868 5.30807 20.1529 4.97824 20.0973 4.65544C20.0498 4.37895 19.9833 4.10947 19.8978 3.84702C19.1651 1.61403 17.1256 0 14.7252 0C11.7156 0 9.26638 2.53333 9.26638 5.64632V9.58877H5.45752C2.44788 9.59158 0 12.1235 0 15.2365C0 17.7193 1.56045 19.8288 3.71795 20.5825C3.68674 20.3242 3.6691 20.0632 3.6691 19.7965C3.6691 19.4414 3.69895 19.0933 3.75187 18.7537C2.50758 18.1053 1.64865 16.7747 1.64865 15.2365C1.64865 13.0639 3.35701 11.2968 5.45752 11.2968H9.26638V13.4161V15.2365C9.26638 15.4709 9.24331 15.6982 9.20532 15.9214C9.15511 16.2133 9.07777 16.4954 8.96921 16.7621C8.58249 17.7095 7.8484 18.4702 6.93248 18.8688C6.84564 19.1621 6.79815 19.4737 6.79815 19.7965C6.79815 20.0996 6.84157 20.393 6.91891 20.6709C8.79553 20.1305 10.2637 18.5796 10.7427 16.6218H10.7441Z" fill="#E60012"/>
+<path class="svg-elm svg-path svg-path02" d="M25.2834 9.42039C25.3147 9.67864 25.3323 9.93969 25.3323 10.2064C25.3323 10.5614 25.3024 10.9095 25.2495 11.2492C26.4938 11.8976 27.3527 13.2281 27.3527 14.7664C27.3527 16.939 25.6444 18.706 23.5439 18.706H19.735V16.5867V14.7664C19.735 14.532 19.7581 14.3046 19.7961 14.0814C19.8463 13.7895 19.9236 13.5074 20.0322 13.2407C20.4189 12.2934 21.153 11.5341 22.0689 11.1341C22.1558 10.8407 22.2032 10.5292 22.2032 10.205C22.2032 9.90179 22.1598 9.60846 22.0825 9.33057C20.2059 9.87092 18.7377 11.4218 18.2587 13.3797C18.1976 13.6295 18.1474 13.8835 18.1203 14.1446C18.0986 14.3481 18.085 14.5544 18.085 14.765V18.7074H16.0659V19.7951C16.0659 20.0042 16.0551 20.2106 16.0361 20.4155H18.085V24.3551C18.085 26.5278 16.3767 28.2948 14.2761 28.2948C12.7903 28.2948 11.5026 27.4078 10.8757 26.1193C10.7617 25.8864 10.6708 25.6393 10.603 25.3825C10.5175 25.0541 10.4673 24.7102 10.4673 24.3537C10.4673 24.1193 10.4904 23.892 10.5283 23.6688C10.5786 23.3769 10.6559 23.0948 10.7644 22.8281C11.1512 21.8807 11.8853 21.12 12.8012 20.7214C12.888 20.4281 12.9355 20.1165 12.9355 19.7937V18.8871C11.0426 19.3839 9.54458 20.9025 9.02081 22.8421C8.95568 23.0864 8.90547 23.3362 8.87155 23.5916C8.83898 23.8414 8.81592 24.0941 8.81592 24.3537C8.81592 24.6934 8.84984 25.0232 8.90547 25.346C8.95297 25.6225 9.01945 25.892 9.10494 26.1544C9.8336 28.386 11.873 30 14.2734 30C17.2831 30 19.7323 27.4667 19.7323 24.3537V20.4113H23.5412C26.5508 20.4099 29 17.8765 29 14.7635C29 12.2807 27.4409 10.1713 25.2821 9.41758L25.2834 9.42039Z" fill="#E60012"/>
+<path class="svg-elm svg-path svg-path03" d="M4.61359 18.2849C4.54845 18.5291 4.49825 18.779 4.46432 19.0344C4.43176 19.2842 4.40869 19.5369 4.40869 19.7965C4.40869 20.1362 4.44261 20.466 4.49825 20.7888C4.54574 21.0653 4.61223 21.3347 4.69771 21.5972C5.24184 23.2632 6.51598 24.5797 8.12528 25.1425C8.09407 24.8842 8.07643 24.6232 8.07643 24.3565C8.07643 24.0014 8.10629 23.6533 8.15921 23.3137C7.42783 22.9333 6.83214 22.3172 6.46442 21.5607C6.35044 21.3277 6.25952 21.0807 6.19168 20.8239C6.10619 20.4954 6.05599 20.1516 6.05599 19.7965C6.05599 19.5621 6.07905 19.3347 6.11705 19.1116C6.16725 18.8197 6.2446 18.5376 6.35315 18.2709C6.73987 17.3235 7.47396 16.5628 8.38988 16.1642C8.47672 15.8709 8.52422 15.5593 8.52422 15.2365V14.3298C6.63132 14.8267 5.13328 16.3453 4.60951 18.2849H4.61359Z" fill="#666666"/>
+<path class="svg-elm svg-path svg-path04" d="M13.8485 8.8211C13.7874 9.07092 13.7372 9.32496 13.7101 9.58601C13.6883 9.78952 13.6748 9.99583 13.6748 10.2064V14.1488H11.6557V15.2365C11.6557 15.4457 11.6448 15.652 11.6258 15.8569H13.6748V17.9776V19.7979C13.6748 20.0323 13.6517 20.2597 13.6137 20.4829C13.5635 20.7748 13.4862 21.0569 13.3776 21.3236C12.9909 22.2709 12.2568 23.0316 11.3409 23.4302C11.254 23.7236 11.2065 24.0351 11.2065 24.3579C11.2065 24.6611 11.25 24.9544 11.3273 25.2323C13.2039 24.692 14.6707 23.1411 15.1511 21.1832C15.2122 20.9334 15.2624 20.6793 15.2895 20.4183C15.3112 20.2148 15.3248 20.0085 15.3248 19.7979V15.8555H17.3439V14.7678C17.3439 14.5586 17.3547 14.3523 17.3737 14.1474H15.3248V12.0267V10.2064C15.3248 9.97197 15.3478 9.7446 15.3858 9.52145C15.436 9.22952 15.5134 8.94741 15.6219 8.68074C16.0087 7.73338 16.7428 6.97408 17.6587 6.57408C17.7455 6.28074 17.793 5.96917 17.793 5.64636C17.793 5.3432 17.7496 5.04987 17.6722 4.77197C15.7956 5.31232 14.3288 6.8632 13.8485 8.8211Z" fill="#666666"/>
+<path class="svg-elm svg-path svg-path05" d="M24.503 9.21404C24.4555 8.93754 24.389 8.66807 24.3036 8.40561C23.7594 6.73965 22.4853 5.42316 20.876 4.86035C20.9072 5.1186 20.9248 5.37965 20.9248 5.64632C20.9248 6.0014 20.895 6.34947 20.8421 6.68912C21.5734 7.06947 22.1691 7.68561 22.5368 8.44211C22.6508 8.67509 22.7417 8.92211 22.8096 9.17895C22.8951 9.50737 22.9453 9.85123 22.9453 10.2063C22.9453 10.4407 22.9222 10.6681 22.8842 10.8912C22.834 11.1832 22.7567 11.4653 22.6481 11.7319C22.2614 12.6793 21.5273 13.4386 20.6114 13.8386C20.5245 14.1319 20.4771 14.4435 20.4771 14.7663V15.673C22.3699 15.1761 23.8693 13.6575 24.3918 11.7179C24.4569 11.4737 24.5071 11.2239 24.541 10.9684C24.5736 10.7186 24.5966 10.466 24.5966 10.2063C24.5966 9.86667 24.5627 9.53684 24.5071 9.21404H24.503Z" fill="#666666"/>
+</svg>
+              <p class="lcl-cmn-ttl__en">CONTACT</p>
+              <h2>無料相談・お問い合わせ</h2>
+            </div><!-- .lcl-cmn-ttl -->
+            <div class="lcl-contact__cnt">
+              <div class="lcl-contact__sep">
+                <a href="https://lin.ee/zy6qOdz"  awicon="nothing" class="lcl-contact__link">
+                  <span class="lcl-contact__sub">チャット形式で相談</span>
+                  <div class="lcl-contact__area">
+                    <span class="lcl-contact__icon lcl-contact__icon--line"><svg class="ico_svg ic_line" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path class="svg-elm svg-path svg-path01" d="M30.0671 1.66666H9.93255C5.36734 1.66666 1.6665 5.3675 1.6665 9.93271V30.0673C1.6665 34.6325 5.36734 38.3333 9.93255 38.3333H30.0671C34.6323 38.3333 38.3332 34.6325 38.3332 30.0673V9.93271C38.3332 5.3675 34.6323 1.66666 30.0671 1.66666Z" fill="#06C755"/>
+<path class="svg-elm svg-path svg-path02" d="M32.2213 18.2721C32.2213 12.8019 26.7373 8.35146 19.9964 8.35146C13.2554 8.35146 7.77148 12.8019 7.77148 18.2721C7.77148 23.1762 12.1211 27.2829 17.9958 28.0598C18.3934 28.1457 18.9353 28.3222 19.0728 28.6625C19.1966 28.9719 19.153 29.4554 19.1129 29.7682C19.1129 29.7682 18.9697 30.631 18.9388 30.8144C18.8849 31.1237 18.6936 32.0232 19.9975 31.4732C21.3026 30.9232 27.0375 27.3276 29.6019 24.3759C31.3734 22.4326 32.2224 20.4618 32.2224 18.2721H32.2213Z" fill="white"/>
+<path class="svg-elm svg-path svg-path03" d="M28.1532 21.4311H24.7191C24.5896 21.4311 24.4854 21.3268 24.4854 21.1974V21.1939V15.8681V15.8624C24.4854 15.7329 24.5896 15.6286 24.7191 15.6286H28.1532C28.2815 15.6286 28.3869 15.734 28.3869 15.8624V16.7297C28.3869 16.8592 28.2826 16.9635 28.1532 16.9635H25.8191V17.8641H28.1532C28.2815 17.8641 28.3869 17.9695 28.3869 18.0979V18.9653C28.3869 19.0947 28.2826 19.199 28.1532 19.199H25.8191V20.0996H28.1532C28.2815 20.0996 28.3869 20.2051 28.3869 20.3334V21.2008C28.3869 21.3303 28.2826 21.4345 28.1532 21.4345V21.4311Z" fill="#06C755"/>
+<path class="svg-elm svg-path svg-path04" d="M15.4492 21.4311C15.5776 21.4311 15.683 21.3268 15.683 21.1974V20.33C15.683 20.2016 15.5776 20.0962 15.4492 20.0962H13.1152V15.8612C13.1152 15.7329 13.0098 15.6275 12.8814 15.6275H12.014C11.8845 15.6275 11.7803 15.7317 11.7803 15.8612V21.1928V21.1974C11.7803 21.3268 11.8845 21.4311 12.014 21.4311H15.4481H15.4492Z" fill="#06C755"/>
+<path class="svg-elm svg-path svg-path05" d="M17.5155 15.6286H16.6493C16.5202 15.6286 16.4155 15.7332 16.4155 15.8623V21.1973C16.4155 21.3264 16.5202 21.4311 16.6493 21.4311H17.5155C17.6446 21.4311 17.7493 21.3264 17.7493 21.1973V15.8623C17.7493 15.7332 17.6446 15.6286 17.5155 15.6286Z" fill="#06C755"/>
+<path class="svg-elm svg-path svg-path06" d="M23.4178 15.6286H22.5504C22.4209 15.6286 22.3166 15.7328 22.3166 15.8623V19.0306L19.876 15.734C19.8703 15.726 19.8634 15.718 19.8577 15.7099C19.8577 15.7099 19.8577 15.7099 19.8565 15.7088C19.8519 15.7042 19.8474 15.6985 19.8428 15.6939C19.8416 15.6927 19.8393 15.6916 19.8382 15.6905C19.8336 15.687 19.8302 15.6836 19.8256 15.6801C19.8233 15.679 19.821 15.6767 19.8187 15.6756C19.8153 15.6721 19.8107 15.6698 19.8061 15.6675C19.8038 15.6664 19.8015 15.6641 19.7992 15.663C19.7946 15.6607 19.7912 15.6584 19.7866 15.6561C19.7843 15.6549 19.782 15.6538 19.7797 15.6526C19.7752 15.6503 19.7706 15.6481 19.766 15.6469C19.7637 15.6469 19.7614 15.6446 19.758 15.6446C19.7534 15.6435 19.7488 15.6412 19.7442 15.64C19.7419 15.64 19.7385 15.6389 19.7362 15.6377C19.7316 15.6377 19.727 15.6355 19.7225 15.6343C19.719 15.6343 19.7156 15.6343 19.7121 15.6332C19.7076 15.6332 19.7041 15.632 19.6995 15.632C19.695 15.632 19.6915 15.632 19.6869 15.632C19.6846 15.632 19.6812 15.632 19.6789 15.632H18.8172C18.6889 15.632 18.5835 15.7363 18.5835 15.8658V21.2008C18.5835 21.3291 18.6878 21.4345 18.8172 21.4345H19.6846C19.8141 21.4345 19.9184 21.3302 19.9184 21.2008V18.0325L22.3625 21.3337C22.3796 21.3577 22.4003 21.3772 22.4232 21.3921C22.4232 21.3921 22.4255 21.3933 22.4255 21.3944C22.4301 21.3978 22.4346 21.4001 22.4404 21.4036C22.4427 21.4047 22.445 21.4059 22.4472 21.407C22.4507 21.4093 22.4553 21.4105 22.4587 21.4127C22.4621 21.415 22.4667 21.4162 22.4702 21.4173C22.4725 21.4173 22.4747 21.4196 22.477 21.4196C22.4828 21.4219 22.4874 21.4231 22.4931 21.4242C22.4931 21.4242 22.4954 21.4242 22.4965 21.4242C22.516 21.4288 22.5366 21.4322 22.5572 21.4322H23.4189C23.5472 21.4322 23.6527 21.328 23.6527 21.1985V15.8635C23.6527 15.7351 23.5484 15.6297 23.4189 15.6297L23.4178 15.6286Z" fill="#06C755"/>
+</svg>
+</span>
+                    <span class="title-04 c-black"><span class="title-03">LINE</span>でお問い合わせ</span>
+                  </div>
+                </a>
+                <a href="https://forms.office.com/r/rbUvBcrHNx"  awicon="nothing" class="lcl-contact__link">
+                  <span class="lcl-contact__sub">専用フォームに入力</span>
+                  <div class="lcl-contact__area">
+                    <span class="lcl-contact__icon lcl-contact__icon--mail"><svg class="ico_svg ic_mail" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path class="svg-elm svg-path svg-path01" d="M20 4H4C2.9 4 2.01 4.9 2.01 6L2 18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20 8L12 13L4 8V6L12 11L20 6V8Z" fill="#1F1F1F"/>
+</svg>
+</span>
+                    <span class="title-04 c-black"><span class="title-03">メール</span>でお問い合わせ</span>
+                  </div>
+                </a>
+                <a href="https://www.jtbbwt.com/government/service/solution/area-marketing/promotion/futari-tsumugi/"  awicon="nothing" class="lcl-contact__link">
+                  <span class="lcl-contact__sub">地域の課題解決はこちらへ</span>
+                  <div class="lcl-contact__area">
+                    <span class="lcl-contact__icon lcl-contact__icon--cam"><svg class="ico_svg ic_campaign" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path class="svg-elm svg-path svg-path01" d="M18 11V13H22V11H18ZM16 17.61C16.96 18.32 18.21 19.26 19.2 20C19.6 19.47 20 18.93 20.4 18.4C19.41 17.66 18.16 16.72 17.2 16C16.8 16.54 16.4 17.08 16 17.61ZM20.4 5.6C20 5.07 19.6 4.53 19.2 4C18.21 4.74 16.96 5.68 16 6.4C16.4 6.93 16.8 7.47 17.2 8C18.16 7.28 19.41 6.35 20.4 5.6ZM4 9C2.9 9 2 9.9 2 11V13C2 14.1 2.9 15 4 15H5V19H7V15H8L13 18V6L8 9H4ZM15.5 12C15.5 10.67 14.92 9.47 14 8.65V15.34C14.92 14.53 15.5 13.33 15.5 12Z" fill="#1F1F1F"/>
+</svg>
+</span>
+                    <span class="title-04 c-black"><span class="title-03">自治体・行政機関</span><br class="dn-n"><span class="lcl-contact__detail">向けはこちら</span></span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main><!-- #main -->
+      <div class="pagetop__wrp">
+  <p class="pagetop">
+    <a href="#wrapper">
+      <svg class="ico_svg ic_down" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path class="svg-elm svg-path svg-path01" d="M20 12L18.59 10.59L13 16.17V4H11V16.17L5.42 10.58L4 12L12 20L20 12Z" fill="#1F1F1F"/>
+</svg>
+      <span class="pagetop__txt">PAGE<br>TOP</span>
+    </a>
+  </p>
+</div>
+<footer id="footer">
+  <div class="footer__in">
+    <div class="footer-box">
+      <p class="txt-large">特定商取引法に基づく表記</p>
+      <ul class="footer-box__list">
+        <li class="footer-box__item">
+          <p class="footer-box__ttl">運営者名</p>
+          <p>新開祐二</p>
+        </li>
+        <li class="footer-box__item">
+          <p class="footer-box__ttl">住所</p>
+          <p>〒780-0834 高知県高知市堺町1-21　はりまや橋スクエアビル3階</p>
+        </li>
+        <li class="footer-box__item">
+          <p class="footer-box__ttl">運営責任者名</p>
+          <p>新開祐二</p>
+        </li>
+        <li class="footer-box__item">
+          <p class="footer-box__ttl">電話番号</p>
+          <p>請求があれば遅滞なく個人情報を提供する</p>
+        </li>
+        <li class="footer-box__item">
+          <p class="footer-box__ttl">支払い方法</p>
+          <p>現金、銀行振込</p>
+        </li>
+        <li class="footer-box__item">
+          <p class="footer-box__ttl">役務の提供時期</p>
+          <p>入会手続き及び登録完了より退会のお申し出があった月の末日まで</p>
+        </li>
+        <li class="footer-box__item">
+          <p class="footer-box__ttl">商品以外の必要料金</p>
+          <p>銀行振込の場合、振込み手数料をご負担いただきます。お見合い時の交通費、喫茶代は実費となります。</p>
+        </li>
+        <li class="footer-box__item">
+          <p class="footer-box__ttl">中途解約/返金・キャンセルについて</p>
+          <p>入会契約日から8日間以内であれば無条件で解約することができます（クーリングオフ）。クーリングオフ後でも中途解約可能ですが、初期費用の返金はできません。</p>
+        </li>
+      </ul>
+    </div>
+    <div class="footer__sep">
+      <ul class="footer__list">
+        <li>
+          <a href="https://www.jtbcorp.jp/jp/" target="_blank" class="footer__link">JTB公式サイト<svg class="ico_svg ic_tab" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path class="svg-elm svg-path svg-path01" d="M19 19H5V5H12V3H5C3.89 3 3 3.9 3 5V19C3 20.1 3.89 21 5 21H19C20.1 21 21 20.1 21 19V12H19V19ZM14 3V5H17.59L7.76 14.83L9.17 16.24L19 6.41V10H21V3H14Z" fill="#1F1F1F"/>
+</svg>
+</a>
+        </li>
+        <li>
+          <a href="https://www.jtbcorp.jp/jp/privacy/jtb/" target="_blank" class="footer__link">個人情報保護方針<svg class="ico_svg ic_tab" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path class="svg-elm svg-path svg-path01" d="M19 19H5V5H12V3H5C3.89 3 3 3.9 3 5V19C3 20.1 3.89 21 5 21H19C20.1 21 21 20.1 21 19V12H19V19ZM14 3V5H17.59L7.76 14.83L9.17 16.24L19 6.41V10H21V3H14Z" fill="#1F1F1F"/>
+</svg>
+</a>
+        </li>
+      </ul>
+      <p class="tac-n txt-small mt20-n">© JTBの結婚相談所 ふたり紬</p>
+    </div>
+  </div>
+</footer><!-- #footer -->
+    </div><!-- #wrapper -->
+
+  </div>
+
+      <!-- change -->
+    <!-- #Include virtual="/smartphone/common/change_sp_UTF8.asp" -->
+    <%
+	If Not isSmartPhone Then
+		IsGokan
+	End If
+%>
+
+    <%
+	If isSmartPhone Then
+		IsGokanSP
+	End If
+%>
+    <!-- /change -->
+
+    <!--#include virtual="/_common/footer/footer.html"-->
+    <!-- global-script -->
+<script src="/recommend/futari-tsumugi/common/js/library.js"></script>
+<script src="/recommend/futari-tsumugi/common/js/basic.js"></script>
+<!-- / global-script -->
+  <script src="js/index.js"></script>
+  <script src="/ExtSite/jtb/inspect.js" type="text/JavaScript" language="JavaScript" charset="utf-8"></script>
+</body>
+
+</html>

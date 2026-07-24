@@ -1,0 +1,589 @@
+@charset 'utf-8';
+@use "../util/util" as *;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+  min-height: 0;
+}
+body,
+html {
+  color: #000;
+  background: #fff 0 0;
+}
+address,
+blockquote,
+caption,
+cite,
+code,
+dd,
+dt,
+em,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+li,
+p,
+pre,
+select,
+small,
+strong,
+td,
+textarea,
+th {
+  font-size: 100%;
+  font-weight: inherit;
+  font-style: inherit;
+}
+select,
+button,
+input,
+textarea {
+  color: $c-black;
+  @include font-family;
+}
+button {
+  text-align: left;
+  cursor: pointer;
+}
+span,
+em,
+strong,
+small {
+  letter-spacing: inherit;
+}
+li,
+ol,
+ul {
+  list-style: none;
+}
+table {
+  border-collapse: collapse;
+}
+caption,
+th {
+  text-align: left;
+}
+fieldset {
+  border: 0;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+picture {
+  display: block;
+}
+img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: top;
+  border: 0;
+}
+br {
+  letter-spacing: 0;
+}
+button,
+input:not([type="checkbox"]):not([type="radio"]),
+textarea {
+  border: 0;
+  border-radius: 0;
+  // outline: 0;
+  background: transparent;
+
+  -webkit-appearance: none;
+}
+@include media_hover {
+  a:hover {
+    text-decoration: none;
+  }
+}
+@include media_wide {
+  a[href^="tel:"] {
+    pointer-events: none;
+  }
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*------------------------------------------------
+utils
+------------------------------------------------*/
+// ・リストなどで使用します。
+.dot {
+  @include dot;
+}
+// ●リストなどで使用します。
+.maru {
+  @include maru;
+}
+// ※リストなどで使用します。
+.kome {
+  @include kome;
+}
+// インデント用(default: 1em)
+.indent {
+  @include indent;
+}
+
+.of-cover {
+  @include of-cover;
+}
+
+/*------------------------------------------------
+縦書き文字
+------------------------------------------------*/
+.txt-vertical {
+  @include txt-vertical;
+}
+.txt-orientation {
+  @include txt-orientation;
+}
+.txt-combine {
+  @include txt-combine;
+}
+
+// .clb {
+//   clear: both;
+// }
+// .clr {
+//   clear: right;
+// }
+// .cll {
+//   clear: left;
+// }
+// .cln {
+//   clear: none;
+// }
+// .cura {
+//   cursor: auto;
+// }
+// .curc {
+//   cursor: crosshair;
+// }
+// .curd {
+//   cursor: default;
+// }
+// .curm {
+//   cursor: move;
+// }
+// .curp {
+//   cursor: pointer;
+// }
+// .curt {
+//   cursor: text;
+// }
+.dn {
+  display: none;
+}
+.di {
+  display: inline;
+}
+.db {
+  display: block;
+}
+.dib {
+  display: inline-block;
+}
+// .dtb {
+//   display: table;
+// }
+// .dtbc {
+//   display: table-cell;
+// }
+// .fll {
+//   float: left;
+// }
+// .flr {
+//   float: right;
+// }
+// .fln {
+//   float: none;
+// }
+// .fsn {
+//   font-style: normal;
+// }
+// .fsi {
+//   font-style: italic;
+// }
+// .fso {
+//   font-style: oblique;
+// }
+.fwn {
+  font-weight: 400;
+}
+.fwb {
+  font-weight: 700;
+}
+// .fwbr {
+//   font-weight: bolder;
+// }
+// .fwlr {
+//   font-weight: lighter;
+// }
+// .fz10 {
+//   @include fz(10);
+// }
+// .fz11 {
+//   @include fz(11);
+// }
+// .fz12 {
+//   @include fz(12);
+// }
+// .fz13 {
+//   @include fz(13);
+// }
+// .fz14 {
+//   @include fz(14);
+// }
+// .fz15 {
+//   @include fz(15);
+// }
+// .fz16 {
+//   @include fz(16);
+// }
+// .fz17 {
+//   @include fz(17);
+// }
+// .fz18 {
+//   @include fz(18);
+// }
+// .fz19 {
+//   @include fz(19);
+// }
+// .fz20 {
+//   @include fz(20);
+// }
+// .fz21 {
+//   @include fz(21);
+// }
+// .fz22 {
+//   @include fz(22);
+// }
+// .fz23 {
+//   @include fz(23);
+// }
+// .fz24 {
+//   @include fz(24);
+// }
+// .fz25 {
+//   @include fz(25);
+// }
+// .fz30 {
+//   @include fz(30);
+// }
+// .fz35 {
+//   @include fz(35);
+// }
+// .fz40 {
+//   @include fz(40);
+// }
+// .fz45 {
+//   @include fz(45);
+// }
+// .fz50 {
+//   @include fz(50);
+// }
+// .ha {
+//   height: auto;
+// }
+// .h0 {
+//   height: 0;
+// }
+// .h100p {
+//   height: 100%;
+// }
+// .lh100 {
+//   line-height: 1;
+// }
+// .lh110 {
+//   line-height: 1.1;
+// }
+// .lh120 {
+//   line-height: 1.2;
+// }
+// .lh130 {
+//   line-height: 1.3;
+// }
+// .lh140 {
+//   line-height: 1.4;
+// }
+// .lh150 {
+//   line-height: 1.5;
+// }
+// .lh160 {
+//   line-height: 1.6;
+// }
+// .lh170 {
+//   line-height: 1.7;
+// }
+// .lh180 {
+//   line-height: 1.8;
+// }
+// .lh190 {
+//   line-height: 1.9;
+// }
+// .lh200 {
+//   line-height: 2;
+// }
+// .lts0 {
+//   letter-spacing: 0;
+// }
+// .lts25 {
+//   letter-spacing: 0.025em;
+// }
+// .lts50 {
+//   letter-spacing: 0.05em;
+// }
+// .lts80 {
+//   letter-spacing: 0.08em;
+// }
+// .lts100 {
+//   letter-spacing: 0.1em;
+// }
+// .lts125 {
+//   letter-spacing: 0.125em;
+// }
+// .lts150 {
+//   letter-spacing: 0.15em;
+// }
+// .lts175 {
+//   letter-spacing: 0.175em;
+// }
+// .lts200 {
+//   letter-spacing: 0.2em;
+// }
+// .lts300 {
+//   letter-spacing: 0.3em;
+// }
+// .lts400 {
+//   letter-spacing: 0.4em;
+// }
+// .lts500 {
+//   letter-spacing: 0.5em;
+// }
+// .lts600 {
+//   letter-spacing: 0.6em;
+// }
+// .lts700 {
+//   letter-spacing: 0.7em;
+// }
+// .lts800 {
+//   letter-spacing: 0.8em;
+// }
+// .lts900 {
+//   letter-spacing: 0.9em;
+// }
+// .lts1000 {
+//   letter-spacing: 1em;
+// }
+// .mahn {
+//   max-height: none;
+// }
+// .mah100p {
+//   max-height: 100%;
+// }
+// .mawn {
+//   max-width: none;
+// }
+// .maw100p {
+//   max-width: 100%;
+// }
+// .mih0 {
+//   min-height: 0;
+// }
+// .mih100p {
+//   min-height: 100%;
+// }
+// .miw0 {
+//   min-width: 0;
+// }
+// .miw100p {
+//   min-width: 100%;
+// }
+.wbk {
+  word-break: keep-all;
+}
+.pen {
+  pointer-events: none;
+}
+
+@for $i from 1 through 3 {
+  .txt-clamp#{$i} {
+    @include txt-clamp($i);
+  }
+} /* -- @for -- */
+
+$i: 5;
+@while $i <= 200 {
+  .mt#{$i} {
+    margin-top: #{$i}px;
+  }
+  // $i: $i + 5;
+  @if $i >= 100 {
+    $i: $i + 10;
+    // } @else if $i >= 50 {
+    //   $i: $i + 10;
+  } @else {
+    $i: $i + 5;
+  } /* -- @if -- */
+}
+.mra {
+  margin-right: auto;
+}
+.mla {
+  margin-left: auto;
+}
+// .ovh {
+//   overflow: hidden;
+// }
+// .ovv {
+//   overflow: visible;
+// }
+// .ovs {
+//   overflow: scroll;
+// }
+// .ova {
+//   overflow: auto;
+// }
+// .poss {
+//   position: static;
+// }
+// .posr {
+//   position: relative;
+// }
+// .posa {
+//   position: absolute;
+// }
+// .posf {
+//   position: fixed;
+// }
+.tar {
+  text-align: right;
+}
+.tal {
+  text-align: left;
+}
+.tac {
+  text-align: center;
+}
+.tdn {
+  text-decoration: none;
+}
+.tdu {
+  span {
+    text-decoration: underline;
+  }
+  @include media_hover {
+    &:hover {
+      span {
+        text-decoration: none;
+      }
+    }
+  } /* media_hover ------------ */
+}
+// .tdo {
+//   text-decoration: overline;
+// }
+// .tdl {
+//   text-decoration: line-through;
+// }
+// .vat {
+//   vertical-align: top;
+// }
+// .vam {
+//   vertical-align: middle;
+// }
+// .vab {
+//   vertical-align: bottom;
+// }
+// .vabl {
+//   vertical-align: baseline;
+// }
+// .vv {
+//   visibility: visible;
+// }
+// .vh {
+//   visibility: hidden;
+// }
+// .vc {
+//   visibility: collapse;
+// }
+// .wa {
+//   width: auto;
+// }
+// .w0 {
+//   width: 0;
+// }
+.w100p {
+  width: 100% !important;
+}
+// .block-flex {
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   flex-wrap: wrap;
+// }
+/*block-fade*/
+.fadein {
+  transition:
+    opacity 0.8s,
+    transform 0.8s;
+  opacity: 0;
+}
+.fadein.scroll-fade {
+  opacity: 1;
+}
+.fadein-right {
+  transition:
+    opacity 0.8s,
+    transform 0.8s;
+  transform: translate(30px, 0);
+  opacity: 0;
+}
+.fadein-right.scroll-fade {
+  transform: translate(0, 0);
+  opacity: 1;
+}
+.fadein-left {
+  transition:
+    opacity 0.8s,
+    transform 0.8s;
+  transform: translate(-30px, 0);
+  opacity: 0;
+}
+.fadein-left.scroll-fade {
+  transform: translate(0, 0);
+  opacity: 1;
+}
+.fadein-top {
+  transition:
+    opacity 0.8s,
+    transform 0.8s;
+  transform: translate(0, -30px);
+  opacity: 0;
+}
+.fadein-top.scroll-fade {
+  transform: translate(0, 0);
+  opacity: 1;
+}
+.fadein-bottom {
+  transition:
+    opacity 0.8s,
+    transform 0.8s;
+  transform: translate(0, 30px);
+  opacity: 0;
+}
+.fadein-bottom.scroll-fade {
+  transform: translate(0, 0);
+  opacity: 1;
+}

@@ -1,0 +1,213 @@
+/* ============================================================
+ * note-sections.css
+ * 「記事ランキングTOP3」「ブログ記事」セクション専用スタイル
+ *
+ * 出典: anyaku-production-inline.html (Next.js + Tailwind CSS v3.4)
+ * 生成: _extract_note_css.py により自動抽出
+ *
+ * 【重要】既存サイト(main.css/BEM設計)との競合防止のため、
+ *  全ルールを `.note-embed` ラッパー配下にスコープ化しています。
+ *  → HTML側は <div class="note-embed"> でセクションを包んでいます。
+ *
+ * 【.aspへの流し込み時の注意】
+ *  - この1ファイルを読み込むだけでOK(他CSSへの依存なし)
+ *  - Tailwindのグローバルreset(preflight)は含めず、
+ *    最小限のresetのみ .note-embed 配下に限定して適用
+ * ============================================================ */
+
+/* --- ブランドカラー変数(Tailwind theme由来) --- */
+.note-embed {
+  --brand-red: #e60012;
+  --brand-gold: #b5941c;
+  --brand-ink: #323743;
+  --brand-muted: #666666;
+  --brand-panel: #f0f0f0;
+  --brand-cream: #fbf5e8;
+  color: var(--brand-ink);
+  font-family: "Noto Sans JP", system-ui, sans-serif;
+}
+
+/* --- 最小限のreset(このブロック内のみ) --- */
+.note-embed *,
+.note-embed *::before,
+.note-embed *::after { box-sizing: border-box; }
+.note-embed a { color: inherit; text-decoration: none; }
+.note-embed img { max-width: 100%; }
+
+/* --- Tailwind 内部変数の初期化 --- */
+/*   transform(translateによる中央寄せ) / gradient / shadow の
+ *   ユーティリティが依存する --tw-* 変数を初期化。
+ *   (本来 Tailwind の preflight が付与するものをスコープ限定で再現) */
+.note-embed *,
+.note-embed ::before,
+.note-embed ::after {
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-gradient-from-position: ;
+  --tw-gradient-via-position: ;
+  --tw-gradient-to-position: ;
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+}
+
+/* --- Tailwind ユーティリティ(使用分のみ抽出・スコープ化) --- */
+.note-embed .pointer-events-none { pointer-events:none }
+.note-embed .absolute { position:absolute }
+.note-embed .relative { position:relative }
+.note-embed .inset-0 { inset:0 }
+.note-embed .left-1\/2 { left:50% }
+.note-embed .left-\[-330px\] { left:-330px }
+.note-embed .right-\[-255px\] { right:-255px }
+.note-embed .top-11 { top:2.75rem }
+.note-embed .top-4 { top:1rem }
+.note-embed .top-\[64px\] { top:64px }
+.note-embed .z-10 { z-index:10 }
+.note-embed .z-20 { z-index:20 }
+.note-embed .mx-auto { margin-left:auto;margin-right:auto }
+.note-embed .-mt-\[42px\] { margin-top:-42px }
+.note-embed .mb-6 { margin-bottom:1.5rem }
+.note-embed .mt-11 { margin-top:2.75rem }
+.note-embed .mt-3 { margin-top:.75rem }
+.note-embed .mt-4 { margin-top:1rem }
+.note-embed .mt-\[58px\] { margin-top:58px }
+.note-embed .mt-auto { margin-top:auto }
+.note-embed .line-clamp-2 { -webkit-line-clamp:2 }
+.note-embed .line-clamp-2, .note-embed .line-clamp-3 { overflow:hidden;display:-webkit-box;-webkit-box-orient:vertical }
+.note-embed .line-clamp-3 { -webkit-line-clamp:3 }
+.note-embed .block { display:block }
+.note-embed .flex { display:flex }
+.note-embed .inline-flex { display:inline-flex }
+.note-embed .grid { display:grid }
+.note-embed .hidden { display:none }
+.note-embed .aspect-\[323\/170\] { aspect-ratio:323/170 }
+.note-embed .h-0\.5 { height:.125rem }
+.note-embed .h-\[58px\] { height:58px }
+.note-embed .h-full { height:100% }
+.note-embed .min-h-\[41px\] { min-height:41px }
+.note-embed .min-h-\[448px\] { min-height:448px }
+.note-embed .min-h-\[44px\] { min-height:44px }
+.note-embed .min-h-\[58px\] { min-height:58px }
+.note-embed .min-h-\[78px\] { min-height:78px }
+.note-embed .w-\[136px\] { width:136px }
+.note-embed .w-\[174px\] { width:174px }
+.note-embed .w-\[520px\] { width:520px }
+.note-embed .w-\[58px\] { width:58px }
+.note-embed .w-\[610px\] { width:610px }
+.note-embed .w-\[90px\] { width:90px }
+.note-embed .w-full { width:100% }
+.note-embed .max-w-\[1012px\] { max-width:1012px }
+.note-embed .flex-1 { flex:1 1 0% }
+.note-embed .-translate-x-1\/2 { --tw-translate-x:-50% }
+.note-embed .-translate-x-1\/2, .note-embed .-translate-y-1\/2 { transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y)) }
+.note-embed .-translate-y-1\/2 { --tw-translate-y:-50% }
+.note-embed .flex-col { flex-direction:column }
+.note-embed .place-items-center { place-items:center }
+.note-embed .items-center { align-items:center }
+.note-embed .justify-center { justify-content:center }
+.note-embed .gap-1 { gap:.25rem }
+.note-embed .gap-x-6 { -moz-column-gap:1.5rem;column-gap:1.5rem }
+.note-embed .gap-y-10 { row-gap:2.5rem }
+.note-embed .overflow-hidden { overflow:hidden }
+.note-embed .rounded-\[12px\] { border-radius:12px }
+.note-embed .rounded-full { border-radius:9999px }
+.note-embed .rounded-t-\[42px\] { border-top-left-radius:42px;border-top-right-radius:42px }
+.note-embed .border-\[3px\] { border-width:3px }
+.note-embed .border-white { --tw-border-opacity:1;border-color:rgb(255 255 255/var(--tw-border-opacity,1)) }
+.note-embed .bg-\[\#f0f0f0\] { --tw-bg-opacity:1;background-color:rgb(240 240 240/var(--tw-bg-opacity,1)) }
+.note-embed .bg-brand-ink { --tw-bg-opacity:1;background-color:rgb(50 55 67/var(--tw-bg-opacity,1)) }
+.note-embed .bg-brand-red { --tw-bg-opacity:1;background-color:rgb(230 0 18/var(--tw-bg-opacity,1)) }
+.note-embed .bg-white { --tw-bg-opacity:1;background-color:rgb(255 255 255/var(--tw-bg-opacity,1)) }
+.note-embed .bg-gradient-to-b { background-image:linear-gradient(to bottom,var(--tw-gradient-stops)) }
+.note-embed .bg-gradient-to-br { background-image:linear-gradient(to bottom right,var(--tw-gradient-stops)) }
+.note-embed .bg-gradient-to-r { background-image:linear-gradient(to right,var(--tw-gradient-stops)) }
+.note-embed .from-\[\#d6d6d6\] { --tw-gradient-from:#d6d6d6 var(--tw-gradient-from-position);--tw-gradient-to:rgb(214 214 214/0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to) }
+.note-embed .from-\[\#df9a45\] { --tw-gradient-from:#df9a45 var(--tw-gradient-from-position);--tw-gradient-to:rgb(223 154 69/0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to) }
+.note-embed .from-\[\#ffd200\] { --tw-gradient-from:#ffd200 var(--tw-gradient-from-position);--tw-gradient-to:rgb(255 210 0/0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to) }
+.note-embed .from-black\/15 { --tw-gradient-from:rgb(0 0 0/0.15) var(--tw-gradient-from-position);--tw-gradient-to:rgb(0 0 0/0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to) }
+.note-embed .from-brand-red { --tw-gradient-from:#e60012 var(--tw-gradient-from-position);--tw-gradient-to:rgb(230 0 18/0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to) }
+.note-embed .via-black\/0 { --tw-gradient-to:rgb(0 0 0/0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),rgb(0 0 0/0) var(--tw-gradient-via-position),var(--tw-gradient-to) }
+.note-embed .to-\[\#aeb0b4\] { --tw-gradient-to:#aeb0b4 var(--tw-gradient-to-position) }
+.note-embed .to-\[\#c97c2f\] { --tw-gradient-to:#c97c2f var(--tw-gradient-to-position) }
+.note-embed .to-\[\#f2b632\] { --tw-gradient-to:#f2b632 var(--tw-gradient-to-position) }
+.note-embed .to-\[\#f6bd00\] { --tw-gradient-to:#f6bd00 var(--tw-gradient-to-position) }
+.note-embed .to-black\/5 { --tw-gradient-to:rgb(0 0 0/0.05) var(--tw-gradient-to-position) }
+.note-embed .object-cover { -o-object-fit:cover;object-fit:cover }
+.note-embed .px-5 { padding-left:1.25rem;padding-right:1.25rem }
+.note-embed .px-6 { padding-left:1.5rem;padding-right:1.5rem }
+.note-embed .pb-6 { padding-bottom:1.5rem }
+.note-embed .pb-\[78px\] { padding-bottom:78px }
+.note-embed .pb-\[88px\] { padding-bottom:88px }
+.note-embed .pt-5 { padding-top:1.25rem }
+.note-embed .pt-8 { padding-top:2rem }
+.note-embed .pt-\[76px\] { padding-top:76px }
+.note-embed .text-center { text-align:center }
+.note-embed .text-\[13px\] { font-size:13px }
+.note-embed .text-\[14px\] { font-size:14px }
+.note-embed .text-\[17px\] { font-size:17px }
+.note-embed .text-\[26px\] { font-size:26px }
+.note-embed .text-\[28px\] { font-size:28px }
+.note-embed .font-bold { font-weight:700 }
+.note-embed .leading-\[1\.7\] { line-height:1.7 }
+.note-embed .leading-\[1\.85\] { line-height:1.85 }
+.note-embed .leading-none { line-height:1 }
+.note-embed .leading-tight { line-height:1.25 }
+.note-embed .tracking-\[0\.03em\] { letter-spacing:.03em }
+.note-embed .text-\[\#9a9a9a\] { --tw-text-opacity:1;color:rgb(154 154 154/var(--tw-text-opacity,1)) }
+.note-embed .text-brand-ink { --tw-text-opacity:1;color:rgb(50 55 67/var(--tw-text-opacity,1)) }
+.note-embed .text-white { --tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity,1)) }
+.note-embed .opacity-0 { opacity:0 }
+.note-embed .opacity-\[0\.52\] { opacity:.52 }
+.note-embed .opacity-\[0\.72\] { opacity:.72 }
+.note-embed .shadow-\[0_4px_9px_rgba\(120\2c 120\2c 120\2c 0\.28\)\] { --tw-shadow:0 4px 9px rgba(120,120,120,0.28);--tw-shadow-colored:0 4px 9px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow) }
+.note-embed .shadow-\[0_4px_9px_rgba\(180\2c 104\2c 34\2c 0\.32\)\] { --tw-shadow:0 4px 9px rgba(180,104,34,0.32);--tw-shadow-colored:0 4px 9px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow) }
+.note-embed .shadow-\[0_4px_9px_rgba\(210\2c 153\2c 0\2c 0\.35\)\] { --tw-shadow:0 4px 9px rgba(210,153,0,0.35);--tw-shadow-colored:0 4px 9px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow) }
+.note-embed .shadow-\[0_6px_18px_rgba\(0\2c 0\2c 0\2c 0\.18\)\] { --tw-shadow:0 6px 18px rgba(0,0,0,0.18);--tw-shadow-colored:0 6px 18px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow) }
+.note-embed .transition-\[background-color\2c transform\] { transition-property:background-color,transform;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s }
+.note-embed .transition-colors { transition-property:color,background-color,border-color,text-decoration-color,fill,stroke;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s }
+.note-embed .transition-opacity { transition-property:opacity;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s }
+.note-embed .duration-200 { transition-duration:.2s }
+.note-embed .duration-700 { transition-duration:.7s }
+.note-embed .ease-out { transition-timing-function:cubic-bezier(0,0,.2,1) }
+.note-embed .hover\:scale-\[1\.04\]:hover { --tw-scale-x:1.04;--tw-scale-y:1.04;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y)) }
+.note-embed .hover\:bg-\[\#ab892d\]:hover { --tw-bg-opacity:1;background-color:rgb(171 137 45/var(--tw-bg-opacity,1)) }
+
+@media (min-width:640px) {
+  .note-embed .sm\:text-\[32px\] { font-size:32px }
+}
+
+@media (min-width:768px) {
+  .note-embed .md\:block { display:block }
+  .note-embed .md\:h-\[64px\] { height:64px }
+  .note-embed .md\:w-\[64px\] { width:64px }
+  .note-embed .md\:grid-cols-2 { grid-template-columns:repeat(2,minmax(0,1fr)) }
+  .note-embed .md\:rounded-t-\[80px\] { border-top-left-radius:80px;border-top-right-radius:80px }
+  .note-embed .md\:px-8 { padding-left:2rem;padding-right:2rem }
+  .note-embed .md\:px-\[22px\] { padding-left:22px;padding-right:22px }
+  .note-embed .md\:pb-\[86px\] { padding-bottom:86px }
+  .note-embed .md\:pb-\[96px\] { padding-bottom:96px }
+  .note-embed .md\:pt-\[78px\] { padding-top:78px }
+  .note-embed .md\:text-\[15px\] { font-size:15px }
+  .note-embed .md\:text-\[18px\] { font-size:18px }
+  .note-embed .md\:text-\[30px\] { font-size:30px }
+  .note-embed .md\:text-\[40px\] { font-size:40px }
+  .note-embed .md\:leading-\[1\.25\] { line-height:1.25 }
+}
+
+@media (min-width:1024px) {
+  .note-embed .lg\:right-\[-200px\] { right:-200px }
+  .note-embed .lg\:w-\[620px\] { width:620px }
+  .note-embed .lg\:grid-cols-3 { grid-template-columns:repeat(3,minmax(0,1fr)) }
+}
+
+@media (prefers-reduced-motion:reduce) {
+  .note-embed .motion-reduce\:opacity-100 { opacity:1 }
+  .note-embed .motion-reduce\:transition-none { transition-property:none }
+  .note-embed .motion-reduce\:hover\:scale-100:hover { --tw-scale-x:1;--tw-scale-y:1;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y)) }
+}

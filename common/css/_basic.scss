@@ -1,0 +1,669 @@
+@charset 'utf-8';
+@use "./util/util" as *;
+
+/*------------------------------------------------
+variable
+------------------------------------------------*/
+#__bs_notify__ {
+  display: none !important;
+}
+/* ルートをデザインデータ上の10pxに統一 ------------*/
+:root {
+  --fz: 62.5%;
+  font-size: var(--fz);
+  --scrollbar: 0px;
+  @include ie_only {
+    font-size: 10px;
+  }
+}
+
+/*------------------------------------------------
+html,body
+------------------------------------------------*/
+html,
+body {
+  @include font-family;
+  color: $c-black;
+  background: $c-white none;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-overflow-scrolling: touch;
+  @include txt-basic;
+}
+body {
+  *:focus-visible {
+    @include media_wide {
+      outline: auto;
+      // outline-color: tomato;
+    } /* PC only ------------ */
+    &[tabindex="-1"] {
+      outline: 0;
+      outline-color: transparent;
+    }
+  }
+}
+.is-modal {
+  overflow: hidden;
+}
+.oh-open {
+  overflow: hidden;
+  width: 100%;
+  position: fixed;
+  left: 0;
+}
+// .ff-mincho {
+// 	font-family: 'Noto Serif JP', sans-serif;
+// }
+
+a[href*="未設定"],
+a[href=""] {
+  // @include dummy;
+}
+.dummy {
+  @include dummy;
+}
+
+/*------------------------------------------------
+general
+------------------------------------------------*/
+// PC専用(default: 1000px)
+.w1000 {
+  @include w1000;
+}
+// SP専用(default: 345px)
+.inner {
+  @include inner;
+}
+
+.txt-large {
+  @include txt-large;
+}
+.txt-basic {
+  @include txt-basic;
+}
+.txt-small {
+  @include txt-small;
+}
+.title-01 {
+  @include title-01;
+}
+.title-02 {
+  @include title-02;
+}
+.title-03 {
+  @include title-03;
+}
+.title-04 {
+  @include title-04;
+}
+
+/*------------------------------------------------
+svg
+------------------------------------------------*/
+.ico_svg {
+  width: 100%;
+  height: auto;
+  transition: transform 0.25s ease;
+  .svg-elm {
+    transition:
+      fill 0.25s ease,
+      stroke 0.25s ease,
+      transform 0.25s ease;
+  }
+}
+
+/*------------------------------------------------
+wrapper
+------------------------------------------------*/
+#wrapper {
+  width: 100%;
+  @include media_wide {
+    width: auto;
+    min-width: 1200px;
+  }
+}
+
+/*------------------------------------------------
+header
+------------------------------------------------*/
+#header {
+  position: absolute;
+  width: 100%;
+  z-index: 999;
+  transition: transform 0.25s ease;
+  body.oh-open &,
+  &.header--fixed {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+  }
+  /* header__in ------------*/
+  .header__in {
+    position: relative;
+    @include flex;
+    justify-content: space-between;
+    padding: vw(10) vw(15) vw(2);
+    @include media_wide {
+      min-width: 1200px;
+      margin-right: auto;
+      margin-left: auto;
+      padding: 20px 20px 15px;
+    }
+  }
+  .header__list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+    top: vw(6);
+    right: vw(70);
+    gap: vw(5);
+    @include media_wide {
+      top: 8px;
+      right: 100px;
+      gap: 15px;
+    } /* PC only ------------ */
+  }
+  .header__link {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    transition: opacity 0.25s ease;
+    @include media_hover {
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+    &.header__link--insta {
+      .header__sns {
+        border-color: #ea33af;
+      }
+    }
+  }
+  .header__sns {
+    @include flex;
+    position: relative;
+    border-radius: 50%;
+    background-color: $c-white;
+    border: vw(1) solid $c-red;
+    width: vw(45);
+    height: vw(45);
+    @include media_wide {
+      border: 2px solid $c-red;
+      width: 60px;
+      height: 60px;
+    } /* PC only ------------ */
+    img {
+      width: vw(30);
+      @include media_wide {
+        width: 40px;
+      } /* PC only ------------ */
+    }
+  }
+  .header__linktxt {
+    display: none;
+    @include media_wide {
+      display: block;
+      padding: 13px 30px 13px 40px;
+      margin-left: -30px;
+      background-color: $c-red;
+      border-radius: 0 100vw 100vw 0;
+      color: $c-white;
+      font-weight: 400;
+      @include fz(15);
+      line-height: 1.9;
+      letter-spacing: 0.03em;
+    } /* PC only ------------ */
+  }
+
+  /* header-logo ------------*/
+  .header-logo {
+    position: relative;
+    z-index: 1;
+    @include flex;
+    width: vw(136);
+    @include media_wide {
+      width: 227px;
+    } /* PC only ------------ */
+  }
+  /* nav ------------*/
+  .nav {
+    @include flex;
+    align-items: flex-start;
+    position: fixed;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    height: 100svh;
+    background: $c-white;
+    overflow: auto;
+    opacity: 0;
+    visibility: hidden;
+    transition:
+      opacity 0.5s ease,
+      visibility 0.5s ease;
+    @include media_wide {
+      align-items: center;
+    } /* PC only ------------ */
+    &.nav--active {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  .nav__in {
+    @include w1000;
+    padding: vw(85) vw(42) vw(35);
+    @include media_wide {
+      padding: 0;
+    } /* PC only ------------ */
+  }
+  .nav-list {
+    @include flex;
+    flex-direction: column;
+    gap: vw(4);
+    width: vw(246);
+    margin-left: auto;
+    margin-right: auto;
+    @include media_wide {
+      @include grid(3, 48, 30);
+      width: 846px;
+    } /* PC only ------------ */
+  }
+  .nav-list__item {
+    width: 100%;
+    margin: 0;
+    color: $c-black;
+    background-color: $c-white;
+  }
+  .nav-list__link {
+    position: relative;
+    display: inline-block;
+    padding-left: vw(16);
+    @include fz(14);
+    line-height: 2;
+    color: $c-black;
+    letter-spacing: 0.03em;
+    transition: color 0.25s ease;
+    @include media_wide {
+      padding-left: 20px;
+      @include fz(18);
+      line-height: 2.2;
+    } /* PC only ------------ */
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: vw(6);
+      height: vw(6);
+      border-radius: 50%;
+      background-color: $c-red;
+      margin: auto;
+      @include media_wide {
+        width: 10px;
+        height: 10px;
+      } /* PC only ------------ */
+    } /* before ------------*/
+    @include media_hover {
+      &:hover {
+        color: $c-red;
+      }
+    } /* media_hover ------------ */
+  }
+  .nav-bnr {
+    display: flex;
+    justify-content: center;
+    margin-top: vw(40);
+    gap: vw(15);
+    align-items: flex-start;
+    flex-direction: column;
+    @include media_wide {
+      flex-direction: row;
+      align-items: flex-end;
+      gap: 19px;
+      margin-top: 40px;
+    } /* PC only ------------ */
+  }
+  .nav-bnr__item {
+    width: 100%;
+    @include media_wide {
+      width: 320px;
+    } /* PC only ------------ */
+    &.nav-bnr__item--line {
+      margin-top: vw(-12);
+      @include media_wide {
+        margin-top: 0;
+      } /* PC only ------------ */
+    }
+  }
+  .nav-bnr__link {
+    display: block;
+    filter: drop-shadow(2px 4px 15px rgba(0, 0, 0, 0.15));
+    transition:
+      filter 0.25s ease,
+      transform 0.25s ease;
+    transform: scale(1) translateZ(0);
+    @include media_hover {
+      &:hover {
+        transform: scale(1.03) translateZ(0);
+        filter: drop-shadow(4px 8px 20px rgba(0, 0, 0, 0.3));
+      }
+    }
+  }
+
+  /* close ------------*/
+  .menu {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    overflow: hidden;
+    background-color: $c-gold;
+    @include flex;
+    width: vw(60);
+    height: vw(60);
+    border-radius: 0 0 0 vw(22);
+    @include media_wide {
+      width: 80px;
+      height: 80px;
+      border-radius: 0 0 0 30px;
+    } /* PC only ------------ */
+  }
+  .menu__btn {
+    position: relative;
+    width: vw(25);
+    height: vw(16);
+    @include media_wide {
+      width: 33px;
+      height: 20px;
+    } /* PC only ------------ */
+  }
+  .menu__line {
+    position: absolute;
+    right: -100%;
+    left: -100%;
+    display: block;
+    width: 100%;
+    height: vw(1);
+    margin: auto;
+    opacity: 1;
+    background-color: $c-white;
+    transition:
+      top 0.25s ease,
+      opacity 0.25s ease,
+      transform 0.25s ease,
+      width 0.25s ease,
+      left 0.25s ease,
+      right 0.25s ease;
+    @include media_wide {
+      height: 2px;
+    } /* PC only ------------ */
+    /* option ------------*/
+    &:nth-of-type(1) {
+      top: 0;
+    }
+    &:nth-of-type(2) {
+      top: 0;
+      bottom: 0;
+      width: calc(100% - vw(9));
+      @include media_wide {
+        width: calc(100% - 12px);
+      } /* PC only ------------ */
+    }
+    &:nth-of-type(3) {
+      top: 0;
+      bottom: 0;
+      opacity: 0;
+    }
+    &:nth-of-type(4) {
+      bottom: 0;
+    }
+    /* /option -----------*/
+  }
+  /* open ------------*/
+  .menu--open {
+    .menu__line {
+      &:nth-of-type(1) {
+        // left: -200%;
+        opacity: 0;
+      }
+      &:nth-of-type(2) {
+        width: vw(33);
+        transform: rotate(150deg);
+        @include media_wide {
+          width: 40px;
+        } /* PC only ------------ */
+      }
+      &:nth-of-type(3) {
+        width: vw(33);
+        transform: rotate(-150deg);
+        opacity: 1;
+        @include media_wide {
+          width: 40px;
+        } /* PC only ------------ */
+      }
+      &:nth-of-type(4) {
+        // right: -200%;
+        opacity: 0;
+      }
+    }
+  }
+}
+
+/*------------------------------------------------
+main
+------------------------------------------------*/
+#main {
+  overflow: hidden;
+  @include media_wide {
+    display: block; /*IE対策*/
+  }
+}
+
+/*------------------------------------------------
+page-top
+------------------------------------------------*/
+.pagetop__wrp {
+  position: relative;
+  width: 100%;
+  height: 0;
+  margin-right: auto;
+  margin-left: auto;
+}
+.pagetop {
+  position: relative;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.25s ease,
+    visibility 0s 0.25s ease;
+  &.pagetop--show {
+    opacity: 1;
+    visibility: visible;
+    transition:
+      opacity 0.25s ease,
+      visibility 0s ease;
+  }
+  a {
+    @include flex;
+    flex-direction: column;
+    position: fixed;
+    z-index: 100;
+    bottom: vw(10);
+    right: vw(8);
+    width: vw(40);
+    height: vw(40);
+    border-radius: 50%;
+    border: 1px solid $c-white;
+    background-color: $c-gold;
+    @include media_hover {
+      &:hover {
+        background-color: $c-red;
+      }
+    }
+    transition: background 0.25s ease;
+    @include media_wide {
+      bottom: 25px;
+      right: 25px;
+      width: 70px;
+      height: 70px;
+      color: $c-white;
+      @include ff-worksans;
+      font-weight: 400;
+      @include fz(15);
+      line-height: 1.1;
+      letter-spacing: 0.05em;
+      text-align: center;
+      color: $c-white;
+    } /* PC only ------------ */
+    .ic_down {
+      transform: scale(1, -1);
+      display: block;
+      width: vw(20);
+      height: vw(20);
+      @include media_wide {
+        width: 15px;
+        height: 15px;
+      } /* PC only ------------ */
+      .svg-path {
+        fill: $c-white;
+      }
+    }
+  }
+  .pagetop__txt {
+    display: none;
+    @include media_wide {
+      display: block;
+    } /* PC only ------------ */
+  }
+}
+
+/*------------------------------------------------
+footer
+------------------------------------------------*/
+#footer {
+  .footer__in {
+    padding: vw(20) vw(15);
+    margin-left: auto;
+    margin-right: auto;
+    @include media_wide {
+      padding: 20px 32px;
+      max-width: 1600px;
+    } /* PC only ------------ */
+  }
+  .footer-box {
+    position: relative;
+    background-color: $c-lightgray;
+    overflow: auto;
+    height: vw(300);
+    padding: vw(20) vw(15);
+    @include media_wide {
+      height: 300px;
+      padding: 25px 30px;
+    } /* PC only ------------ */
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: 1;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100px;
+      margin: auto;
+      background: linear-gradient(180deg, rgba(115, 115, 115, 0) 0%, $c-lightgray 80%);
+    } /* before ------------*/
+    &.scrolled {
+      &::before {
+        display: none;
+      }
+    }
+  }
+  .footer-box__list {
+    margin-top: vw(10);
+    @include media_wide {
+      margin-top: 15px;
+    } /* PC only ------------ */
+  }
+  .footer-box__item {
+    &:not(:first-of-type) {
+      margin-top: vw(10);
+      @include media_wide {
+        margin-top: 10px;
+      } /* PC only ------------ */
+    } /* :not(:first-of-type) ------------ */
+  }
+  .footer-box__ttl {
+    position: relative;
+    padding-left: vw(15);
+    @include media_wide {
+      padding-left: 15px;
+    } /* PC only ------------ */
+    &::before {
+      content: "";
+      position: absolute;
+      top: 1px;
+      bottom: 0;
+      left: 0;
+      width: vw(10);
+      height: vw(10);
+      margin: auto;
+      border-radius: 50%;
+      background-color: $c-black;
+      @include media_wide {
+        width: 10px;
+        height: 10px;
+      } /* PC only ------------ */
+    } /* before ------------*/
+  }
+  .footer__sep {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-top: vw(15);
+    @include media_wide {
+      justify-content: space-between;
+      flex-direction: row;
+      margin-top: 15px;
+    } /* PC only ------------ */
+  }
+  .footer__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: vw(15);
+    @include media_wide {
+      justify-content: flex-start;
+      gap: 30px;
+    } /* PC only ------------ */
+  }
+  .footer__link {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: vw(5);
+    color: $c-black !important;
+    @include txt-small;
+    @include media_wide {
+      gap: 5px;
+    } /* PC only ------------ */
+    .ico_svg {
+      width: vw(15);
+      height: vw(15);
+      @include media_wide {
+        width: 15px;
+        height: 15px;
+      } /* PC only ------------ */
+    }
+    @include media_hover {
+      &:hover {
+        text-decoration: underline;
+      }
+    } /* media_hover ------------ */
+  }
+}

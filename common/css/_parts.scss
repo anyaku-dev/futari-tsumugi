@@ -1,0 +1,518 @@
+@charset 'utf-8';
+@use "./util/util" as *;
+
+/*------------------------------------------------
+fonts
+------------------------------------------------*/
+@for $i from 1 through 9 {
+  .fw#{$i}00 {
+    font-weight: #{$i}00;
+  }
+}
+
+/*------------------------------------------------
+color & background-color
+------------------------------------------------*/
+$colors: (
+  c-black: #{$c-black},
+  c-lightgray: #{$c-lightgray},
+  c-white: #{$c-white},
+  c-red: #{$c-red},
+  c-beige: #{$c-beige},
+  c-gold: #{$c-gold},
+  c-darkgold: #{$c-darkgold}
+);
+@each $key, $color in $colors {
+  .#{$key} {
+    color: #{$color};
+  }
+  .bg#{$key} {
+    background-color: #{$color};
+  }
+}
+
+/*------------------------------------------------
+details
+------------------------------------------------*/
+.details {
+  .details__summary {
+    display: block; /*デフォルトの三角形を削除*/
+    cursor: pointer;
+    &::-webkit-details-marker {
+      /* Safari-デフォルトの三角形を削除*/
+      display: none;
+    }
+    .ic_toggle {
+      .svg-path {
+        transform-origin: center;
+        transition:
+          fill 0.25s ease,
+          stroke 0.25s ease,
+          transform 0.25s ease;
+      }
+    }
+  }
+  .details__in {
+    overflow: hidden;
+    /* padding・marginはここでは設定しない */
+  }
+}
+/*------------------------------------------------
+details
+------------------------------------------------*/
+.details {
+  &.details--open {
+    > .details__summary .ic_toggle {
+      .svg-path01 {
+        transform: rotate(180deg);
+      }
+      .svg-path02 {
+        transform: rotate(90deg);
+      }
+    }
+  }
+  .details__summary {
+    position: relative;
+    .ico_svg {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 15px;
+      width: 30px;
+      margin: auto 0;
+    }
+  }
+}
+/* -------------- ttl-toggle -------------- */
+.ttl-toggle {
+  .ttl-toggle__summary {
+    position: relative;
+    padding: 15px 60px 15px 20px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.4;
+    letter-spacing: 0;
+    background-color: #eee;
+    border-radius: 5px;
+    transition:
+      color 0.25s ease,
+      background-color 0.25s ease;
+    @include media_hover {
+      &:hover {
+        background-color: salmon;
+        color: white;
+        .ico_svg .svg-path {
+          fill: $c-white;
+        }
+      }
+    } /* media_hover ------------ */
+  }
+  .ttl-toggle__main {
+    margin-top: 15px;
+  }
+}
+
+/*------------------------------------------------
+swipe
+------------------------------------------------*/
+@keyframes swipe-ani {
+  0%,
+  95%,
+  100% {
+    transform: translateX(-20%);
+    animation-timing-function: ease-in-out;
+  }
+  45%,
+  50% {
+    transform: translateX(20%);
+    animation-timing-function: ease-in-out;
+  }
+} /* -- @keyframes -- */
+@mixin swipe {
+  position: relative;
+  overflow: hidden;
+  overflow-x: auto;
+  > * {
+    max-width: unset;
+    width: max-content;
+    //  width: 810px; // 横幅の固定値などがあれば指定してください
+  }
+  &.swipe--swiped {
+    &::after {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: 10;
+    top: 50px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 85px;
+    height: 85px;
+    pointer-events: none;
+    background: url(/recommend/futari-tsumugi/common/images/svg/ic_scroll.svg) center / contain no-repeat;
+    transition:
+      opacity 0.25s ease,
+      visibility 0.25s ease;
+    animation: swipe-ani 3s infinite both;
+  } /* after ------------*/
+}
+.swipe {
+  @include swipe;
+}
+.swipe-w {
+  @include media_wide {
+    @include swipe;
+  } /* PC only ------------ */
+}
+.swipe-n {
+  @include media_narrow {
+    @include swipe;
+  } /* SP only ------------ */
+}
+
+.btn01 {
+  @include flex;
+  width: fit-content;
+  gap: 7px;
+  padding: vw(5) vw(20);
+  border-radius: 100vw;
+  background-color: $c-black;
+  transition: background-color 0.25s ease;
+  @include media_wide {
+    padding: 10px 40px;
+  } /* PC only ------------ */
+  @include media_hover {
+    &:hover {
+      background-color: $c-red;
+    }
+  } /* media_hover ------------ */
+  .btn01__txt {
+    color: $c-white;
+  }
+  .ico_svg {
+    width: vw(15);
+    height: vw(15);
+    @include media_wide {
+      width: 20px;
+      height: 20px;
+    } /* PC only ------------ */
+    .svg-path {
+      fill: $c-white;
+    }
+  }
+}
+
+/*------------------------------------------------
+fs-ctaarea 無料相談はこちら
+------------------------------------------------*/
+.fs-ctaarea {
+  position: relative;
+  z-index: 2;
+  margin: vw(-30) auto;
+  @include media_wide {
+    max-width: 1600px;
+    margin: -184px auto;
+  } /* PC only ------------ */
+  .fs-ctaarea__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, #ff9987 0%, #ffcfc6 96.25%);
+    overflow: hidden;
+    border-radius: vw(30);
+    @include media_wide {
+      border-radius: 80px;
+    } /* PC only ------------ */
+    &::before {
+      content: "";
+      position: absolute;
+      margin: auto;
+      inset: -100%;
+      bottom: auto;
+      top: vw(-40);
+      width: vw(327);
+      height: vw(332);
+      background: url(/recommend/futari-tsumugi/common/images/ctaarea/logo_mark.png) center / cover no-repeat;
+      @include media_wide {
+        inset: -100%;
+        width: 771px;
+        height: 780px;
+      } /* PC only ------------ */
+    } /* before ------------*/
+  }
+  .fs-ctaarea__fig {
+    position: absolute;
+    width: vw(149);
+    bottom: vw(-12);
+    @include media_wide {
+      width: 340px;
+      bottom: -23px;
+    } /* PC only ------------ */
+    &.fs-ctaarea__fig--01 {
+      left: vw(12);
+      transform: rotate(-5deg);
+      @include media_wide {
+        left: pos(28);
+      } /* PC only ------------ */
+    }
+    &.fs-ctaarea__fig--02 {
+      right: vw(26);
+      transform: rotate(5deg);
+      @include media_wide {
+        right: pos(30);
+      } /* PC only ------------ */
+    }
+  }
+  .fs-ctaarea__in {
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    padding-block: vw(38) vw(186);
+    clip-path: polygon(0 -200px, 100% -200px, 100% 100%, 0% 100%);
+    @include media_wide {
+      padding-block: 50px 90px;
+      max-width: 1300px;
+    } /* PC only ------------ */
+  }
+  .fs-ctaarea__ttl {
+    position: relative;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    padding-inline: vw(32);
+    @include fz(16);
+    font-weight: 400;
+    line-height: 1.7;
+    letter-spacing: 0.05em;
+    @include media_wide {
+      padding-inline: 37px;
+      @include fz(24);
+    } /* PC only ------------ */
+    span {
+      font-weight: 400;
+      @include fz(24);
+      line-height: 1.7;
+      letter-spacing: 0.05em;
+      @include media_wide {
+        @include fz(36);
+      } /* PC only ------------ */
+    }
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      width: vw(17);
+      background: url(/recommend/futari-tsumugi/common/images/vec.svg) center / contain no-repeat;
+      @include media_wide {
+        width: 22px;
+      } /* PC only ------------ */
+    } /* before after ------------*/
+    &::before {
+      left: 0;
+      transform: scale(-1, -1);
+    } /* before ------------*/
+    &::after {
+      right: 0;
+      transform: scale(1, -1);
+    } /* after ------------*/
+  }
+  .fs-ctaarea__link {
+    @include flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+    width: vw(326);
+    height: vw(68);
+    padding-top: vw(3);
+    margin-top: vw(35);
+    margin-left: auto;
+    margin-right: auto;
+    transition: transform 0.3s ease;
+    @include media_wide {
+      width: 544px;
+      height: 113px;
+      padding-top: 5px;
+      margin-top: 55px;
+    } /* PC only ------------ */
+    @include media_hover {
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      border-radius: 100vw;
+      border: 2px solid var(--c-white, #fff);
+      background: linear-gradient(180deg, #f7915e 0.96%, #e60012 74.52%);
+      box-shadow: 0 7px 20px 0 rgba(95, 88, 78, 0.2);
+    } /* before ------------*/
+  }
+  .fs-ctaarea__label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: fit-content;
+    margin: 0 auto;
+    border-radius: 100vw;
+    background-color: $c-white;
+    color: $c-red;
+    font-weight: 400;
+    line-height: 1.45;
+    letter-spacing: 0;
+    gap: vw(6);
+    top: vw(-20);
+    padding: vw(3) vw(18);
+    @include fz(16);
+    @include media_wide {
+      gap: 6px;
+      top: -26px;
+      padding: 5px 30px;
+      @include fz(18);
+    } /* PC only ------------ */
+    .ico_svg {
+      width: vw(29);
+      height: vw(29);
+      @include media_wide {
+        width: 40px;
+        height: 40px;
+      } /* PC only ------------ */
+    }
+  }
+  .fs-ctaarea__txt {
+    color: $c-white;
+    @include fz(24);
+    font-weight: 400;
+    line-height: 1.7;
+    letter-spacing: 0.05em;
+    @include media_wide {
+      @include fz(40);
+    } /* PC only ------------ */
+  }
+  .fs-ctaarea__small {
+    font-weight: 400;
+    line-height: 1.45;
+    letter-spacing: 0;
+    @include fz(15);
+    @include media_wide {
+      @include fz(24);
+    } /* PC only ------------ */
+  }
+  .fs-ctaarea__ico {
+    @include flex;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: vw(18);
+    width: vw(20);
+    height: vw(20);
+    margin-block: auto;
+    background-color: $c-white;
+    border-radius: 50%;
+    @include media_wide {
+      right: 30px;
+      width: 35px;
+      height: 35px;
+    } /* PC only ------------ */
+    .ico_svg {
+      width: vw(12);
+      @include media_wide {
+        width: 20px;
+      } /* PC only ------------ */
+      .svg-path {
+        fill: $c-red;
+      }
+    }
+  }
+}
+
+/*------------------------------------------------
+cmn-dlist
+------------------------------------------------*/
+.cmn-dlist {
+  --dlistColor: #{$c-darkgold};
+  width: vw(345);
+  margin-left: auto;
+  margin-right: auto;
+  @include media_wide {
+    width: 950px;
+    max-width: calc(100% - 40px);
+  } /* PC only ------------ */
+  &.cmn-dlist--red {
+    --dlistColor: #{$c-red};
+  }
+  .cmn-dlist__sep {
+    display: block;
+    padding-inline: vw(15);
+    padding-bottom: vw(15);
+    position: relative;
+    border-bottom: 1px solid #d2d2d2;
+    @include media_wide {
+      display: flex;
+      gap: 30px;
+      padding-inline: 30px;
+      padding-bottom: 15px;
+    } /* PC only ------------ */
+    &:not(:first-of-type) {
+      margin-top: vw(15);
+      @include media_wide {
+        margin-top: 20px;
+      } /* PC only ------------ */
+    } /* :not(:first-of-type) ------------ */
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: 1;
+      bottom: -1px;
+      left: 0;
+      width: 40px;
+      height: 1px;
+      background-color: var(--dlistColor);
+    } /* before ------------*/
+    @include media_narrow {
+      &:last-child {
+        border-bottom: 0;
+        &::before {
+          content: none;
+        }
+      }
+    } /* SP only ------------ */
+  }
+  .cmn-dlist__term {
+    @include flex;
+    justify-content: flex-start;
+    width: 100%;
+    color: var(--dlistColor);
+    @include media_wide {
+      width: 240px;
+    } /* PC only ------------ */
+  }
+  .cmn-dlist__desc {
+    flex: 1;
+    margin-top: vw(2);
+    @include media_wide {
+      margin-top: 0;
+    } /* PC only ------------ */
+  }
+}

@@ -1,0 +1,2749 @@
+@charset 'utf-8';
+@use "../common/css/util/util" as *;
+#main {
+  padding-top: vw(72);
+  @include media_wide {
+    padding-top: 80px;
+  } /* PC only ------------ */
+}
+
+.lcl-cmn-ttl {
+  text-align: center;
+  .ico_svg {
+    width: vw(29);
+    @include media_wide {
+      width: 29px;
+    } /* PC only ------------ */
+  }
+  .lcl-cmn-ttl__en {
+    color: $c-red;
+    @include ff-worksans;
+    font-weight: 400;
+    @include fz(36);
+    line-height: 1.2;
+    letter-spacing: 0.1em;
+    @include media_wide {
+      @include fz(60);
+    } /* PC only ------------ */
+  }
+  &.lcl-cmn-ttl--white {
+    color: $c-white;
+    .lcl-cmn-ttl__en {
+      color: $c-white;
+    }
+    .ico_svg {
+      .svg-elm {
+        fill: $c-white;
+      }
+    }
+  }
+}
+
+.lcl-cmn-sub {
+  position: relative;
+  padding-bottom: vw(11);
+  color: $c-red;
+  @include title-02;
+  text-align: center;
+  @include media_wide {
+    padding-bottom: 11px;
+  } /* SP ------------ */
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: vw(18);
+    height: vw(1);
+    border-radius: 100vw;
+    background-color: $c-red;
+    margin: auto;
+    @include media_wide {
+      width: 18px;
+      height: 1px;
+    } /* SP only ------------ */
+  } /* before ------------*/
+  &.lcl-cmn-sub--gold {
+    color: $c-gold;
+    &::before {
+      background-color: $c-gold;
+    } /* before ------------ */
+  }
+}
+
+.lcl-fixbnr {
+  position: fixed;
+  z-index: 10;
+  width: vw(260);
+  right: 0;
+  left: 0;
+  margin: auto;
+  bottom: vw(10);
+  @include media_wide {
+    bottom: 25px;
+    left: auto;
+    right: 111px;
+    width: 370px;
+  } /* SP only ------------ */
+  &.lcl-fixbnr--hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition:
+      opacity 0.4s ease,
+      visibility 0s 0.4s ease;
+  }
+  .lcl-fixbnr__close {
+    position: absolute;
+    top: vw(-5);
+    right: vw(-11);
+    width: vw(30);
+    height: vw(30);
+    @include media_wide {
+      top: -2px;
+      right: -13px;
+      width: 30px;
+      height: 30px;
+    } /* PC only ------------ */
+  }
+}
+
+/*------------------------------------------------
+lcl-hero
+------------------------------------------------*/
+.lcl-hero {
+  padding-top: vw(12);
+  padding-bottom: vw(38);
+  @include media_wide {
+    padding-top: 0;
+    padding-bottom: 100px;
+  } /* PC only ------------ */
+  .lcl-hero__sep {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    position: relative;
+    width: vw(345);
+    margin-left: auto;
+    margin-right: auto;
+    @include media_wide {
+      flex-direction: row;
+      width: 1100px;
+    } /* PC only ------------ */
+  }
+  .lcl-hero__cnt {
+    width: 100%;
+    padding-top: 0;
+    @include media_wide {
+      width: 507px;
+      padding-top: 50px;
+    } /* PC only ------------ */
+  }
+  .lcl-hero__lead {
+    font-weight: 400;
+    @include fz(16);
+    line-height: 1.6;
+    letter-spacing: 0.1em;
+    text-align: center;
+    @include media_wide {
+      @include fz(18);
+      line-height: 1.8;
+    } /* PC only ------------ */
+  }
+  .lcl-hero__ttl {
+    width: vw(240);
+    margin-left: auto;
+    margin-right: auto;
+    @include media_wide {
+      width: 420px;
+    } /* PC only ------------ */
+  }
+  .lcl-hero__award {
+    display: flex;
+    justify-content: center;
+    gap: vw(4);
+    margin-top: vw(20);
+    @include media_wide {
+      gap: 12px;
+      margin-top: 34px;
+    } /* PC only ------------ */
+  }
+  .lcl-hero__select {
+    width: vw(56);
+    @include media_wide {
+      width: 81px;
+    } /* PC only ------------ */
+  }
+  .lcl-hero__list {
+    display: flex;
+    justify-content: center;
+    gap: vw(5);
+    @include media_wide {
+      gap: 12px;
+    } /* PC only ------------ */
+  }
+  .lcl-hero__label {
+    width: vw(90);
+    @include media_wide {
+      width: 130px;
+    } /* PC only ------------ */
+  }
+  .lcl-hero__figarea {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    gap: vw(4);
+    margin-top: vw(20);
+    @include media_wide {
+      width: 560px;
+      gap: 7px;
+      margin-top: 0;
+    } /* PC only ------------ */
+  }
+  .lcl-hero__person {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    border-radius: vw(20);
+    @include media_wide {
+      border-radius: 30px;
+    } /* PC only ------------ */
+    &.lcl-hero__person--02 {
+      margin-top: vw(38);
+      @include media_wide {
+        margin-top: 63px;
+      } /* PC only ------------ */
+    }
+  }
+  &.js-load {
+    .lcl-hero__person {
+      clip-path: inset(0 100% 0 0 round vw(20));
+      transition: clip-path 0.8s cubic-bezier(0.49, -0.01, 0.16, 0.99);
+      @include media_wide {
+        clip-path: inset(0 100% 0 0 round 30px);
+      } /* PC only ------------ */
+      img {
+        transform: translateX(vw(-20));
+        transition: transform 0.8s cubic-bezier(0.49, -0.01, 0.16, 0.99);
+        @include media_wide {
+          transform: translateX(-20px);
+        } /* PC only ------------ */
+      }
+      &:nth-of-type(2) {
+        transition-delay: 0.1s;
+        img {
+          transition-delay: 0.1s;
+        }
+      } /* nth-of-type(1) ------------ */
+      &:nth-of-type(3) {
+        transition-delay: 0.2s;
+        img {
+          transition-delay: 0.2s;
+        }
+      } /* nth-of-type(1) ------------ */
+    }
+  }
+  &.js-load--on {
+    .lcl-hero__person {
+      clip-path: inset(0 0% 0 0 round vw(20));
+      @include media_wide {
+        clip-path: inset(0 0% 0 0 round 30px);
+      } /* PC only ------------ */
+      img {
+        transform: translateX(0px) !important;
+      }
+    }
+  }
+}
+
+/*------------------------------------------------
+lcl-lead
+------------------------------------------------*/
+.lcl-lead {
+  .lcl-lead__sep {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: vw(12);
+    @include media_wide {
+      flex-direction: row;
+      align-items: stretch;
+      gap: 12px;
+    } /* PC only ------------ */
+  }
+  .lcl-lead__box {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    width: vw(345);
+    filter: drop-shadow(2px 4px 15px rgba(0, 0, 0, 0.15));
+    transform: translateZ(0);
+    transition:
+      filter 0.25s ease,
+      transform 0.25s ease;
+    @include media_hover {
+      &:hover {
+        filter: drop-shadow(2px 8px 8px rgba(0, 0, 0, 0.3));
+        transform: scale(1.02) translateZ(0);
+        .lcl-lead__label {
+          background-color: $c-gold;
+        }
+        .lcl-lead__cnt {
+          border-color: $c-gold;
+        }
+        .lcl-lead__link {
+          color: $c-red;
+          &::before {
+            transform-origin: right;
+            transform: scaleX(0);
+          }
+          .ico_svg .svg-path {
+            fill: $c-red;
+          }
+        }
+      }
+    } /* media_hover ------------ */
+    @include media_wide {
+      width: 500px;
+    } /* PC only ------------ */
+  }
+  .lcl-lead__label {
+    width: 100%;
+    padding: vw(10);
+    border-radius: vw(20) vw(20) 0 0;
+    background-color: $c-red;
+    color: $c-white;
+    @include title-02;
+    font-weight: 700;
+    text-align: center;
+    transition: background-color 0.25s ease;
+    @include media_wide {
+      padding: 10px;
+      border-radius: 20px 20px 0 0;
+    } /* PC only ------------ */
+  }
+  .lcl-lead__cnt {
+    flex: 1;
+    width: 100%;
+    background-color: $c-white;
+    color: $c-black;
+    border: 1px solid $c-red;
+    padding: vw(14);
+    border-radius: 0 0 vw(20) vw(20);
+    transition: border-color 0.25s ease;
+    @include media_wide {
+      padding: 19px;
+      border-radius: 0 0 30px 30px;
+    } /* PC only ------------ */
+  }
+  .lcl-lead-cnt__txt {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: vw(2);
+    margin-top: vw(-3);
+    @include txt-large;
+    @include media_wide {
+      gap: 2px;
+      margin-top: -10px;
+    } /* PC only ------------ */
+  }
+  .lcl-lead-cnt01__price {
+    color: $c-red;
+    @include ff-worksans;
+    @include fz(44);
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: 0;
+    @include media_wide {
+      @include fz(70);
+    } /* PC only ------------ */
+  }
+  .lcl-lead-cnt01__unit {
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: vw(2);
+    padding-bottom: vw(5);
+    @include txt-large;
+    font-weight: 700;
+    @include media_wide {
+      gap: 2px;
+      padding-bottom: 5px;
+    } /* PC only ------------ */
+  }
+  .lcl-lead-cnt01__usable {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: vw(5);
+    margin-top: vw(10);
+    padding-inline: vw(25);
+    flex-direction: column;
+    position: relative;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 700;
+    @include media_wide {
+      flex-direction: row;
+      gap: 5px;
+      margin-top: 10px;
+      padding-inline: 25px;
+    } /* PC only ------------ */
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      width: vw(17);
+      height: vw(22);
+      margin: auto;
+      background: url(/recommend/futari-tsumugi/common/images/vec.svg) center / cover no-repeat;
+      @include media_wide {
+        width: 17px;
+        height: 22px;
+      } /* PC only ------------ */
+    } /* before after ------------*/
+    &::before {
+      left: 0;
+      transform: scale(-1, 1);
+    } /* before ------------*/
+    &::after {
+      right: 0;
+    } /* before ------------*/
+  }
+  .lcl-lead-cnt01__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: vw(5);
+    @include media_wide {
+      gap: 5px;
+    } /* PC only ------------ */
+  }
+  .lcl-lead-cnt01__item {
+    padding: 0 vw(10);
+    border-radius: 100vw;
+    background-color: $c-gold;
+    color: $c-white;
+    font-weight: 700;
+    @include fz(13);
+    line-height: 1.9;
+    letter-spacing: 0.03em;
+    @include media_wide {
+      padding: 0 10px;
+    } /* PC only ------------ */
+  }
+  .lcl-lead__underline {
+    position: relative;
+    z-index: 1;
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      left: 0;
+      right: 0;
+      bottom: vw(6);
+      height: vw(13);
+      width: 100%;
+      background-color: #ffed74;
+      margin: auto;
+      @include media_wide {
+        bottom: 7px;
+        height: 17px;
+      } /* PC only ------------ */
+    } /* before ------------*/
+  }
+  .lcl-lead__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    position: relative;
+    gap: vw(5);
+    margin-top: vw(10);
+    padding: 0 vw(10) vw(2);
+    margin-left: auto;
+    margin-right: auto;
+    transition: color 0.25s ease;
+    @include txt-small;
+    @include media_wide {
+      gap: 5px;
+      margin-top: 15px;
+      padding: 0 10px 2px;
+    } /* PC only ------------ */
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: $c-red;
+      transform-origin: left;
+      transition: transform 0.25s ease;
+    } /* before ------------*/
+    .ico_svg {
+      width: vw(20);
+      @include media_wide {
+        width: 20px;
+      } /* PC only ------------ */
+      .svg-path {
+        fill: $c-red;
+      }
+    }
+  }
+  .lcl-lead-cnt02__txt {
+    color: $c-red;
+    font-weight: 700;
+    @include fz(26);
+    line-height: 1.7;
+    letter-spacing: 0.1em;
+    @include media_wide {
+      @include fz(40);
+    } /* PC only ------------ */
+  }
+  .lcl-lead-cnt02__note {
+    color: $c-red;
+    text-align: center;
+    @include txt-small;
+    font-weight: 700;
+    @include media_wide {
+      margin-top: -8px;
+    } /* PC only ------------ */
+  }
+}
+
+/*------------------------------------------------
+lcl-recommend
+------------------------------------------------*/
+.lcl-recommend {
+  position: relative;
+  z-index: 2;
+  margin-top: vw(60);
+  @include media_wide {
+    margin-top: 80px;
+  } /* PC only ------------ */
+  .lcl-recommend__box {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-inline: vw(15);
+    @include media_wide {
+      width: 1000px;
+      padding: 0;
+    } /* PC only ------------ */
+  }
+  .lcl-recommend__lead {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex-direction: column;
+    width: vw(299);
+    padding: vw(15);
+    z-index: 1;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 100vw;
+    background-color: $c-gold;
+    color: $c-white;
+    text-align: center;
+    @include txt-basic;
+    @include media_wide {
+      flex-direction: row;
+      gap: 10px;
+      padding: 10px;
+      width: 800px;
+    } /* PC only ------------ */
+    span {
+      @include title-02;
+    }
+  }
+  .lcl-recommend__cnt {
+    border-radius: vw(20);
+    margin-top: vw(-35);
+    padding: vw(78) vw(13) vw(47);
+    background: url(/recommend/futari-tsumugi/images/sp/recommend/bg.jpg) center / cover no-repeat;
+    @include media_wide {
+      margin-top: -35px;
+      padding: 57px 50px 0;
+      border-radius: 40px;
+      background: url(/recommend/futari-tsumugi/images/recommend/bg.jpg) center / cover no-repeat;
+    } /* PC only ------------ */
+  }
+  .lcl-recommend__sep {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: vw(15);
+    @include media_wide {
+      flex-direction: row;
+      align-items: flex-end;
+      gap: 30px;
+    } /* PC only ------------ */
+  }
+  .lcl-recommend__item {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    @include media_wide {
+      display: block;
+      width: 290px;
+    } /* PC only ------------ */
+    &:nth-of-type(2n) {
+      flex-direction: row-reverse;
+      @include media_wide {
+        width: 260px;
+      } /* PC only ------------ */
+      .lcl-recommend__bubble {
+        height: vw(122);
+        padding-bottom: vw(15);
+        background: url(/recommend/futari-tsumugi/images/recommend/bubble_02.png) center / cover no-repeat;
+        @include media_wide {
+          height: 156px;
+          padding-bottom: 16px;
+        } /* PC only ------------ */
+      }
+    } /* nth-of-type(2n) ------------ */
+  }
+  .lcl-recommend__bubble {
+    @include flex;
+    background: url(/recommend/futari-tsumugi/images/recommend/bubble_01.png) center / cover no-repeat;
+    width: vw(204);
+    height: vw(133);
+    padding-bottom: vw(25);
+    @include fz(13);
+    line-height: 1.6;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+    text-align: center;
+    @include media_wide {
+      width: 100%;
+      height: 189px;
+      padding-bottom: 28px;
+      @include fz(15);
+      line-height: 1.9;
+    } /* PC only ------------ */
+  }
+  .lcl-recommend__em {
+    color: $c-red;
+    @include fz(18);
+    line-height: 1.45;
+    letter-spacing: 0.05em;
+    @include media_wide {
+      @include fz(20);
+    } /* PC only ------------ */
+  }
+  .lcl-recommend__fig {
+    width: vw(112);
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    @include media_wide {
+      width: 160px;
+      margin-top: 5px;
+    } /* PC only ------------ */
+  }
+}
+
+@mixin bg_logo($pos, $color: #f7f7f7) {
+  position: absolute;
+  z-index: -1;
+  width: vw(351);
+  @if $pos == "left" {
+    left: vw(-129);
+  } @else if $pos == "right" {
+    right: vw(-129);
+  }
+  @include media_wide {
+    width: 565px;
+    @if $pos == "left" {
+      left: pos(-182);
+    } @else if $pos == "right" {
+      right: pos(-182);
+    }
+  } /* PC only ------------ */
+  .svg-elm {
+    fill: $color;
+  }
+}
+
+/*------------------------------------------------
+lcl-message
+------------------------------------------------*/
+.lcl-message {
+  position: relative;
+  z-index: 1;
+  margin-top: vw(60);
+  @include media_wide {
+    margin-top: 0;
+  } /* PC only ------------ */
+  .bg_logo {
+    @include bg_logo("left");
+    top: vw(-45);
+    @include media_wide {
+      top: -98px;
+    } /* PC only ------------ */
+  }
+  .lcl-message__in {
+    position: relative;
+    z-index: 1;
+    width: vw(345);
+    padding-bottom: vw(60);
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    @include media_wide {
+      width: 100%;
+      text-align: center;
+      padding-block: 80px;
+    } /* PC only ------------ */
+  }
+  .lcl-message-btm {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: $c-beige;
+    text-align: left;
+    border-radius: vw(30);
+    padding: vw(30) vw(15);
+    margin-top: vw(60);
+    @include media_wide {
+      max-width: 1236px;
+      padding: 40px 0;
+      border-radius: 80px;
+      margin-top: 80px;
+    } /* PC only ------------ */
+  }
+  .lcl-message-btm__sep {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: vw(30);
+    @include w1000;
+    @include media_wide {
+      max-width: calc(100% - 40px);
+      flex-direction: row;
+      gap: 40px;
+    } /* PC only ------------ */
+  }
+  .lcl-message-btm__cnt {
+    flex: 1;
+  }
+  .lcl-message-btm__info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: vw(15);
+    @include media_wide {
+      gap: 15px;
+    } /* PC only ------------ */
+  }
+  .lcl-message-btm__icon {
+    @include flex;
+    width: vw(55);
+    height: vw(55);
+    background-color: $c-white;
+    border-radius: 50%;
+    @include media_wide {
+      width: 90px;
+      height: 90px;
+    } /* PC only ------------ */
+    img {
+      width: vw(38);
+      @include media_wide {
+        width: 62px;
+      } /* PC only ------------ */
+    }
+  }
+  .lcl-message-btm__txt {
+    flex: 1;
+    color: $c-red;
+    @include title-02;
+    sup {
+      @include fz(16);
+    }
+  }
+  .lcl-message-btm__figarea {
+    position: relative;
+    width: 100%;
+    @include media_wide {
+      width: 325px;
+    } /* PC only ------------ */
+  }
+  .lcl-message-btm__fig {
+    width: 100%;
+    border-radius: vw(20);
+    overflow: hidden;
+    @include media_wide {
+      border-radius: 40px;
+    } /* PC only ------------ */
+  }
+  .lcl-message-btm__bubble {
+    position: absolute;
+    z-index: 1;
+    width: vw(162);
+    top: vw(-34);
+    right: vw(-1);
+    @include media_wide {
+      width: 162px;
+      top: 22px;
+      right: -57px;
+    } /* PC only ------------ */
+  }
+}
+
+/*------------------------------------------------
+lcl-nav
+------------------------------------------------*/
+.lcl-nav {
+  width: vw(345);
+  margin-left: auto;
+  margin-right: auto;
+  @include flex;
+  align-items: stretch;
+  gap: 0 vw(15);
+  padding-bottom: vw(60);
+  @include media_wide {
+    align-items: center;
+    width: 1000px;
+    gap: 15px 20px;
+    padding-bottom: 80px;
+  } /* PC only ------------ */
+  .lcl-nav__item {
+    width: calc((100% - #{vw(16)}) / 2);
+    @include media_wide {
+      width: fit-content;
+    } /* PC only ------------ */
+  }
+  .lcl-nav__link {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    transition: color 0.3s ease;
+    height: 100%;
+    gap: vw(5);
+    color: $c-black;
+    padding: vw(10) vw(27) vw(10) vw(5);
+    @include media_wide {
+      height: auto;
+      gap: 7px;
+      padding: 10px 47px 10px 20px;
+    } /* PC only ------------ */
+    .ico_svg {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      right: vw(5);
+      width: vw(15);
+      height: vw(15);
+      @include media_wide {
+        right: 5px;
+        width: 15px;
+        height: 15px;
+      } /* PC only ------------ */
+    }
+    @include media_hover {
+      &:hover {
+        color: $c-red;
+        &::before {
+          transform-origin: right;
+          transform: scaleX(0);
+        } /* before ------------*/
+      }
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: $c-red;
+      transform-origin: left;
+      transition: transform 0.3s ease;
+    } /* before ------------*/
+    .ico_svg {
+      width: vw(15);
+      @include media_wide {
+        width: 20px;
+      } /* PC only ------------ */
+      .svg-path {
+        fill: $c-red;
+      }
+    }
+  }
+}
+
+/*------------------------------------------------
+lcl-about
+------------------------------------------------*/
+.lcl-about {
+  position: relative;
+  z-index: 1;
+  background-color: $c-lightgray;
+  border-radius: vw(60) vw(60) 0 0;
+  @include media_wide {
+    border-radius: 80px 80px 0 0;
+  } /* PC only ------------ */
+  .bg_logo {
+    opacity: 0.5;
+    top: vw(55);
+    @include bg_logo("right", $c-white);
+    @include media_wide {
+      top: 94px;
+    } /* PC only ------------ */
+  }
+  .lcl-about__in {
+    padding: vw(50) vw(15) vw(130);
+    margin-left: auto;
+    margin-right: auto;
+    @include media_wide {
+      padding-block: 80px 280px;
+      padding-inline: 12px;
+      max-width: 1260px;
+    } /* PC only ------------ */
+  }
+  .lcl-about__wrap {
+    margin-top: vw(40);
+    @include media_wide {
+      margin-top: 50px;
+    } /* PC only ------------ */
+  }
+  .lcl-about__block {
+    @include grid(1, 15);
+    @include media_wide {
+      @include grid(2, 36);
+    } /* PC only ------------ */
+    &:not(:first-of-type) {
+      padding-top: vw(29);
+      margin-top: vw(29);
+      border-top: vw(2) solid $c-white;
+      @include media_wide {
+        padding-top: 59px;
+        margin-top: 59px;
+        border-top: 2px solid $c-white;
+      } /* PC only ------------ */
+    } /* :not(:first-of-type) ------------ */
+  }
+  .lcl-about__fig {
+    width: 100%;
+    height: vw(278);
+    overflow: hidden;
+    border-radius: vw(20);
+    @include media_wide {
+      height: 500px;
+      border-radius: 40px;
+    } /* PC only ------------ */
+    &.lcl-about__fig--01 {
+      background: url(/recommend/futari-tsumugi/images/about/img_01.jpg) center / cover no-repeat;
+    }
+    &.lcl-about__fig--02 {
+      background: url(/recommend/futari-tsumugi/images/about/img_02.jpg) center / cover no-repeat;
+    }
+    &.lcl-about__fig--03 {
+      background: url(/recommend/futari-tsumugi/images/about/img_03.jpg) center / cover no-repeat;
+    }
+    &.lcl-about__fig--04 {
+      background: url(/recommend/futari-tsumugi/images/about/img_04.jpg) center / cover no-repeat;
+    }
+  }
+  .lcl-about__cnt {
+    width: 100%;
+  }
+  .lcl-about__head {
+    display: grid;
+    grid-template-columns: vw(35) 1fr;
+    gap: vw(10);
+    @include media_wide {
+      display: block;
+    } /* PC only ------------ */
+  }
+  .lcl-about__num {
+    @include flex;
+    width: vw(35);
+    height: vw(35);
+    border-radius: 50%;
+    background-color: $c-red;
+    color: $c-white;
+    @include fz(18);
+    @include ff-worksans;
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    @include media_wide {
+      width: 54px;
+      height: 54px;
+      @include fz(24);
+    } /* PC only ------------ */
+  }
+  .lcl-about__lead {
+    color: $c-red;
+    @include title-02;
+    @include media_wide {
+      margin-top: 20px;
+    } /* PC only ------------ */
+  }
+  .lcl-about-info {
+    display: flex;
+    flex-direction: column;
+    gap: vw(5);
+    margin-top: vw(20);
+    @include media_wide {
+      flex-direction: row;
+      gap: 10px;
+      margin-top: 20px;
+    } /* PC only ------------ */
+  }
+  .lcl-about-info__item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    background-color: $c-gold;
+    color: $c-white;
+    padding: vw(10) vw(17);
+    width: 100%;
+    border-radius: vw(15);
+    @include media_wide {
+      display: block;
+      width: fit-content;
+      padding: 15px 20px 10px;
+      border-radius: 20px;
+    } /* PC only ------------ */
+  }
+  .lcl-about-info__label {
+    width: vw(90);
+    text-align: left;
+    @include media_wide {
+      width: auto;
+      text-align: center;
+    } /* PC only ------------ */
+  }
+  .lcl-about-info__cnt {
+    flex: 1;
+  }
+  .lcl-about-info__num {
+    @include ff-worksans;
+    font-weight: 400;
+    @include fz(34);
+    line-height: 1.3;
+    letter-spacing: 0;
+  }
+  .lcl-about-box {
+    border-radius: vw(15);
+    padding: vw(25) vw(20);
+    background-color: $c-white;
+    @include media_wide {
+      border-radius: 20px;
+      padding: 25px 30px;
+    } /* PC only ------------ */
+  }
+  .lcl-about-box01 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: vw(10);
+    flex-direction: column;
+    @include media_wide {
+      gap: 20px;
+      flex-direction: row;
+    } /* PC only ------------ */
+  }
+  .lcl-about-box01__fig {
+    width: vw(120);
+    @include media_wide {
+      width: 120px;
+    } /* PC only ------------ */
+  }
+  .lcl-about-box01__cnt {
+    flex: 1;
+  }
+  .lcl-about-box02 {
+  }
+  .lcl-about-box02__item {
+    position: relative;
+    padding-left: vw(20);
+    @include media_wide {
+      padding-left: 20px;
+    } /* PC only ------------ */
+    &:not(:first-of-type) {
+      margin-top: vw(10);
+      @include media_wide {
+        margin-top: 10px;
+      } /* PC only ------------ */
+    } /* :not(:first-of-type) ------------ */
+    &::before {
+      content: "";
+      position: absolute;
+      width: vw(10);
+      height: vw(10);
+      top: vw(7);
+      left: 0;
+      border-radius: 50%;
+      background-color: $c-gold;
+      @include media_wide {
+        top: 11px;
+        width: 10px;
+        height: 10px;
+      } /* PC only ------------ */
+    } /* before ------------*/
+  }
+  .lcl-about-box03 {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: vw(-11);
+      right: vw(31);
+      width: vw(112);
+      height: vw(105);
+      background: url(/recommend/futari-tsumugi/images/about/gift.png) center / cover no-repeat;
+      @include media_wide {
+        top: 7px;
+        right: 37px;
+        width: 149px;
+        height: 140px;
+      } /* PC only ------------ */
+      @media screen and (min-width: 759px) and (max-width: 1150px) {
+        width: 129px;
+        height: 120px;
+        right: 3px;
+      }
+    } /* before ------------*/
+  }
+  .lcl-about-box03__label {
+    width: fit-content;
+    border-radius: 100vw;
+    padding: vw(5) vw(30);
+    background-color: $c-gold;
+    color: $c-white;
+    @include txt-large;
+    @include media_wide {
+      padding: 2px 30px;
+    } /* PC only ------------ */
+  }
+  .lcl-about-box03__sub {
+    margin-top: vw(10);
+    color: $c-red;
+    @include title-03;
+    font-weight: 700;
+    @include media_wide {
+      margin-top: 10px;
+    } /* PC only ------------ */
+  }
+  .lcl-about-box03__ttl {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap: vw(5);
+    color: $c-red;
+    @include ff-worksans;
+    font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: 0;
+    margin-top: 0;
+    @include fz(44);
+    @include media_wide {
+      gap: 10px;
+      margin-top: -10px;
+      @include fz(50);
+    } /* PC only ------------ */
+  }
+  .lcl-about-box03__unit {
+    display: inline-block;
+    color: $c-red;
+    @include title-03;
+    font-weight: 700;
+    padding-bottom: vw(10);
+    @include media_wide {
+      padding-bottom: 10px;
+    } /* PC only ------------ */
+  }
+  .lcl-about-box03__box {
+    display: flex;
+    gap: vw(35);
+    margin-top: vw(15);
+    padding: vw(15);
+    border-radius: vw(15);
+    background-color: $c-lightgray;
+    @include media_wide {
+      gap: 40px;
+      margin-top: 15px;
+      padding: 20px;
+      border-radius: 15px;
+    } /* PC only ------------ */
+  }
+  .lcl-about-box03__lead {
+    @include flex;
+    justify-content: flex-start;
+    color: $c-red;
+    min-width: vw(85);
+    @include txt-large;
+    @include media_wide {
+      min-width: 95px;
+    } /* PC only ------------ */
+  }
+  .lcl-about-box03__detail {
+    position: relative;
+    flex: 1;
+    @include txt-small;
+    &::before {
+      content: "";
+      position: absolute;
+      top: -100%;
+      bottom: -100%;
+      height: vw(46);
+      width: vw(2);
+      height: vw(-21);
+      left: vw(-19);
+      margin: auto;
+      background-color: $c-white;
+      @include media_wide {
+        left: -21px;
+        width: 2px;
+        height: calc(100% + 4px);
+      } /* PC only ------------ */
+    } /* before ------------*/
+  }
+  .lcl-about__bnr {
+    display: block;
+    margin-top: vw(40);
+    @include media_wide {
+      margin-top: 40px;
+    } /* PC only ------------ */
+  }
+}
+
+/*------------------------------------------------
+lcl-service
+------------------------------------------------*/
+.lcl-service {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  .bg_logo {
+    top: vw(120);
+    @include bg_logo("left", #f7f7f7);
+    @include media_wide {
+      top: -80px;
+    } /* PC only ------------ */
+  }
+  .lcl-service__in {
+    padding-block: vw(90);
+    @include media_wide {
+      padding-block: 270px;
+    } /* PC only ------------ */
+  }
+  .lcl-service__plan {
+    width: 100%;
+    padding: 0;
+    margin-top: vw(50);
+    margin-left: auto;
+    margin-right: auto;
+    @include media_wide {
+      width: 1144px;
+      max-width: calc(100% - 24px);
+      margin-top: 50px;
+      padding-inline: 12px;
+    } /* PC only ------------ */
+  }
+  .lcl-service__tablearea {
+    margin-top: vw(30);
+    @include media_wide {
+      margin-top: 30px;
+    } /* PC only ------------ */
+  }
+  .lcl-service__table {
+    width: vw(565);
+    padding-inline: vw(15);
+    @include media_wide {
+      width: auto;
+      padding: 0;
+    } /* PC only ------------ */
+  }
+  .lcl-service-benefits {
+    width: vw(345);
+    margin-top: vw(50);
+    margin-left: auto;
+    margin-right: auto;
+    @include media_wide {
+      width: 100%;
+      margin-top: 60px;
+      max-width: 1236px;
+    } /* PC only ------------ */
+  }
+  .lcl-service-benefits__ttl {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: $c-red;
+    text-align: center;
+    color: $c-white;
+    @include title-03;
+    width: fit-content;
+    padding: vw(10) vw(20);
+    border-radius: 100vw;
+    @include media_wide {
+      width: calc(100% - 176px);
+      padding: 10px;
+    } /* PC only ------------ */
+    &::before {
+      content: "";
+      width: vw(46);
+      height: vw(10);
+      background: url(/recommend/futari-tsumugi/images/service/heart.png) center / cover no-repeat;
+      @include media_wide {
+        width: 69px;
+        height: 15px;
+      } /* PC only ------------ */
+    } /* before ------------*/
+  }
+  .lcl-service-benefits__box {
+    margin-top: vw(-40);
+    padding: vw(70) vw(20) vw(30);
+    border-radius: vw(30);
+    background-color: $c-lightgray;
+    @include media_wide {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: -40px;
+      padding: 70px 30px 30px;
+      border-radius: 80px;
+    } /* PC only ------------ */
+  }
+  .lcl-service-benefits__sep {
+    width: 100%;
+    @include media_wide {
+      max-width: 520px;
+    } /* PC only ------------ */
+    &:not(:first-of-type) {
+      margin-top: vw(15);
+      @include media_wide {
+        margin-top: 0;
+      } /* PC only ------------ */
+    } /* :not(:first-of-type) ------------ */
+  }
+  .lcl-service-benefits__label {
+    @include flex;
+    text-align: center;
+    background-color: #f8684f;
+    color: $c-white;
+    width: 100%;
+    padding: vw(5);
+    border-radius: 100vw;
+    @include media_wide {
+      padding: 3px;
+    } /* PC only ------------ */
+  }
+  .lcl-service-benefits__list {
+    margin-top: vw(10);
+    @include media_wide {
+      margin-top: 10px;
+    } /* PC only ------------ */
+  }
+  .lcl-service-benefits__item {
+    position: relative;
+    padding-left: vw(20);
+    @include media_wide {
+      padding-left: 20px;
+    } /* PC only ------------ */
+    &::before {
+      content: "";
+      position: absolute;
+      top: vw(8);
+      width: vw(10);
+      height: vw(10);
+      left: 0;
+      margin: auto;
+      border-radius: 50%;
+      background-color: $c-red;
+      @include media_wide {
+        top: 10px;
+        width: 10px;
+        height: 10px;
+      } /* PC only ------------ */
+    } /* before ------------*/
+    &:not(:first-of-type) {
+      margin-top: vw(10);
+      @include media_wide {
+        margin-top: 15px;
+      } /* PC only ------------ */
+    } /* :not(:first-of-type) ------------ */
+  }
+  .lcl-service-box {
+    width: vw(345);
+    margin-top: vw(50);
+    padding: vw(30) vw(20);
+    border-radius: vw(30);
+    margin-left: auto;
+    margin-right: auto;
+    background-color: $c-beige;
+    @include media_wide {
+      max-width: 1236px;
+      width: 100%;
+      margin-top: 60px;
+      padding: 40px 0 60px;
+      border-radius: 80px;
+    } /* PC only ------------ */
+  }
+  .lcl-service-box__sep {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0;
+    gap: vw(15);
+    margin-top: vw(15);
+    flex-direction: column-reverse;
+    @include media_wide {
+      flex-direction: row;
+      max-width: 1076px;
+      gap: 40px;
+      padding-inline: 12px;
+      margin: 30px auto 0;
+    } /* PC only ------------ */
+  }
+  .lcl-service-box__fig {
+    aspect-ratio: 440 / 310;
+    width: vw(315);
+    border-radius: vw(20);
+    overflow: hidden;
+    background: url(/recommend/futari-tsumugi/images/service/img_01.jpg) center / cover no-repeat;
+    @include media_wide {
+      width: 440px;
+      border-radius: 40px;
+    } /* PC only ------------ */
+  }
+  .lcl-service-box__cnt {
+    flex: 1;
+  }
+  .lcl-service-detail {
+    width: vw(345);
+    padding: 0;
+    margin-top: vw(50);
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    @include media_wide {
+      width: 100%;
+      max-width: 1260px;
+      margin-top: 60px;
+      padding-inline: 12px;
+    } /* PC only ------------ */
+  }
+  .lcl-service-detail__in {
+    position: relative;
+    width: 100%;
+    padding-block: vw(15);
+    @include media_wide {
+      padding-block: 33px;
+    } /* PC only ------------ */
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      margin: auto;
+      width: 100%;
+      border: 1px solid $c-gold;
+      height: vw(16);
+      left: 0;
+      @include media_wide {
+        width: 27px;
+        height: 100%;
+        top: 0;
+        left: auto;
+      } /* PC only ------------ */
+    } /* before after ------------*/
+    &::before {
+      top: 0;
+      border-radius: vw(60) vw(60) 0 0;
+      border-bottom: none;
+      @include media_wide {
+        left: 0;
+        top: auto;
+        border: 1px solid $c-gold;
+        border-right: none;
+        border-radius: 60px 0 0 60px;
+      } /* PC only ------------ */
+    } /* before ------------*/
+    &::after {
+      bottom: 0;
+      border-radius: 0 0 vw(60) vw(60);
+      border-top: none;
+      @include media_wide {
+        bottom: auto;
+        right: 0;
+        border: 1px solid $c-gold;
+        border-left: none;
+        border-radius: 0 60px 60px 0;
+      } /* PC only ------------ */
+    } /* after ------------*/
+  }
+}
+
+/*------------------------------------------------
+lcl-flow
+------------------------------------------------*/
+.lcl-flow {
+  position: relative;
+  z-index: 1;
+  background-color: $c-lightgray;
+  border-radius: vw(60);
+  @include media_wide {
+    border-radius: 100px;
+  } /* PC only ------------ */
+  .bg_logo {
+    top: vw(-115);
+    @include bg_logo("right", #f7f7f7);
+    @include media_wide {
+      top: 130px;
+    } /* PC only ------------ */
+  }
+  .lcl-flow__in {
+    margin-left: auto;
+    margin-right: auto;
+    padding: vw(80) vw(15) vw(60);
+    @include media_wide {
+      max-width: 1260px;
+      padding: 300px 12px 80px;
+    } /* PC only ------------ */
+  }
+  .lcl-flow__cnt {
+    margin-top: vw(30);
+    @include media_wide {
+      margin-top: 60px;
+    } /* PC only ------------ */
+  }
+  .lcl-flow__list {
+    @include grid(1, 10);
+    @include media_wide {
+      @include grid(3, 40, 60);
+    } /* PC only ------------ */
+  }
+  .lcl-flow__item {
+    position: relative;
+    height: 100%;
+    padding-right: 0;
+    padding-bottom: vw(11);
+    @include media_wide {
+      padding-right: 16px;
+      padding-bottom: 0;
+    } /* PC only ------------ */
+    &:not(:last-of-type) {
+      &::before {
+        content: "";
+        position: absolute;
+        top: auto;
+        width: vw(30);
+        clip-path: polygon(0 0, 100% 0%, 50% 100%);
+        height: vw(11);
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: $c-gold;
+        margin: auto;
+        @include media_wide {
+          top: 0;
+          width: 16px;
+          height: 43px;
+          clip-path: polygon(0 0, 100% 50%, 0 100%);
+          right: 0;
+          left: auto;
+        } /* PC only ------------ */
+      } /* before ------------*/
+    } /* :not(:last-of-type) ------------ */
+  }
+  .lcl-flow__wrap {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: vw(20);
+    padding: vw(20) vw(15);
+    border-radius: vw(20);
+    height: 100%;
+    background-color: $c-white;
+    @include media_wide {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      padding: 20px 30px;
+      border-radius: 20px;
+    } /* PC only ------------ */
+  }
+  .lcl-flow__label {
+    @include flex;
+    flex-direction: column;
+    margin-inline: auto;
+    border-radius: 50%;
+    background-color: $c-red;
+    width: vw(45);
+    height: vw(45);
+    padding-top: vw(4);
+    @include fz(10);
+    color: $c-white;
+    @include ff-worksans;
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    @include media_wide {
+      width: 75px;
+      height: 75px;
+      padding-top: 5px;
+      @include fz(13);
+    } /* PC only ------------ */
+  }
+  .lcl-flow__num {
+    line-height: 1.2;
+    @include fz(15);
+    @include media_wide {
+      @include fz(30);
+    } /* PC only ------------ */
+  }
+  .lcl-flow__area {
+    flex: 1;
+    @include media_wide {
+      flex: none;
+    } /* PC only ------------ */
+  }
+  .lcl-flow__ttl {
+    color: $c-red;
+    @include title-03;
+    text-align: left;
+    @include media_wide {
+      text-align: center;
+    } /* PC only ------------ */
+  }
+  .lcl-flow__box {
+    background-color: $c-lightgray;
+    margin-top: vw(10);
+    padding: vw(10) vw(20);
+    border-radius: vw(15);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    @include media_wide {
+      display: block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      border-radius: 20px;
+    } /* PC only ------------ */
+  }
+  .lcl-flow__en {
+    width: vw(64);
+    color: $c-red;
+    @include ff-worksans;
+    font-weight: 400;
+    @include fz(14);
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    text-align: left;
+    @include media_wide {
+      width: 100%;
+      text-align: center;
+    } /* PC only ------------ */
+  }
+  .lcl-flow__detail {
+    flex: 1;
+    @include fz(12);
+    line-height: 1.5;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+    @include media_wide {
+      margin-top: 5px;
+      @include fz(14);
+      line-height: 1.6;
+    } /* PC only ------------ */
+  }
+}
+
+/*------------------------------------------------
+lcl-staff
+------------------------------------------------*/
+.lcl-staff {
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  .bg_logo {
+    @include bg_logo("left", #f7f7f7);
+    top: vw(-115);
+    @include media_wide {
+      top: 70px;
+    } /* PC only ------------ */
+  }
+  .lcl-staff__in {
+    margin-left: auto;
+    margin-right: auto;
+    padding: vw(60) vw(15) vw(90);
+    @include media_wide {
+      max-width: 1260px;
+      padding: 80px 12px 280px;
+    } /* PC only ------------ */
+  }
+  .lcl-staff__cnt {
+    margin-top: vw(20);
+    @include media_wide {
+      margin-top: 40px;
+    } /* PC only ------------ */
+  }
+  .lcl-staff__box {
+    background-color: $c-lightgray;
+    margin-top: vw(50);
+    padding: vw(40) vw(15);
+    border-radius: vw(30);
+    @include media_wide {
+      margin-top: 50px;
+      padding: 60px 80px 40px;
+      border-radius: 80px;
+    } /* PC only ------------ */
+  }
+  .lcl-staff__sep {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    margin-top: vw(20);
+    gap: vw(20);
+    @include media_wide {
+      flex-direction: row;
+      gap: 60px;
+      margin-top: 20px;
+    } /* PC only ------------ */
+  }
+  .lcl-staff__fig {
+    overflow: hidden;
+    width: 100%;
+    border-radius: vw(20);
+    @include media_wide {
+      width: 470px;
+      border-radius: 40px;
+    } /* PC only ------------ */
+  }
+  .lcl-staff__area {
+    flex: 1;
+  }
+  .lcl-staff-list {
+    @include flex;
+    align-items: stretch;
+    margin-top: vw(44);
+    gap: vw(30) vw(14);
+    @include media_wide {
+      margin-top: 77px;
+      gap: 50px 29px;
+    } /* PC only ------------ */
+    &.lcl-staff-list--large {
+      gap: vw(30);
+      @include media_wide {
+        gap: 50px 40px;
+      } /* PC only ------------ */
+      .lcl-staff-list__item {
+        width: vw(285);
+        @include media_wide {
+          width: 352px;
+        } /* PC only ------------ */
+      }
+      .lcl-staff-list__txt {
+        margin-top: vw(19);
+        @include media_wide {
+          margin-top: 19px;
+        }
+      }
+    }
+  }
+  .lcl-staff-list__item {
+    width: vw(160);
+    @include media_wide {
+      width: 287px;
+    } /* PC only ------------ */
+  }
+  .lcl-staff-list__open {
+    @include media_hover {
+      &:hover {
+        .lcl-staff-list__figarea img {
+          transform: scale(1.05);
+        }
+        .lcl-staff-list__icon {
+          background-color: $c-red;
+        }
+      }
+    } /* media_hover ------------ */
+  }
+  .lcl-staff-list__figarea {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    border-radius: vw(15);
+    @include media_wide {
+      border-radius: 20px;
+    } /* PC only ------------ */
+    img {
+      width: 100%;
+      height: auto;
+      transition: transform 0.3s ease;
+    }
+  }
+  .lcl-staff-list__icon {
+    position: absolute;
+    background-color: $c-gold;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+    width: vw(40);
+    height: vw(40);
+    bottom: vw(12);
+    right: vw(12);
+    @include media_wide {
+      bottom: 12px;
+      right: 12px;
+      width: 70px;
+      height: 70px;
+    } /* PC only ------------ */
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: vw(16);
+      height: vw(2);
+      background-color: $c-white;
+      margin: auto;
+      @include media_wide {
+        width: 28px;
+        height: 3px;
+      } /* PC only ------------ */
+    } /* before after ------------*/
+    &::before {
+      transform: rotate(90deg);
+    } /* before ------------*/
+  }
+  .lcl-staff-list__txt {
+    display: block;
+    text-align: center;
+    margin-top: vw(10);
+    @include txt-basic;
+    @include media_wide {
+      margin-top: 19px;
+    } /* PC only ------------ */
+  }
+  .lcl-staff-list__name {
+    display: block;
+    text-align: center;
+    color: $c-red;
+    @include title-02;
+    @include media_wide {
+      margin-top: 5px;
+    } /* PC only ------------ */
+  }
+  .modal {
+    display: block;
+    position: fixed;
+    inset: 0;
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    max-width: 1236px;
+    margin: auto;
+    border: 0;
+    opacity: 0;
+    visibility: hidden;
+    background: transparent;
+    filter: drop-shadow(0 0 30px rgba($c-black, 0.5));
+    transition:
+      opacity 0.25s ease,
+      visibility 0.25s ease;
+    &[open] {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    // モーダルを開いた際フォーカスを当てるが、アウトラインは非表示
+    outline: 0 !important;
+    outline-color: transparent !important;
+
+    /* スクロールバーの非表示 ------------*/
+    /*IE(Internet Explorer)・Microsoft Edgeへの対応*/
+    -ms-overflow-style: none;
+    /*Firefoxへの対応*/
+    scrollbar-width: none;
+    /*Google Chrome、Safariへの対応*/
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    /* オーバーレイ ------------*/
+    &::backdrop {
+      background-color: rgba($c-black, 0.3);
+      transition: all 0.25s ease;
+    }
+  }
+  .modal__inner {
+    pointer-events: none;
+    position: relative;
+    padding: vw(40) vw(15);
+    @include media_wide {
+      padding: 32px 16px;
+    } /* PC only ------------ */
+  }
+  .modal__main {
+    pointer-events: auto;
+    position: relative;
+    background-color: $c-white;
+    border-radius: vw(30);
+    @include media_wide {
+      border-radius: 80px;
+    } /* PC only ------------ */
+  }
+  .lcl-staff-modal__in {
+    padding: vw(30) vw(20);
+    @include media_wide {
+      padding: 60px 80px;
+    } /* PC only ------------ */
+  }
+
+  .modal__close {
+    pointer-events: auto;
+    position: absolute;
+    overflow: hidden;
+    width: vw(40);
+    height: vw(40);
+    top: vw(25);
+    right: vw(10);
+    transition: background-color 0.25s ease;
+    @include media_wide {
+      top: 10px;
+      right: 0;
+      width: 60px;
+      height: 60px;
+    } /* PC only ------------ */
+    .ic_cancel {
+      .svg-path01 {
+        fill: $c-red;
+      }
+    }
+    @include media_hover {
+      &:hover {
+        .ic_cancel {
+          .svg-path01 {
+            fill: $c-black;
+          }
+        }
+      }
+    } /* media_hover ------------ */
+  }
+
+  .lcl-staff-modal__sep {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: vw(30);
+    @include media_wide {
+      gap: 60px;
+      flex-direction: row;
+    } /* PC only ------------ */
+    &.lcl-staff-modal__sep--fs {
+      @include media_wide {
+        align-items: flex-start;
+      } /* PC only ------------ */
+    }
+  }
+  .lcl-staff-modal__fig {
+    width: vw(250);
+    border-radius: vw(30);
+    overflow: hidden;
+    @include media_wide {
+      width: 352px;
+      border-radius: 30px;
+    } /* PC only ------------ */
+  }
+  .lcl-staff-modal__cnt {
+    flex: 1;
+  }
+  .lcl-staff-modal__box {
+    border: 2px solid $c-red;
+    margin-top: vw(20);
+    border-radius: vw(15);
+    padding: vw(18) vw(13);
+    @include media_wide {
+      margin-top: 20px;
+      border-radius: 20px;
+      padding: 18px 38px;
+    } /* PC only ------------ */
+  }
+  .lcl-staff-modal__area {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: vw(15);
+    margin-top: vw(10);
+    @include media_wide {
+      flex-direction: row;
+      gap: 30px;
+      margin-top: 10px;
+    } /* PC only ------------ */
+  }
+  .lcl-staff-modal__item {
+    position: relative;
+    padding-left: vw(20);
+    @include media_wide {
+      padding-left: 20px;
+    } /* PC only ------------ */
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+      width: vw(10);
+      height: vw(10);
+      border-radius: 50%;
+      background-color: $c-gold;
+      @include media_wide {
+        width: 10px;
+        height: 10px;
+      } /* PC only ------------ */
+    } /* before ------------*/
+  }
+  .lcl-staff-modal__figlist {
+    flex: 1;
+  }
+  .lcl-staff-modal__bnr {
+    width: 100%;
+    @include media_wide {
+      width: 300px;
+    } /* PC only ------------ */
+  }
+  .lcl-staff-modal__hobby {
+    display: flex;
+    justify-content: flex-start;
+    background-color: $c-lightgray;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: vw(20);
+    margin-top: vw(20);
+    border-radius: vw(15);
+    padding: vw(20) vw(15);
+    @include media_wide {
+      flex-direction: row;
+      align-items: center;
+      margin-top: 20px;
+      border-radius: 20px;
+      padding: 15px 40px;
+      gap: 60px;
+    } /* PC only ------------ */
+  }
+  .lcl-staff-modal__hobbytxt {
+    position: relative;
+    flex: 1;
+    &::before {
+      content: "";
+      position: absolute;
+      background-color: $c-white;
+      margin: auto;
+      left: 0;
+      top: vw(-11);
+      width: 100%;
+      height: vw(2);
+      @include media_wide {
+        top: 0;
+        left: -31px;
+        width: 2px;
+        height: 100%;
+      } /* PC only ------------ */
+    } /* before ------------*/
+  }
+  .lcl-staff-modal__btn {
+    @include flex;
+    width: fit-content;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    @include txt-small;
+    gap: vw(5);
+    margin-top: vw(30);
+    padding-inline: vw(5);
+    padding-bottom: vw(2);
+    @include media_wide {
+      gap: 5px;
+      margin-top: 30px;
+      padding-inline: 10px 5px;
+      padding-bottom: 2px;
+    } /* PC only ------------ */
+    @include media_hover {
+      &:hover {
+        &::before {
+          transform: scaleX(0);
+          transform-origin: right;
+        } /* before ------------*/
+      }
+    } /* media_hover ------------ */
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: $c-red;
+      transition: transform 0.3s ease;
+      transform-origin: left;
+    } /* before ------------*/
+    .ico_svg {
+      width: vw(15);
+      @include media_wide {
+        width: 15px;
+      } /* PC only ------------ */
+      .svg-path01 {
+        fill: $c-red;
+      }
+    }
+  }
+}
+
+/*------------------------------------------------
+lcl-comparison
+------------------------------------------------*/
+.lcl-comparison {
+  position: relative;
+  z-index: 1;
+  background-color: $c-lightgray;
+  border-radius: 0 0 vw(60) vw(60);
+  @include media_wide {
+    border-radius: 0 0 100px 100px;
+  } /* PC only ------------ */
+  .bg_logo {
+    top: vw(-115);
+    @include bg_logo("right", #f7f7f7);
+    @include media_wide {
+      top: 130px;
+    } /* PC only ------------ */
+  }
+  .lcl-comparison__in {
+    padding-block: vw(80) vw(60);
+    @include media_wide {
+      padding-block: 280px 80px;
+    } /* PC only ------------ */
+  }
+  .lcl-comparison__cnt {
+    margin-top: vw(20);
+    @include media_wide {
+      margin-top: 40px;
+    } /* PC only ------------ */
+  }
+  .lcl-comparison__head {
+    padding-inline: vw(15);
+    text-align: left;
+    @include media_wide {
+      padding: 0;
+      text-align: center;
+    } /* PC only ------------ */
+  }
+  .lcl-comparison__tablearea {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    @include media_wide {
+      width: 950px;
+      max-width: calc(100% - 24px);
+    } /* PC only ------------ */
+  }
+  .lcl-comparison__table {
+    width: vw(350);
+    margin-inline: auto;
+    margin-top: vw(40);
+    @include media_wide {
+      padding: 0;
+      margin-top: 50px;
+      width: auto;
+    } /* PC only ------------ */
+  }
+  .lcl-comparison__note {
+    @include flex;
+    position: relative;
+    width: vw(345);
+    margin-top: vw(50);
+    padding-block: vw(37);
+    margin-left: auto;
+    margin-right: auto;
+    @include media_wide {
+      padding: 0;
+      width: 670px;
+      margin-top: 50px;
+    } /* PC only ------------ */
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: vw(27);
+      @include media_wide {
+        left: auto;
+        top: 0;
+        width: 27px;
+        height: 100%;
+      } /* PC only ------------ */
+    } /* before after ------------*/
+    &::before {
+      top: 0;
+      border-radius: vw(60) vw(60) 0 0;
+      border: 1px solid $c-red;
+      border-bottom: none;
+      @include media_wide {
+        top: auto;
+        left: 0;
+        border: 1px solid $c-red;
+        border-right: none;
+        border-radius: 60px 0 0 60px;
+      } /* PC only ------------ */
+    } /* before ------------*/
+    &::after {
+      bottom: 0;
+      border-radius: 0 0 vw(60) vw(60);
+      border: 1px solid $c-red;
+      border-top: none;
+      @include media_wide {
+        bottom: auto;
+        right: 0;
+        border: 1px solid $c-red;
+        border-radius: 0 60px 60px 0;
+        border-left: none;
+      } /* PC only ------------ */
+    } /* after ------------*/
+  }
+  .lcl-comparison__list {
+    padding: vw(10) vw(15);
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    @include media_wide {
+      padding: 17px;
+    } /* PC only ------------ */
+  }
+  .lcl-comparison__item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: vw(14);
+    @include media_wide {
+      gap: 20px;
+    } /* PC only ------------ */
+    .ico_svg {
+      width: vw(24);
+      @include media_wide {
+        width: 25px;
+      } /* PC only ------------ */
+    }
+    &:not(:first-of-type) {
+      margin-top: vw(5);
+      @include media_wide {
+        margin-top: 5px;
+      } /* PC only ------------ */
+    } /* :not(:first-of-type) ------------ */
+  }
+  .lcl-comparison-case {
+    margin-left: auto;
+    width: vw(345);
+    margin-top: vw(50);
+    padding: 0;
+    margin-right: auto;
+    @include media_wide {
+      margin-top: 50px;
+      padding-inline: 12px;
+      width: 100%;
+      max-width: 1260px;
+    } /* PC only ------------ */
+  }
+  .lcl-comparison-case__in {
+    background-color: $c-white;
+    border-radius: vw(30);
+    padding: vw(30) vw(15);
+    @include media_wide {
+      border-radius: 80px;
+      padding: 60px 0;
+    } /* PC only ------------ */
+  }
+  .lcl-comparison-case__cnt {
+    width: 100%;
+    margin-top: vw(30);
+    margin-left: auto;
+    margin-right: auto;
+    @include media_wide {
+      width: 950px;
+      margin-top: 30px;
+      max-width: calc(100% - 40px);
+    } /* PC only ------------ */
+  }
+  .lcl-comparison-case__sep {
+    @include grid(1, 10);
+    @include media_wide {
+      @include grid(2, 30);
+    } /* PC only ------------ */
+  }
+}
+
+/*------------------------------------------------
+lcl-insta
+------------------------------------------------*/
+.lcl-insta {
+  padding-top: vw(60);
+  @include media_wide {
+    padding-top: 80px;
+  } /* PC only ------------ */
+  .lcl-insta__link {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    margin-left: auto;
+    width: vw(345);
+    padding: vw(20) vw(5);
+    border-radius: vw(15);
+    margin-right: auto;
+    background: linear-gradient(87deg, #fe0a68 1.21%, #d54fe1 99.26%);
+    box-shadow: 2px 4px 15px 0 rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+    @include media_wide {
+      border-radius: 20px;
+      width: 747px;
+      padding: 20px;
+    } /* PC only ------------ */
+    @include media_hover {
+      &:hover {
+        transform: scale(1.05);
+        .lcl-insta__btn {
+          background: transparent;
+          color: $c-white;
+          .svg-path {
+            fill: $c-white;
+          }
+        }
+      }
+    }
+    .ic_insta {
+      width: vw(30);
+      @include media_wide {
+        width: 35px;
+      } /* PC only ------------ */
+    }
+  }
+  .lcl-insta__area {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+    @include paya(30, 42, $c-white, 1, 20);
+    margin-left: auto;
+    margin-right: auto;
+    &::before,
+    &::after {
+      top: auto;
+      bottom: 0;
+    } /* before ------------*/
+    @include media_wide {
+      @include paya(48, 80, $c-white, 1, 20);
+    } /* PC only ------------ */
+  }
+  .lcl-insta__linktxt {
+    text-align: center;
+    margin-top: vw(5);
+    color: $c-white;
+    @include title-04;
+    @include media_wide {
+      margin-top: 5px;
+    } /* PC only ------------ */
+    span {
+      @include title-03;
+    }
+  }
+  .lcl-insta__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $c-black;
+    background-color: $c-white;
+    border: 1px solid $c-white;
+    gap: vw(7);
+    width: vw(126);
+    height: vw(35);
+    margin-top: vw(15);
+    border-radius: 1000vw;
+    transition:
+      background 0.3s ease,
+      color 0.3s ease;
+    @include media_wide {
+      gap: 7px;
+      width: 186px;
+      height: 50px;
+      margin-top: 15px;
+    } /* PC only ------------ */
+    .ico_svg {
+      width: vw(15);
+      height: vw(15);
+      @include media_wide {
+        width: 20px;
+        height: 20px;
+      } /* PC only ------------ */
+      .svg-path {
+        fill: $c-red;
+      }
+    }
+  }
+}
+
+/*------------------------------------------------
+lcl-faq
+------------------------------------------------*/
+.lcl-faq {
+  position: relative;
+  z-index: 1;
+  .bg_logo {
+    top: vw(19);
+    @include bg_logo("left", #f7f7f7);
+    @include media_wide {
+      top: -80px;
+    } /* PC only ------------ */
+  }
+  .lcl-faq__in {
+    margin-left: auto;
+    margin-right: auto;
+    padding: vw(60) vw(15) vw(90);
+    @include media_wide {
+      max-width: 1260px;
+      padding: 80px 12px 289px;
+    } /* PC only ------------ */
+  }
+  .lcl-faq__cnt {
+    margin-top: vw(20);
+    @include media_wide {
+      margin-top: 40px;
+    } /* PC only ------------ */
+  }
+  .lcl-faq__wrap {
+    margin-top: vw(50);
+    @include media_wide {
+      margin-top: 50px;
+    } /* PC only ------------ */
+  }
+  .lcl-faq__details {
+    &:not(:first-of-type) {
+      margin-top: vw(10);
+      @include media_wide {
+        margin-top: 10px;
+      } /* PC only ------------ */
+    } /* :not(:first-of-type) ------------ */
+    &.details--open {
+      .lcl-faq__summary {
+        border-radius: vw(15) vw(15) 0 0;
+        background-color: $c-red;
+        @include media_wide {
+          border-radius: 20px 20px 0 0;
+        } /* PC only ------------ */
+      }
+      .lcl-faq__main {
+        border-radius: 0 0 vw(15) vw(15);
+        @include media_wide {
+          border-radius: 0 0 20px 20px;
+        } /* PC only ------------ */
+      }
+      .lcl-faq__summary {
+        &::after {
+          transform: rotate(0deg);
+        } /* after ------------*/
+      }
+    }
+  }
+  .lcl-faq__summary {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: $c-gold;
+    color: $c-white;
+    @include title-04;
+    transition:
+      border-radius 0.3s ease,
+      background-color 0.3s ease;
+    gap: vw(5);
+    padding: vw(15);
+    padding-right: vw(55);
+    border-radius: vw(15);
+    @include media_wide {
+      gap: 10px;
+      padding: 20px 60px 20px 30px;
+      border-radius: 20px;
+    } /* PC only ------------ */
+    @include media_hover {
+      &:hover {
+        background-color: $c-red;
+      }
+    } /* media_hover ------------ */
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      background-color: $c-white;
+      transition: transform 0.3s ease;
+      right: vw(18);
+      width: vw(13);
+      height: vw(2);
+      @include media_wide {
+        right: 36px;
+        width: 18px;
+        height: 2px;
+      } /* PC only ------------ */
+    } /* before after ------------*/
+    &::after {
+      transform: rotate(-90deg);
+    } /* after ------------*/
+  }
+  .lcl-faq__icon {
+    display: block;
+    color: $c-white;
+    @include ff-worksans;
+    font-weight: 400;
+    width: vw(20);
+    @include fz(16);
+    line-height: 1.6;
+    letter-spacing: 0.03em;
+    @include media_wide {
+      width: 25px;
+      @include fz(20);
+    } /* PC only ------------ */
+  }
+  .lcl-faq__main {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: $c-lightgray;
+    padding: vw(20) vw(15);
+    gap: vw(10);
+    @include media_wide {
+      gap: 10px;
+      padding: 20px 30px;
+    } /* PC only ------------ */
+    .lcl-faq__icon {
+      color: $c-red;
+    }
+  }
+}
+
+/*------------------------------------------------
+lcl-reason
+------------------------------------------------*/
+.lcl-reason {
+  position: relative;
+  z-index: 1;
+  .bg_logo {
+    @include media_narrow {
+      right: vw(-160);
+      bottom: vw(-153);
+    } /* SP only ------------ */
+    @include bg_logo("right", #f7f7f7);
+    @include media_wide {
+      bottom: 100px;
+    } /* PC only ------------ */
+  }
+  .lcl-reason__in {
+    position: relative;
+    padding: vw(90) vw(15) vw(60);
+    @include media_wide {
+      padding-block: 280px 80px;
+    } /* PC only ------------ */
+  }
+  .lcl-reason__sub {
+    position: relative;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: $c-gold;
+    border-radius: 100vw;
+    color: $c-white;
+    @include title-04;
+    padding: vw(10) vw(30);
+    @include media_wide {
+      padding: 10px 60px;
+    } /* PC only ------------ */
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: vw(-15);
+      width: vw(19);
+      height: vw(16);
+      margin: auto;
+      clip-path: polygon(0 0, 100% 0, 50% 100%);
+      background-color: $c-gold;
+      @include media_wide {
+        bottom: -16px;
+        width: 19px;
+        height: 17px;
+      } /* PC only ------------ */
+    } /* before ------------*/
+  }
+  .lcl-reason__logo {
+    display: block;
+    width: vw(120);
+    margin-top: vw(25);
+    margin-left: auto;
+    margin-right: auto;
+    @include media_wide {
+      width: 150px;
+      margin-top: 25px;
+    } /* PC only ------------ */
+  }
+}
+
+.lcl-info {
+  position: relative;
+  z-index: 1;
+  background-color: $c-lightgray;
+  border-radius: vw(60) vw(60) 0 0;
+  @include media_wide {
+    border-radius: 100px 100px 0 0;
+  } /* PC only ------------ */
+  .lcl-info__in {
+    padding: vw(40) vw(15);
+    @include media_wide {
+      padding: 60px 0;
+    } /* PC only ------------ */
+  }
+  .lcl-info__cnt {
+    margin-top: vw(20);
+    @include media_wide {
+      margin-top: 50px;
+    } /* PC only ------------ */
+  }
+}
+
+/*------------------------------------------------
+lcl-contact
+------------------------------------------------*/
+.lcl-contact {
+  background: linear-gradient(180deg, #f7915e 0.96%, #e60012 74.52%);
+  .lcl-contact__in {
+    margin-left: auto;
+    margin-right: auto;
+    padding: vw(40) vw(15);
+    @include media_wide {
+      max-width: 1260px;
+      padding: 60px 12px;
+    } /* PC only ------------ */
+  }
+  .lcl-contact__sep {
+    @include grid(1, 20);
+    margin-top: vw(20);
+    @include media_wide {
+      @include grid(3, 12);
+      margin-top: 40px;
+    } /* PC only ------------ */
+  }
+  .lcl-contact__link {
+    transition: opacity 0.25s ease;
+    @include media_hover {
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+  .lcl-contact__sub {
+    display: block;
+    position: relative;
+    z-index: 1;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 100vw;
+    background-color: $c-gold;
+    color: $c-white;
+    padding: vw(5) vw(40);
+    line-height: 1.5;
+    text-align: center;
+    font-weight: 400;
+    @include fz(14);
+    letter-spacing: 0.03em;
+    @include media_wide {
+      padding: 5px 30px;
+      line-height: 1.6;
+    } /* PC only ------------ */
+  }
+  .lcl-contact__area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: vw(10);
+    height: vw(90);
+    margin-top: vw(-15);
+    border-radius: vw(15);
+    width: 100%;
+    background-color: $c-white;
+    @include media_wide {
+      gap: 15px;
+      height: 120px;
+      margin-top: -17px;
+      padding-inline: 10px;
+      border-radius: 15px;
+    } /* PC only ------------ */
+  }
+  .lcl-contact__detail {
+    display: inline-block;
+    @include media_wide {
+      margin-top: -2px;
+    } /* PC only ------------ */
+  }
+  .lcl-contact__icon {
+    @include flex;
+    width: vw(50);
+    height: vw(50);
+    background-color: $c-lightgray;
+    border-radius: 50%;
+    @include media_wide {
+      width: 60px;
+      height: 60px;
+    } /* PC only ------------ */
+    &.lcl-contact__icon--line {
+      background-color: transparent;
+    }
+    &.lcl-contact__icon--mail {
+      .ico_svg {
+        width: vw(30);
+        @include media_wide {
+          width: 34px;
+        } /* PC only ------------ */
+        .svg-path {
+          fill: $c-red;
+        }
+      }
+    }
+    &.lcl-contact__icon--cam {
+      .ico_svg {
+        width: vw(30);
+        @include media_wide {
+          width: 34px;
+        } /* PC only ------------ */
+        .svg-path {
+          fill: $c-gold;
+        }
+      }
+    }
+  }
+}
