@@ -390,7 +390,7 @@
         <section
             class="relative overflow-hidden rounded-t-[42px] bg-[#f0f0f0] px-5 pb-[88px] pt-[76px] md:rounded-t-[80px] md:px-8 md:pb-[96px] md:pt-[78px]"
             aria-labelledby="blog-heading"><img
-                src="https://anyaku-test-52iu3h485-1111anyaku-7096s-projects.vercel.app/images/blog/watermark-white.png"
+                src="/recommend/futari-tsumugi/common/images/svg/bg_logo.svg"
                 alt="" aria-hidden="true"
                 class="pointer-events-none absolute right-[-255px] top-11 hidden w-[520px] opacity-[0.52] md:block lg:right-[-200px] lg:w-[620px]" />
             <div class="relative mx-auto max-w-[1012px]">
@@ -493,7 +493,7 @@
         <section
             class="relative z-10 -mt-[42px] overflow-hidden rounded-t-[42px] bg-white px-5 pb-[78px] pt-[76px] md:rounded-t-[80px] md:px-8 md:pb-[86px] md:pt-[78px]"
             aria-labelledby="blog-heading-branding"><img
-                src="https://anyaku-test-52iu3h485-1111anyaku-7096s-projects.vercel.app/images/blog/watermark-cream.png"
+                src="/recommend/futari-tsumugi/images/blog/watermark-cream.png"
                 alt="" aria-hidden="true"
                 class="pointer-events-none absolute left-[-330px] top-[64px] hidden w-[610px] opacity-[0.72] md:block" />
             <div class="relative mx-auto max-w-[1012px]">
@@ -576,7 +576,7 @@
                         </article>
                     </div>
                 </div>
-                <div class="mt-11 flex items-center justify-center"><a href="https://note.com/futari_tsumugi"
+                <div class="mt-11 flex items-center justify-center"><a href="https://note.com/futari_tsumugi/m/mf2d28c48d139"
                         target="_blank" rel="noopener noreferrer"
                         class="inline-flex min-h-[44px] w-[174px] items-center justify-center gap-1 rounded-full bg-brand-ink px-6 text-[14px] text-white transition-colors duration-200 ease-out hover:bg-[#ab892d] motion-reduce:transition-none"><span>ブログ記事一覧</span><svg
                             xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none"
@@ -587,14 +587,16 @@
             </div>
         </section>
         </div>
-        <!-- [NOTE-SECTIONS] note連携: サーバー側プロキシ(?note_feed=)経由でnoteを取得しカードを描画。
-             ・ランキング = noteマガジン(m337eb74a473c) / ブログ = 最新記事
-             ・note APIはCORS非対応のため、必ずサーバー側(index.asp / preview server)で中継します。
-             ・取得できない環境では直下のベタ書きカードをそのままフォールバック表示します。
-             ・IntersectionObserverで元サイトのフェードイン挙動を再現します。 -->
+        <!-- [NOTE-SECTIONS] note連携:
+             ・同一オリジンの note-feed.asp が note.com API をサーバー側で代理取得します
+               (note API は CORS 非対応のためブラウザから直接取得できません)。
+             ・ランキング = マガジン m337eb74a473c / おすすめ = マガジン mf2d28c48d139
+             ・取得できない場合は上のベタ書きカードをそのままフォールバック表示します。
+             ・IntersectionObserver でフェードイン表示します。 -->
         <script>
           (function () {
             var NOTE_USER = 'futari_tsumugi';
+            var FEED_ENDPOINT = '/recommend/futari-tsumugi/note-feed.asp?feed=';
             var RANK_BADGE = [
               'from-[#ffd200] to-[#f6bd00] shadow-[0_4px_9px_rgba(210,153,0,0.35)]',
               'from-[#d6d6d6] to-[#aeb0b4] shadow-[0_4px_9px_rgba(120,120,120,0.28)]',
@@ -697,7 +699,7 @@
               var opts = { headers: { 'Accept': 'application/json' } };
               var ctrl = ('AbortController' in window) ? new AbortController() : null;
               if (ctrl) { opts.signal = ctrl.signal; setTimeout(function () { ctrl.abort(); }, 6000); }
-              return fetch('?note_feed=' + type, opts).then(function (r) {
+              return fetch(FEED_ENDPOINT + type, opts).then(function (r) {
                 var ct = r.headers.get('content-type') || '';
                 if (!r.ok || ct.indexOf('application/json') === -1) throw new Error('not json');
                 return r.json();
@@ -720,7 +722,7 @@
 
             function init() {
               hydrate('[data-note-grid="ranking"]', 'ranking', true, 'data.section.contents');
-              hydrate('[data-note-grid="blog"]', 'blog', false, 'data.contents');
+              hydrate('[data-note-grid="blog"]', 'blog', false, 'data.section.contents');
             }
 
             if (document.readyState === 'loading') {

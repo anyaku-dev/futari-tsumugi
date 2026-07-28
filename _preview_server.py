@@ -1,9 +1,9 @@
 """
 プレビュー用ローカルサーバー
 /recommend/futari-tsumugi/ へのリクエストをルートに書き換えて配信します。
-また ?note_feed=ranking|blog へのリクエストは note API をサーバー側で中継します
-（note API は CORS 非対応のため、ブラウザから直接取得できないための措置。
- 本番 .asp でも同等のサーバー側中継が必要です）。
+また note-feed.asp?feed=ranking|blog へのリクエストは note API をサーバー側で中継し、
+本番の note-feed.asp （Classic ASP）と同じ振る舞いをローカルで再現します。
+（note API は CORS 非対応のため、ブラウザから直接取得できないための措置）
 """
 import os
 import urllib.request
@@ -14,17 +14,20 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 PORT = 8080
 
 # note フィード取得先（ホワイトリスト固定 = 任意URL指定は不可）
+# ranking = 「ランキング上位記事」マガジン / blog = 「スタッフおすすめ記事」マガジン
 NOTE_FEEDS = {
     'ranking': 'https://note.com/api/v1/layout/magazine/m337eb74a473c/section?page=1',
-    'blog': 'https://note.com/api/v2/creators/futari_tsumugi/contents?kind=note&page=1',
+    'blog': 'https://note.com/api/v1/layout/magazine/mf2d28c48d139/section?page=1',
 }
 
 
 class RewriteHandler(SimpleHTTPRequestHandler):
     def do_GET(self):
-        feed = parse_qs(urlparse(self.path).query).get('note_feed', [None])[0]
-        if feed is not None:
-            self.handle_note_feed(feed)
+        parsed = urlparse(self.path)
+        query = parse_qs(parsed.query)
+        # 本番と同じ note-feed.asp?feed=... 形式
+        if parsed.path.endswith('/note-feed.asp'):
+            self.handle_note_feed(query.get('feed', [None])[0])
             return
         super().do_GET()
 
@@ -34,7 +37,7 @@ class RewriteHandler(SimpleHTTPRequestHandler):
             self.send_response(400)
             self.send_header('Content-Type', 'application/json; charset=utf-8')
             self.end_headers()
-            self.wfile.write(b'{"error":"bad note_feed"}')
+            self.wfile.write(b'{"error":"bad feed"}')
             return
         try:
             req = urllib.request.Request(url, headers={
