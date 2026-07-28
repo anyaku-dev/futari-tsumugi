@@ -34,6 +34,13 @@
 .note-embed a { color: inherit; text-decoration: none; }
 .note-embed img { max-width: 100%; }
 
+/* --- 背景ロゴ(透かし) ---
+ * 既存の common/images/svg/bg_logo.svg と同一のパスをインライン展開しているため、
+ * セクションごとに fill で色を個別指定できます。
+ * 既定は既存サイトと同じ薄いグレー(#f7f7f7)。 */
+.note-embed .note-watermark { height: auto; }
+.note-embed .note-watermark--cream .svg-elm { fill: var(--brand-cream); }
+
 /* --- Tailwind 内部変数の初期化 --- */
 /*   transform(translateによる中央寄せ) / gradient / shadow の
  *   ユーティリティが依存する --tw-* 変数を初期化。
