@@ -170,6 +170,7 @@
 .note-embed .text-brand-ink { --tw-text-opacity:1;color:rgb(50 55 67/var(--tw-text-opacity,1)) }
 .note-embed .text-white { --tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity,1)) }
 .note-embed .opacity-0 { opacity:0 }
+.note-embed .opacity-50 { opacity:.5 }
 .note-embed .opacity-\[0\.52\] { opacity:.52 }
 .note-embed .opacity-\[0\.72\] { opacity:.72 }
 .note-embed .shadow-\[0_4px_9px_rgba\(120\2c 120\2c 120\2c 0\.28\)\] { --tw-shadow:0 4px 9px rgba(120,120,120,0.28);--tw-shadow-colored:0 4px 9px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow) }
