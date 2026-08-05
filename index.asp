@@ -408,6 +408,30 @@
                         <article
                             class="flex h-full min-h-[448px] flex-col overflow-hidden rounded-[12px] bg-white shadow-[0_6px_18px_rgba(0,0,0,0.18)]">
                             <div class="relative aspect-[323/170] w-full overflow-hidden"><img
+                                    src="https://assets.st-note.com/production/uploads/images/296783427/rectangle_large_type_2_deb3dd05acea23a29adb90e246bc9188.jpeg?width=800"
+                                    alt="" class="h-full w-full object-cover" /><span
+                                    class="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/15 via-black/0 to-black/5"
+                                    aria-hidden="true"></span></div>
+                            <div class="flex flex-1 flex-col px-5 pb-6 pt-5 md:px-[22px]"><time
+                                    class="text-[13px] tracking-[0.03em] text-[#9a9a9a]">2026.07.27</time>
+                                <h3
+                                    class="mt-4 line-clamp-2 min-h-[58px] text-[17px] font-bold leading-[1.7] text-brand-ink md:text-[18px]">
+                                    婚活で2回目デートに進む人の特徴　脈ありサインと当日の過ごし方</h3>
+                                <p
+                                    class="mb-6 mt-3 line-clamp-3 min-h-[78px] text-[14px] leading-[1.85] text-brand-ink md:text-[15px]">
+                                    帰宅して上着を脱ぎ、スマートフォンを見ると、相手から「今日は楽しかったです。また行きましょう」とメッセージが届いている。 嬉しい。けれど、その言葉を何度か読み返すうちに、「本当にまた会いたいという意味なのかな」「社交的な言葉だったらどうしよう」と、返信の速さまで気になってくる。 …</p><a
+                                    href="https://note.com/futari_tsumugi/n/n726d9f8536fd" target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="mt-auto inline-flex min-h-[41px] w-[136px] items-center justify-center rounded-full bg-brand-red text-[13px] font-bold text-white transition-[background-color,transform] duration-200 ease-out hover:scale-[1.04] hover:bg-[#ab892d] motion-reduce:transition-none motion-reduce:hover:scale-100">記事ページへ</a>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="relative pt-8 transition-opacity duration-700 ease-out motion-reduce:opacity-100 motion-reduce:transition-none opacity-0"
+                        style="transition-delay:120ms"><span aria-label="2位"
+                            class="absolute left-1/2 top-4 z-20 grid h-[58px] w-[58px] -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full border-[3px] border-white bg-gradient-to-br text-[28px] font-bold leading-none text-white md:h-[64px] md:w-[64px] md:text-[30px] from-[#d6d6d6] to-[#aeb0b4] shadow-[0_4px_9px_rgba(120,120,120,0.28)]">2</span>
+                        <article
+                            class="flex h-full min-h-[448px] flex-col overflow-hidden rounded-[12px] bg-white shadow-[0_6px_18px_rgba(0,0,0,0.18)]">
+                            <div class="relative aspect-[323/170] w-full overflow-hidden"><img
                                     src="https://assets.st-note.com/production/uploads/images/294854807/rectangle_large_type_2_385fdd1a6e7174e773efe5e86ed1b479.jpeg?width=800"
                                     alt="" class="h-full w-full object-cover" /><span
                                     class="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/15 via-black/0 to-black/5"
@@ -419,7 +443,7 @@
                                     婚活デートの場所選び　初対面でも会話が弾むおすすめプラン</h3>
                                 <p
                                     class="mb-6 mt-3 line-clamp-3 min-h-[78px] text-[14px] leading-[1.85] text-brand-ink md:text-[15px]">
-                                    「では、行く場所はどこにしましょうか？」 会う予定が決まり、メッセージ画面を閉じたあと。地図アプリと予約サイトを行き来しながら、「静かすぎると緊張しそう」「長時間になったら疲れないかな」と迷ってしまうことはありませんか。</p><a
+                                    「では、行く場所はどこにしましょうか？」 会う予定が決まり、メッセージ画面を閉じたあと。地図アプリと予約サイトを行き来しながら、「静かすぎると緊張しそう」「長時間になったら疲れないかな」と迷ってしまうことはありませんか。 候補を探すほど、「ここは騒がしそう」「歩き回るのは大変かも…</p><a
                                     href="https://note.com/futari_tsumugi/n/n7ee9de40d58b" target="_blank"
                                     rel="noopener noreferrer"
                                     class="mt-auto inline-flex min-h-[41px] w-[136px] items-center justify-center rounded-full bg-brand-red text-[13px] font-bold text-white transition-[background-color,transform] duration-200 ease-out hover:scale-[1.04] hover:bg-[#ab892d] motion-reduce:transition-none motion-reduce:hover:scale-100">記事ページへ</a>
@@ -427,8 +451,8 @@
                         </article>
                     </div>
                     <div class="relative pt-8 transition-opacity duration-700 ease-out motion-reduce:opacity-100 motion-reduce:transition-none opacity-0"
-                        style="transition-delay:120ms"><span aria-label="2位"
-                            class="absolute left-1/2 top-4 z-20 grid h-[58px] w-[58px] -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full border-[3px] border-white bg-gradient-to-br text-[28px] font-bold leading-none text-white md:h-[64px] md:w-[64px] md:text-[30px] from-[#d6d6d6] to-[#aeb0b4] shadow-[0_4px_9px_rgba(120,120,120,0.28)]">2</span>
+                        style="transition-delay:240ms"><span aria-label="3位"
+                            class="absolute left-1/2 top-4 z-20 grid h-[58px] w-[58px] -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full border-[3px] border-white bg-gradient-to-br text-[28px] font-bold leading-none text-white md:h-[64px] md:w-[64px] md:text-[30px] from-[#df9a45] to-[#c97c2f] shadow-[0_4px_9px_rgba(180,104,34,0.32)]">3</span>
                         <article
                             class="flex h-full min-h-[448px] flex-col overflow-hidden rounded-[12px] bg-white shadow-[0_6px_18px_rgba(0,0,0,0.18)]">
                             <div class="relative aspect-[323/170] w-full overflow-hidden"><img
@@ -443,32 +467,8 @@
                                     婚活デートで盛り上がる会話の話題　沈黙を防ぐ準備のコツ</h3>
                                 <p
                                     class="mb-6 mt-3 line-clamp-3 min-h-[78px] text-[14px] leading-[1.85] text-brand-ink md:text-[15px]">
-                                    デート前日の夜。ベッドやソファでスマートフォンを見ながら、「明日、何を話そう」と検索している。話題をメモしておかないと、沈黙してしまいそうで落ち着かない。</p><a
+                                    デート前日の夜。ベッドやソファでスマートフォンを見ながら、「明日、何を話そう」と検索している。話題をメモしておかないと、沈黙してしまいそうで落ち着かない。 でも、質問をたくさん用意すると、今度は「質問攻めみたいになったらどうしよう」と心配になる。 婚活デートの会話は、話題の数だけ…</p><a
                                     href="https://note.com/futari_tsumugi/n/n5b35cbd30fe3" target="_blank"
-                                    rel="noopener noreferrer"
-                                    class="mt-auto inline-flex min-h-[41px] w-[136px] items-center justify-center rounded-full bg-brand-red text-[13px] font-bold text-white transition-[background-color,transform] duration-200 ease-out hover:scale-[1.04] hover:bg-[#ab892d] motion-reduce:transition-none motion-reduce:hover:scale-100">記事ページへ</a>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="relative pt-8 transition-opacity duration-700 ease-out motion-reduce:opacity-100 motion-reduce:transition-none opacity-0"
-                        style="transition-delay:240ms"><span aria-label="3位"
-                            class="absolute left-1/2 top-4 z-20 grid h-[58px] w-[58px] -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full border-[3px] border-white bg-gradient-to-br text-[28px] font-bold leading-none text-white md:h-[64px] md:w-[64px] md:text-[30px] from-[#df9a45] to-[#c97c2f] shadow-[0_4px_9px_rgba(180,104,34,0.32)]">3</span>
-                        <article
-                            class="flex h-full min-h-[448px] flex-col overflow-hidden rounded-[12px] bg-white shadow-[0_6px_18px_rgba(0,0,0,0.18)]">
-                            <div class="relative aspect-[323/170] w-full overflow-hidden"><img
-                                    src="https://assets.st-note.com/production/uploads/images/288651279/rectangle_large_type_2_d74ed3c7e84a38af75afb6ef3fe31afa.jpeg?width=800"
-                                    alt="" class="h-full w-full object-cover" /><span
-                                    class="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/15 via-black/0 to-black/5"
-                                    aria-hidden="true"></span></div>
-                            <div class="flex flex-1 flex-col px-5 pb-6 pt-5 md:px-[22px]"><time
-                                    class="text-[13px] tracking-[0.03em] text-[#9a9a9a]">2026.07.02</time>
-                                <h3
-                                    class="mt-4 line-clamp-2 min-h-[58px] text-[17px] font-bold leading-[1.7] text-brand-ink md:text-[18px]">
-                                    じっくりご相談で選ばれた喜び✨</h3>
-                                <p
-                                    class="mb-6 mt-3 line-clamp-3 min-h-[78px] text-[14px] leading-[1.85] text-brand-ink md:text-[15px]">
-                                    フレッシュな２０代男性会員様ご入会されました！ 20代のとっても爽やかな男性が、ふたり紬にご入会いただきました🎉</p><a
-                                    href="https://note.com/futari_tsumugi/n/nb0306cf7eb84" target="_blank"
                                     rel="noopener noreferrer"
                                     class="mt-auto inline-flex min-h-[41px] w-[136px] items-center justify-center rounded-full bg-brand-red text-[13px] font-bold text-white transition-[background-color,transform] duration-200 ease-out hover:scale-[1.04] hover:bg-[#ab892d] motion-reduce:transition-none motion-reduce:hover:scale-100">記事ページへ</a>
                             </div>
