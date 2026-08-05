@@ -54,6 +54,9 @@
     <!-- #include virtual="/smartphone/_common/head/head.html" -->
     <% End If %>
     <link rel="stylesheet" href="css/index.css" />
+    <!-- [NOTE-SECTIONS] 「記事ランキングTOP3」「スタッフおすすめ記事」専用CSS
+         .note-embed 配下にスコープ化済みのため、既存デザインには影響しません。 -->
+    <link rel="stylesheet" href="/recommend/futari-tsumugi/css/note-sections.css" />
   </head>
 
 <body>
@@ -366,6 +369,376 @@
             </a>
           </li>
         </ul>
+
+        <!-- ============================================================ -->
+        <!-- [NOTE-SECTIONS-START] 記事ランキングTOP3 / スタッフおすすめ記事  -->
+        <!--   スタイル: css/note-sections.css (.note-embed にスコープ化済)  -->
+        <!--   データ  : note-feed.asp 経由で note.com から自動取得          -->
+        <!--   ランキング     = noteマガジン m337eb74a473c                   -->
+        <!--   スタッフおすすめ = noteマガジン mf2d28c48d139                 -->
+        <!-- ============================================================ -->
+        <div class="note-embed">
+        <!-- ▼ 記事ランキング TOP3 -->
+        <section
+            class="relative overflow-hidden rounded-t-[42px] bg-[#f0f0f0] px-5 pb-[88px] pt-[76px] md:rounded-t-[80px] md:px-8 md:pb-[96px] md:pt-[78px]"
+            aria-labelledby="blog-heading">
+            <svg class="note-watermark pointer-events-none absolute right-[-255px] top-11 hidden w-[520px] opacity-[0.52] md:block lg:right-[-200px] lg:w-[620px]"
+                viewBox="0 0 565 572" fill="none" aria-hidden="true" focusable="false"
+                xmlns="http://www.w3.org/2000/svg">
+                <path class="svg-elm" fill="#F7F7F7" d="M209.324 316.921C210.514 312.158 211.492 307.315 212.02 302.337C212.443 298.457 212.708 294.523 212.708 290.509V215.34H252.045V194.6C252.045 190.613 252.257 186.679 252.627 182.772H212.708V107.656C212.708 66.2316 245.991 32.5404 286.915 32.5404C315.863 32.5404 340.951 49.4529 353.165 74.0188C355.385 78.461 357.157 83.1708 358.478 88.0679C360.144 94.3298 361.122 100.886 361.122 107.683C361.122 112.152 360.673 116.487 359.932 120.742C358.954 126.308 357.447 131.687 355.332 136.772C347.798 154.835 333.496 169.312 315.651 176.939C313.959 182.532 313.034 188.472 313.034 194.627V211.914C349.913 202.441 379.099 173.487 389.303 136.504C390.572 131.848 391.55 127.084 392.211 122.214C392.846 117.451 393.295 112.634 393.295 107.683C393.295 101.207 392.634 94.9185 391.55 88.7637C390.625 83.4919 389.33 78.354 387.664 73.3498C373.389 30.7743 333.655 0 286.888 0C228.252 0 180.535 48.3022 180.535 107.656V182.826H106.327C47.6914 182.879 0 231.155 0 290.509C0 337.848 30.4019 378.069 72.4359 392.439C71.8279 387.515 71.4842 382.538 71.4842 377.453C71.4842 370.683 72.0658 364.046 73.0968 357.57C48.8546 345.207 32.1203 319.838 32.1203 290.509C32.1203 249.084 65.4038 215.393 106.327 215.393H180.535V255.801V290.509C180.535 294.978 180.085 299.313 179.345 303.568C178.367 309.134 176.86 314.513 174.745 319.597C167.211 337.661 152.908 352.165 135.064 359.765C133.372 365.357 132.447 371.298 132.447 377.453C132.447 383.233 133.293 388.826 134.8 394.125C171.361 383.822 199.965 354.252 209.297 316.921H209.324Z" />
+                <path class="svg-elm" fill="#F7F7F7" d="M492.589 179.615C493.197 184.539 493.541 189.516 493.541 194.601C493.541 201.371 492.959 208.008 491.928 214.484C516.171 226.847 532.905 252.215 532.905 281.545C532.905 322.97 499.621 356.661 458.698 356.661H384.491V316.253V281.545C384.491 277.076 384.94 272.741 385.68 268.486C386.658 262.92 388.165 257.541 390.28 252.456C397.815 234.393 412.117 219.916 429.961 212.289C431.653 206.696 432.578 200.756 432.578 194.574C432.578 188.794 431.733 183.201 430.226 177.902C393.664 188.205 365.06 217.775 355.728 255.106C354.538 259.869 353.56 264.713 353.031 269.69C352.608 273.57 352.344 277.504 352.344 281.518V356.687H313.006V377.427C313.006 381.414 312.795 385.348 312.425 389.255H352.344V464.371C352.344 505.795 319.06 539.487 278.137 539.487C249.189 539.487 224.101 522.574 211.887 498.008C209.666 493.566 207.895 488.856 206.573 483.959C204.908 477.697 203.93 471.141 203.93 464.344C203.93 459.875 204.379 455.54 205.119 451.285C206.097 445.719 207.604 440.34 209.719 435.255C217.253 417.192 231.556 402.688 249.4 395.088C251.092 389.495 252.017 383.555 252.017 377.4V360.113C215.139 369.586 185.953 398.54 175.748 435.523C174.479 440.179 173.501 444.943 172.84 449.813C172.206 454.576 171.756 459.393 171.756 464.344C171.756 470.82 172.417 477.108 173.501 483.263C174.426 488.535 175.722 493.673 177.387 498.677C191.584 541.226 231.318 572 278.084 572C336.72 572 384.438 523.698 384.438 464.344V389.174H458.645C517.281 389.148 564.999 340.845 564.999 281.491C564.999 234.152 534.623 193.932 492.563 179.561L492.589 179.615Z" />
+                <path class="svg-elm" fill="#F7F7F7" d="M89.8835 348.633C88.6146 353.289 87.6364 358.052 86.9755 362.923C86.341 367.686 85.8916 372.503 85.8916 377.454C85.8916 383.93 86.5525 390.218 87.6364 396.373C88.5617 401.645 89.8571 406.783 91.5226 411.787C102.124 443.551 126.947 468.652 158.301 479.383C157.693 474.459 157.349 469.482 157.349 464.398C157.349 457.627 157.931 450.991 158.962 444.515C144.713 437.263 133.107 425.515 125.943 411.091C123.722 406.649 121.951 401.939 120.629 397.042C118.964 390.78 117.985 384.224 117.985 377.454C117.985 372.985 118.435 368.649 119.175 364.395C120.153 358.828 121.66 353.45 123.775 348.365C131.309 330.302 145.612 315.798 163.456 308.198C165.148 302.605 166.073 296.664 166.073 290.51V273.222C129.195 282.696 100.009 311.65 89.8042 348.633H89.8835Z" />
+                <path class="svg-elm" fill="#F7F7F7" d="M269.81 168.188C268.621 172.952 267.642 177.795 267.114 182.773C266.691 186.653 266.426 190.587 266.426 194.601V269.77H227.089V290.509C227.089 294.497 226.877 298.43 226.507 302.337H266.426V342.772V377.48C266.426 381.949 265.977 386.284 265.237 390.539C264.259 396.105 262.752 401.484 260.637 406.569C253.102 424.632 238.8 439.136 220.956 446.736C219.264 452.329 218.338 458.269 218.338 464.424C218.338 470.204 219.184 475.797 220.691 481.096C257.253 470.793 285.831 441.223 295.189 403.893C296.379 399.129 297.357 394.286 297.886 389.308C298.309 385.428 298.573 381.494 298.573 377.48V302.311H337.91V281.572C337.91 277.584 338.122 273.65 338.492 269.743H298.573V229.309V194.601C298.573 190.132 299.022 185.797 299.763 181.542C300.741 175.976 302.248 170.597 304.363 165.512C311.897 147.449 326.199 132.972 344.044 125.345C345.736 119.752 346.661 113.812 346.661 107.657C346.661 101.877 345.815 96.2836 344.308 90.9851C307.747 101.288 279.169 130.858 269.81 168.188Z" />
+                <path class="svg-elm" fill="#F7F7F7" d="M477.388 175.681C476.462 170.41 475.167 165.272 473.501 160.267C462.9 128.503 438.077 103.402 406.723 92.6711C407.331 97.595 407.675 102.572 407.675 107.657C407.675 114.427 407.093 121.064 406.062 127.54C420.311 134.792 431.917 146.539 439.081 160.963C441.302 165.405 443.073 170.115 444.395 175.012C446.06 181.274 447.039 187.831 447.039 194.601C447.039 199.07 446.589 203.405 445.849 207.66C444.871 213.226 443.364 218.605 441.249 223.689C433.715 241.752 419.412 256.23 401.568 263.856C399.876 269.449 398.951 275.39 398.951 281.545V298.832C435.83 289.359 465.042 260.404 475.22 223.422C476.489 218.765 477.467 214.002 478.128 209.132C478.762 204.368 479.212 199.552 479.212 194.601C479.212 188.125 478.551 181.836 477.467 175.681H477.388Z" />
+            </svg>
+            <div class="relative mx-auto max-w-[1012px]">
+                <div class="relative text-center">
+                    <h2 id="blog-heading"
+                        class="text-[26px] font-bold leading-tight text-brand-ink sm:text-[32px] md:text-[40px] md:leading-[1.25]">
+                        記事ランキング TOP 3</h2><span
+                        class="mx-auto mt-4 block h-0.5 w-[90px] bg-gradient-to-r from-brand-red to-[#f2b632]"
+                        aria-hidden="true"></span>
+                </div>
+                <!-- ▼ note取得成功時はJSがこのgrid内を差し替えます。
+                     取得できない場合は以下のカードがそのまま表示されます(フォールバック)。 -->
+                <div class="mt-[58px] grid gap-x-6 gap-y-10 md:grid-cols-2 lg:grid-cols-3" data-note-grid="ranking">
+                    <div class="relative pt-8 transition-opacity duration-700 ease-out motion-reduce:opacity-100 motion-reduce:transition-none opacity-0"
+                        style="transition-delay:0ms"><span aria-label="1位"
+                            class="absolute left-1/2 top-4 z-20 grid h-[58px] w-[58px] -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full border-[3px] border-white bg-gradient-to-br text-[28px] font-bold leading-none text-white md:h-[64px] md:w-[64px] md:text-[30px] from-[#ffd200] to-[#f6bd00] shadow-[0_4px_9px_rgba(210,153,0,0.35)]">1</span>
+                        <article
+                            class="flex h-full min-h-[448px] flex-col overflow-hidden rounded-[12px] bg-white shadow-[0_6px_18px_rgba(0,0,0,0.18)]">
+                            <div class="relative aspect-[323/170] w-full overflow-hidden"><img
+                                    src="https://assets.st-note.com/production/uploads/images/294854807/rectangle_large_type_2_385fdd1a6e7174e773efe5e86ed1b479.jpeg?width=800"
+                                    alt="" class="h-full w-full object-cover" /><span
+                                    class="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/15 via-black/0 to-black/5"
+                                    aria-hidden="true"></span></div>
+                            <div class="flex flex-1 flex-col px-5 pb-6 pt-5 md:px-[22px]"><time
+                                    class="text-[13px] tracking-[0.03em] text-[#9a9a9a]">2026.07.21</time>
+                                <h3
+                                    class="mt-4 line-clamp-2 min-h-[58px] text-[17px] font-bold leading-[1.7] text-brand-ink md:text-[18px]">
+                                    婚活デートの場所選び　初対面でも会話が弾むおすすめプラン</h3>
+                                <p
+                                    class="mb-6 mt-3 line-clamp-3 min-h-[78px] text-[14px] leading-[1.85] text-brand-ink md:text-[15px]">
+                                    「では、行く場所はどこにしましょうか？」 会う予定が決まり、メッセージ画面を閉じたあと。地図アプリと予約サイトを行き来しながら、「静かすぎると緊張しそう」「長時間になったら疲れないかな」と迷ってしまうことはありませんか。</p><a
+                                    href="https://note.com/futari_tsumugi/n/n7ee9de40d58b" target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="mt-auto inline-flex min-h-[41px] w-[136px] items-center justify-center rounded-full bg-brand-red text-[13px] font-bold text-white transition-[background-color,transform] duration-200 ease-out hover:scale-[1.04] hover:bg-[#ab892d] motion-reduce:transition-none motion-reduce:hover:scale-100">記事ページへ</a>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="relative pt-8 transition-opacity duration-700 ease-out motion-reduce:opacity-100 motion-reduce:transition-none opacity-0"
+                        style="transition-delay:120ms"><span aria-label="2位"
+                            class="absolute left-1/2 top-4 z-20 grid h-[58px] w-[58px] -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full border-[3px] border-white bg-gradient-to-br text-[28px] font-bold leading-none text-white md:h-[64px] md:w-[64px] md:text-[30px] from-[#d6d6d6] to-[#aeb0b4] shadow-[0_4px_9px_rgba(120,120,120,0.28)]">2</span>
+                        <article
+                            class="flex h-full min-h-[448px] flex-col overflow-hidden rounded-[12px] bg-white shadow-[0_6px_18px_rgba(0,0,0,0.18)]">
+                            <div class="relative aspect-[323/170] w-full overflow-hidden"><img
+                                    src="https://assets.st-note.com/production/uploads/images/294825053/rectangle_large_type_2_466fa7e6395d11b068c283f7c8a39bff.jpeg?width=800"
+                                    alt="" class="h-full w-full object-cover" /><span
+                                    class="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/15 via-black/0 to-black/5"
+                                    aria-hidden="true"></span></div>
+                            <div class="flex flex-1 flex-col px-5 pb-6 pt-5 md:px-[22px]"><time
+                                    class="text-[13px] tracking-[0.03em] text-[#9a9a9a]">2026.07.21</time>
+                                <h3
+                                    class="mt-4 line-clamp-2 min-h-[58px] text-[17px] font-bold leading-[1.7] text-brand-ink md:text-[18px]">
+                                    婚活デートで盛り上がる会話の話題　沈黙を防ぐ準備のコツ</h3>
+                                <p
+                                    class="mb-6 mt-3 line-clamp-3 min-h-[78px] text-[14px] leading-[1.85] text-brand-ink md:text-[15px]">
+                                    デート前日の夜。ベッドやソファでスマートフォンを見ながら、「明日、何を話そう」と検索している。話題をメモしておかないと、沈黙してしまいそうで落ち着かない。</p><a
+                                    href="https://note.com/futari_tsumugi/n/n5b35cbd30fe3" target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="mt-auto inline-flex min-h-[41px] w-[136px] items-center justify-center rounded-full bg-brand-red text-[13px] font-bold text-white transition-[background-color,transform] duration-200 ease-out hover:scale-[1.04] hover:bg-[#ab892d] motion-reduce:transition-none motion-reduce:hover:scale-100">記事ページへ</a>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="relative pt-8 transition-opacity duration-700 ease-out motion-reduce:opacity-100 motion-reduce:transition-none opacity-0"
+                        style="transition-delay:240ms"><span aria-label="3位"
+                            class="absolute left-1/2 top-4 z-20 grid h-[58px] w-[58px] -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full border-[3px] border-white bg-gradient-to-br text-[28px] font-bold leading-none text-white md:h-[64px] md:w-[64px] md:text-[30px] from-[#df9a45] to-[#c97c2f] shadow-[0_4px_9px_rgba(180,104,34,0.32)]">3</span>
+                        <article
+                            class="flex h-full min-h-[448px] flex-col overflow-hidden rounded-[12px] bg-white shadow-[0_6px_18px_rgba(0,0,0,0.18)]">
+                            <div class="relative aspect-[323/170] w-full overflow-hidden"><img
+                                    src="https://assets.st-note.com/production/uploads/images/288651279/rectangle_large_type_2_d74ed3c7e84a38af75afb6ef3fe31afa.jpeg?width=800"
+                                    alt="" class="h-full w-full object-cover" /><span
+                                    class="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/15 via-black/0 to-black/5"
+                                    aria-hidden="true"></span></div>
+                            <div class="flex flex-1 flex-col px-5 pb-6 pt-5 md:px-[22px]"><time
+                                    class="text-[13px] tracking-[0.03em] text-[#9a9a9a]">2026.07.02</time>
+                                <h3
+                                    class="mt-4 line-clamp-2 min-h-[58px] text-[17px] font-bold leading-[1.7] text-brand-ink md:text-[18px]">
+                                    じっくりご相談で選ばれた喜び✨</h3>
+                                <p
+                                    class="mb-6 mt-3 line-clamp-3 min-h-[78px] text-[14px] leading-[1.85] text-brand-ink md:text-[15px]">
+                                    フレッシュな２０代男性会員様ご入会されました！ 20代のとっても爽やかな男性が、ふたり紬にご入会いただきました🎉</p><a
+                                    href="https://note.com/futari_tsumugi/n/nb0306cf7eb84" target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="mt-auto inline-flex min-h-[41px] w-[136px] items-center justify-center rounded-full bg-brand-red text-[13px] font-bold text-white transition-[background-color,transform] duration-200 ease-out hover:scale-[1.04] hover:bg-[#ab892d] motion-reduce:transition-none motion-reduce:hover:scale-100">記事ページへ</a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="mt-11 flex items-center justify-center"><a
+                        href="https://note.com/futari_tsumugi" target="_blank" rel="noopener noreferrer"
+                        class="inline-flex min-h-[44px] w-[174px] items-center justify-center gap-1 rounded-full bg-brand-ink px-6 text-[14px] text-white transition-colors duration-200 ease-out hover:bg-[#ab892d] motion-reduce:transition-none"><span>ブログ記事一覧</span><svg
+                            xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-chevron-right" aria-hidden="true">
+                            <path d="m9 18 6-6-6-6"></path>
+                        </svg></a></div>
+            </div>
+        </section>
+        <!-- ▼ スタッフおすすめ記事 -->
+        <section
+            class="relative z-10 -mt-[42px] overflow-hidden rounded-t-[42px] bg-white px-5 pb-[78px] pt-[76px] md:rounded-t-[80px] md:px-8 md:pb-[86px] md:pt-[78px]"
+            aria-labelledby="blog-heading-branding">
+            <svg class="note-watermark note-watermark--cream pointer-events-none absolute left-[-330px] top-[64px] hidden w-[610px] opacity-50 md:block"
+                viewBox="0 0 565 572" fill="none" aria-hidden="true" focusable="false"
+                xmlns="http://www.w3.org/2000/svg">
+                <path class="svg-elm" fill="#F7F7F7" d="M209.324 316.921C210.514 312.158 211.492 307.315 212.02 302.337C212.443 298.457 212.708 294.523 212.708 290.509V215.34H252.045V194.6C252.045 190.613 252.257 186.679 252.627 182.772H212.708V107.656C212.708 66.2316 245.991 32.5404 286.915 32.5404C315.863 32.5404 340.951 49.4529 353.165 74.0188C355.385 78.461 357.157 83.1708 358.478 88.0679C360.144 94.3298 361.122 100.886 361.122 107.683C361.122 112.152 360.673 116.487 359.932 120.742C358.954 126.308 357.447 131.687 355.332 136.772C347.798 154.835 333.496 169.312 315.651 176.939C313.959 182.532 313.034 188.472 313.034 194.627V211.914C349.913 202.441 379.099 173.487 389.303 136.504C390.572 131.848 391.55 127.084 392.211 122.214C392.846 117.451 393.295 112.634 393.295 107.683C393.295 101.207 392.634 94.9185 391.55 88.7637C390.625 83.4919 389.33 78.354 387.664 73.3498C373.389 30.7743 333.655 0 286.888 0C228.252 0 180.535 48.3022 180.535 107.656V182.826H106.327C47.6914 182.879 0 231.155 0 290.509C0 337.848 30.4019 378.069 72.4359 392.439C71.8279 387.515 71.4842 382.538 71.4842 377.453C71.4842 370.683 72.0658 364.046 73.0968 357.57C48.8546 345.207 32.1203 319.838 32.1203 290.509C32.1203 249.084 65.4038 215.393 106.327 215.393H180.535V255.801V290.509C180.535 294.978 180.085 299.313 179.345 303.568C178.367 309.134 176.86 314.513 174.745 319.597C167.211 337.661 152.908 352.165 135.064 359.765C133.372 365.357 132.447 371.298 132.447 377.453C132.447 383.233 133.293 388.826 134.8 394.125C171.361 383.822 199.965 354.252 209.297 316.921H209.324Z" />
+                <path class="svg-elm" fill="#F7F7F7" d="M492.589 179.615C493.197 184.539 493.541 189.516 493.541 194.601C493.541 201.371 492.959 208.008 491.928 214.484C516.171 226.847 532.905 252.215 532.905 281.545C532.905 322.97 499.621 356.661 458.698 356.661H384.491V316.253V281.545C384.491 277.076 384.94 272.741 385.68 268.486C386.658 262.92 388.165 257.541 390.28 252.456C397.815 234.393 412.117 219.916 429.961 212.289C431.653 206.696 432.578 200.756 432.578 194.574C432.578 188.794 431.733 183.201 430.226 177.902C393.664 188.205 365.06 217.775 355.728 255.106C354.538 259.869 353.56 264.713 353.031 269.69C352.608 273.57 352.344 277.504 352.344 281.518V356.687H313.006V377.427C313.006 381.414 312.795 385.348 312.425 389.255H352.344V464.371C352.344 505.795 319.06 539.487 278.137 539.487C249.189 539.487 224.101 522.574 211.887 498.008C209.666 493.566 207.895 488.856 206.573 483.959C204.908 477.697 203.93 471.141 203.93 464.344C203.93 459.875 204.379 455.54 205.119 451.285C206.097 445.719 207.604 440.34 209.719 435.255C217.253 417.192 231.556 402.688 249.4 395.088C251.092 389.495 252.017 383.555 252.017 377.4V360.113C215.139 369.586 185.953 398.54 175.748 435.523C174.479 440.179 173.501 444.943 172.84 449.813C172.206 454.576 171.756 459.393 171.756 464.344C171.756 470.82 172.417 477.108 173.501 483.263C174.426 488.535 175.722 493.673 177.387 498.677C191.584 541.226 231.318 572 278.084 572C336.72 572 384.438 523.698 384.438 464.344V389.174H458.645C517.281 389.148 564.999 340.845 564.999 281.491C564.999 234.152 534.623 193.932 492.563 179.561L492.589 179.615Z" />
+                <path class="svg-elm" fill="#F7F7F7" d="M89.8835 348.633C88.6146 353.289 87.6364 358.052 86.9755 362.923C86.341 367.686 85.8916 372.503 85.8916 377.454C85.8916 383.93 86.5525 390.218 87.6364 396.373C88.5617 401.645 89.8571 406.783 91.5226 411.787C102.124 443.551 126.947 468.652 158.301 479.383C157.693 474.459 157.349 469.482 157.349 464.398C157.349 457.627 157.931 450.991 158.962 444.515C144.713 437.263 133.107 425.515 125.943 411.091C123.722 406.649 121.951 401.939 120.629 397.042C118.964 390.78 117.985 384.224 117.985 377.454C117.985 372.985 118.435 368.649 119.175 364.395C120.153 358.828 121.66 353.45 123.775 348.365C131.309 330.302 145.612 315.798 163.456 308.198C165.148 302.605 166.073 296.664 166.073 290.51V273.222C129.195 282.696 100.009 311.65 89.8042 348.633H89.8835Z" />
+                <path class="svg-elm" fill="#F7F7F7" d="M269.81 168.188C268.621 172.952 267.642 177.795 267.114 182.773C266.691 186.653 266.426 190.587 266.426 194.601V269.77H227.089V290.509C227.089 294.497 226.877 298.43 226.507 302.337H266.426V342.772V377.48C266.426 381.949 265.977 386.284 265.237 390.539C264.259 396.105 262.752 401.484 260.637 406.569C253.102 424.632 238.8 439.136 220.956 446.736C219.264 452.329 218.338 458.269 218.338 464.424C218.338 470.204 219.184 475.797 220.691 481.096C257.253 470.793 285.831 441.223 295.189 403.893C296.379 399.129 297.357 394.286 297.886 389.308C298.309 385.428 298.573 381.494 298.573 377.48V302.311H337.91V281.572C337.91 277.584 338.122 273.65 338.492 269.743H298.573V229.309V194.601C298.573 190.132 299.022 185.797 299.763 181.542C300.741 175.976 302.248 170.597 304.363 165.512C311.897 147.449 326.199 132.972 344.044 125.345C345.736 119.752 346.661 113.812 346.661 107.657C346.661 101.877 345.815 96.2836 344.308 90.9851C307.747 101.288 279.169 130.858 269.81 168.188Z" />
+                <path class="svg-elm" fill="#F7F7F7" d="M477.388 175.681C476.462 170.41 475.167 165.272 473.501 160.267C462.9 128.503 438.077 103.402 406.723 92.6711C407.331 97.595 407.675 102.572 407.675 107.657C407.675 114.427 407.093 121.064 406.062 127.54C420.311 134.792 431.917 146.539 439.081 160.963C441.302 165.405 443.073 170.115 444.395 175.012C446.06 181.274 447.039 187.831 447.039 194.601C447.039 199.07 446.589 203.405 445.849 207.66C444.871 213.226 443.364 218.605 441.249 223.689C433.715 241.752 419.412 256.23 401.568 263.856C399.876 269.449 398.951 275.39 398.951 281.545V298.832C435.83 289.359 465.042 260.404 475.22 223.422C476.489 218.765 477.467 214.002 478.128 209.132C478.762 204.368 479.212 199.552 479.212 194.601C479.212 188.125 478.551 181.836 477.467 175.681H477.388Z" />
+            </svg>
+            <div class="relative mx-auto max-w-[1012px]">
+                <div class="relative text-center">
+                    <h2 id="blog-heading-branding"
+                        class="text-[26px] font-bold leading-tight text-brand-ink sm:text-[32px] md:text-[40px] md:leading-[1.25]">
+                        スタッフおすすめ記事</h2><span
+                        class="mx-auto mt-4 block h-0.5 w-[90px] bg-gradient-to-r from-brand-red to-[#f2b632]"
+                        aria-hidden="true"></span>
+                </div>
+                <!-- ▼ note取得成功時はJSがこのgrid内を差し替えます。
+                     取得できない場合は以下のカードがそのまま表示されます(フォールバック)。 -->
+                <div class="mt-[58px] grid gap-x-6 gap-y-10 md:grid-cols-2 lg:grid-cols-3" data-note-grid="blog">
+                    <div class="relative  transition-opacity duration-700 ease-out motion-reduce:opacity-100 motion-reduce:transition-none opacity-0"
+                        style="transition-delay:0ms">
+                        <article
+                            class="flex h-full min-h-[448px] flex-col overflow-hidden rounded-[12px] bg-white shadow-[0_6px_18px_rgba(0,0,0,0.18)]">
+                            <div class="relative aspect-[323/170] w-full overflow-hidden"><img
+                                    src="https://assets.st-note.com/production/uploads/images/284815797/rectangle_large_type_2_59948a4ce411138d0e02e888a51d28ef.jpeg?width=800"
+                                    alt="" class="h-full w-full object-cover" /><span
+                                    class="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/15 via-black/0 to-black/5"
+                                    aria-hidden="true"></span></div>
+                            <div class="flex flex-1 flex-col px-5 pb-6 pt-5 md:px-[22px]"><time
+                                    class="text-[13px] tracking-[0.03em] text-[#9a9a9a]">2026.06.14</time>
+                                <h3
+                                    class="mt-4 line-clamp-2 min-h-[58px] text-[17px] font-bold leading-[1.7] text-brand-ink md:text-[18px]">
+                                    旅行相談がきっかけで始まったご縁♡</h3>
+                                <p
+                                    class="mb-6 mt-3 line-clamp-3 min-h-[78px] text-[14px] leading-[1.85] text-brand-ink md:text-[15px]">
+                                    40代の素敵な女性会員様が新たにご入会されました！
+                                    先日、「旅行の相談」をきっかけにお知り合いになった落ち着いた雰囲気が魅力の40代女性のお客様が、このたび結婚相談所「ふたり紬」にご入会されました。</p><a
+                                    href="https://note.com/futari_tsumugi/n/n3591e3db96bd" target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="mt-auto inline-flex min-h-[41px] w-[136px] items-center justify-center rounded-full bg-brand-red text-[13px] font-bold text-white transition-[background-color,transform] duration-200 ease-out hover:scale-[1.04] hover:bg-[#ab892d] motion-reduce:transition-none motion-reduce:hover:scale-100">記事ページへ</a>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="relative  transition-opacity duration-700 ease-out motion-reduce:opacity-100 motion-reduce:transition-none opacity-0"
+                        style="transition-delay:120ms">
+                        <article
+                            class="flex h-full min-h-[448px] flex-col overflow-hidden rounded-[12px] bg-white shadow-[0_6px_18px_rgba(0,0,0,0.18)]">
+                            <div class="relative aspect-[323/170] w-full overflow-hidden"><img
+                                    src="https://assets.st-note.com/production/uploads/images/283953724/rectangle_large_type_2_3f6ed69485d1bf0dc772ca0dec31bd33.jpeg?width=800"
+                                    alt="" class="h-full w-full object-cover" /><span
+                                    class="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/15 via-black/0 to-black/5"
+                                    aria-hidden="true"></span></div>
+                            <div class="flex flex-1 flex-col px-5 pb-6 pt-5 md:px-[22px]"><time
+                                    class="text-[13px] tracking-[0.03em] text-[#9a9a9a]">2026.06.09</time>
+                                <h3
+                                    class="mt-4 line-clamp-2 min-h-[58px] text-[17px] font-bold leading-[1.7] text-brand-ink md:text-[18px]">
+                                    ＪＴＢのトップコンサルタントがあなたの出会いを本気でサポート！</h3>
+                                <p
+                                    class="mb-6 mt-3 line-clamp-3 min-h-[78px] text-[14px] leading-[1.85] text-brand-ink md:text-[15px]">
+                                    「旅」を通じて、たくさんのお客様に幸せや感動を提供してきたJTB。 その経験を生かし、人生という名の旅の新たな章をサポートするサービスが始まりました。
+                                    それが、結婚相談所サービス「ふたり紬」です。</p><a
+                                    href="https://note.com/futari_tsumugi/n/n7bf0f8822d1a" target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="mt-auto inline-flex min-h-[41px] w-[136px] items-center justify-center rounded-full bg-brand-red text-[13px] font-bold text-white transition-[background-color,transform] duration-200 ease-out hover:scale-[1.04] hover:bg-[#ab892d] motion-reduce:transition-none motion-reduce:hover:scale-100">記事ページへ</a>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="relative  transition-opacity duration-700 ease-out motion-reduce:opacity-100 motion-reduce:transition-none opacity-0"
+                        style="transition-delay:240ms">
+                        <article
+                            class="flex h-full min-h-[448px] flex-col overflow-hidden rounded-[12px] bg-white shadow-[0_6px_18px_rgba(0,0,0,0.18)]">
+                            <div class="relative aspect-[323/170] w-full overflow-hidden"><img
+                                    src="https://assets.st-note.com/production/uploads/images/283955573/rectangle_large_type_2_a2cd6260f795d023981aa1b7bacd122e.jpeg?width=800"
+                                    alt="" class="h-full w-full object-cover" /><span
+                                    class="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/15 via-black/0 to-black/5"
+                                    aria-hidden="true"></span></div>
+                            <div class="flex flex-1 flex-col px-5 pb-6 pt-5 md:px-[22px]"><time
+                                    class="text-[13px] tracking-[0.03em] text-[#9a9a9a]">2026.06.14</time>
+                                <h3
+                                    class="mt-4 line-clamp-2 min-h-[58px] text-[17px] font-bold leading-[1.7] text-brand-ink md:text-[18px]">
+                                    ＪＴＢの結婚相談所「ふたり紬」４か月で成婚実績あり！</h3>
+                                <p
+                                    class="mb-6 mt-3 line-clamp-3 min-h-[78px] text-[14px] leading-[1.85] text-brand-ink md:text-[15px]">
+                                    💡最短4ヶ月で成婚実績！ 「ふたり紬」では、最短4ヶ月での成婚実績があります。 専任カウンセラーが、お一人おひとりの状況に合わせて、
+                                    出会いから成婚までを丁寧にサポート。</p><a
+                                    href="https://note.com/futari_tsumugi/n/ne7fecb1c9552" target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="mt-auto inline-flex min-h-[41px] w-[136px] items-center justify-center rounded-full bg-brand-red text-[13px] font-bold text-white transition-[background-color,transform] duration-200 ease-out hover:scale-[1.04] hover:bg-[#ab892d] motion-reduce:transition-none motion-reduce:hover:scale-100">記事ページへ</a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="mt-11 flex items-center justify-center"><a
+                        href="https://note.com/futari_tsumugi" target="_blank" rel="noopener noreferrer"
+                        class="inline-flex min-h-[44px] w-[174px] items-center justify-center gap-1 rounded-full bg-brand-ink px-6 text-[14px] text-white transition-colors duration-200 ease-out hover:bg-[#ab892d] motion-reduce:transition-none"><span>ブログ記事一覧</span><svg
+                            xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-chevron-right" aria-hidden="true">
+                            <path d="m9 18 6-6-6-6"></path>
+                        </svg></a></div>
+            </div>
+        </section>
+        </div>
+        <!-- [NOTE-SECTIONS] note連携:
+             ・同一オリジンの note-feed.asp が note.com API をサーバー側で代理取得します
+               (note API は CORS 非対応のためブラウザから直接取得できません)。
+             ・ランキング = マガジン m337eb74a473c / おすすめ = マガジン mf2d28c48d139
+             ・取得できない場合は上のベタ書きカードをそのままフォールバック表示します。
+             ・IntersectionObserver でフェードイン表示します。 -->
+        <script>
+          (function () {
+            var NOTE_USER = 'futari_tsumugi';
+            var FEED_ENDPOINT = '/recommend/futari-tsumugi/note-feed.asp?feed=';
+            var RANK_BADGE = [
+              'from-[#ffd200] to-[#f6bd00] shadow-[0_4px_9px_rgba(210,153,0,0.35)]',
+              'from-[#d6d6d6] to-[#aeb0b4] shadow-[0_4px_9px_rgba(120,120,120,0.28)]',
+              'from-[#df9a45] to-[#c97c2f] shadow-[0_4px_9px_rgba(180,104,34,0.32)]'
+            ];
+
+            function el(tag, cls, text) {
+              var e = document.createElement(tag);
+              if (cls) e.className = cls;
+              if (text != null) e.textContent = text;
+              return e;
+            }
+            // note CDN以外の画像URLは弾く(XSS/不正URL対策)。幅800に正規化。
+            function normImg(url) {
+              if (typeof url !== 'string' || url.indexOf('https://assets.st-note.com/') !== 0) return '';
+              var q = url.indexOf('?');
+              return (q === -1 ? url : url.slice(0, q)) + '?width=800';
+            }
+            function fmtDate(s) {
+              return (typeof s === 'string' && s.length >= 10) ? s.slice(0, 10).replace(/-/g, '.') : '';
+            }
+            function excerpt(s) {
+              if (typeof s !== 'string') return '';
+              var t = s.replace(/\s+/g, ' ').trim();
+              return t.length > 140 ? t.slice(0, 140) + '…' : t;
+            }
+            function noteUrl(item) {
+              if (typeof item.noteUrl === 'string' && /^https:\/\/note\.com\//.test(item.noteUrl)) return item.noteUrl;
+              if (typeof item.key === 'string' && /^n[0-9a-z]+$/i.test(item.key)) return 'https://note.com/' + NOTE_USER + '/n/' + item.key;
+              return 'https://note.com/' + NOTE_USER;
+            }
+
+            function buildCard(item, index, isRanking) {
+              var wrap = el('div', (isRanking ? 'relative pt-8 ' : 'relative  ') +
+                'transition-opacity duration-700 ease-out motion-reduce:opacity-100 motion-reduce:transition-none opacity-0');
+              wrap.style.transitionDelay = (index * 120) + 'ms';
+
+              if (isRanking) {
+                var badge = el('span',
+                  'absolute left-1/2 top-4 z-20 grid h-[58px] w-[58px] -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full border-[3px] border-white bg-gradient-to-br text-[28px] font-bold leading-none text-white md:h-[64px] md:w-[64px] md:text-[30px] ' +
+                  (RANK_BADGE[index] || RANK_BADGE[2]), String(index + 1));
+                badge.setAttribute('aria-label', (index + 1) + '位');
+                wrap.appendChild(badge);
+              }
+
+              var article = el('article', 'flex h-full min-h-[448px] flex-col overflow-hidden rounded-[12px] bg-white shadow-[0_6px_18px_rgba(0,0,0,0.18)]');
+
+              var imgWrap = el('div', 'relative aspect-[323/170] w-full overflow-hidden');
+              var img = el('img', 'h-full w-full object-cover');
+              var src = normImg(item.eyecatch);
+              if (src) img.src = src;
+              img.alt = '';
+              img.loading = 'lazy';
+              var overlay = el('span', 'pointer-events-none absolute inset-0 bg-gradient-to-b from-black/15 via-black/0 to-black/5');
+              overlay.setAttribute('aria-hidden', 'true');
+              imgWrap.appendChild(img);
+              imgWrap.appendChild(overlay);
+
+              var body = el('div', 'flex flex-1 flex-col px-5 pb-6 pt-5 md:px-[22px]');
+              body.appendChild(el('time', 'text-[13px] tracking-[0.03em] text-[#9a9a9a]', fmtDate(item.publish_at || item.publishAt)));
+              body.appendChild(el('h3', 'mt-4 line-clamp-2 min-h-[58px] text-[17px] font-bold leading-[1.7] text-brand-ink md:text-[18px]', item.name || ''));
+              body.appendChild(el('p', 'mb-6 mt-3 line-clamp-3 min-h-[78px] text-[14px] leading-[1.85] text-brand-ink md:text-[15px]', excerpt(item.body)));
+              var a = el('a', 'mt-auto inline-flex min-h-[41px] w-[136px] items-center justify-center rounded-full bg-brand-red text-[13px] font-bold text-white transition-[background-color,transform] duration-200 ease-out hover:scale-[1.04] hover:bg-[#ab892d] motion-reduce:transition-none motion-reduce:hover:scale-100', '記事ページへ');
+              a.href = noteUrl(item);
+              a.target = '_blank';
+              a.rel = 'noopener noreferrer';
+              body.appendChild(a);
+
+              article.appendChild(imgWrap);
+              article.appendChild(body);
+              wrap.appendChild(article);
+              return wrap;
+            }
+
+            function render(grid, items, isRanking) {
+              if (!grid || !items || !items.length) return false;
+              var frag = document.createDocumentFragment();
+              items.slice(0, 3).forEach(function (item, i) { frag.appendChild(buildCard(item, i, isRanking)); });
+              grid.innerHTML = '';
+              grid.appendChild(frag);
+              return true;
+            }
+
+            function fadeIn(scope) {
+              scope = scope || document.querySelector('.note-embed') || document;
+              var targets = scope.querySelectorAll('.opacity-0');
+              if (!('IntersectionObserver' in window)) {
+                Array.prototype.forEach.call(targets, function (n) { n.style.opacity = '1'; });
+                return;
+              }
+              var io = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                  if (entry.isIntersecting) { entry.target.style.opacity = '1'; io.unobserve(entry.target); }
+                });
+              }, { threshold: 0.1 });
+              Array.prototype.forEach.call(targets, function (n) { io.observe(n); });
+            }
+
+            function fetchFeed(type) {
+              var opts = { headers: { 'Accept': 'application/json' } };
+              var ctrl = ('AbortController' in window) ? new AbortController() : null;
+              if (ctrl) { opts.signal = ctrl.signal; setTimeout(function () { ctrl.abort(); }, 6000); }
+              return fetch(FEED_ENDPOINT + type, opts).then(function (r) {
+                var ct = r.headers.get('content-type') || '';
+                if (!r.ok || ct.indexOf('application/json') === -1) throw new Error('not json');
+                return r.json();
+              });
+            }
+
+            function pick(obj, path) {
+              try { return path.split('.').reduce(function (o, k) { return o[k]; }, obj); } catch (e) { return null; }
+            }
+
+            function hydrate(gridSel, type, isRanking, itemsPath) {
+              var grid = document.querySelector(gridSel);
+              var section = grid ? grid.parentNode.parentNode : null;
+              if (!('fetch' in window) || !('Promise' in window)) { fadeIn(section); return; }
+              fetchFeed(type)
+                .then(function (d) { if (!render(grid, pick(d, itemsPath), isRanking)) throw new Error('empty'); })
+                .catch(function () { /* 取得失敗時はベタ書きカードを維持 */ })
+                .then(function () { fadeIn(section); });
+            }
+
+            function init() {
+              hydrate('[data-note-grid="ranking"]', 'ranking', true, 'data.section.contents');
+              hydrate('[data-note-grid="blog"]', 'blog', false, 'data.section.contents');
+            }
+
+            if (document.readyState === 'loading') {
+              document.addEventListener('DOMContentLoaded', init);
+            } else {
+              init();
+            }
+          })();
+        </script>
+        <!-- [NOTE-SECTIONS-END] -->
 
         <section class="lcl-about" id="about">
           <svg class="ico_svg bg_logo" width="565" height="572" viewBox="0 0 565 572" fill="none" xmlns="http://www.w3.org/2000/svg">
