@@ -4,6 +4,8 @@
   "trailingSlash": false,
   "rewrites": [
     { "source": "/", "destination": "/index_preview.html" },
+    { "source": "/recommend/futari-tsumugi/note-feed.asp", "destination": "/api/note-feed" },
+    { "source": "/note-feed.asp", "destination": "/api/note-feed" },
     { "source": "/recommend/futari-tsumugi/:path*", "destination": "/:path*" }
   ],
   "headers": [

@@ -3,6 +3,10 @@
 # octet-stream 配信されてしまうため除外する（プレビューは index_preview.html）
 index.asp
 
+# note-feed.asp も同様に実行されず生テキスト配信されてしまうため除外
+# Vercel上では api/note-feed.ts (Edge Function) が代わりに動く
+note-feed.asp
+
 # ローカル専用の補助スクリプト・参照ファイル
 _preview_server.py
 _extract_note_css.py
